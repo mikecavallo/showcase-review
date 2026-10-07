@@ -1,0 +1,465 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>The Caviar Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Libre+Franklin:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a naturalist's field guide set in cold water. A map of origins opens it; every roe is then plotted to scale
+   in its own sampled colour; species plates, a matching quiz with a live 3D jar, and the serving notes follow.
+   One committed dark look: deep cold water, pearl text, the brand's gold. The data colours are the roe itself. */
+:root {
+  color-scheme: dark;
+  --water: #091316;        /* page */
+  --water-2: #0f1d21;      /* raised panels */
+  --water-3: #16292e;      /* hover, rules */
+  --pearl: #ebe5d6;        /* text */
+  --mist: #93a39f;         /* secondary text */
+  --gold: #d3ae63;         /* accent */
+  --gold-deep: #9d7b3a;
+  --line: rgba(211, 174, 99, .2);
+  --ok: #7fb48f; --warn: #d9a441; --bad: #d4664f;   /* conservation status only */
+  --display: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --body: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--water); color: var(--pearl); }
+body { margin: 0; font: 400 16px/1.6 var(--body); }
+a { color: var(--gold); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 48px); }
+.kicker { font: 500 12px/1.2 var(--mono); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: -.005em; }
+h2 { font-size: clamp(30px, 4.2vw, 50px); line-height: 1.04; }
+h3 { font-size: 24px; line-height: 1.15; }
+.lede { max-width: 62ch; color: var(--mist); margin: 0; font-size: 17px; }
+.latin { font-family: var(--display); font-style: italic; }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+section { padding-block: clamp(56px, 9vh, 104px); border-top: 1px solid var(--line); }
+.head { display: grid; gap: 14px; margin-bottom: clamp(24px, 4vh, 40px); }
+
+/* hero: the origins map */
+.hero { position: relative; padding-block: clamp(28px, 5vh, 56px) clamp(40px, 6vh, 64px); border-top: 0; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 8fr); gap: clamp(20px, 3vw, 40px); align-items: center; }
+.hero h1 { font-size: clamp(48px, 7.4vw, 104px); line-height: .92; letter-spacing: -.02em; }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero .lede { margin-top: 18px; color: var(--pearl); }
+.stats { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 26px; }
+.stat b { display: block; font: 400 34px/1 var(--display); color: var(--pearl); }
+.stat span { font: 500 11px/1.4 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--mist); }
+.mapbox { position: relative; min-width: 0; }
+#map { width: 100%; height: auto; display: block; }
+#map .land { fill: #1a2c31; stroke: #26403f; stroke-width: .5; }
+#map .grat { fill: none; stroke: rgba(147, 163, 159, .09); stroke-width: .6; }
+#map .pin { cursor: pointer; }
+#map .pin circle.core { stroke: var(--pearl); stroke-width: 1.2; stroke-opacity: .85; }
+#map .pin circle.halo { fill: none; stroke: var(--gold); opacity: .45; }
+#map .pin text { font: 500 10.5px var(--mono); letter-spacing: .06em; fill: var(--pearl); paint-order: stroke; stroke: var(--water); stroke-width: 3px; }
+#map .pin:hover text, #map .pin.on text { fill: var(--gold); }
+#map .pin.on circle.core { stroke: var(--gold); stroke-width: 2.5; }
+.map-note { margin-top: 8px; font: 400 12px/1.4 var(--mono); color: var(--mist); }
+@media (prefers-reduced-motion: no-preference) { #map .pin circle.halo { animation: halo 3.2s ease-out infinite; transform-box: fill-box; transform-origin: center; } }
+@keyframes halo { 0% { transform: scale(.6); opacity: .6; } 100% { transform: scale(2.2); opacity: 0; } }
+
+/* the pearl scale chart */
+.hero-grid > *, .scale-grid > *, .quiz > * { min-width: 0; }
+.scale-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
+.chartbox { min-width: 0; background: var(--water-2); border: 1px solid var(--line); padding: 14px 10px 6px; }
+#chart { width: 100%; height: auto; display: block; }
+#chart .axis text { font: 400 11px var(--mono); fill: var(--mist); }
+#chart .axis line, #chart .axis path { stroke: rgba(147, 163, 159, .25); }
+#chart .grid line { stroke: rgba(147, 163, 159, .08); }
+#chart .lab { font: 500 11px var(--mono); fill: var(--mist); letter-spacing: .08em; text-transform: uppercase; }
+#chart .pearl { cursor: pointer; transition: opacity .2s; }
+#chart .pearl.dim { opacity: .18; }
+#chart .pearl.on circle.ring { stroke: var(--gold); stroke-width: 2; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.chip { font: 500 12px/1 var(--mono); letter-spacing: .06em; padding: 8px 12px; border: 1px solid var(--line); background: transparent; color: var(--pearl); cursor: pointer; }
+.chip[aria-pressed="true"] { border-color: var(--gold); color: var(--water); background: var(--gold); }
+.chip b { font-weight: 500; opacity: .6; margin-left: 6px; }
+.strip { margin-top: 18px; overflow-x: auto; }
+.strip-in { display: flex; align-items: flex-end; gap: 10px; padding: 8px 2px 4px; min-width: max-content; }
+.strip-in .p { display: grid; justify-items: center; gap: 6px; }
+.strip-in .p i { display: block; border-radius: 50%; }
+.unmeasured { margin-top: 10px; font: 400 12px/1.5 var(--mono); color: var(--mist); }
+.unmeasured button { font: inherit; background: none; border: 0; padding: 0; color: var(--pearl); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.strip-in .p span { font: 400 10px var(--mono); color: var(--mist); }
+
+/* specimen card (product detail) */
+.card { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); background: var(--water-2); border: 1px solid var(--line); display: grid; min-width: 0; }
+.card .pic { position: relative; aspect-ratio: 1; overflow: hidden; background: #07080c; max-width: 100%; }
+.card .pic img { position: absolute; top: 0; left: 0; height: 100%; width: 200%; max-width: none; }
+.card .body { padding: 16px 18px 18px; display: grid; gap: 10px; }
+.card h3 { font-size: 23px; }
+.card dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; font-size: 14px; }
+.card dt { font: 500 10.5px/1.9 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--mist); }
+.card dd { margin: 0; min-width: 0; }
+.card q { font-family: var(--display); font-style: italic; font-size: 16px; color: var(--pearl); quotes: "\201C" "\201D"; }
+.card .buy { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 6px; border-top: 1px solid var(--line); }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; background: var(--gold); color: #12100a; font: 600 12px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; text-decoration: none; border: 0; cursor: pointer; }
+.btn.ghost { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+
+/* species plates */
+.plates { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.plate { background: var(--water-2); border: 1px solid var(--line); padding: 18px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.plate .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.plate h3 { font-size: 22px; }
+.plate .latin { color: var(--gold); font-size: 16px; }
+.status { font: 500 10px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 5px 7px; border: 1px solid currentColor; white-space: nowrap; }
+.status.cr { color: var(--bad); } .status.en { color: var(--bad); } .status.vu { color: var(--warn); } .status.nt { color: var(--warn); } .status.lc { color: var(--ok); } .status.na { color: var(--mist); }
+.plate p { margin: 0; font-size: 14px; color: var(--mist); }
+.plate .fact { color: var(--pearl); font-family: var(--display); font-style: italic; font-size: 16px; line-height: 1.4; }
+.bars { display: grid; gap: 8px; }
+.bar { display: grid; grid-template-columns: 112px 1fr auto; gap: 10px; align-items: center; font: 400 11px var(--mono); color: var(--mist); }
+.bar .track { height: 6px; background: var(--water-3); position: relative; overflow: hidden; }
+.bar .fill { position: absolute; inset: 0 auto 0 0; background: var(--gold); }
+.bar .fill.range { background: linear-gradient(90deg, var(--gold-deep), var(--gold)); }
+.plate .sold { display: flex; flex-wrap: wrap; gap: 6px; }
+.plate .sold button { font: 400 11px/1.2 var(--body); padding: 5px 8px; background: var(--water-3); border: 0; color: var(--pearl); cursor: pointer; text-align: left; }
+.plate .sold button:hover { color: var(--gold); }
+.plate .parent { font: 400 11px/1.4 var(--mono); color: var(--mist); }
+.status.hy { color: var(--gold); }
+
+/* quiz */
+.quiz { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+.q { border: 0; margin: 0 0 22px; padding: 0; min-width: 0; }
+.q legend { font: 400 20px/1.3 var(--display); margin-bottom: 10px; padding: 0; }
+.q .opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.q input { position: absolute; opacity: 0; pointer-events: none; }
+.q label { font: 500 13px/1.2 var(--body); padding: 10px 14px; border: 1px solid var(--line); cursor: pointer; }
+.q input:checked + label { background: var(--gold); color: #12100a; border-color: var(--gold); }
+.q input:focus-visible + label { outline: 2px solid var(--gold); outline-offset: 2px; }
+.result { background: var(--water-2); border: 1px solid var(--line); display: grid; min-width: 0; }
+.result .stage { position: relative; aspect-ratio: 4 / 3; background: #07080c; max-width: 100%; }
+.result canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.result #stageImg { position: absolute; inset: 0; background: #07080c 0 50% / 200% auto no-repeat; transition: opacity .4s; }
+.result .body { padding: 18px; display: grid; gap: 10px; }
+.result .why { margin: 0; font-size: 14px; color: var(--mist); }
+.alts { display: flex; flex-wrap: wrap; gap: 8px; }
+.alts button { font: 400 12px/1.2 var(--body); padding: 7px 10px; background: var(--water-3); border: 0; color: var(--pearl); cursor: pointer; }
+
+/* guide, words, timeline */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px 32px; }
+.note h3 { font-size: 20px; margin-bottom: 6px; }
+.note p { margin: 0; color: var(--mist); font-size: 15px; max-width: 60ch; }
+.note .src { display: block; margin-top: 6px; font: 400 10.5px var(--mono); color: rgba(147, 163, 159, .7); overflow-wrap: anywhere; }
+.words { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 40px; margin: 0; }
+.words div { padding: 14px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 150px 1fr; gap: 16px; }
+.words dt { font: 400 19px/1.25 var(--display); font-style: italic; color: var(--gold); }
+.words dd { margin: 0; font-size: 14.5px; color: var(--mist); min-width: 0; }
+.tl { position: relative; display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.tl li { display: grid; grid-template-columns: 110px 1fr; gap: 22px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.tl .yr { font: 400 30px/1 var(--display); color: var(--gold); }
+.tl h3 { font-size: 19px; margin-bottom: 4px; }
+.tl p { margin: 0; color: var(--mist); font-size: 14.5px; max-width: 70ch; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.fact-c { border-top: 2px solid var(--gold); padding-top: 12px; }
+.fact-c h3 { font-size: 18px; margin-bottom: 6px; }
+.fact-c p { margin: 0; font-size: 14px; color: var(--mist); }
+footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: grid; gap: 16px; }
+footer .links { display: flex; flex-wrap: wrap; gap: 10px; }
+footer p { margin: 0; color: var(--mist); font-size: 13px; max-width: 90ch; }
+
+@media (max-width: 980px) {
+  .hero-grid, .scale-grid, .quiz { grid-template-columns: 1fr; }
+  .card { position: static; }
+  .words { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .words div { grid-template-columns: 1fr; gap: 4px; }
+  .tl li { grid-template-columns: 1fr; gap: 6px; }
+  .bar { grid-template-columns: 96px 1fr auto; }
+}
+</style>
+
+<div class="wrap">
+  <header class="hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Caviar Star &middot; A field guide</div>
+        <h1>The Caviar <em>Atlas</em></h1>
+        <p class="lede" id="heroLede">Every caviar and roe in the Caviar Star collection: where it swims, what it is, how big the pearl is, and which one belongs on your table.</p>
+        <div class="stats" id="stats"></div>
+      </div>
+      <div class="mapbox">
+        <svg id="map" viewBox="0 0 900 380" role="img" aria-label="World map of where each caviar comes from"></svg>
+        <div class="map-note" id="mapNote">Tap a point to see what comes from those waters.</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="scale" aria-labelledby="scale-h">
+    <div class="head">
+      <div class="kicker">The pearl scale</div>
+      <h2 id="scale-h">Every roe, drawn to size, in its own colour</h2>
+      <p class="lede">Each pearl is one product, drawn at nine times life size in the colour sampled from the shop's own photograph, and placed by price per gram against grain size. Where the shop gives no size, the pearl uses the species' published egg size. The red roes are the biggest pearls and the cheapest; sturgeon are smaller and dearer, because a sturgeon takes years to make her first eggs.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter by kind"></div>
+    <div class="scale-grid">
+      <div>
+        <div class="chartbox"><svg id="chart" viewBox="0 0 820 520" role="img" aria-label="Price per gram against grain size for every caviar"></svg></div>
+        <div class="strip" aria-label="All pearls lined up by size"><div class="strip-in" id="strip"></div></div>
+        <div class="unmeasured" id="unmeasured"></div>
+      </div>
+      <aside class="card" id="card" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="species" aria-labelledby="species-h">
+    <div class="head">
+      <div class="kicker">Species plates</div>
+      <h2 id="species-h">Who makes the pearls</h2>
+      <p class="lede">Sturgeon are older than the dinosaurs, and slow. A female can take a decade or more before she carries her first eggs, which is most of what you pay for. Here is every fish (and one snail) behind the collection.</p>
+    </div>
+    <div class="plates" id="plates"></div>
+  </section>
+
+  <section id="quiz" aria-labelledby="quiz-h">
+    <div class="head">
+      <div class="kicker">Find your caviar</div>
+      <h2 id="quiz-h">Five questions, one tin</h2>
+      <p class="lede">Answer what you know. The match updates as you go, and the jar on the right is the real thing, in 3D. Drag it to turn it.</p>
+    </div>
+    <div class="quiz">
+      <form id="qform"></form>
+      <div class="result" id="result">
+        <div class="stage" id="stage"><div id="stageImg" aria-hidden="true"></div><canvas id="view" aria-label="3D view of the matched caviar"></canvas></div>
+        <div class="body" id="resBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="serve" aria-labelledby="serve-h">
+    <div class="head">
+      <div class="kicker">At the table</div>
+      <h2 id="serve-h">How to serve it</h2>
+    </div>
+    <div class="cols" id="serving"></div>
+  </section>
+
+  <section id="words" aria-labelledby="words-h">
+    <div class="head">
+      <div class="kicker">The words on the tin</div>
+      <h2 id="words-h">A short glossary</h2>
+    </div>
+    <dl class="words" id="glossary"></dl>
+  </section>
+
+  <section id="history" aria-labelledby="history-h">
+    <div class="head">
+      <div class="kicker">From wild to farmed</div>
+      <h2 id="history-h">How caviar changed</h2>
+    </div>
+    <ol class="tl" id="timeline"></ol>
+  </section>
+
+  <section id="house" aria-labelledby="house-h">
+    <div class="head">
+      <div class="kicker">The house</div>
+      <h2 id="house-h">Caviar Star, Ocean Isle Beach</h2>
+    </div>
+    <div class="facts" id="facts"></div>
+  </section>
+
+  <footer>
+    <div class="links" id="links"></div>
+    <p id="credit"></p>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+const A = await (await fetch('atlas.json')).json();
+const $ = s => document.querySelector(s), el = (t, c, h) => { const e = document.createElement(t); if (c) e.className = c; if (h != null) e.innerHTML = h; return e; };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const P = A.products, byH = Object.fromEntries(P.map(p => [p.h, p]));
+const money = v => v == null ? '' : '$' + (v >= 10 ? v.toFixed(0) : v.toFixed(2));
+const fmtG = g => g >= 1000 ? (g / 1000).toFixed(g % 1000 ? 1 : 0) + ' kg' : Math.round(g) + ' g';
+let current = null;
+
+/* ---------- hero stats ---------- */
+$('#stats').innerHTML = A.stats.map(s => `<div class="stat"><b>${esc(s.v)}</b><span>${esc(s.k)}</span></div>`).join('');
+
+/* ---------- map ---------- */
+{
+  const svg = d3.select('#map'), W = 900, H = 380;
+  const world = await (await fetch('land-110m.json')).json();
+  const land = topojson.feature(world, world.objects.land);
+  const proj = d3.geoNaturalEarth1().rotate([-10, 0]).fitExtent([[10, 10], [W - 10, H - 10]], { type: 'MultiPoint', coordinates: [[-160, 18], [137, 18], [-160, 66], [137, 66], [-10, 10]] });
+  svg.append('clipPath').attr('id', 'mclip').append('rect').attr('width', W).attr('height', H);
+  const path = d3.geoPath(proj);
+  svg.append('path').attr('class', 'grat').attr('clip-path', 'url(#mclip)').attr('d', path(d3.geoGraticule10()));
+  svg.append('path').attr('class', 'land').attr('clip-path', 'url(#mclip)').attr('d', path(land));
+  const g = svg.append('g');
+  A.origins.forEach((o, i) => {
+    const [x, y] = proj([o.lon, o.lat]);
+    const pin = g.append('g').attr('class', 'pin').attr('transform', `translate(${x},${y})`).attr('tabindex', 0).attr('role', 'button')
+      .attr('aria-label', `${o.label}: ${o.products.length} products`);
+    const c = byH[o.products[0]]?.color?.mid || '#d3ae63';
+    pin.append('circle').attr('class', 'halo').attr('r', 9).style('animation-delay', `${(i % 7) * .45}s`);
+    pin.append('circle').attr('class', 'core').attr('r', 4 + Math.min(5, o.products.length)).attr('fill', c);
+    const t = pin.append('text').attr('x', o.dx ?? 10).attr('y', o.dy ?? 4).attr('text-anchor', o.anchor || 'start').text(o.short || o.label);
+    const pick = () => { d3.selectAll('#map .pin').classed('on', false); pin.classed('on', true); focusOrigin(o); };
+    pin.on('click', pick).on('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+  });
+}
+function focusOrigin(o) {
+  $('#mapNote').innerHTML = `<b style="color:var(--pearl)">${esc(o.label)}</b>: ${o.products.map(h => `<a href="#scale" data-h="${h}">${esc(byH[h].short)}</a>`).join(', ')}`;
+  $('#mapNote').querySelectorAll('a').forEach(a => a.addEventListener('click', () => select(a.dataset.h)));
+  highlight(new Set(o.products));
+}
+
+/* ---------- pearl scale chart ---------- */
+const KINDS = A.kinds; let kindOn = 'all';
+const fb = $('#filters');
+[['all', 'Everything', P.length], ...KINDS.map(k => [k.id, k.label, P.filter(p => p.group === k.id).length])].forEach(([id, label, n]) => {
+  const b = el('button', 'chip', `${esc(label)}<b>${n}</b>`); b.type = 'button'; b.setAttribute('aria-pressed', String(id === 'all'));
+  b.addEventListener('click', () => { kindOn = id; fb.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', String(c === b))); highlight(id === 'all' ? null : new Set(P.filter(p => p.group === id).map(p => p.h))); });
+  fb.appendChild(b);
+});
+const MAG = A.magnification;  // px per mm in the chart
+{
+  const svg = d3.select('#chart'), W = 820, H = 520, m = { l: 62, r: 22, t: 18, b: 52 };
+  const pts = P.filter(p => p.grain_mm != null && p.ppg != null);
+  const x = d3.scaleLog().domain(d3.extent(pts, p => p.ppg)).nice().range([m.l, W - m.r]);
+  const y = d3.scaleLinear().domain([0, d3.max(pts, p => p.grain_mm) * 1.12]).nice().range([H - m.b, m.t]);
+  const defs = svg.append('defs');
+  svg.append('g').attr('class', 'grid').selectAll('line').data(y.ticks(6)).join('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y).attr('y2', y);
+  svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(6, '$,.2~f').tickSizeOuter(0));
+  svg.append('g').attr('class', 'axis').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(6).tickFormat(d => d + ' mm').tickSizeOuter(0));
+  svg.append('text').attr('class', 'lab').attr('x', W - m.r).attr('y', H - 12).attr('text-anchor', 'end').text('Price per gram, log scale →');
+  svg.append('text').attr('class', 'lab').attr('x', m.l).attr('y', m.t - 4).text('↑ Grain diameter');
+  // biggest pearls first so small ones stay on top
+  const g = svg.append('g');
+  [...pts].sort((a, b) => b.grain_mm - a.grain_mm).forEach((p, i) => {
+    const id = 'gr' + i;
+    const rg = defs.append('radialGradient').attr('id', id).attr('cx', '38%').attr('cy', '34%').attr('r', '70%');
+    rg.append('stop').attr('offset', '0%').attr('stop-color', p.color.hi); rg.append('stop').attr('offset', '45%').attr('stop-color', p.color.mid); rg.append('stop').attr('offset', '100%').attr('stop-color', p.color.lo);
+    const r = Math.max(2.2, p.grain_mm * MAG / 2);
+    const node = g.append('g').attr('class', 'pearl').attr('data-h', p.h).attr('transform', `translate(${x(p.ppg)},${y(p.grain_mm)})`).attr('tabindex', 0).attr('role', 'button').attr('aria-label', `${p.title}, ${p.grain_mm} millimetre grain, ${money(p.ppg)} per gram`);
+    node.append('circle').attr('r', r).attr('fill', `url(#${id})`);
+    node.append('circle').attr('class', 'ring').attr('r', r + 1.5).attr('fill', 'none').attr('stroke', 'rgba(235,229,214,.18)');
+    node.append('circle').attr('r', r * .22).attr('cx', -r * .3).attr('cy', -r * .32).attr('fill', 'rgba(255,255,255,.5)');
+    node.on('click', () => select(p.h)).on('mouseenter', () => select(p.h, true)).on('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(p.h); } });
+  });
+  // the same pearls in a row, smallest to largest, at the same scale
+  const strip = $('#strip');
+  [...pts].sort((a, b) => a.grain_mm - b.grain_mm).forEach(p => {
+    const d = p.grain_mm * MAG, w = el('button', 'p'); w.type = 'button'; w.style.cssText = 'background:none;border:0;padding:0;cursor:pointer;color:inherit';
+    w.innerHTML = `<i style="width:${d}px;height:${d}px;background:radial-gradient(circle at 38% 34%, ${p.color.hi}, ${p.color.mid} 45%, ${p.color.lo})"></i><span>${p.grain_mm}</span>`;
+    w.title = p.title; w.addEventListener('click', () => select(p.h)); strip.appendChild(w);
+  });
+}
+{
+  const um = P.filter(p => p.grain_mm == null || p.ppg == null);
+  if (um.length) { $('#unmeasured').innerHTML = `Not on the scale (no published grain size): ${um.map(p => `<button type="button" data-h="${p.h}">${esc(p.short)}</button>`).join(', ')}`;
+    $('#unmeasured').querySelectorAll('button').forEach(b => b.addEventListener('click', () => select(b.dataset.h))); }
+}
+function highlight(set) { document.querySelectorAll('#chart .pearl').forEach(n => n.classList.toggle('dim', !!set && !set.has(n.dataset.h))); }
+function select(h, soft) {
+  const p = byH[h]; if (!p || (soft && current === h)) return; current = h;
+  document.querySelectorAll('#chart .pearl').forEach(n => n.classList.toggle('on', n.dataset.h === h));
+  const sp = A.speciesById[p.species] || {};
+  const sizes = (p.sizes || []).filter(s => s.grams).map(s => `${fmtG(s.grams)} ${money(s.price_usd)}${s.available === false ? ' (sold out)' : ''}`).join(' · ');
+  $('#card').innerHTML = `<div class="pic"><img src="posters/${p.h}.webp" alt="${esc(p.title)} in 3D"></div>
+    <div class="body"><div class="kicker">${esc(p.kindLabel)}</div><h3>${esc(p.title)}</h3>
+    ${p.species_latin ? `<div class="latin" style="color:var(--gold)">${esc(p.species_latin)}</div>` : ''}
+    <dl>
+      ${p.origin ? `<dt>From</dt><dd>${esc(p.origin)}</dd>` : ''}
+      <dt>Grain</dt><dd>${p.grain_mm != null ? `<span class="num">${p.grain_src === 'species' ? '≈ ' : ''}${p.grain_mm} mm</span>${p.grain_src === 'species' ? ' <span style="color:var(--mist)">(species typical)</span>' : ''}` : '<span style="color:var(--mist)">No published size</span>'}${p.grain_label ? `<br><span style="color:var(--mist)">${esc(p.grain_label)}</span>` : ''}</dd>
+      ${p.color_words ? `<dt>Colour</dt><dd>${esc(p.color_words)}</dd>` : ''}
+      ${p.flavor ? `<dt>Taste</dt><dd>${esc(p.flavor)}</dd>` : ''}
+      ${sizes ? `<dt>Sizes</dt><dd class="num" style="font-size:12.5px">${sizes}</dd>` : ''}
+    </dl>
+    ${p.quote ? `<q>${esc(p.quote)}</q>` : ''}
+    <div class="buy"><span class="num">${money(p.ppg)} / g</span><a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">View in the shop</a></div></div>`;
+}
+select(A.featured);
+
+/* ---------- species plates ---------- */
+{
+  const STATUS = { HY: ['hy', 'Farmed hybrid'], DD: ['na', 'Data deficient'], CR: ['cr', 'Critically endangered'], EN: ['en', 'Endangered'], VU: ['vu', 'Vulnerable'], NT: ['nt', 'Near threatened'], LC: ['lc', 'Least concern'] };
+  const maxM = d3.max(A.species, s => s.max_length_m || 0), maxAge = d3.max(A.species, s => (s.maturity || [0, 0])[1] || 0), maxEgg = d3.max(A.species, s => (s.egg || [0, 0])[1] || 0);
+  const box = $('#plates');
+  A.species.filter(s => s.products.length || s.parent_of.length).forEach(s => {
+    const st = STATUS[s.iucn_code] || ['na', s.iucn_code ? s.iucn_code : 'Not assessed'];
+    const pl = el('article', 'plate');
+    const mat = s.maturity;
+    pl.innerHTML = `<div class="top"><h3>${esc(s.common)}</h3><span class="status ${st[0]}" title="IUCN Red List${s.iucn_year ? ', ' + s.iucn_year : ''}">${esc(st[1])}</span></div>
+      <div class="latin">${esc(s.latin)}</div>
+      <p>${esc(s.native_range || '')}</p>
+      <div class="bars">
+        ${mat ? `<div class="bar"><span>Years to first eggs</span><span class="track"><span class="fill range" style="left:${mat[0] / maxAge * 100}%;width:${Math.max(2, (mat[1] - mat[0]) / maxAge * 100)}%"></span></span><span class="num">${mat[0] === mat[1] ? mat[0] : mat[0] + '–' + mat[1]}</span></div>` : ''}
+        ${s.max_length_m ? `<div class="bar"><span>Largest recorded</span><span class="track"><span class="fill" style="width:${s.max_length_m / maxM * 100}%"></span></span><span class="num">${s.max_length_m} m</span></div>` : ''}
+        ${s.egg ? `<div class="bar"><span>Egg diameter</span><span class="track"><span class="fill range" style="left:${Math.min(98, s.egg[0] / maxEgg * 100)}%;width:${Math.max(2, (s.egg[1] - s.egg[0]) / maxEgg * 100)}%"></span></span><span class="num">${s.egg[0] === s.egg[1] ? s.egg[0] : s.egg[0] + '–' + s.egg[1]} mm</span></div>` : ''}
+      </div>
+      ${s.one_fact ? `<div class="fact">${esc(s.one_fact)}</div>` : ''}
+      <div class="sold">${s.products.map(h => `<button type="button" data-h="${h}">${esc(byH[h].short)}</button>`).join('')}${s.parent_of.length ? `<span class="parent">Parent of the ${s.parent_of.map(id => esc((A.speciesById[id] || {}).common || id)).join(' and the ')}</span>` : ''}</div>`;
+    pl.querySelectorAll('.sold button').forEach(b => b.addEventListener('click', () => { select(b.dataset.h); $('#scale').scrollIntoView({ behavior: RM ? 'auto' : 'smooth' }); }));
+    box.appendChild(pl);
+  });
+}
+
+/* ---------- quiz ---------- */
+const Q = A.quiz, form = $('#qform'), answers = {};
+Q.forEach((q, i) => {
+  const fs = el('fieldset', 'q'); fs.innerHTML = `<legend>${esc(q.q)}</legend><div class="opts">${q.options.map((o, j) => `<input type="radio" name="q${i}" id="q${i}o${j}" value="${j}"><label for="q${i}o${j}">${esc(o.label)}</label>`).join('')}</div>`;
+  fs.addEventListener('change', e => { answers[i] = +e.target.value; match(); });
+  form.appendChild(fs);
+});
+function score(p) {
+  let s = 0;
+  Q.forEach((q, i) => { if (answers[i] == null) return; const o = q.options[answers[i]]; s += o.score(p); });
+  return s;
+}
+// option scorers are declared in data as small rule objects: {attr, op, value, w}
+Q.forEach(q => q.options.forEach(o => { o.score = p => (o.rules || []).reduce((s, r) => s + (test(p[r.attr], r) ? r.w : 0), 0); }));
+function test(v, r) { if (v == null) return false; switch (r.op) { case '<': return v < r.value; case '>': return v > r.value; case 'between': return v >= r.value[0] && v <= r.value[1]; case 'in': return r.value.includes(v); default: return v === r.value; } }
+let studio = null, loadTok = 0;
+async function show3d(p) {
+  const tok = ++loadTok; $('#stageImg').style.backgroundImage = `url(posters/${p.h}.webp)`; $('#stageImg').style.opacity = 1;
+  try {
+    if (!studio) { const { Studio } = await import('./studio.js'); studio = new Studio($('#view'), { base: '.', dpr: Math.min(2, devicePixelRatio || 1) }); startLoop(); }
+    await studio.load(Object.assign({ handle: p.h, kind: p.k, title: p.title, period: 10, packed: true }, p.three), './assets');
+    if (tok !== loadTok) return; const c = $('#view'); studio.size(c.clientWidth, c.clientHeight); $('#stageImg').style.opacity = 0;
+  } catch (e) { $('#stageImg').style.opacity = 1; }
+}
+let drag = null, yaw = 0;
+function startLoop() {
+  const c = $('#view'); let t0 = performance.now(), down = false, lx = 0, rel = 0, dy = 0;
+  c.addEventListener('pointerdown', e => { down = true; lx = e.clientX; c.setPointerCapture(e.pointerId); dy = yaw; });
+  c.addEventListener('pointermove', e => { if (!down) return; dy += (e.clientX - lx) * .008; lx = e.clientX; drag = 1; });
+  const up = () => { if (down) { down = false; rel = performance.now(); } }; c.addEventListener('pointerup', up); c.addEventListener('pointercancel', up);
+  studio.free = true;
+  addEventListener('resize', () => studio.size(c.clientWidth, c.clientHeight));
+  (function loop(now) { const t = RM ? 0 : (now - t0) / 1000, sw = studio.obj ? studio.swingYaw(t) : 0;
+    if (down) yaw = dy; else if (drag) { const k = Math.min(1, (now - rel) / 1600), e2 = k * k * (3 - 2 * k); yaw = dy + (sw - dy) * e2; if (k >= 1) drag = 0; } else yaw = sw;
+    studio.yaw = yaw; studio.render(t); requestAnimationFrame(loop); })(performance.now());
+}
+const sentence = t => { t = (t || '').trim(); if (!t) return ''; t = t[0].toUpperCase() + t.slice(1); return /[.!?]$/.test(t) ? t : t + '.'; };
+function match() {
+  const ranked = P.filter(p => p.quizable).map(p => ({ p, s: score(p) + (p.featuredBoost || 0) })).sort((a, b) => b.s - a.s || a.p.ppg - b.p.ppg);
+  const best = ranked[0].p, none = !Object.keys(answers).length;
+  const alts = none ? A.starters.filter(h => h !== best.h).slice(0, 3).map(h => byH[h]) : ranked.slice(1, 4).map(r => r.p);
+  $('#resBody').innerHTML = `<div class="kicker">${Object.keys(answers).length ? 'Your match' : 'A good place to start'}</div><h3>${esc(best.title)}</h3>
+    <p class="why">${esc(sentence(best.flavor))}${best.origin ? ` From ${esc(best.origin)}.` : ''}</p>
+    <div class="buy" style="display:flex;justify-content:space-between;align-items:center;gap:12px"><span class="num">${best.sizes?.length ? 'From ' + money(Math.min(...best.sizes.map(s => s.price_usd))) : ''}</span><a class="btn" href="${esc(best.url)}" target="_blank" rel="noopener">View in the shop</a></div>
+    <div class="kicker" style="color:var(--mist)">Also consider</div><div class="alts">${alts.map(a => `<button type="button" data-h="${a.h}">${esc(a.short)}</button>`).join('')}</div>`;
+  $('#resBody').querySelectorAll('.alts button').forEach(b => b.addEventListener('click', () => { const a = byH[b.dataset.h]; show3d(a); select(a.h); }));
+  if (best.h !== match.last) { match.last = best.h; show3d(best); }
+}
+match();
+
+/* ---------- guide, glossary, timeline, house ---------- */
+const note = n => `<div class="note"><h3>${esc(n.title)}</h3><p>${esc(n.text)}</p>${n.source ? `<span class="src">${esc(n.source)}</span>` : ''}</div>`;
+$('#serving').innerHTML = [...A.guide.serving, ...A.guide.storage].map(note).join('');
+$('#glossary').innerHTML = A.guide.words.map(w => `<div><dt>${esc(w.title)}</dt><dd>${esc(w.text)}</dd></div>`).join('');
+$('#timeline').innerHTML = A.guide.history_market.map(h => `<li><span class="yr">${esc(h.year)}</span><div><h3>${esc(h.title)}</h3><p>${esc(h.text)}</p></div></li>`).join('');
+$('#facts').innerHTML = A.guide.caviar_star.map(f => `<div class="fact-c"><h3>${esc(f.title)}</h3><p>${esc(f.text)}</p></div>`).join('');
+$('#links').innerHTML = A.links.map(l => `<a class="btn ${l.ghost ? 'ghost' : ''}" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join('');
+$('#credit').textContent = A.credit;
+</script>

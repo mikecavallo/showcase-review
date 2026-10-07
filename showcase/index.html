@@ -1,0 +1,134 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Caviar Star Showcase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<style>
+/* Layout: the brand's screening room, as a one-page brief. Five pieces of work as large image cards, then what the
+   research turned up, then what comes next. One committed dark look in Caviar Star's black and gold. */
+:root {
+  color-scheme: dark;
+  --bg: #07080c; --panel: #0e1016; --ink: #efe8da; --muted: #a69c8a; --gold: #d9b871; --gold-deep: #9c7536;
+  --line: rgba(217, 184, 113, .18);
+  --display: "Cinzel", "Trajan Pro", Georgia, serif; --serif: "Cormorant Garamond", Garamond, Georgia, serif;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--ink); }
+body { margin: 0; font: 500 20px/1.5 var(--serif); }
+a { color: var(--gold); text-underline-offset: 3px; }
+:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 48px); }
+header { padding-block: clamp(48px, 10vh, 112px) clamp(32px, 6vh, 64px); display: grid; gap: 16px; justify-items: center; text-align: center; }
+.k { font: 500 13px/1.3 var(--display); letter-spacing: .4em; text-transform: uppercase; color: var(--muted); }
+h1 { margin: 0; font: 500 clamp(36px, 6vw, 76px)/1.04 var(--display); letter-spacing: .07em; text-wrap: balance;
+  background: linear-gradient(180deg, #f6e7b8 0%, #d9b871 55%, #9c7536 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.rule { width: 220px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+header p { margin: 0; max-width: 40em; font-style: italic; font-size: 23px; }
+h2 { margin: 0; font: 500 clamp(24px, 3vw, 34px)/1.15 var(--display); letter-spacing: .08em; text-wrap: balance; }
+section { padding-block: clamp(40px, 7vh, 80px); border-top: 1px solid var(--line); display: grid; gap: 24px; }
+.lede { margin: 0; color: var(--muted); max-width: 46em; }
+
+.work { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+.card { grid-column: span 2; display: grid; grid-template-rows: auto 1fr; background: var(--panel); border: 1px solid var(--line); color: inherit; text-decoration: none; min-width: 0; transition: border-color .3s; }
+.card.big { grid-column: span 3; }
+.card:hover { border-color: var(--gold); }
+.card .img { aspect-ratio: 16 / 10; overflow: hidden; background: #000; max-width: 100%; }
+.card img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(.2, .7, .2, 1); }
+.card:hover img { transform: scale(1.03); }
+.card .body { padding: 18px 20px 22px; display: grid; gap: 8px; align-content: start; }
+.card .num { font: 500 12px/1 var(--display); letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+.card h3 { margin: 0; font: 500 22px/1.2 var(--display); letter-spacing: .06em; }
+.card p { margin: 0; color: var(--muted); font-size: 18px; }
+.card .go { margin-top: 6px; font: 600 12px/1 var(--display); letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+
+.finds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; margin: 0; padding: 0; list-style: none; }
+.finds li { padding: 18px 0; border-bottom: 1px solid var(--line); display: grid; gap: 6px; min-width: 0; }
+.finds b { font: 500 16px/1.3 var(--display); letter-spacing: .05em; color: var(--ink); }
+.finds span { color: var(--muted); font-size: 18px; }
+.finds em { color: var(--gold); font-style: normal; }
+
+.next { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.next div { border-top: 2px solid var(--gold); padding-top: 14px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.next b { font: 500 16px/1.3 var(--display); letter-spacing: .05em; }
+.next span { color: var(--muted); font-size: 18px; }
+footer { border-top: 1px solid var(--line); padding-block: 28px 48px; color: var(--muted); font-size: 16px; }
+@media (max-width: 980px) { .card, .card.big { grid-column: span 3; } .next { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .work { grid-template-columns: 1fr; } .card, .card.big { grid-column: auto; } .finds, .next { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .card img, .card { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="k">For Great Atlantic Trading &middot; Caviar Star</div>
+    <h1>The Caviar Star Showcase</h1>
+    <div class="rule"></div>
+    <p>Every product in the shop rebuilt in 3D, your story told as a fifteen-minute film, an interactive guide to every caviar you sell, sale ads for social, and a tool to make the next ones yourself. All of it made from your own photographs and your own words.</p>
+  </header>
+
+  <section aria-labelledby="work-h">
+    <h2 id="work-h">The work</h2>
+    <div class="work">
+      <a class="card big" href="../collection/" target="_blank" rel="noopener">
+        <div class="img"><img src="gallery.jpg" alt="The Caviar Star OT tin rendered in 3D, lid open"></div>
+        <div class="body"><div class="num">01 &middot; 181 products</div><h3>The collection in 3D</h3>
+          <p>Every caviar, oil, vinegar, truffle and spoon in the shop, on a live stage you can turn by hand. Each caviar sits in its own jar under its own lid.</p><div class="go">Open the collection</div></div>
+      </a>
+      <a class="card big" href="../film/" target="_blank" rel="noopener">
+        <div class="img"><img src="film.jpg" alt="Title card of the film From the Docks to the Tin"></div>
+        <div class="body"><div class="num">02 &middot; 15 minutes</div><h3>From the Docks to the Tin</h3>
+          <p>The story of the family business: urchin diving in Portland, the fish markets of Japan, the move to Ocean Isle Beach, and the caviar that leaves it today. Eight chapters, with captions.</p><div class="go">Watch the film</div></div>
+      </a>
+      <a class="card" href="../atlas/" target="_blank" rel="noopener">
+        <div class="img"><img src="atlas.jpg" alt="Chart of every caviar drawn to scale by grain size and price"></div>
+        <div class="body"><div class="num">03 &middot; 31 caviars</div><h3>The Caviar Atlas</h3>
+          <p>Where each roe comes from, every pearl drawn to scale in its real colour, the species behind it, and a quiz that ends at the right tin.</p><div class="go">Explore the atlas</div></div>
+      </a>
+      <a class="card" href="../turntables/" target="_blank" rel="noopener">
+        <div class="img"><img src="turntables.jpg" alt="A 50-year aged balsamic box turning in the light"></div>
+        <div class="body"><div class="num">04 &middot; 181 loops</div><h3>Turntables</h3>
+          <p>A ten-second loop of every product, turning in the light. Ready for product pages, ads and stories.</p><div class="go">See the turntables</div></div>
+      </a>
+      <a class="card" href="../film/#reels-h" target="_blank" rel="noopener">
+        <div class="img"><img src="reels.jpg" alt="Grid of caviar jars from the landscape reel"></div>
+        <div class="body"><div class="num">05 &middot; 2 cuts</div><h3>Reels</h3>
+          <p>Fifty seconds of the collection in motion, cut vertical for Instagram, TikTok and Shorts, and landscape for the web.</p><div class="go">Watch the reels</div></div>
+      </a>
+      <a class="card big" href="../ads/" target="_blank" rel="noopener">
+        <div class="img"><img src="ads.jpg" alt="Three sale ads: Kaluga Hybrid 9:16, Royal Osetra 4:5, Smoked Golden Whitefish 1:1"></div>
+        <div class="body"><div class="num">06 &middot; 11 ads, 3 sizes</div><h3>Sale ads, ready to run</h3>
+          <p>Every caviar on sale plus serving pieces and a collection ad, as motion and stills for Stories, Feed and Square, with paste-ready Meta and TikTok copy. Every price checked against the store, every saving rounded down.</p><div class="go">See the ads</div></div>
+      </a>
+      <a class="card big" href="../ad-studio/" target="_blank" rel="noopener">
+        <div class="img"><img src="studio.jpg" alt="The Ad Studio: product, size and price controls beside a live preview"></div>
+        <div class="body"><div class="num">07 &middot; Self-serve</div><h3>The Ad Studio</h3>
+          <p>Pick any product and size, it loads the store's price and compare-at price, write a headline, and export the video in all three sizes. The next sale takes minutes, not a designer.</p><div class="go">Open the studio</div></div>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="found-h">
+    <h2 id="found-h">Found along the way</h2>
+    <p class="lede">Building these meant reading every product page, the 2026 catalog and about sixty of your blog posts. A few small things turned up that are quick to fix.</p>
+    <ul class="finds">
+      <li><b>The caviar quiz has dead ends</b><span>Two of its routing rules can never be true, so customers who score 2, 3, 4 or -1 reach the default end screen with no caviar recommended. <em>The Atlas quiz can replace it.</em></span></li>
+      <li><b>Two jar sizes, one price</b><span>Smoked American Salmon Caviar lists the 1 oz and the 2 oz jars at the same $25.00.</span></li>
+      <li><b>A species line copied from another page</b><span>Reserve Beluga Sevruga says "Huso huso x Acipenser ruthenus" (the Bester cross). Its description and the catalog say sevruga, Acipenser stellatus.</span></li>
+      <li><b>Two Latin names in the 2026 catalog</b><span>Albino Sterlet is printed as Acipenser stellatus and Italian White Sturgeon as Acipenser schrenckii. The product pages have them right.</span></li>
+      <li><b>Five answers to "how long does it keep?"</b><span>Unopened shelf life reads 2 to 4 weeks, 4 to 6 weeks, about 4 weeks, 3 to 5 weeks and up to two months across the FAQ and the blog. The shipping cutoff is 1 PM on one page and 2 PM on another.</span></li>
+      <li><b>Hickory or bourbon barrel?</b><span>The smoked trout roe copy credits Pappy Van Winkle barrel staves; the page title says natural hickory smoked.</span></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="next-h">
+    <h2 id="next-h">What this could become</h2>
+    <div class="next">
+      <div><b>3D on every product page</b><span>The same viewer, embedded in the Shopify page, so a customer can turn the tin before they buy it.</span></div>
+      <div><b>A quiz that sells</b><span>The Atlas quiz in place of the current one, ending on a product with an add-to-cart.</span></div>
+      <div><b>A season of short films</b><span>The documentary cut into one-minute chapters for social, one a week.</span></div>
+      <div><b>Motion for every ad</b><span>Turntables in the product media and in paid social, in every format the platforms ask for.</span></div>
+    </div>
+  </section>
+
+  <footer>Spec work prepared for Great Atlantic Trading Inc. and Caviar Star. Built from caviarstar.com, the 2026 catalog and public sources. Not an official Caviar Star page.</footer>
+</div>

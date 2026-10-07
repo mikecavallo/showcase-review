@@ -1,0 +1,418 @@
+{
+ "total": 927.738,
+ "parts": [
+  {
+   "src": "part1.mp4",
+   "vtt": "part1.vtt",
+   "start": 0.0,
+   "dur": 230.099,
+   "mb": 10.2
+  },
+  {
+   "src": "part2.mp4",
+   "vtt": "part2.vtt",
+   "start": 230.099,
+   "dur": 228.409,
+   "mb": 11.4
+  },
+  {
+   "src": "part3.mp4",
+   "vtt": "part3.vtt",
+   "start": 458.508,
+   "dur": 245.216,
+   "mb": 12.2
+  },
+  {
+   "src": "part4.mp4",
+   "vtt": "part4.vtt",
+   "start": 703.724,
+   "dur": 218.895,
+   "mb": 11.9
+  },
+  {
+   "src": "part5.mp4",
+   "vtt": "part5.vtt",
+   "start": 922.619,
+   "dur": 5.119,
+   "mb": 0.4
+  }
+ ],
+ "scenes": [
+  {
+   "id": "0.1",
+   "kind": "scene",
+   "chapter": 0,
+   "chapterTitle": "Cold open",
+   "heading": "",
+   "t": 0.0
+  },
+  {
+   "id": "0.2",
+   "kind": "scene",
+   "chapter": 0,
+   "chapterTitle": "Cold open",
+   "heading": "",
+   "t": 21.647
+  },
+  {
+   "id": "ch1",
+   "kind": "card",
+   "chapter": 1,
+   "chapterTitle": "Maine and the sea",
+   "heading": "",
+   "t": 43.058
+  },
+  {
+   "id": "1.1",
+   "kind": "scene",
+   "chapter": 1,
+   "chapterTitle": "Maine and the sea",
+   "heading": "",
+   "t": 47.058
+  },
+  {
+   "id": "1.2",
+   "kind": "scene",
+   "chapter": 1,
+   "chapterTitle": "Maine and the sea",
+   "heading": "",
+   "t": 71.314
+  },
+  {
+   "id": "1.3",
+   "kind": "scene",
+   "chapter": 1,
+   "chapterTitle": "Maine and the sea",
+   "heading": "",
+   "t": 95.201
+  },
+  {
+   "id": "ch2",
+   "kind": "card",
+   "chapter": 2,
+   "chapterTitle": "The docks and Japan",
+   "heading": "",
+   "t": 129.506
+  },
+  {
+   "id": "2.1",
+   "kind": "scene",
+   "chapter": 2,
+   "chapterTitle": "The docks and Japan",
+   "heading": "",
+   "t": 133.506
+  },
+  {
+   "id": "2.2",
+   "kind": "scene",
+   "chapter": 2,
+   "chapterTitle": "The docks and Japan",
+   "heading": "",
+   "t": 157.485
+  },
+  {
+   "id": "2.3",
+   "kind": "scene",
+   "chapter": 2,
+   "chapterTitle": "The docks and Japan",
+   "heading": "",
+   "t": 175.953
+  },
+  {
+   "id": "2.4",
+   "kind": "scene",
+   "chapter": 2,
+   "chapterTitle": "The docks and Japan",
+   "heading": "",
+   "t": 211.276
+  },
+  {
+   "id": "2.5",
+   "kind": "scene",
+   "chapter": 2,
+   "chapterTitle": "The docks and Japan",
+   "heading": "",
+   "t": 230.099
+  },
+  {
+   "id": "ch3",
+   "kind": "card",
+   "chapter": 3,
+   "chapterTitle": "Building Great Atlantic",
+   "heading": "",
+   "t": 254.69
+  },
+  {
+   "id": "3.1",
+   "kind": "scene",
+   "chapter": 3,
+   "chapterTitle": "Building Great Atlantic",
+   "heading": "",
+   "t": 258.69
+  },
+  {
+   "id": "3.2",
+   "kind": "scene",
+   "chapter": 3,
+   "chapterTitle": "Building Great Atlantic",
+   "heading": "",
+   "t": 278.829
+  },
+  {
+   "id": "3.3",
+   "kind": "scene",
+   "chapter": 3,
+   "chapterTitle": "Building Great Atlantic",
+   "heading": "",
+   "t": 304.614
+  },
+  {
+   "id": "3.4",
+   "kind": "scene",
+   "chapter": 3,
+   "chapterTitle": "Building Great Atlantic",
+   "heading": "",
+   "t": 319.241
+  },
+  {
+   "id": "ch4",
+   "kind": "card",
+   "chapter": 4,
+   "chapterTitle": "Caviar and the world after wild Caspian caviar",
+   "heading": "",
+   "t": 335.788
+  },
+  {
+   "id": "4.1",
+   "kind": "scene",
+   "chapter": 4,
+   "chapterTitle": "Caviar and the world after wild Caspian caviar",
+   "heading": "",
+   "t": 339.788
+  },
+  {
+   "id": "4.2",
+   "kind": "scene",
+   "chapter": 4,
+   "chapterTitle": "Caviar and the world after wild Caspian caviar",
+   "heading": "",
+   "t": 365.603
+  },
+  {
+   "id": "4.3",
+   "kind": "scene",
+   "chapter": 4,
+   "chapterTitle": "Caviar and the world after wild Caspian caviar",
+   "heading": "",
+   "t": 395.576
+  },
+  {
+   "id": "4.4",
+   "kind": "scene",
+   "chapter": 4,
+   "chapterTitle": "Caviar and the world after wild Caspian caviar",
+   "heading": "",
+   "t": 410.124
+  },
+  {
+   "id": "4.5",
+   "kind": "scene",
+   "chapter": 4,
+   "chapterTitle": "Caviar and the world after wild Caspian caviar",
+   "heading": "",
+   "t": 428.157
+  },
+  {
+   "id": "4.6",
+   "kind": "scene",
+   "chapter": 4,
+   "chapterTitle": "Caviar and the world after wild Caspian caviar",
+   "heading": "",
+   "t": 458.508
+  },
+  {
+   "id": "4.7",
+   "kind": "scene",
+   "chapter": 4,
+   "chapterTitle": "Caviar and the world after wild Caspian caviar",
+   "heading": "",
+   "t": 490.992
+  },
+  {
+   "id": "ch5",
+   "kind": "card",
+   "chapter": 5,
+   "chapterTitle": "Caviar Star",
+   "heading": "",
+   "t": 513.953
+  },
+  {
+   "id": "5.1",
+   "kind": "scene",
+   "chapter": 5,
+   "chapterTitle": "Caviar Star",
+   "heading": "",
+   "t": 517.953
+  },
+  {
+   "id": "5.2",
+   "kind": "scene",
+   "chapter": 5,
+   "chapterTitle": "Caviar Star",
+   "heading": "",
+   "t": 532.73
+  },
+  {
+   "id": "5.3",
+   "kind": "scene",
+   "chapter": 5,
+   "chapterTitle": "Caviar Star",
+   "heading": "",
+   "t": 556.509
+  },
+  {
+   "id": "5.4",
+   "kind": "scene",
+   "chapter": 5,
+   "chapterTitle": "Caviar Star",
+   "heading": "",
+   "t": 578.858
+  },
+  {
+   "id": "5.5",
+   "kind": "scene",
+   "chapter": 5,
+   "chapterTitle": "Caviar Star",
+   "heading": "",
+   "t": 605.567
+  },
+  {
+   "id": "5.6",
+   "kind": "scene",
+   "chapter": 5,
+   "chapterTitle": "Caviar Star",
+   "heading": "",
+   "t": 619.411
+  },
+  {
+   "id": "ch6",
+   "kind": "card",
+   "chapter": 6,
+   "chapterTitle": "The products and the people who use them",
+   "heading": "",
+   "t": 646.98
+  },
+  {
+   "id": "6.1",
+   "kind": "scene",
+   "chapter": 6,
+   "chapterTitle": "The products and the people who use them",
+   "heading": "",
+   "t": 650.98
+  },
+  {
+   "id": "6.2",
+   "kind": "scene",
+   "chapter": 6,
+   "chapterTitle": "The products and the people who use them",
+   "heading": "",
+   "t": 676.347
+  },
+  {
+   "id": "6.3",
+   "kind": "scene",
+   "chapter": 6,
+   "chapterTitle": "The products and the people who use them",
+   "heading": "",
+   "t": 703.724
+  },
+  {
+   "id": "6.4",
+   "kind": "scene",
+   "chapter": 6,
+   "chapterTitle": "The products and the people who use them",
+   "heading": "",
+   "t": 736.407
+  },
+  {
+   "id": "6.5",
+   "kind": "scene",
+   "chapter": 6,
+   "chapterTitle": "The products and the people who use them",
+   "heading": "",
+   "t": 755.066
+  },
+  {
+   "id": "6.6",
+   "kind": "scene",
+   "chapter": 6,
+   "chapterTitle": "The products and the people who use them",
+   "heading": "",
+   "t": 780.837
+  },
+  {
+   "id": "ch7",
+   "kind": "card",
+   "chapter": 7,
+   "chapterTitle": "Family and the future",
+   "heading": "",
+   "t": 811.442
+  },
+  {
+   "id": "7.1",
+   "kind": "scene",
+   "chapter": 7,
+   "chapterTitle": "Family and the future",
+   "heading": "",
+   "t": 815.442
+  },
+  {
+   "id": "7.2",
+   "kind": "scene",
+   "chapter": 7,
+   "chapterTitle": "Family and the future",
+   "heading": "",
+   "t": 832.849
+  },
+  {
+   "id": "7.3",
+   "kind": "scene",
+   "chapter": 7,
+   "chapterTitle": "Family and the future",
+   "heading": "",
+   "t": 857.41
+  },
+  {
+   "id": "7.4",
+   "kind": "scene",
+   "chapter": 7,
+   "chapterTitle": "Family and the future",
+   "heading": "",
+   "t": 884.311
+  },
+  {
+   "id": "ch8",
+   "kind": "card",
+   "chapter": 8,
+   "chapterTitle": "Close",
+   "heading": "",
+   "t": 895.608
+  },
+  {
+   "id": "8.1",
+   "kind": "scene",
+   "chapter": 8,
+   "chapterTitle": "Close",
+   "heading": "",
+   "t": 899.608
+  },
+  {
+   "id": "8.2",
+   "kind": "scene",
+   "chapter": 8,
+   "chapterTitle": "Close",
+   "heading": "",
+   "t": 922.619
+  }
+ ]
+}

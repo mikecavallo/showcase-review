@@ -1,0 +1,87 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Caviar Star Turntables</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<style>
+/* Layout: a contact sheet of every product's 10-second turntable loop, in the brand's black and gold.
+   Tiles show the still until they scroll into view, then play muted and loop. One committed dark look. */
+:root {
+  color-scheme: dark;
+  --bg: #07080c; --panel: #0d0f14; --ink: #efe8da; --muted: #a69c8a; --gold: #d9b871; --line: rgba(217, 184, 113, .16);
+  --display: "Cinzel", "Trajan Pro", Georgia, serif; --serif: "Cormorant Garamond", Garamond, Georgia, serif;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--ink); }
+body { margin: 0; font: 500 18px/1.5 var(--serif); }
+:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: 1500px; margin: 0 auto; padding: clamp(28px, 6vh, 64px) clamp(16px, 4vw, 48px) 56px; display: grid; gap: 22px; }
+header { display: grid; gap: 10px; }
+.k { font: 500 12px/1 var(--display); letter-spacing: .4em; text-transform: uppercase; color: var(--muted); }
+h1 { margin: 0; font: 500 clamp(30px, 4.6vw, 56px)/1.05 var(--display); letter-spacing: .08em; color: var(--gold); text-wrap: balance; }
+header p { margin: 0; max-width: 50em; color: var(--muted); font-size: 19px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { font: 500 11px/1 var(--display); letter-spacing: .18em; text-transform: uppercase; padding: 9px 12px; background: transparent; color: var(--ink); border: 1px solid var(--line); cursor: pointer; }
+.chips button[aria-pressed="true"] { border-color: var(--gold); color: var(--gold); }
+.chips b { font-weight: 500; opacity: .55; margin-left: 6px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(230px, 100%), 1fr)); gap: 14px; }
+.tile { display: grid; gap: 8px; min-width: 0; color: inherit; text-decoration: none; }
+.frame { position: relative; aspect-ratio: 1; overflow: hidden; background: #0a0b0f 0 50% / 200% auto no-repeat; border: 1px solid rgba(217, 184, 113, .08); max-width: 100%; }
+.frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .6s; }
+.frame video.on { opacity: 1; }
+.nm { font: 500 12.5px/1.35 var(--display); letter-spacing: .08em; }
+.pr { font-size: 16px; color: var(--muted); }
+.tile:hover .nm { color: var(--gold); }
+footer { color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); padding-top: 18px; }
+@media (prefers-reduced-motion: reduce) { .frame video { display: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="k">Caviar Star &middot; Turntables</div>
+    <h1>Every product, turning</h1>
+    <p id="lede">A ten-second loop of every piece in the shop, lit from behind and turning on its own. Each one is ready for a product page, an ad or a story. Scroll and they start; tap one to open it in the shop.</p>
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+  </header>
+  <div class="grid" id="grid"></div>
+  <footer id="foot"></footer>
+</div>
+
+<script>
+(async function () {
+  var items = await (await fetch('catalog.json')).json();
+  var have = await (await fetch('turntables.json')).json();
+  items = items.filter(function (i) { return have.indexOf(i.h) >= 0; });
+  var grid = document.getElementById('grid'), chips = document.getElementById('chips');
+  var RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var money = function (v) { return '$' + Number(v).toLocaleString('en-US', { minimumFractionDigits: 2 }); };
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      var v = e.target.querySelector('video'); if (!v || RM) return;
+      if (e.isIntersecting) { if (!v.src) v.src = v.dataset.src; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+      else v.pause();
+    });
+  }, { rootMargin: '200px 0px' }) : null;
+  function render(c) {
+    grid.innerHTML = '';
+    items.filter(function (i) { return c === 'All' || i.c === c; }).forEach(function (it) {
+      var a = document.createElement('a'); a.className = 'tile'; a.href = it.u; a.target = '_blank'; a.rel = 'noopener';
+      a.innerHTML = '<div class="frame" style="background-image:url(posters/' + it.h + '.webp)"><video muted loop playsinline preload="none" data-src="turntable/' + it.h + '.mp4" aria-label="' + it.t.replace(/"/g, '&quot;') + ' turning"></video></div>' +
+        '<div class="nm"></div><div class="pr"></div>';
+      a.querySelector('.nm').textContent = it.t; a.querySelector('.pr').textContent = money(it.p) + (it.a ? '' : ' · sold out');
+      var v = a.querySelector('video'); v.addEventListener('playing', function () { v.classList.add('on'); });
+      grid.appendChild(a); if (io) io.observe(a);
+    });
+  }
+  var cats = ['All'].concat(Array.from(new Set(items.map(function (i) { return i.c; }))));
+  cats.forEach(function (c) {
+    var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-pressed', String(c === 'All'));
+    b.innerHTML = c + '<b>' + (c === 'All' ? items.length : items.filter(function (i) { return i.c === c; }).length) + '</b>';
+    b.addEventListener('click', function () { chips.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); }); render(c); });
+    chips.appendChild(b);
+  });
+  render('All');
+  document.getElementById('foot').textContent = items.length + ' turntable loops, 720 by 720, 10 seconds, 24 frames a second. Rebuilt in 3D from the shop\'s own photographs. A spec concept for Caviar Star and Great Atlantic Trading; not an official page.';
+})();
+</script>

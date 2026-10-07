@@ -1,0 +1,188 @@
+{
+ "beluga-sterlet-bester-hybrid": {
+  "kind": "jar",
+  "mid": "#201f1f",
+  "hi": "#4b4948",
+  "lo": "#111010"
+ },
+ "white-escargot-snail-caviar": {
+  "kind": "jar",
+  "mid": "#dac18d",
+  "hi": "#f2e8d5",
+  "lo": "#c4a45f"
+ },
+ "dieckmann-hansen-reserve-german-osetra-caviar": {
+  "kind": "jar",
+  "mid": "#42382d",
+  "hi": "#685c49",
+  "lo": "#27201a"
+ },
+ "classic-california-white-sturgeon-caviar": {
+  "kind": "jar",
+  "mid": "#13110b",
+  "hi": "#3c3528",
+  "lo": "#070604"
+ },
+ "classic-italian-white-sturgeon-caviar": {
+  "kind": "jar",
+  "mid": "#13110b",
+  "hi": "#3c3527",
+  "lo": "#070604"
+ },
+ "royal-california-white-sturgeon-caviar": {
+  "kind": "jar",
+  "mid": "#251d0f",
+  "hi": "#62532f",
+  "lo": "#110d05"
+ },
+ "dynasty-royal-osetra-caviar": {
+  "kind": "jar",
+  "mid": "#211d13",
+  "hi": "#524e41",
+  "lo": "#100f09"
+ },
+ "golden-dynasty-imperial-osetra-caviar": {
+  "kind": "jar",
+  "mid": "#372408",
+  "hi": "#624817",
+  "lo": "#1a1202"
+ },
+ "golden-dynasty-imperial-kaluga-hybrid-caviar": {
+  "kind": "jar",
+  "mid": "#5c3d11",
+  "hi": "#968257",
+  "lo": "#1d1205"
+ },
+ "amber-dynasty-royal-kaluga-caviar": {
+  "kind": "jar",
+  "mid": "#36230c",
+  "hi": "#866333",
+  "lo": "#161006"
+ },
+ "lyna-polska-siberian-caviar": {
+  "kind": "jar",
+  "mid": "#151310",
+  "hi": "#3a352d",
+  "lo": "#0b0b09"
+ },
+ "tuna-bottarga-dried-and-cured-tuna-fish-roe": {
+  "kind": "relief",
+  "mid": "#775746",
+  "hi": "#ad988b",
+  "lo": "#5c3e2e"
+ },
+ "dynasty-siberian-caviar": {
+  "kind": "jar",
+  "mid": "#181009",
+  "hi": "#41382e",
+  "lo": "#040200"
+ },
+ "american-hackleback-sturgeon-caviar": {
+  "kind": "jar",
+  "mid": "#111010",
+  "hi": "#2e2f2e",
+  "lo": "#080808"
+ },
+ "bottarga-dried-and-cured-mullet-roe": {
+  "kind": "relief",
+  "mid": "#e2661c",
+  "hi": "#eeb583",
+  "lo": "#c14703"
+ },
+ "american-paddlefish-caviar": {
+  "kind": "jar",
+  "mid": "#322f21",
+  "hi": "#5a5748",
+  "lo": "#181610"
+ },
+ "bourbon-barrel-smoked-trout-roe": {
+  "kind": "jar",
+  "mid": "#da4303",
+  "hi": "#e45009",
+  "lo": "#d13b00"
+ },
+ "american-bowfin-caviar": {
+  "kind": "jar",
+  "mid": "#1c1615",
+  "hi": "#342d2b",
+  "lo": "#0f0c0b"
+ },
+ "smoked-american-salmon-caviar": {
+  "kind": "jar",
+  "mid": "#cd4726",
+  "hi": "#d2522c",
+  "lo": "#c84122"
+ },
+ "golden-whitefish-roe": {
+  "kind": "jar",
+  "mid": "#e16206",
+  "hi": "#e87113",
+  "lo": "#db5701"
+ },
+ "rainbow-trout-roe": {
+  "kind": "jar",
+  "mid": "#e33905",
+  "hi": "#e94310",
+  "lo": "#dd3000"
+ },
+ "american-salmon-caviar": {
+  "kind": "jar",
+  "mid": "#e34304",
+  "hi": "#e95213",
+  "lo": "#dd3900"
+ },
+ "smoked-golden-whitefish-caviar": {
+  "kind": "jar",
+  "mid": "#d86512",
+  "hi": "#de721e",
+  "lo": "#d15b0c"
+ },
+ "genki-tobiko-caviar-flying-fish-roe": {
+  "kind": "jar",
+  "mid": "#e40708",
+  "hi": "#f6141a",
+  "lo": "#cd0102"
+ },
+ "albino-almas-caviar": {
+  "kind": "jar",
+  "mid": "#f6d04b",
+  "hi": "#fcdb5f",
+  "lo": "#eac13c"
+ },
+ "caviar-house-prunier-osetra-caviar": {
+  "kind": "jar",
+  "mid": "#2e251c",
+  "hi": "#8a7e6b",
+  "lo": "#050404"
+ },
+ "supreme-california-white-sturgeon-caviar": {
+  "kind": "jar",
+  "mid": "#61450e",
+  "hi": "#8b782b",
+  "lo": "#2a1a05"
+ },
+ "karat-israeli-osetra-caviar": {
+  "kind": "jar",
+  "mid": "#4b341d",
+  "hi": "#6b563c",
+  "lo": "#2c1c0f"
+ },
+ "beluga-sevruga-hybrid": {
+  "kind": "jar",
+  "mid": "#352f25",
+  "hi": "#5c574c",
+  "lo": "#1d1a14"
+ },
+ "lyna-polska-royal-osetra-caviar": {
+  "kind": "jar",
+  "mid": "#393830",
+  "hi": "#5c5950",
+  "lo": "#1a1b15"
+ },
+ "dynasty-imperial-amur-sturgeon-caviar": {
+  "kind": "jar",
+  "mid": "#514225",
+  "hi": "#71603b",
+  "lo": "#2d220f"
+ }
+}

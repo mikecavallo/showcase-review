@@ -1,0 +1,10 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch(); const D = '/tmp/claude-0/gat/d3pkg';
+const pg = await b.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1.5 });
+pg.on('pageerror', e => console.log('PAGEERROR', e.message));
+await pg.route(/cdnjs\.cloudflare\.com\/ajax\/libs\/d3\//, r => r.fulfill({ path: `${D}/d3-7.9.0/dist/d3.min.js`, contentType: 'text/javascript' }));
+await pg.route(/cdnjs\.cloudflare\.com\/ajax\/libs\/topojson\//, r => r.fulfill({ path: `${D}/topojson-3.0.2/dist/topojson.min.js`, contentType: 'text/javascript' }));
+await pg.route(/fonts\.googleapis|studio\.js|jsdelivr/, r => r.abort());
+await pg.goto('http://localhost:8795/atlas/index.html'); await pg.waitForTimeout(3000);
+const box = await (await pg.$('#map')).boundingBox(); await pg.screenshot({ path: '/tmp/claude-0/gat/map.png', clip: box });
+await b.close();

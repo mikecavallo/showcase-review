@@ -1,0 +1,311 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<script src="d3-array.min.js"></script><script src="d3-geo.min.js"></script><script src="topojson-client.min.js"></script>
+<script type="importmap">{"imports":{"three":"../../web/vendor/three.module.js","three/addons/":"../../web/vendor/addons/"}}</script>
+<style>
+:root { --bg:#07080c; --ink:#efe8da; --muted:#a69c8a; --gold:#d9b871; --gold2:#9c7536; --navy:#0b1220;
+  --display:'Cinzel', Georgia, serif; --serif:'Cormorant Garamond', Georgia, serif; --type:'Special Elite', 'Courier New', monospace; }
+html,body { margin:0; background:#000; }
+#stage { position:relative; width:1920px; height:1080px; overflow:hidden; background:var(--bg); color:var(--ink); font-family:var(--serif); }
+.layer { position:absolute; inset:0; opacity:0; will-change:opacity; overflow:hidden; }
+.fill { position:absolute; inset:0; }
+.kb { position:absolute; left:50%; top:50%; transform-origin:50% 50%; }
+.backdrop { position:absolute; inset:-40px; background-size:cover; background-position:center; filter:blur(38px) brightness(.35) saturate(.8); }
+.lower { position:absolute; left:120px; bottom:110px; display:grid; gap:8px; }
+.lower .r { width:120px; height:1px; background:linear-gradient(90deg,var(--gold),transparent); }
+.lower .t { font-family:var(--display); font-size:34px; letter-spacing:.14em; color:var(--ink); text-shadow:0 2px 18px #000; }
+.lower .s { font-family:var(--display); font-size:17px; letter-spacing:.32em; text-transform:uppercase; color:var(--gold); text-shadow:0 2px 12px #000; }
+.cap { position:absolute; left:120px; top:96px; font-family:var(--display); font-size:22px; letter-spacing:.36em; text-transform:uppercase; color:var(--gold); text-shadow:0 2px 14px #000; }
+.center { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:22px; padding:0 160px; }
+.gold { background:linear-gradient(180deg,#f6e7b8 0%,var(--gold) 55%,var(--gold2) 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.kicker { font-family:var(--display); font-size:22px; letter-spacing:.5em; text-transform:uppercase; color:var(--muted); }
+.ttl { font-family:var(--display); font-weight:500; font-size:104px; letter-spacing:.14em; line-height:1.05; }
+.sub { font-family:var(--serif); font-style:italic; font-size:44px; color:var(--ink); }
+.rule { width:260px; height:1px; background:linear-gradient(90deg,transparent,var(--gold),transparent); }
+.quote { font-family:var(--serif); font-style:italic; font-size:66px; line-height:1.22; max-width:1400px; color:var(--ink); text-wrap:balance; text-shadow:0 2px 30px #000; }
+.by { font-family:var(--display); font-size:22px; letter-spacing:.32em; text-transform:uppercase; color:var(--gold); }
+.big { font-family:var(--display); font-size:300px; font-weight:500; line-height:.9; letter-spacing:.02em; }
+.bigsub { font-family:var(--serif); font-size:46px; color:var(--ink); max-width:1300px; text-wrap:balance; }
+.src { position:absolute; left:120px; bottom:64px; font-family:var(--display); font-size:15px; letter-spacing:.24em; color:var(--muted); text-transform:uppercase; }
+.lines { position:absolute; left:220px; right:220px; top:50%; transform:translateY(-50%); display:grid; gap:44px; }
+.lines .l { font-family:var(--serif); font-size:52px; line-height:1.2; color:var(--ink); display:grid; grid-template-columns:44px 1fr; gap:24px; align-items:baseline; }
+.lines .l::before { content:''; width:14px; height:14px; transform:rotate(45deg) translateY(-6px); background:var(--gold); }
+.lines.type .l { font-family:var(--type); font-size:46px; }
+.chart { position:absolute; left:220px; right:220px; top:200px; bottom:230px; display:flex; align-items:flex-end; gap:80px; border-bottom:1px solid rgba(217,184,113,.4); }
+.bar { flex:1; position:relative; background:linear-gradient(180deg,var(--gold),var(--gold2)); height:0; }
+.bar .v { position:absolute; left:0; right:0; top:-74px; text-align:center; font-family:var(--display); font-size:44px; color:var(--ink); }
+.bar .k { position:absolute; left:0; right:0; bottom:-64px; text-align:center; font-family:var(--display); font-size:30px; letter-spacing:.2em; color:var(--muted); }
+.ctitle { position:absolute; left:220px; top:100px; font-family:var(--display); font-size:30px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); }
+svg.map { position:absolute; inset:0; width:100%; height:100%; }
+.pinlabel { font-family:'Cinzel', serif; font-size:30px; letter-spacing:.14em; fill:#efe8da; paint-order:stroke; stroke:#07080c; stroke-width:6px; }
+.maplabel { position:absolute; left:120px; bottom:96px; font-family:var(--display); font-size:24px; letter-spacing:.34em; text-transform:uppercase; color:var(--gold); }
+canvas.p3d { position:absolute; }
+.pcap { position:absolute; font-family:var(--display); color:var(--ink); text-align:center; letter-spacing:.12em; }
+.note { position:absolute; left:120px; top:120px; max-width:640px; display:grid; gap:18px; }
+.note .n1 { font-family:var(--display); font-size:46px; letter-spacing:.08em; line-height:1.15; }
+.note .n2 { font-family:var(--serif); font-size:34px; line-height:1.35; color:var(--ink); }
+.page { position:absolute; top:90px; height:900px; box-shadow:0 30px 80px rgba(0,0,0,.6); transform-origin:0 50%; backface-visibility:hidden; }
+#grain { position:absolute; inset:0; pointer-events:none; mix-blend-mode:overlay; opacity:.16; }
+#vig { position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 75% 70% at 50% 50%, transparent 55%, rgba(0,0,0,.55) 100%); }
+#fade { position:absolute; inset:0; background:#000; opacity:0; pointer-events:none; }
+</style></head>
+<body><div id="stage"><canvas id="grain" width="960" height="540"></canvas><div id="vig"></div><div id="fade"></div></div>
+<script type="module">
+import { Studio } from '../../web/studio.js';
+const S = document.getElementById('stage');
+const W = 1920, H = 1080, XF = 0.7;
+const lerp = (a, b, t) => a + (b - a) * t, clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2, sm = t => { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); };
+const IMG = '../research/img/', ASSET = '../../web/assets';
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const loadImg = src => new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => r(i); i.src = src; });
+
+/* ---------------- map data ---------------- */
+let WORLD = null, STATES = null;
+async function mapData() {
+  if (WORLD) return;
+  const [c, s] = await Promise.all([fetch('countries-50m.json').then(r => r.json()), fetch('states-10m.json').then(r => r.json())]);
+  WORLD = topojson.feature(c, c.objects.countries); STATES = topojson.feature(s, s.objects.states);
+}
+const VIEWS = {
+  'gulf-maine': () => d3.geoConicConformal().parallels([40, 48]).rotate([69, 0]).center([0, 43.6]).scale(9000).translate([W / 2, H / 2]),
+  'pacific': () => d3.geoNaturalEarth1().rotate([-212, 0]).center([0, 41]).scale(560).translate([W / 2, H / 2]),
+  'east-coast': () => d3.geoConicConformal().parallels([33, 45]).rotate([75, 0]).center([0, 39.2]).scale(3200).translate([W / 2, H / 2]),
+  'mississippi': () => d3.geoConicConformal().parallels([30, 45]).rotate([94, 0]).center([0, 39]).scale(2300).translate([W / 2, H / 2]),
+  'caspian': () => d3.geoConicConformal().parallels([38, 48]).rotate([-46, 0]).center([0, 43]).scale(2300).translate([W / 2, H / 2]),
+  'world': () => d3.geoNaturalEarth1().rotate([-10, 0]).center([0, 18]).scale(370).translate([W / 2, H / 2 + 20]),
+};
+const RIVERS = { // waypoints along the rivers [lon, lat], hand-traced from known towns
+  mississippi: [[-95.2, 47.2], [-93.3, 45.0], [-91.6, 43.6], [-90.6, 41.6], [-91.3, 40.4], [-90.2, 38.6], [-89.5, 37.0], [-89.2, 36.0], [-90.05, 35.1], [-91.1, 33.4], [-91.2, 32.3], [-91.4, 31.0], [-91.2, 30.45], [-90.07, 29.95], [-89.4, 29.2]],
+  missouri: [[-111.5, 45.9], [-111.3, 47.5], [-108.0, 47.6], [-104.0, 48.0], [-101.3, 47.3], [-100.8, 46.8], [-100.4, 44.4], [-98.4, 42.8], [-96.4, 42.5], [-95.9, 41.3], [-95.0, 39.8], [-94.6, 39.1], [-92.3, 38.6], [-90.2, 38.8]],
+  ohio: [[-80.0, 40.4], [-82.6, 38.7], [-85.8, 38.25], [-87.6, 37.9], [-89.2, 37.0]],
+  white: [[-93.9, 36.6], [-92.2, 36.2], [-91.6, 35.3], [-91.4, 34.3], [-91.1, 33.9]],
+  arkansas: [[-97.3, 37.7], [-95.4, 35.6], [-94.4, 35.4], [-92.3, 34.75], [-91.1, 33.9]],
+};
+
+/* ---------------- shot builders: each returns {el, update(u, sec)} ---------------- */
+const B = {};
+B.photo = async (s) => {
+  const L = el('div', 'fill');
+  const img = await loadImg(IMG + s.src);
+  if (s.fit === 'contain') { const bd = el('div', 'backdrop'); bd.style.backgroundImage = `url("${IMG + s.src}")`; L.appendChild(bd); }
+  const k = el('div', 'kb'); const im = el('img'); im.src = img.src; k.appendChild(im); L.appendChild(k);
+  const iw = img.naturalWidth || 1600, ih = img.naturalHeight || 900;
+  const base = s.fit === 'contain' ? Math.min(W * .86 / iw, H * .84 / ih) : Math.max(W / iw, H / ih);
+  im.style.width = iw * base + 'px'; im.style.height = ih * base + 'px'; im.style.display = 'block';
+  if (s.fit === 'contain') im.style.boxShadow = '0 30px 90px rgba(0,0,0,.7)';
+  if (s.mono) im.style.filter = 'grayscale(.15) contrast(1.05) sepia(.08)';
+  const [a, b] = s.kb || [[1.04, 0, 0], [1.14, -.02, .01]];
+  if (s.lower) { const lo = el('div', 'lower', `<div class="r"></div><div class="t">${s.lower[0]}</div>${s.lower[1] ? `<div class="s">${s.lower[1]}</div>` : ''}`); L.appendChild(lo); L._lo = lo; }
+  if (s.cap) { const c = el('div', 'cap', s.cap); L.appendChild(c); }
+  return { el: L, update(u) {
+    const e = sm(u), sc = lerp(a[0], b[0], e), x = lerp(a[1], b[1], e) * W, y = lerp(a[2], b[2], e) * H;
+    k.style.transform = `translate(calc(-50% + ${x}px), calc(-50% + ${y}px)) scale(${sc})`;
+    if (L._lo) L._lo.style.opacity = sm((u - .08) * 6) * (1 - sm((u - .9) * 10));
+  } };
+};
+B.title = async (s) => {
+  const L = el('div', 'fill');
+  if (s.bg) { const bd = el('div', 'backdrop'); bd.style.backgroundImage = `url("${IMG + s.bg}")`; bd.style.filter = 'blur(10px) brightness(.28)'; L.appendChild(bd); }
+  const c = el('div', 'center');
+  if (s.logo) { const i = el('img'); i.src = IMG + s.logo; i.style.cssText = 'height:200px;filter:invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(.95);'; if (s.logoRaw) i.style.filter = ''; c.appendChild(i); }
+  if (s.kicker) c.appendChild(el('div', 'kicker', s.kicker));
+  const t = el('div', 'ttl gold', s.title || ''); c.appendChild(t);
+  c.appendChild(el('div', 'rule'));
+  if (s.sub) c.appendChild(el('div', 'sub', s.sub));
+  L.appendChild(c);
+  const parts = [...c.children];
+  return { el: L, update(u, sec) {
+    parts.forEach((p, i) => { const o = sm((sec - .25 - i * .35) / .9); p.style.opacity = o; p.style.transform = `translateY(${(1 - o) * 18}px)`; });
+    t.style.letterSpacing = lerp(.22, .14, sm(sec / 3)) + 'em';
+  } };
+};
+B.quote = async (s) => {
+  const L = el('div', 'fill');
+  if (s.bg) { const bd = el('div', 'fill'); bd.style.cssText = `background:url("${IMG + s.bg}") center/cover; filter:brightness(.3) saturate(.8);`; L.appendChild(bd); L._bd = bd; }
+  const c = el('div', 'center');
+  if (s.mark) { const i = el('img'); i.src = IMG + s.mark; i.style.cssText = 'height:90px;opacity:.85;filter:invert(1) sepia(1) saturate(3) brightness(.9);'; c.appendChild(i); }
+  const q = el('div', 'quote', `“${s.text}”`); c.appendChild(q);
+  if (s.by) c.appendChild(el('div', 'by', s.by));
+  L.appendChild(c);
+  const parts = [...c.children];
+  return { el: L, update(u, sec) {
+    parts.forEach((p, i) => { p.style.opacity = sm((sec - .3 - i * .6) / 1.2); });
+    if (L._bd) L._bd.style.transform = `scale(${1.05 + .06 * u})`;
+  } };
+};
+B.number = async (s) => {
+  const L = el('div', 'fill'); const c = el('div', 'center');
+  const big = el('div', 'big gold', s.big); c.appendChild(big); c.appendChild(el('div', 'rule'));
+  const sub = el('div', 'bigsub', s.sub || ''); c.appendChild(sub); L.appendChild(c);
+  if (s.src) L.appendChild(el('div', 'src', s.src));
+  const m = /^([^\d]*)([\d.,]+)(.*)$/.exec(s.big); const target = m ? parseFloat(m[2].replace(/,/g, '')) : null;
+  return { el: L, update(u, sec) {
+    if (target != null && s.count !== false) { const v = target * ease(clamp(sec / 1.8, 0, 1)); const dec = (m[2].split('.')[1] || '').length; big.textContent = m[1] + v.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec }) + m[3]; }
+    big.style.opacity = sm(sec / .6); sub.style.opacity = sm((sec - 1.2) / .8);
+  } };
+};
+B.lines = async (s) => {
+  const L = el('div', 'fill'); if (s.title) L.appendChild(el('div', 'ctitle', s.title));
+  const box = el('div', 'lines' + (s.typed ? ' type' : '')); const items = s.items.map(t => { const d = el('div', 'l'); d.dataset.full = t; box.appendChild(d); return d; });
+  L.appendChild(box); if (s.src) L.appendChild(el('div', 'src', s.src));
+  return { el: L, update(u, sec) {
+    const per = s.per || Math.max(1.4, (s.dur * .78) / items.length);
+    items.forEach((d, i) => {
+      const t0 = .35 + i * per, full = d.dataset.full;
+      if (s.typed) { const n = Math.floor(clamp((sec - t0) / Math.max(.6, full.length * .04), 0, 1) * full.length); d.textContent = full.slice(0, n); d.style.opacity = sec > t0 ? 1 : 0; }
+      else { d.textContent = full; const o = sm((sec - t0) / .7); d.style.opacity = o; d.style.transform = `translateX(${(1 - o) * -24}px)`; }
+    });
+  } };
+};
+B.chart = async (s) => {
+  const L = el('div', 'fill'); if (s.title) L.appendChild(el('div', 'ctitle', s.title));
+  const ch = el('div', 'chart'); const max = s.max || Math.max(...s.bars.map(b => b.value));
+  const bars = s.bars.map(b => { const d = el('div', 'bar', `<div class="v">${b.text}</div><div class="k">${b.label}</div>`); ch.appendChild(d); return d; });
+  L.appendChild(ch); if (s.src) L.appendChild(el('div', 'src', s.src));
+  return { el: L, update(u, sec) { s.bars.forEach((b, i) => { const g = ease(clamp((sec - .4 - i * .5) / 1.6, 0, 1)) * (s.stall && i === s.bars.length - 1 ? .82 + .18 * (1 - sm((sec - 3) / 2)) : 1); bars[i].style.height = (b.value / max * 100 * g) + '%'; bars[i].querySelector('.v').style.opacity = sm((sec - 1.2 - i * .5) / .6); }); } };
+};
+B.map = async (s) => {
+  await mapData();
+  const L = el('div', 'fill'); L.style.background = 'radial-gradient(ellipse at 50% 40%, #0e1626, #05070c 75%)';
+  const proj = VIEWS[s.view](); proj.clipExtent([[-80, -80], [W + 80, H + 80]]); const path = d3.geoPath(proj);
+  const NS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('class', 'map'); svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const g = document.createElementNS(NS, 'g'); svg.appendChild(g);
+  const grat = document.createElementNS(NS, 'path'); grat.setAttribute('d', path(d3.geoGraticule().step([10, 10])()) || ''); grat.setAttribute('fill', 'none'); grat.setAttribute('stroke', 'rgba(217,184,113,.07)');
+  const hi = new Set(s.highlight || []);
+  // static base (graticule, land, borders, states) is baked into one image; only highlights, routes and pins stay live
+  const base = document.createElementNS(NS, 'svg'); base.setAttribute('xmlns', NS); base.setAttribute('viewBox', `0 0 ${W} ${H}`); base.setAttribute('width', W); base.setAttribute('height', H);
+  base.appendChild(grat);
+  for (const f of WORLD.features) {
+    const d = path(f); if (!d) continue;
+    const on = hi.has(f.properties.name);
+    const p = document.createElementNS(NS, 'path'); p.setAttribute('d', d);
+    p.setAttribute('fill', '#1b1d22'); p.setAttribute('stroke', 'rgba(217,184,113,.32)'); p.setAttribute('stroke-width', '.8');
+    base.appendChild(p);
+    if (on) { const q = document.createElementNS(NS, 'path'); q.setAttribute('d', d); q.setAttribute('fill', 'rgba(217,184,113,0)'); q.setAttribute('stroke', 'none'); q.dataset.hi = [...hi].indexOf(f.properties.name); g.appendChild(q); }
+  }
+  if (s.states) for (const f of STATES.features) { const d = path(f); if (!d) continue; const p = document.createElementNS(NS, 'path'); p.setAttribute('d', d); p.setAttribute('fill', 'none'); p.setAttribute('stroke', 'rgba(217,184,113,.14)'); p.setAttribute('stroke-width', '.6'); base.appendChild(p); }
+  const url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(base)], { type: 'image/svg+xml' }));
+  const svgImg = await loadImg(url);
+  const cnv = document.createElement('canvas'); cnv.width = W; cnv.height = H; cnv.getContext('2d').drawImage(svgImg, 0, 0, W, H);
+  const bi = el('img'); bi.src = cnv.toDataURL('image/png'); await new Promise(r => bi.complete ? r() : (bi.onload = r)); bi.style.cssText = `position:absolute;left:0;top:0;width:${W}px;height:${H}px;transform-origin:50% 50%;`;
+  L.appendChild(bi); L._bi = bi;
+  const lines = [];
+  for (const r of (s.rivers || [])) { const p = document.createElementNS(NS, 'path'); p.setAttribute('d', path({ type: 'LineString', coordinates: RIVERS[r.name] }) || ''); p.setAttribute('fill', 'none'); p.setAttribute('stroke', r.color || '#5f8fb8'); p.setAttribute('stroke-width', r.w || 4); p.setAttribute('stroke-linecap', 'round'); g.appendChild(p); lines.push({ p, at: r.at || 0, len: 0 }); }
+  for (const a of (s.arcs || [])) { const p = document.createElementNS(NS, 'path'); p.setAttribute('d', path({ type: 'LineString', coordinates: a.via ? [a.from, ...a.via, a.to] : [a.from, a.to] }) || ''); p.setAttribute('fill', 'none'); p.setAttribute('stroke', '#d9b871'); p.setAttribute('stroke-width', a.w || 3); p.setAttribute('stroke-dasharray', a.dash || ''); g.appendChild(p); lines.push({ p, at: a.at || 0, len: 0, dur: a.dur || 1.6 }); }
+  const pins = (s.pins || []).map(pn => {
+    const [x, y] = proj([pn.lon, pn.lat]); const gg = document.createElementNS(NS, 'g');
+    const ring = document.createElementNS(NS, 'circle'); ring.setAttribute('cx', x); ring.setAttribute('cy', y); ring.setAttribute('r', 10); ring.setAttribute('fill', 'none'); ring.setAttribute('stroke', '#d9b871'); ring.setAttribute('stroke-width', 2);
+    const dot = document.createElementNS(NS, 'circle'); dot.setAttribute('cx', x); dot.setAttribute('cy', y); dot.setAttribute('r', 7); dot.setAttribute('fill', '#f1dc9d');
+    const t = document.createElementNS(NS, 'text'); t.setAttribute('x', x + (pn.dx ?? 22)); t.setAttribute('y', y + (pn.dy ?? 10)); t.setAttribute('class', 'pinlabel'); t.setAttribute('text-anchor', pn.anchor || 'start'); t.textContent = pn.label || '';
+    gg.appendChild(ring); gg.appendChild(dot); gg.appendChild(t); svg.appendChild(gg); return { gg, ring, at: pn.at || 0 };
+  });
+  L.appendChild(svg); if (s.label) L.appendChild(el('div', 'maplabel', s.label));
+  const hiPaths = [...g.querySelectorAll('[data-hi]')];
+  requestAnimationFrame(() => lines.forEach(l => { l.len = l.p.getTotalLength(); l.p.style.strokeDasharray = l.p.getAttribute('stroke-dasharray') || `${l.len} ${l.len}`; }));
+  return { el: L, update(u, sec) {
+    const z = s.zoom || [1, 1.08]; const sc = lerp(z[0], z[1], sm(u)); svg.style.transformOrigin = '50% 50%'; svg.style.transform = `scale(${sc})`; L._bi.style.transform = `scale(${sc})`;
+    lines.forEach(l => { if (!l.len) l.len = l.p.getTotalLength(); const k = clamp((sec - l.at) / (l.dur || 1.6), 0, 1); if (!l.p.getAttribute('stroke-dasharray')) { l.p.style.strokeDasharray = `${l.len} ${l.len}`; l.p.style.strokeDashoffset = l.len * (1 - ease(k)); } else l.p.style.opacity = k; });
+    pins.forEach(p => { const k = sm((sec - p.at) / .5); p.gg.style.opacity = k; p.ring.setAttribute('r', 10 + 14 * ((sec * .8) % 1)); p.ring.style.opacity = 1 - ((sec * .8) % 1); });
+    hiPaths.forEach(p => { const i = +p.dataset.hi; p.setAttribute('fill', `rgba(217,184,113,${.55 * sm((sec - .6 - i * .25) / .5)})`); });
+  } };
+};
+B.product = async (s) => {
+  const L = el('div', 'fill'); L.style.background = 'radial-gradient(ellipse 60% 70% at 50% 45%, #15120c, #07080c 70%)';
+  const items = s.items, n = items.length;
+  const sz = n === 1 ? 1000 : n === 2 ? 760 : n === 3 ? 600 : 470;
+  const studios = [];
+  const spec = await fetch('../../work/spec.json').then(r => r.json());
+  for (let i = 0; i < n; i++) {
+    const c = el('canvas', 'p3d'); c.width = sz; c.height = sz;
+    const x = n === 1 ? (s.note ? 1920 - sz - 120 : (W - sz) / 2) : (W - n * sz) / 2 + i * sz; c.style.left = x + 'px'; c.style.top = (n === 1 ? (H - sz) / 2 + 10 : 200) + 'px'; c.style.width = sz + 'px'; c.style.height = sz + 'px';
+    L.appendChild(c);
+    const st = new Studio(c, { base: '../../web', dpr: 1, preserve: true, floor: true });
+    st.size(sz, sz);
+    await st.load(Object.assign({ handle: items[i], period: s.period || 12 }, spec[items[i]]), ASSET);
+    studios.push(st);
+    if (s.labels) { const cp = el('div', 'pcap', s.labels[i]); cp.style.cssText += `left:${x}px;width:${sz}px;top:${200 + sz + 10}px;font-size:22px;color:#a69c8a;letter-spacing:.2em;text-transform:uppercase;`; L.appendChild(cp); }
+  }
+  if (s.note) { const nt = el('div', 'note', `<div class="n1 gold">${s.note[0]}</div>${s.note[1] ? `<div class="n2">${s.note[1]}</div>` : ''}`); L.appendChild(nt); L._nt = nt; }
+  if (s.cap) L.appendChild(el('div', 'cap', s.cap));
+  return { el: L, update(u, sec) { studios.forEach((st, i) => st.render(sec + (s.offset || 0) + i * 1.3)); if (L._nt) L._nt.style.opacity = sm((sec - .5) / .8); }, active: true };
+};
+B.pages = async (s) => {
+  const L = el('div', 'fill'); L.style.background = '#0b0b0e';
+  const imgs = await Promise.all(s.srcs.map(x => loadImg(IMG + x)));
+  const els = imgs.map(img => { const e = el('img', 'page'); e.src = img.src; const h = 900, w = h * img.naturalWidth / img.naturalHeight; e.style.width = w + 'px'; e.style.left = (W - w) / 2 + 'px'; L.appendChild(e); return e; });
+  return { el: L, update(u, sec) {
+    const per = s.dur / els.length;
+    els.forEach((e, i) => { const k = clamp((sec - i * per) / per, 0, 1); const fl = sm((k - .8) / .2); const inn = sm((sec - (i - 1) * per - per * .8) / (per * .2)); e.style.opacity = i === 0 ? 1 - fl : Math.min(inn, 1 - (i === els.length - 1 ? 0 : fl)); e.style.transform = `perspective(2400px) rotateY(${-fl * 70}deg) scale(${1 + .03 * k})`; e.style.zIndex = els.length - i; });
+  } };
+};
+B.diagram = async (s) => {
+  const L = el('div', 'fill'); L.style.background = 'radial-gradient(ellipse at 50% 40%, #101722, #05070c 75%)';
+  L.innerHTML = DIAGRAMS[s.kind](s);
+  if (s.label) L.appendChild(el('div', 'maplabel', s.label));
+  const parts = [...L.querySelectorAll('[data-at]')];
+  return { el: L, update(u, sec) { parts.forEach(p => { p.style.opacity = sm((sec - +p.dataset.at) / .7); }); } };
+};
+const DIAGRAMS = {
+  urchin: s => `<svg class="map" viewBox="0 0 1920 1080">
+    <defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16324a"/><stop offset="1" stop-color="#060b12"/></linearGradient></defs>
+    <rect x="0" y="180" width="1920" height="900" fill="url(#sea)"/>
+    <path d="M0 180 Q 480 160 960 180 T 1920 180" stroke="#9fc3dd" stroke-width="3" fill="none" opacity=".6"/>
+    <g data-at=".4">${Array.from({ length: 9 }, (_, i) => `<path d="M${180 + i * 190} 940 C ${160 + i * 190} 760, ${230 + i * 190} 640, ${200 + i * 190} 440" stroke="#5c7a3a" stroke-width="10" fill="none" opacity=".75"/><ellipse cx="${205 + i * 190}" cy="520" rx="26" ry="70" fill="#4d6b2f" opacity=".7"/>`).join('')}</g>
+    <path d="M0 960 C 300 900, 600 990, 900 940 S 1500 900, 1920 960 L1920 1080 L0 1080Z" fill="#2a2620"/>
+    <g data-at="1.2">${[[420, 930], [760, 925], [1110, 935], [1420, 918], [1640, 932]].map(([x, y]) => `<g transform="translate(${x} ${y})"><circle r="30" fill="#3c5a28"/>${Array.from({ length: 22 }, (_, k) => { const a = k / 22 * Math.PI; return `<line x1="0" y1="0" x2="${Math.cos(a) * 52}" y2="${-Math.sin(a) * 52}" stroke="#7a9b4a" stroke-width="3"/>`; }).join('')}</g>`).join('')}</g>
+    <g data-at="2" transform="translate(1180 470) rotate(18)"><ellipse rx="150" ry="34" fill="#0b0d10"/><circle cx="-170" cy="-6" r="34" fill="#0b0d10"/><rect x="120" y="-14" width="120" height="16" fill="#0b0d10"/><path d="M-60 30 L -110 120 L -70 120 Z" fill="#0b0d10"/><circle cx="-180" cy="-14" r="14" fill="#2c4b66"/></g>
+    <g data-at="2.6"><path d="M1460 640 q 30 60 0 120 h 90 q -30 -60 0 -120 z" fill="none" stroke="#d9b871" stroke-width="3" stroke-dasharray="6 6"/><text x="1505" y="800" text-anchor="middle" class="pinlabel" style="font-size:24px">MESH BAG</text></g>
+    <text x="960" y="120" text-anchor="middle" class="pinlabel" data-at=".2" style="font-size:40px;fill:#d9b871">${s.title || 'Prime season: November to March'}</text>
+    <text x="300" y="1050" class="pinlabel" data-at="1.4" style="font-size:24px">GREEN SEA URCHIN · ROCKY BOTTOM BELOW THE KELP</text></svg>`,
+  grades: s => `<svg class="map" viewBox="0 0 1920 1080">
+    <text x="960" y="170" text-anchor="middle" class="pinlabel" style="font-size:40px;fill:#d9b871" data-at=".2">ROE COLOR GRADES</text>
+    ${[['#f3e39a', 'PALE YELLOW', 'TOP GRADE'], ['#eec46a', 'YELLOW', ''], ['#e39a4a', 'ORANGE', ''], ['#b8742e', 'DARK ORANGE', ''], ['#8d8a83', 'GRAY', 'LOWEST']].map(([c, n, g], i) => `<g data-at="${.6 + i * .45}"><rect x="${250 + i * 290}" y="330" width="250" height="360" rx="6" fill="${c}" ${i === 0 ? 'stroke="#fff" stroke-width="6"' : ''}/><text x="${375 + i * 290}" y="750" text-anchor="middle" class="pinlabel" style="font-size:26px">${n}</text><text x="${375 + i * 290}" y="795" text-anchor="middle" class="pinlabel" style="font-size:22px;fill:#d9b871">${g}</text></g>`).join('')}
+    <text x="960" y="930" text-anchor="middle" class="pinlabel" style="font-size:26px;fill:#a69c8a" data-at="3">FRESHNESS · COLOR · WEIGHT · PREPARATION</text></svg>`,
+  box: s => `<svg class="map" viewBox="0 0 1920 1080">
+    <g data-at=".3"><path d="M560 420 L960 300 L1360 420 L960 540 Z" fill="#22252b" stroke="#d9b871" stroke-width="2"/><path d="M560 420 L960 540 L960 900 L560 780 Z" fill="#17191d" stroke="#d9b871" stroke-width="2"/><path d="M1360 420 L960 540 L960 900 L1360 780 Z" fill="#1d2025" stroke="#d9b871" stroke-width="2"/></g>
+    <g data-at="1"><path d="M610 440 L960 335 L1310 440 L960 545 Z" fill="#8f8a80" opacity=".55"/><text x="420" y="380" class="pinlabel" style="font-size:24px">RECYCLED COTTON + DENIM LINER</text></g>
+    <g data-at="1.7"><rect x="760" y="390" width="140" height="60" rx="10" fill="#7fb0d6" opacity=".8"/><rect x="1020" y="390" width="140" height="60" rx="10" fill="#7fb0d6" opacity=".8"/><text x="1400" y="360" class="pinlabel" style="font-size:24px">GEL ICE</text></g>
+    <g data-at="2.4"><ellipse cx="960" cy="440" rx="70" ry="26" fill="#0c0c0e" stroke="#d9b871" stroke-width="3"/><text x="1400" y="470" class="pinlabel" style="font-size:24px">CAVIAR, PACKED TO ORDER</text></g>
+    <text x="960" y="1000" text-anchor="middle" class="pinlabel" style="font-size:30px;fill:#d9b871" data-at="3">${s.title || ''}</text></svg>`,
+  recipe: s => `<svg class="map" viewBox="0 0 1920 1080"><rect x="340" y="170" width="860" height="740" fill="#efe6d2" transform="rotate(-2 770 540)"/>
+    <text x="420" y="290" style="font-family:'Cinzel';font-size:46px;fill:#3a2c1c" data-at=".3">CAVIAR ROLL</text>
+    ${['Small potato roll, toasted', 'Butter', 'Crème fraîche', 'Chives', 'Caviar, a generous spoon'].map((t, i) => `<text x="440" y="${400 + i * 90}" style="font-family:'Special Elite';font-size:40px;fill:#3a2c1c" data-at="${.8 + i * .5}">· ${t}</text>`).join('')}
+    <text x="440" y="860" style="font-family:'Cinzel';font-size:28px;fill:#7a5a2a" data-at="3.4">CHUBBY FISH · CHARLESTON, SC</text></svg>`,
+  label: s => `<svg class="map" viewBox="0 0 1920 1080"><g transform="translate(560 260)" data-at=".3"><rect width="800" height="520" rx="18" fill="#efe8da"/><rect x="24" y="24" width="752" height="472" rx="10" fill="none" stroke="#9c7536" stroke-width="3"/>
+    <text x="400" y="110" text-anchor="middle" style="font-family:'Cinzel';font-size:46px;fill:#1a1a1a">HACKLEBACK CAVIAR</text>
+    <text x="400" y="170" text-anchor="middle" style="font-family:'Cormorant Garamond';font-style:italic;font-size:34px;fill:#444">Scaphirhynchus platorynchus · wild, USA</text>
+    <g data-at="1.2"><rect x="120" y="250" width="560" height="90" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-dasharray="8 6"/><text x="400" y="306" text-anchor="middle" style="font-family:'Special Elite';font-size:34px;fill:#1a1a1a">CITES lot no. ______________</text></g>
+    <text x="400" y="420" text-anchor="middle" style="font-family:'Cinzel';font-size:24px;fill:#666" data-at="2">PACKED BY GREAT ATLANTIC TRADING INC.</text></g>
+    <text x="960" y="900" text-anchor="middle" class="pinlabel" style="font-size:26px;fill:#a69c8a" data-at="2.6">${s.title || ''}</text></svg>`,
+};
+
+/* ---------------- timeline ---------------- */
+let shots = [], built = [], dur = 0;
+window.loadScene = async (scene) => {
+  for (const b of built) b.el.remove();
+  built = []; shots = scene.shots; dur = scene.dur;
+  for (const s of shots) {
+    const b = await B[s.type](s); b.el.classList.add('layer'); S.insertBefore(b.el, document.getElementById('grain')); built.push(b);
+  }
+  await document.fonts.ready;
+  return true;
+};
+const gctx = document.getElementById('grain').getContext('2d'); const gimg = gctx.createImageData(960, 540);
+function grain(seed) { let x = seed * 9301 + 49297; const d = gimg.data; for (let i = 0; i < d.length; i += 4) { x = (x * 1103515245 + 12345) & 0x7fffffff; const v = (x >> 16) & 255; d[i] = d[i + 1] = d[i + 2] = v; d[i + 3] = 255; } gctx.putImageData(gimg, 0, 0); }
+window.renderAt = (t, frame) => {
+  shots.forEach((s, i) => {
+    const b = built[i], a = s.start, e = s.start + s.dur;
+    const fin = i === 0 ? 1 : sm((t - a) / XF), fout = i === shots.length - 1 ? 1 : 1 - sm((t - (e - XF)) / XF);
+    const o = Math.min(fin, fout); const vis = t >= a - .01 && t <= e + .01;
+    b.el.style.opacity = vis ? o : 0; b.el.style.zIndex = i;
+    if (vis) b.update(clamp((t - a) / s.dur, 0, 1), t - a);
+  });
+  const sc = window.sceneFade || [0, 0];
+  document.getElementById('fade').style.opacity = Math.max(sc[0] ? 1 - sm(t / sc[0]) : 0, sc[1] ? sm((t - (dur - sc[1])) / sc[1]) : 0);
+  grain(frame || 0);
+  return true;
+};
+window.ready = true;
+</script></body></html>

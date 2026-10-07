@@ -1,0 +1,4 @@
+== 6.5
+The pantry has its own long histories. A balsamic vinegar from Modena that has passed through wooden barrels for 100 years, made to a family recipe that dates to 1896. It comes with a certificate and a number. And one more, a quiet link to where it all began. Maine lobster, wild caught off the same coast where Dana and Denise once dove.
+  script: 'a hundred'  heard: '100'
+

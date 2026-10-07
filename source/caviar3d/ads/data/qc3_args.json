@@ -1,0 +1,786 @@
+[
+ {
+  "id": "dynasty-siberian-caviar",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/dynasty-siberian-caviar-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/dynasty-siberian-caviar-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/dynasty-siberian-caviar-9x16.png"
+  },
+  "on_image": {
+   "headline": "Elegant. Buttery.",
+   "sub": "Soft pearls that melt on the palate",
+   "name": "Royal Dynasty Siberian Caviar",
+   "now": "$59",
+   "was": "$89",
+   "size": "1 oz",
+   "badge": [
+    "Save",
+    "$30",
+    "on 1 oz"
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "1oz",
+     "price": 59.0,
+     "was": 89.0
+    },
+    {
+     "size": "2oz",
+     "price": 109.0,
+     "was": 150.0
+    },
+    {
+     "size": "4oz",
+     "price": 199.0,
+     "was": 300.0
+    },
+    {
+     "size": "7oz",
+     "price": 329.0,
+     "was": 490.0
+    },
+    {
+     "size": "16oz",
+     "price": 720.0,
+     "was": 1100.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[major/all/product-render] The 3D render still has the round-1 defects. (1) A soft grey halo, about 8-10px wide, outlines both the tub and the lid like a bad cutout matte. For example, on the 9x16 the tub's left edge has a ring of about 62 luminance at x 290-298, y 1380, against a background of about 18. (2) The front centre ",
+   "[minor/4x5/layout] The product is small (tub plus lid about 360px wide in a 1080px frame) and floats high. There are about 186px of empty black between the product's bottom (y about 822) and the product name (y about 1008), but only about 83px between the subhead (y 247) and the product top (y 330). The middle of the ",
+   "[major/all/product-render] The tub render still has round-1 defects that read as a cheap cutout on a premium brand. (1) A flat grey ~10px halo outlines the whole tub and the lid. (2) The caviar texture on the tub wall mirrors at the front center and leaves a chevron seam (9x16 x~446, y~1300-1460; 1x1 x~268, y~580-700; 4x5 x~4",
+   "[minor/all/legibility] The legal line 'Prices on caviarstar.com as of Oct 6, 2026' is set at ~18px (band ~16px tall: 1x1 y 1026-1041, 4x5 y 1288-1303, 9x16 y 839-856) in mid grey (peak ~#A39C8C). At phone feed size the 1x1 and 4x5 are shown at about 0.36x, so the line ends up about 6px tall and can't be read. The badge qu",
+   "[minor/1x1/layout] The product and copy group ends at y~790, and the footer sits alone at y 1026-1041. That leaves a dead black band of about 236px across the whole frame. The gap between the brand and the content above is only about 123px, so the composition floats high and looks unfinished at the bottom."
+  ]
+ },
+ {
+  "id": "amber-dynasty-royal-kaluga-caviar",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/amber-dynasty-royal-kaluga-caviar-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/amber-dynasty-royal-kaluga-caviar-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/amber-dynasty-royal-kaluga-caviar-9x16.png"
+  },
+  "on_image": {
+   "headline": "Large. Firm. Buttery.",
+   "sub": "Delicate and buttery, with a mild briny finish",
+   "name": "Premier Kaluga Hybrid Caviar",
+   "now": "$205",
+   "was": "$300",
+   "size": "4 oz",
+   "badge": [
+    "Save",
+    "31%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "1oz",
+     "price": 79.0,
+     "was": 90.0
+    },
+    {
+     "size": "2oz",
+     "price": 129.0,
+     "was": 170.0
+    },
+    {
+     "size": "4oz",
+     "price": 205.0,
+     "was": 300.0
+    },
+    {
+     "size": "7oz",
+     "price": 349.0,
+     "was": 525.0
+    },
+    {
+     "size": "16oz",
+     "price": 705.0,
+     "was": 1250.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[minor/all/claim] The sub 'Premier Kaluga Hybrid, up to 43% off' repeats the badge's 43% without its 'on 16 oz' qualifier. In the 1x1 (sub y\u2248442 to 470) and the 9x16 (sub y\u2248540 to 574) it sits directly above 'PREMIER KALUGA HYBRID CAVIAR / $79 $90 / 1 OZ'. That 1 oz price is only 12% off ($11). In the 9x16 the qualif",
+   "[major/all/product-render] Both the tub and the lid are outlined by a flat, semi-transparent grey band with no highlights or refraction, so it reads as a cutout matte or sticker outline, not glass. On the tub the band is about 15 to 20px wide outside the caviar on every side (9x16 x of about 280 to 605, down to y 1556). On th",
+   "[major/all/product-render] The caviar reads as a flat leopard-print pattern, not glossy Kaluga pearls. It shows tan blobs with hard white ring outlines and scattered white specks, with no per-pearl shading or wet highlight. This works against the 'Large. Firm. Buttery.' headline. The side wall texture is also mirrored at the ",
+   "[minor/all/claim] The sub 'Premier Kaluga Hybrid, up to 43% off' sits directly above the hero price $79 (was $90, 1 oz), which is 12% off. The 43% is true only for the 16 oz ($705, was $1,250, 43.6%). The sub also repeats 'Premier Kaluga Hybrid' on the line right before the product name 'PREMIER KALUGA HYBRID CAVIAR'",
+   "[minor/9x16/layout] The copy block is packed tight while there is free space below it. The product name ends 19px above the top of '$79' (627 to 646). The legal footer sits 13px under the Shop the sale button (914 to 927). The sub and name lines are only 34px apart. Meanwhile there are about 94px of empty space between",
+   "[minor/9x16/layout] The gold badge (x 670 to 879, y 1038 to 1247) sits on top of the lid's right rim. The lid edge runs to x of about 722 between y of about 1110 and 1245, so about 50px of the lid edge is covered. In 1x1 and 4x5 the badge sits clear of the product, so the 9x16 looks unplanned."
+  ]
+ },
+ {
+  "id": "royal-california-white-sturgeon-caviar",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/royal-california-white-sturgeon-caviar-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/royal-california-white-sturgeon-caviar-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/royal-california-white-sturgeon-caviar-9x16.png"
+  },
+  "on_image": {
+   "headline": "Nutty. Clean. Creamy.",
+   "sub": "Deep amber to dark gold pearls",
+   "name": "Royal California White Sturgeon Caviar",
+   "now": "$159",
+   "was": "$219",
+   "size": "2 oz",
+   "badge": [
+    "Save",
+    "27%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "1oz",
+     "price": 109.0,
+     "was": 129.0
+    },
+    {
+     "size": "2oz",
+     "price": 159.0,
+     "was": 219.0
+    },
+    {
+     "size": "4oz",
+     "price": 279.0,
+     "was": 389.0
+    },
+    {
+     "size": "7oz",
+     "price": 429.0,
+     "was": 599.0
+    },
+    {
+     "size": "16oz",
+     "price": 899.0,
+     "was": 1409.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[major/all/claim] The badge says 'Save up to 36%' and it is mathematically correct: 16 oz $899 vs $1,409 is 36.2%, rounded down to 36%. But the only offer shown is 1 oz $109, was $129, which is $20 or 15.5% off. The 'ON 16 OZ' qualifier is 8-10px tall (about 3pt at feed size), so a viewer reads 36% off $109. 1 oz is ",
+   "[major/all/product-render] The tin render still has the round-1 defects. (1) A flat, semi-transparent grey band, 15-20px in 9x16, outlines the tin body like a sticker matte, and a grey ring outlines the lid. It reads as a frosted plastic tub, not a Caviar Star tin. (2) The caviar texture is mirrored at the front centre of the",
+   "[minor/1x1/layout] The product is still small and high: tin plus lid about 356px wide (x 136-492) in a 1080 frame. The tin bottom is at y\u2248711 while the right text column runs to y\u2248868, which leaves an empty block bottom-left from y\u2248712 to 1025 above the lone footer.",
+   "[minor/4x5/layout] The product is only about 360px wide (tin plus lid x\u2248329-690) in a 1080x1350 frame. There is a 174px dead band between the bottom of the tin (y\u2248834) and the product name (y 1008), so the hero looks undersized and the middle of the frame is empty.",
+   "[major/all/claim] The badge says 'Save up to 36%' in large type beside the hero price $109 (was $129, 1 oz), which is only 15.5% off. The qualifier 'ON 16 OZ' is the smallest text in the ad: about 8px on the 1x1, 10px on the 4x5 and 9x16. The 16 oz price ($899, was $1,409) appears nowhere. 'Up to' plus one named size",
+   "[major/all/product-render] The tub and lid still have a semi-transparent grey halo, like a cutout matte or stroke, around their whole silhouette. It is clearly visible against the black background at phone size. The tub wall shows a mirrored, kaleidoscope-like texture seam down its front centre (1x1 x~262, y~600-690; 4x5 x~46",
+   "[major/1x1/layout] The product is still small (lid and tub about 350px wide, x 139-490) and ends at y~711. The left column is empty from y 712 to 1025, and the legal line sits alone in the bottom-left corner (y 1026-1041), not tied to any column. The frame looks top-heavy and unfinished.",
+   "[minor/4x5/layout] The hero product is small (about 360px wide, x 331-690, y~455-833) inside a 750px band. That leaves about 200px of dead black above it (sub ends at y 251) and 175px below (name starts at y 1008). The badge (x 790-969, y 330-510) floats about 100px from the lid, unattached.",
+   "[minor/9x16/layout] The badge (x 670-879, y 1038-1248) overlaps the lid's upper-right rim and its ingredients ring around x 690-720, y 1100-1230, cutting into the product silhouette. On the 1x1 the badge sits clear of the lid."
+  ]
+ },
+ {
+  "id": "classic-california-white-sturgeon-caviar",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/classic-california-white-sturgeon-caviar-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/classic-california-white-sturgeon-caviar-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/classic-california-white-sturgeon-caviar-9x16.png"
+  },
+  "on_image": {
+   "headline": "Clean. Creamy. Lingering.",
+   "sub": "American White Sturgeon caviar, medium pearls",
+   "name": "Classic American White Sturgeon Caviar",
+   "now": "$459",
+   "was": "$650",
+   "size": "7 oz",
+   "badge": [
+    "Save",
+    "29%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "1oz",
+     "price": 109.0,
+     "was": 119.0
+    },
+    {
+     "size": "2oz",
+     "price": 169.0,
+     "was": 189.0
+    },
+    {
+     "size": "4oz",
+     "price": 279.0,
+     "was": 349.0
+    },
+    {
+     "size": "7oz",
+     "price": 459.0,
+     "was": 650.0
+    },
+    {
+     "size": "16oz",
+     "price": 999.0,
+     "was": 1300.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[minor/1x1/layout] The right-hand text column is pushed against the right edge. The struck-through '$650' and its strike line run to x\u22481049, leaving about 30px to the canvas edge ('Lingering.' ends at about x 1028). The left margin (CAVIAR STAR wordmark and footer at x 65) is twice that, so the composition looks lopsi",
+   "[major/all/product-render] The caviar does not look like caviar. Its texture shows as white ring outlines scattered on a mid-grey field, which reads as bubble wrap or snakeskin. A flat, semi-transparent grey band 10-25px wide runs around the whole tub and lid like a cutout halo. It is thickest under the tub base: 9x16 about y",
+   "[minor/all/product-render] Round-1 seam still visible. The caviar texture mirrors down the front centre of the tub's side wall, with a Y-shaped convergence at mid-height and a V pinch at the base. Locations: 1x1 about x 269, y 641/696; 4x5 about x 461; 9x16 about x 446, y 1468/1536.",
+   "[minor/all/legibility] The legal line 'Prices on caviarstar.com as of Oct 6, 2026' is set at about 16px with a 7px x-height on a 1080-wide canvas. That is about 5.5pt on a phone, only just readable in the feed. In 9x16 it also sits only 14px under the Shop the sale button (button bottom y 914, footer top y 928), tighter t",
+   "[minor/9x16/layout] The SAVE 29% badge (x 670-879, y 1038-1248) overlaps the lid's right rim by about 50px (lid ends near x 722, overlap around y 1110-1260). It clips the lid's silhouette and part of its ring text. In 1x1 and 4x5 the badge sits clear of the product, so this format looks inconsistent and crowded.",
+   "[minor/1x1/layout] The price row runs to x 1049 (the end of the '$650' strike), leaving a 31px right margin against a 65px left margin and a 55px headline margin. The was-price looks pushed against the edge.",
+   "[minor/4x5/layout] The product is small for the hero, about 360px wide (x 332-690). An empty band of about 186px sits between the product (bottom y 822) and the product name (y 1008). The badge (x 790-969) floats about 100px right of the lid, disconnected from it."
+  ]
+ },
+ {
+  "id": "dynasty-royal-osetra-caviar",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/dynasty-royal-osetra-caviar-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/dynasty-royal-osetra-caviar-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/dynasty-royal-osetra-caviar-9x16.png"
+  },
+  "on_image": {
+   "headline": "Nutty. Buttery. Pop.",
+   "sub": "Amber Osetra, perfectly briny",
+   "name": "Dynasty Royal Osetra Caviar",
+   "now": "$999",
+   "was": "$1,269",
+   "size": "16 oz",
+   "badge": [
+    "Save",
+    "21%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "2oz",
+     "price": 179.0,
+     "was": 180.0
+    },
+    {
+     "size": "4oz",
+     "price": 319.0,
+     "was": 340.0
+    },
+    {
+     "size": "7oz",
+     "price": 479.0,
+     "was": 575.0
+    },
+    {
+     "size": "16oz",
+     "price": 999.0,
+     "was": 1269.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[blocker/1x1/price] The was-price '$1,269' runs off the right edge of the canvas. Its ink spans x 954 to 1079, so the right side of the final '9' is cut off by the frame and the red strike line runs straight into the edge. The reference price is not fully shown and the 1x1 looks broken. (Transcribed 1x1: CAVIAR STAR / ",
+   "[major/all/product-render] The tin render still looks unfinished in all three formats:\n- A translucent grey halo outlines the tub and the lid like a sticker matte, and shows as a ghost band where the tub crosses the lid.\n- The tub wall shows a mirrored texture seam at front center (9x16 about x 450, y 1440-1540; 4x5 about x 4",
+   "[minor/9x16/layout] The SAVE 21% badge (about x 670-880, y 1040-1248) overlaps the upper-right rim of the lid (the lid edge reaches about x 720), covering part of the gold rim and the ring text.",
+   "[minor/4x5/layout] The bottom block is no longer crammed, but there is now an empty band of about 174px between the product's lowest pixel (y 834) and the product name (y 1008). The tin floats high and the price block feels detached from it.",
+   "[blocker/1x1/price] The was-price '$1,269' is clipped by the right edge of the canvas. Its ink runs to x=1079 on a 1080px canvas, so the final '9' is cut off and the strikethrough runs off the frame. The price row ($999 at x 655-927, then the was-price at x 954-1079) is too wide for the right column.",
+   "[major/all/product-render] A translucent grey cutout matte still outlines the lid and the base (10 to 15px wide), which makes the tin look pasted on. It is most visible on the 9x16 (around the base, y 1300-1557, and the lid rim) and on the 1x1 tin.",
+   "[major/all/product-render] The caviar pearl texture is wrapped around the outside side wall of the base. Inside the grey shell, the tin reads as a puck of caviar or a glass jar, not a metal tin. Speckled caviar texture also bleeds onto the lid's right rim, and there is a small dark speck on the lid's top rim (9x16 around x 60",
+   "[minor/all/legibility] The legal line 'Prices on caviarstar.com as of Oct 6, 2026' is about 18px (x-height about 7 to 8px). At phone display size that is roughly 5 to 6pt and hard to read (1x1 y 1026-1042, 4x5 y 1288-1304, 9x16 y 927-944).",
+   "[minor/4x5/layout] The hero tin is small for the frame (360px wide, x 328-688). There is a 174px dead band between the tin (bottom y=834) and the product name (y=1008). The SAVE 21% badge floats about 100px right of the tin, so it looks detached rather than attached to the product."
+  ]
+ },
+ {
+  "id": "american-hackleback-sturgeon-caviar",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/american-hackleback-sturgeon-caviar-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/american-hackleback-sturgeon-caviar-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/american-hackleback-sturgeon-caviar-9x16.png"
+  },
+  "on_image": {
+   "headline": "Feel the Pop",
+   "sub": "Mild, clean, with subtle earthy notes",
+   "name": "American Hackleback Sturgeon Caviar",
+   "now": "$309",
+   "was": "$349",
+   "size": "7 oz",
+   "badge": [
+    "Save",
+    "11%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "1oz",
+     "price": 59.0,
+     "was": 62.0
+    },
+    {
+     "size": "2oz",
+     "price": 99.0,
+     "was": 109.0
+    },
+    {
+     "size": "4oz",
+     "price": 189.0,
+     "was": 205.0
+    },
+    {
+     "size": "7oz",
+     "price": 309.0,
+     "was": 349.0
+    },
+    {
+     "size": "16oz",
+     "price": 709.0,
+     "was": 799.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[major/all/product-render] The side of the tin still has the mirrored texture seam from round 1. The roe pattern reflects about a vertical axis down the middle of the side: 1x1 x about 269, y 565-690; 4x5 x about 463, y 700-830; 9x16 x about 446, y 1290-1460. Bright mirrored V/notch shapes sit on that line at the top edge of ",
+   "[major/all/product-render] The caviar fill does not look like caviar. It is a flat mid-grey surface (about #4a4a4a) with white ring-shaped flecks and no specular highlights, so it reads as grey terrazzo or foam, not glossy dark hackleback pearls. A faint mirrored seam also still runs down the front centre of the tub wall (9x1",
+   "[major/all/product-render] A semi-transparent grey halo, about 8-12px wide, outlines the tub and the lid like a sticker stroke or a bad cutout matte. It is clearly visible against the black background at phone size: 9x16 around the tub at x 280-605, y 1205-1468 and around the lid rim; the same band appears in 1x1 and 4x5. The",
+   "[minor/9x16/layout] The SAVE 11% badge (x 670-879, y 950-1159) sits on the lid's outer rim at about x 680-720, y 1060-1150. It clips the edge of the product, so the badge and lid read as colliding.",
+   "[minor/9x16/layout] The copy stack is jammed. The product name (y 521-540) is 19px above the top of $309 (y 559), and the footer (y 839) is only 12px under the Shop the sale button (bottom y 827). Meanwhile about 140px of empty space sits between the footer and the product.",
+   "[minor/all/legibility] The legal line 'Prices on caviarstar.com as of Oct 6, 2026' is only 15-17px tall (1x1 y 1026-1041, 4x5 y 1288-1303, 9x16 y 839-856). That is roughly 5pt on a phone screen, too small to read at a glance.",
+   "[minor/1x1/layout] The product is small, about 355px wide (x 136-490) in a 1080 frame, and sits high in the left column. That leaves a large empty block bottom-left (y 711-1020) and a dead band under the right column (y 840-1020), with the footer floating alone at the bottom."
+  ]
+ },
+ {
+  "id": "smoked-golden-whitefish-caviar",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/smoked-golden-whitefish-caviar-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/smoked-golden-whitefish-caviar-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/smoked-golden-whitefish-caviar-9x16.png"
+  },
+  "on_image": {
+   "headline": "Soft Yet Crunchy",
+   "sub": "Cold smoked over bourbon barrel oak",
+   "name": "Smoked Golden Whitefish Roe",
+   "now": "$25",
+   "was": "$35",
+   "size": "4 oz",
+   "badge": [
+    "Save",
+    "28%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "2oz",
+     "price": 17.0,
+     "was": 20.0
+    },
+    {
+     "size": "4oz",
+     "price": 25.0,
+     "was": 35.0
+    },
+    {
+     "size": "7oz",
+     "price": 35.0,
+     "was": 45.0
+    },
+    {
+     "size": "16oz",
+     "price": 60.0,
+     "was": 80.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[major/all/product-render] The tub and the lid still have a flat, uniform grey outline about 8-12px wide (RGB about 68-73 on a background of about 20). It reads as a sticker matte, not as glass. Examples: 4x5 left wall x 334-342 at y 740, base y 822-834 at x 470; the same band shows around the lid in 1x1 and 9x16. The roe is ",
+   "[minor/all/product-render] The lid art (ads/assets/smoked-golden-whitefish-caviar/lid.jpg) still prints a sturgeon silhouette under 'SMOKED WHITEFISH ROE'. In the 9x16 the lid is about 300px wide and the fish is plainly a sturgeon (about x 515-610, y 1170-1210). This non-sturgeon roe is shown with a sturgeon graphic, which hi",
+   "[major/all/product-render] The tub and lid are still outlined by a flat, uniform grey band (about RGB 70, 12 to 18px wide) that has no refraction or highlight. It reads as a sticker cutout, not glass or clear plastic. In 9x16 it shows at x 287 to 296 at y 1350 and as a band at y 1455 to 1470 under the base; in 1x1 it rings th",
+   "[minor/all/claim] The badge says 'Save up to 28%' next to the hero price $17, was $20, 2 oz, which is 15% off. The 'ON 4 OZ' qualifier that makes the claim accurate has caps only about 8px tall in 1x1 and about 10px in 9x16, roughly 3pt on a phone. In practice viewers read 28% off the $17 jar.",
+   "[minor/all/brand] The lid art still shows a sturgeon silhouette (long pointed snout, upturned tail) directly under 'SMOKED WHITEFISH ROE'. It is clear on the 9x16 lid at about x 515 to 605, y 1170 to 1200, and visible in 1x1 and 4x5. Showing a sturgeon on a whitefish roe product looks careless for a premium brand.",
+   "[minor/9x16/layout] The badge (x about 670 to 879, y about 950 to 1160) sits on top of the lid's upper-right rim and hides about 45px of it (x about 670 to 717, y about 990 to 1145). In 1x1 and 4x5 the badge stands clear of the product, so here it reads as a collision rather than a deliberate sticker.",
+   "[minor/9x16/layout] The legal line 'Prices on caviarstar.com as of Oct 6, 2026' (y 839 to 856) sits only 12px under the Shop the sale button (bottom y 827). The copy stack looks cramped, while 90px of safe space sits unused under the product (y 1468 to 1560).",
+   "[minor/all/legibility] The legal line is set at about 18px with roughly 11px caps (1x1 y 1026 to 1041; 4x5 y 1288 to 1303; 9x16 y 839 to 856) in mid grey. On a phone that is about 4pt caps and hard to read, and the 1x1 has more than 200px of empty space above it (y 815 to 1026)."
+  ]
+ },
+ {
+  "id": "shell-caviar-spoon-with-abalone-inlay",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/shell-caviar-spoon-with-abalone-inlay-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/shell-caviar-spoon-with-abalone-inlay-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/shell-caviar-spoon-with-abalone-inlay-9x16.png"
+  },
+  "on_image": {
+   "headline": "Taste Only Caviar",
+   "sub": "Real mollusk shell, abalone tip, no metal taste",
+   "name": "Shell Caviar Spoon with Abalone Inlay",
+   "now": "$4",
+   "was": "$7.50",
+   "size": "1 spoon",
+   "badge": [
+    "Save",
+    "46%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "One Spoon",
+     "price": 4.0,
+     "was": 7.5
+    },
+    {
+     "size": "Pair of 2",
+     "price": 7.0,
+     "was": 12.0
+    },
+    {
+     "size": "Bundle of 10 Spoons",
+     "price": 32.0,
+     "was": 70.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[major/all/product-render] Round 1's cutout problem is still there, identical in all three formats. In the 1x1: (1) the top third of the bowl has a flat grey cast that ends in a hard horizontal seam at about y=305; (2) small bumps stick out past the bowl outline on both sides at that seam (left at about x=283, right at about ",
+   "[major/all/product-render] The spoon render still looks unfinished for a luxury brand. (1) Small nubs stick out on both sides of the bowl at its widest point: 9x16 at x about 462 and 616, y about 975 to 995; 1x1 at x about 283 and 405, y about 300 to 320; 4x5 at x about 476 and 602, y about 430 to 445. (2) The top third of th",
+   "[minor/all/claim] The badge leads with '54%' beside the hero offer of $4 (was $7.50, 1 spoon), which is 46.7% off. The qualifier 'ON 10 SPOONS' is only 8 to 10px tall on 1x1 and 4x5 (12px on 9x16), so it can't be read in the feed. Viewers will take 54% as the discount on the $4 spoon.",
+   "[minor/9x16/layout] The legal line ('Prices on caviarstar.com as of Oct 6, 2026', y 840 to 856) sits only 26px above the top of the spoon bowl (y 882). It looks jammed onto the product, while the conversion stack above it has comfortable spacing."
+  ]
+ },
+ {
+  "id": "mother-of-pearl-spoon-3-5",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/mother-of-pearl-spoon-3-5-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/mother-of-pearl-spoon-3-5-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/mother-of-pearl-spoon-3-5-9x16.png"
+  },
+  "on_image": {
+   "headline": "Set the Caviar Table",
+   "sub": "Hand cut nacre spoons that protect the flavor",
+   "name": "Mother of Pearl Spoons, 3.5 inch",
+   "now": "$55",
+   "was": "$100",
+   "size": "Set of 10",
+   "badge": [
+    "Save",
+    "45%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "1",
+     "price": 7.5,
+     "was": 10.0
+    },
+    {
+     "size": "2",
+     "price": 12.0,
+     "was": 20.0
+    },
+    {
+     "size": "10",
+     "price": 55.0,
+     "was": 100.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[minor/9x16/safe-zone] The spoon runs from y 971 to y 1586, so the last ~26px of the handle tip sit below y 1560, where the Stories and TikTok caption and reply bar can cover it. All text is inside the safe zone (y 286-942)."
+  ]
+ },
+ {
+  "id": "pink-mother-of-pearl-shell-plate-spoon-set",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/pink-mother-of-pearl-shell-plate-spoon-set-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/pink-mother-of-pearl-shell-plate-spoon-set-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/pink-mother-of-pearl-shell-plate-spoon-set-9x16.png"
+  },
+  "on_image": {
+   "headline": "Set for Caviar Night",
+   "sub": "Handmade pink mother of pearl plate and spoon",
+   "name": "Pink Mother of Pearl Shell Plate and Spoon Set",
+   "now": "$30",
+   "was": "$49",
+   "size": "",
+   "badge": [
+    "Save",
+    "38%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  },
+  "facts": {
+   "sale_rows": [
+    {
+     "size": "Default Title",
+     "price": 30.0,
+     "was": 49.0
+    }
+   ]
+  },
+  "previous_issues": [
+   "[blocker/1x1/layout] The size label under the price is clipped by the right edge of the canvas. It reads 'PLATE AND S' (y 730-746, starting at x about 881, with ink at x 1070-1079) instead of 'PLATE AND SPOON SET'. The label names what the $30 buys, so the offer is incomplete, and cut-off text looks broken.",
+   "[major/1x1/product-render] This is carried over from round 1. The Save 38% disc (centre about 510,285, bottom edge y about 365) still sits on the spoon handle and cuts it off, so about 70px of the handle and its rounded tip are hidden. It also clips the shell's upper rim. The spoon is half of the product being sold.",
+   "[major/9x16/product-render] This is carried over from round 1. The Save 38% disc (centre about 775,1143, radius about 105) still covers the upper half of the spoon handle, which vanishes under it at about (685,1210), plus the shell's upper-right rim. Viewers see a stub of a spoon."
+  ]
+ },
+ {
+  "id": "caviar-sale-collection",
+  "images": {
+   "1x1": "/home/user/caviar3d/ads/out/caviar-sale-collection-1x1.png",
+   "4x5": "/home/user/caviar3d/ads/out/caviar-sale-collection-4x5.png",
+   "9x16": "/home/user/caviar3d/ads/out/caviar-sale-collection-9x16.png"
+  },
+  "on_image": {
+   "headline": "Caviar on sale",
+   "sub": "Up to 43% off sturgeon caviar",
+   "badge": [
+    "Save up to",
+    "43%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "items": [
+    {
+     "h": "amber-dynasty-royal-kaluga-caviar",
+     "label": "Kaluga Hybrid",
+     "size": "16 oz",
+     "price": 705.0,
+     "was": 1250.0
+    },
+    {
+     "h": "dynasty-siberian-caviar",
+     "label": "Siberian",
+     "size": "1 oz",
+     "price": 59.0,
+     "was": 89.0
+    },
+    {
+     "h": "royal-california-white-sturgeon-caviar",
+     "label": "Royal White",
+     "size": "1 oz",
+     "price": 109.0,
+     "was": 129.0
+    },
+    {
+     "h": "classic-california-white-sturgeon-caviar",
+     "label": "Classic White",
+     "size": "2 oz",
+     "price": 169.0,
+     "was": 189.0
+    },
+    {
+     "h": "dynasty-royal-osetra-caviar",
+     "label": "Royal Osetra",
+     "size": "7 oz",
+     "price": 479.0,
+     "was": 575.0
+    },
+    {
+     "h": "american-hackleback-sturgeon-caviar",
+     "label": "Hackleback",
+     "size": "7 oz",
+     "price": 309.0,
+     "was": 349.0
+    }
+   ]
+  },
+  "facts": {
+   "note": "largest sturgeon discount across the six products: Kaluga Hybrid 16 oz $705 was $1,250 (43.6%, 43% rounded down)",
+   "sale_rows_by_product": {
+    "Kaluga Hybrid": [
+     {
+      "size": "1oz",
+      "price": 79.0,
+      "was": 90.0
+     },
+     {
+      "size": "2oz",
+      "price": 129.0,
+      "was": 170.0
+     },
+     {
+      "size": "4oz",
+      "price": 205.0,
+      "was": 300.0
+     },
+     {
+      "size": "7oz",
+      "price": 349.0,
+      "was": 525.0
+     },
+     {
+      "size": "16oz",
+      "price": 705.0,
+      "was": 1250.0
+     }
+    ],
+    "Siberian": [
+     {
+      "size": "1oz",
+      "price": 59.0,
+      "was": 89.0
+     },
+     {
+      "size": "2oz",
+      "price": 109.0,
+      "was": 150.0
+     },
+     {
+      "size": "4oz",
+      "price": 199.0,
+      "was": 300.0
+     },
+     {
+      "size": "7oz",
+      "price": 329.0,
+      "was": 490.0
+     },
+     {
+      "size": "16oz",
+      "price": 720.0,
+      "was": 1100.0
+     }
+    ],
+    "Royal White": [
+     {
+      "size": "1oz",
+      "price": 109.0,
+      "was": 129.0
+     },
+     {
+      "size": "2oz",
+      "price": 159.0,
+      "was": 219.0
+     },
+     {
+      "size": "4oz",
+      "price": 279.0,
+      "was": 389.0
+     },
+     {
+      "size": "7oz",
+      "price": 429.0,
+      "was": 599.0
+     },
+     {
+      "size": "16oz",
+      "price": 899.0,
+      "was": 1409.0
+     }
+    ],
+    "Classic White": [
+     {
+      "size": "1oz",
+      "price": 109.0,
+      "was": 119.0
+     },
+     {
+      "size": "2oz",
+      "price": 169.0,
+      "was": 189.0
+     },
+     {
+      "size": "4oz",
+      "price": 279.0,
+      "was": 349.0
+     },
+     {
+      "size": "7oz",
+      "price": 459.0,
+      "was": 650.0
+     },
+     {
+      "size": "16oz",
+      "price": 999.0,
+      "was": 1300.0
+     }
+    ],
+    "Royal Osetra": [
+     {
+      "size": "2oz",
+      "price": 179.0,
+      "was": 180.0
+     },
+     {
+      "size": "4oz",
+      "price": 319.0,
+      "was": 340.0
+     },
+     {
+      "size": "7oz",
+      "price": 479.0,
+      "was": 575.0
+     },
+     {
+      "size": "16oz",
+      "price": 999.0,
+      "was": 1269.0
+     }
+    ],
+    "Hackleback": [
+     {
+      "size": "1oz",
+      "price": 59.0,
+      "was": 62.0
+     },
+     {
+      "size": "2oz",
+      "price": 99.0,
+      "was": 109.0
+     },
+     {
+      "size": "4oz",
+      "price": 189.0,
+      "was": 205.0
+     },
+     {
+      "size": "7oz",
+      "price": 309.0,
+      "was": 349.0
+     },
+     {
+      "size": "16oz",
+      "price": 709.0,
+      "was": 799.0
+     }
+    ]
+   }
+  },
+  "previous_issues": [
+   "[blocker/9x16] The 'Shop the sale' button sits at y=1560-1626, so all of it is in the bottom 360px that Stories and TikTok cover. The price footer at about y=1645-1660 is also covered. The last price row ends at y=1502, so the CTA is t",
+   "[major/all] The Royal Osetra tile (bottom middle in 1x1 and 4x5, bottom left in 9x16) shows its lid as a blank white disc with only a faint ghost of the logo. It reads as an untextured placeholder, not a Caviar Star tin. The QC rend",
+   "[major/all] The Royal White Sturgeon lid (top right in 1x1 and 4x5, middle left in 9x16) is nearly edge-on and smeared with radial streaks from the stretched texture. The label is unreadable and the lid looks broken. The Siberian li",
+   "[major/all] The sale prices are tiny: about 20px type with a 14px cap height on a 1080px canvas, so roughly 5pt on a phone in the feed. They are no bigger than the bright, letter-spaced product names above them, so the names outrank",
+   "[major/all] 'Royal White Sturgeon \u00b7 1 oz' wraps onto two lines, leaving an orphan second line that starts with a dot. 'Classic White Sturgeon \u00b7 2 oz' also wraps, to 'Classic White / Sturgeon \u00b7 2 oz'. Both prices sit about 26px below",
+   "[major/4x5] The grid ends at y\u22481007 and the CTA starts at y\u22481200, leaving about 190px of empty black band. The grid sits high under the header, so the layout is top-heavy and looks unfinished.",
+   "[minor/all] The subhead and badge both say 'up to 43%', but none of the six products shown is discounted that much. The best shown is Siberian at $59, down from $89 (34%), and the Kaluga Hybrid 1 oz shown is only 12% off. The 43% it",
+   "[minor/all] Each tile's amber glow halo sits above and slightly to one side of its lid instead of behind the jar, so it reads as a smudge. The caviar surface on several jars also shows a white seam or notch at the front, most visibl"
+  ]
+ }
+]

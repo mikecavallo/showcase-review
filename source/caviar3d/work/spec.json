@@ -1,0 +1,1660 @@
+{
+ "vip-kaluga-hybrid-caviar-250g": {
+  "title": "VIP Kaluga Hybrid Caviar \"OT\" Tin (250g)",
+  "kind": "tin",
+  "img": "work/cut/vip-kaluga-hybrid-caviar-250g/00.png",
+  "sym": 0.831,
+  "price": "490.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/vip-kaluga-hybrid-caviar-250g"
+ },
+ "caviar-cloche-with-silver-sturgeon-handle": {
+  "title": "Caviar Cloche, Silver Sturgeon",
+  "kind": "lathe",
+  "img": "work/cut/caviar-cloche-with-silver-sturgeon-handle/01.png",
+  "sym": 0.904,
+  "price": "125.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/caviar-cloche-with-silver-sturgeon-handle"
+ },
+ "dynasty-siberian-caviar": {
+  "title": "Royal Dynasty Siberian Caviar",
+  "kind": "jar",
+  "img": "work/cut/dynasty-siberian-caviar/00.png",
+  "sym": 0,
+  "price": "59.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/dynasty-siberian-caviar"
+ },
+ "dolium-extra-virgin-olive-oil": {
+  "title": "Dolium Extra Virgin Olive Oil",
+  "kind": "lathe",
+  "img": "work/cut/dolium-extra-virgin-olive-oil/01.png",
+  "sym": 0.988,
+  "price": "17.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/dolium-extra-virgin-olive-oil"
+ },
+ "mother-of-pearl-mosaic-handle-spoon-4-75-inch": {
+  "title": "Mother of Pearl Mosaic Handle Spoon, Large",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-mosaic-handle-spoon-4-75-inch/00.png",
+  "sym": 0.973,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-mosaic-handle-spoon-4-75-inch"
+ },
+ "fresh-black-burgundy-truffles": {
+  "title": "Fresh Black Burgundy Truffles",
+  "kind": "relief",
+  "img": "work/cut/fresh-black-burgundy-truffles/00.png",
+  "sym": 0.932,
+  "price": "50.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/fresh-black-burgundy-truffles"
+ },
+ "mothers-day-gift-bag": {
+  "title": "VIP Kaluga Hybrid Caviar Gift Bag (125g)",
+  "kind": "relief",
+  "img": "work/cut/mothers-day-gift-bag/00.png",
+  "sym": 0.905,
+  "price": "400.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mothers-day-gift-bag",
+  "flat": true
+ },
+ "10-piece-chocolate-gift-box": {
+  "title": "Mother's Day Chocolate Gift Box, 10 Piece",
+  "kind": "relief",
+  "img": "work/cut/10-piece-chocolate-gift-box/00.png",
+  "sym": 0.879,
+  "price": "34.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/10-piece-chocolate-gift-box",
+  "flat": true
+ },
+ "classic-california-white-sturgeon-caviar": {
+  "title": "Classic American White Sturgeon Caviar",
+  "kind": "jar",
+  "img": "work/cut/classic-california-white-sturgeon-caviar/00.png",
+  "sym": 0,
+  "price": "109.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/classic-california-white-sturgeon-caviar"
+ },
+ "horn-caviar-spoon-sturgeon-handle": {
+  "title": "Horn Caviar Spoon Sturgeon Handle",
+  "kind": "relief",
+  "img": "work/cut/horn-caviar-spoon-sturgeon-handle/02.png",
+  "sym": 0.936,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/horn-caviar-spoon-sturgeon-handle"
+ },
+ "gold-caviar-star-keychain": {
+  "title": "Gold Caviar Star Keychain",
+  "kind": "relief",
+  "img": "work/cut/gold-caviar-star-keychain/00.png",
+  "sym": 0.573,
+  "price": "7.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/gold-caviar-star-keychain"
+ },
+ "basil-infused-extra-virgin-olive-oil": {
+  "title": "Infused Extra Virgin Olive Oil",
+  "kind": "lathe",
+  "img": "work/cut/basil-infused-extra-virgin-olive-oil/00.png",
+  "sym": 0.984,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/basil-infused-extra-virgin-olive-oil"
+ },
+ "albino-almas-caviar": {
+  "title": "Albino Sterlet Caviar",
+  "kind": "jar",
+  "img": "work/cut/albino-almas-caviar/00.png",
+  "sym": 0,
+  "price": "150.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/albino-almas-caviar"
+ },
+ "kaluga-hybrid-caviar-limited-edition": {
+  "title": "VIP Imperial Kaluga Hybrid Caviar \"OT\" Tins",
+  "kind": "tin",
+  "img": "work/cut/kaluga-hybrid-caviar-limited-edition/00.png",
+  "sym": 0.997,
+  "price": "175.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/kaluga-hybrid-caviar-limited-edition"
+ },
+ "world-star-caviar-party-bag": {
+  "title": "World Star Gift Bag 2oz: Imperial Osetra, Kaluga, Siberian, Smoked Trout",
+  "kind": "relief",
+  "img": "work/cut/world-star-caviar-party-bag/05.png",
+  "sym": 0.923,
+  "price": "489.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/world-star-caviar-party-bag",
+  "flat": true
+ },
+ "world-star-caviar-gift-bag": {
+  "title": "World Star Caviar Gift Bag 1oz: Imperial Osetra, Kaluga, Siberian",
+  "kind": "relief",
+  "img": "work/cut/world-star-caviar-gift-bag/02.png",
+  "sym": 0.923,
+  "price": "259.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/world-star-caviar-gift-bag",
+  "flat": true
+ },
+ "caviar-gift-box-3-x-1oz-variety": {
+  "title": "Caviar Gift Box, 3 x 1oz variety",
+  "kind": "relief",
+  "img": "work/cut/caviar-gift-box-3-x-1oz-variety/00.png",
+  "sym": 0.877,
+  "price": "218.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/caviar-gift-box-3-x-1oz-variety",
+  "flat": true
+ },
+ "caviar-gift-box-4-oz-tin": {
+  "title": "Caviar Gift Box, 4 oz Tin",
+  "kind": "relief",
+  "img": "work/cut/caviar-gift-box-4-oz-tin/00.png",
+  "sym": 0.876,
+  "price": "339.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/caviar-gift-box-4-oz-tin",
+  "flat": true
+ },
+ "caviar-gift-box-2-x-2-oz": {
+  "title": "Caviar Gift Box, 2 x 2 oz",
+  "kind": "relief",
+  "img": "work/cut/caviar-gift-box-2-x-2-oz/00.png",
+  "sym": 0.876,
+  "price": "340.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/caviar-gift-box-2-x-2-oz",
+  "flat": true
+ },
+ "gift-certificate": {
+  "title": "Gift Certificate",
+  "kind": "relief",
+  "img": "work/cut/gift-certificate/00.png",
+  "sym": 1.0,
+  "price": "10.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/gift-certificate",
+  "flat": true
+ },
+ "prepared-french-escargot-in-shells": {
+  "title": "Prepared French Escargot in Shells",
+  "kind": "relief",
+  "img": "work/cut/prepared-french-escargot-in-shells/01.png",
+  "sym": 0.98,
+  "price": "17.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/prepared-french-escargot-in-shells",
+  "flat": true
+ },
+ "caviar-star-black-ot-gift-bag": {
+  "title": "Caviar Star OT Gift Bag (30g or 50g Tin Box)",
+  "kind": "tin",
+  "img": "work/cut/caviar-star-black-ot-gift-bag/01.png",
+  "sym": 0.993,
+  "price": "99.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/caviar-star-black-ot-gift-bag"
+ },
+ "acetaia-reale-flavored-pearls": {
+  "title": "Acetaia Reale Flavored Pearls",
+  "kind": "lathe",
+  "img": "work/cut/acetaia-reale-flavored-pearls/03.png",
+  "sym": 0.996,
+  "price": "16.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/acetaia-reale-flavored-pearls"
+ },
+ "acetaia-reale-extra-virgin-olive-oil-pearls": {
+  "title": "Extra Virgin Olive Oil Pearls by Acetaia Reale",
+  "kind": "lathe",
+  "img": "work/cut/acetaia-reale-extra-virgin-olive-oil-pearls/06.png",
+  "sym": 0.995,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/acetaia-reale-extra-virgin-olive-oil-pearls"
+ },
+ "acetaia-reale-flavored-white-balsamic-pearls": {
+  "title": "Acetaia Reale Flavored White Balsamic Pearls",
+  "kind": "lathe",
+  "img": "work/cut/acetaia-reale-flavored-white-balsamic-pearls/01.png",
+  "sym": 0.994,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/acetaia-reale-flavored-white-balsamic-pearls"
+ },
+ "acetaia-reale-balsamic-pearls": {
+  "title": "Dark Balsamic Pearls from Acetaia Reale",
+  "kind": "lathe",
+  "img": "work/cut/acetaia-reale-balsamic-pearls/00.png",
+  "sym": 0.996,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/acetaia-reale-balsamic-pearls"
+ },
+ "spanish-mullet-bottarga": {
+  "title": "Vega Jardin - Spanish Mullet Bottarga",
+  "kind": "relief",
+  "img": "work/cut/spanish-mullet-bottarga/00.png",
+  "sym": 0,
+  "price": "30.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/spanish-mullet-bottarga"
+ },
+ "raspberry-red-wine-vinegar": {
+  "title": "Raspberry Red Wine Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/raspberry-red-wine-vinegar/00.png",
+  "sym": 0.987,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/raspberry-red-wine-vinegar"
+ },
+ "pink-mother-of-pearl-shell-plate-spoon-set": {
+  "title": "Pink Mother of Pearl Shell Plate Spoon SET",
+  "kind": "relief",
+  "img": "work/cut/pink-mother-of-pearl-shell-plate-spoon-set/01.png",
+  "sym": 0.863,
+  "price": "30.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/pink-mother-of-pearl-shell-plate-spoon-set"
+ },
+ "marinated-australian-sheep-goat-cheese": {
+  "title": "Marinated Australian Sheep & Goat Cheese",
+  "kind": "lathe",
+  "img": "work/cut/marinated-australian-sheep-goat-cheese/00.png",
+  "sym": 0.998,
+  "price": "17.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/marinated-australian-sheep-goat-cheese"
+ },
+ "plain-gold-caviar-key-sturgeon-engraving": {
+  "title": "Gold Oval Caviar Key, Sturgeon Engraving",
+  "kind": "relief",
+  "img": "work/cut/plain-gold-caviar-key-sturgeon-engraving/00.png",
+  "sym": 0.987,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/plain-gold-caviar-key-sturgeon-engraving"
+ },
+ "dieckmann-hansen-reserve-german-osetra-caviar": {
+  "title": "Dieckmann Hansen Reserve Osetra Caviar",
+  "kind": "jar",
+  "img": "work/cut/dieckmann-hansen-reserve-german-osetra-caviar/00.png",
+  "sym": 0,
+  "price": "119.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/dieckmann-hansen-reserve-german-osetra-caviar"
+ },
+ "beluga-sevruga-hybrid": {
+  "title": "Reserve Beluga Sevruga Hybrid",
+  "kind": "jar",
+  "img": "work/cut/beluga-sevruga-hybrid/00.png",
+  "sym": 0,
+  "price": "99.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/beluga-sevruga-hybrid"
+ },
+ "classic-italian-white-sturgeon-caviar": {
+  "title": "Italian White Sturgeon Caviar",
+  "kind": "jar",
+  "img": "work/cut/classic-italian-white-sturgeon-caviar/00.png",
+  "sym": 0,
+  "price": "109.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/classic-italian-white-sturgeon-caviar"
+ },
+ "mother-of-pearl-fork-4-5-inch": {
+  "title": "Mother of Pearl Fork - 4.5 Inch",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-fork-4-5-inch/00.png",
+  "sym": 0.949,
+  "price": "9.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-fork-4-5-inch"
+ },
+ "aged-white-balsamic-vinegar-in-decorative-box": {
+  "title": "Aged White Balsamic Vinegar in Decorative Box",
+  "kind": "relief",
+  "img": "work/cut/aged-white-balsamic-vinegar-in-decorative-box/00.png",
+  "sym": 0.905,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/aged-white-balsamic-vinegar-in-decorative-box",
+  "flat": true
+ },
+ "mother-of-pearl-shell-caviar-palette": {
+  "title": "Mother of Pearl Shell Caviar Palette",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-shell-caviar-palette/00.png",
+  "sym": 0.963,
+  "price": "19.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-shell-caviar-palette"
+ },
+ "mother-of-pearl-spoon-3-5": {
+  "title": "Mother of Pearl Spoon 3.5\"",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-spoon-3-5/00.png",
+  "sym": 1.0,
+  "price": "7.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-spoon-3-5"
+ },
+ "large-burgundy-escargot-2-dozen": {
+  "title": "Large Burgundy Escargots - 2 Dozen",
+  "kind": "lathe",
+  "img": "work/cut/large-burgundy-escargot-2-dozen/01.png",
+  "sym": 0.998,
+  "price": "16.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/large-burgundy-escargot-2-dozen"
+ },
+ "insulated-sturgeon-caviar-server-stainless-steel": {
+  "title": "Insulated Sturgeon Caviar Server, Stainless Steel",
+  "kind": "relief",
+  "img": "work/cut/insulated-sturgeon-caviar-server-stainless-steel/00.png",
+  "sym": 0.868,
+  "price": "139.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/insulated-sturgeon-caviar-server-stainless-steel",
+  "flat": true
+ },
+ "shell-caviar-spoon-with-logo-3-5-inch": {
+  "title": "Shell Caviar Spoon with Logo 3.5 inch",
+  "kind": "relief",
+  "img": "work/cut/shell-caviar-spoon-with-logo-3-5-inch/00.png",
+  "sym": 0.983,
+  "price": "5.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/shell-caviar-spoon-with-logo-3-5-inch"
+ },
+ "mother-of-pearl-spoon-4-inch-plain": {
+  "title": "Mother of Pearl Spoon 4 inch, Plain",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-spoon-4-inch-plain/00.png",
+  "sym": 0.963,
+  "price": "7.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-spoon-4-inch-plain"
+ },
+ "horn-serving-spoon-4-5-inch": {
+  "title": "Horn Serving Spoon, 4.5 Inch",
+  "kind": "relief",
+  "img": "work/cut/horn-serving-spoon-4-5-inch/00.png",
+  "sym": 0.962,
+  "price": "12.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/horn-serving-spoon-4-5-inch"
+ },
+ "fresh-summer-black-truffles": {
+  "title": "Italian Black Summer Truffles",
+  "kind": "relief",
+  "img": "work/cut/fresh-summer-black-truffles/00.png",
+  "sym": 0.801,
+  "price": "42.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/fresh-summer-black-truffles"
+ },
+ "fresh-whitish-spring-bianchetto-truffles": {
+  "title": "Fresh \"Whitish\" Spring Bianchetto Truffles",
+  "kind": "relief",
+  "img": "work/cut/fresh-whitish-spring-bianchetto-truffles/00.png",
+  "sym": 0.754,
+  "price": "54.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/fresh-whitish-spring-bianchetto-truffles"
+ },
+ "insulated-caviar-server-hammered-stainless-steel": {
+  "title": "Insulated Caviar Server, Hammered Stainless Steel",
+  "kind": "lathe",
+  "img": "work/cut/insulated-caviar-server-hammered-stainless-steel/00.png",
+  "sym": 0.995,
+  "price": "99.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/insulated-caviar-server-hammered-stainless-steel"
+ },
+ "mother-of-pearl-caviar-serving-palette-silver-edge": {
+  "title": "Mother of Pearl Caviar Serving Palette - Silver Edge",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-caviar-serving-palette-silver-edge/00.png",
+  "sym": 0.989,
+  "price": "29.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-caviar-serving-palette-silver-edge"
+ },
+ "mother-of-pearl-caviar-plate-gold-brass-edge": {
+  "title": "Mother of Pearl Caviar Plate - Gold Brass Edge",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-caviar-plate-gold-brass-edge/00.png",
+  "sym": 0.994,
+  "price": "25.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-caviar-plate-gold-brass-edge"
+ },
+ "abalone-caviar-bowl-silver-accents": {
+  "title": "Abalone Bowl",
+  "kind": "relief",
+  "img": "work/cut/abalone-caviar-bowl-silver-accents/01.png",
+  "sym": 0.982,
+  "price": "14.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/abalone-caviar-bowl-silver-accents"
+ },
+ "freshwater-shell-caviar-spoon-4-inch": {
+  "title": "Freshwater Shell Caviar Spoon 4 Inch",
+  "kind": "relief",
+  "img": "work/cut/freshwater-shell-caviar-spoon-4-inch/00.png",
+  "sym": 0.958,
+  "price": "6.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/freshwater-shell-caviar-spoon-4-inch"
+ },
+ "silver-fish-6-shot-glass-server": {
+  "title": "Silver Fish 6 Shot-Glass Server",
+  "kind": "lathe",
+  "img": "work/cut/silver-fish-6-shot-glass-server/00.png",
+  "sym": 0.979,
+  "price": "299.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/silver-fish-6-shot-glass-server"
+ },
+ "silver-sturgeon-top-bowl-caviar-server": {
+  "title": "Silver Sturgeon Top Bowl Caviar Server",
+  "kind": "lathe",
+  "img": "work/cut/silver-sturgeon-top-bowl-caviar-server/00.png",
+  "sym": 0.99,
+  "price": "200.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/silver-sturgeon-top-bowl-caviar-server"
+ },
+ "caviar-house-prunier-osetra-caviar": {
+  "title": "Caviar House & Prunier French Osetra Caviar",
+  "kind": "jar",
+  "img": "work/cut/caviar-house-prunier-osetra-caviar/00.png",
+  "sym": 0,
+  "price": "150.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/caviar-house-prunier-osetra-caviar"
+ },
+ "fresh-white-winter-truffles": {
+  "title": "Fresh Alba White Winter Truffles",
+  "kind": "relief",
+  "img": "work/cut/fresh-white-winter-truffles/00.png",
+  "sym": 0.947,
+  "price": "300.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/fresh-white-winter-truffles"
+ },
+ "maine-lobster-meat-cooked-claw-and-knuckle": {
+  "title": "Maine Lobster Meat, Cooked Claw and Knuckle",
+  "kind": "relief",
+  "img": "work/cut/maine-lobster-meat-cooked-claw-and-knuckle/00.png",
+  "sym": 0,
+  "price": "109.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/maine-lobster-meat-cooked-claw-and-knuckle",
+  "flat": true
+ },
+ "black-mother-of-pearl-serving-spoon-3-5-inch": {
+  "title": "Black Mother of Pearl Serving Spoon",
+  "kind": "relief",
+  "img": "work/cut/black-mother-of-pearl-serving-spoon-3-5-inch/00.png",
+  "sym": 0.978,
+  "price": "10.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/black-mother-of-pearl-serving-spoon-3-5-inch"
+ },
+ "shell-caviar-spoon-with-abalone-inlay": {
+  "title": "Shell Caviar Spoon with Abalone Inlay",
+  "kind": "relief",
+  "img": "work/cut/shell-caviar-spoon-with-abalone-inlay/00.png",
+  "sym": 0.985,
+  "price": "4.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/shell-caviar-spoon-with-abalone-inlay"
+ },
+ "extra-virgin-pumpkin-seed-oil": {
+  "title": "Extra Virgin Pumpkin Seed Oil",
+  "kind": "lathe",
+  "img": "work/cut/extra-virgin-pumpkin-seed-oil/00.png",
+  "sym": 0.991,
+  "price": "20.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/extra-virgin-pumpkin-seed-oil"
+ },
+ "pura-vida-pistachio-oil": {
+  "title": "Pura Vida Pistachio Oil",
+  "kind": "lathe",
+  "img": "work/cut/pura-vida-pistachio-oil/00.png",
+  "sym": 0.996,
+  "price": "38.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/pura-vida-pistachio-oil"
+ },
+ "organic-avocado-oil": {
+  "title": "Organic Avocado Oil",
+  "kind": "lathe",
+  "img": "work/cut/organic-avocado-oil/00.png",
+  "sym": 0.982,
+  "price": "25.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/organic-avocado-oil"
+ },
+ "capriete-picual-extra-virgin-olive-oil": {
+  "title": "Capriete Picual Extra Virgin Olive Oil",
+  "kind": "lathe",
+  "img": "work/cut/capriete-picual-extra-virgin-olive-oil/00.png",
+  "sym": 0.925,
+  "price": "10.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/capriete-picual-extra-virgin-olive-oil"
+ },
+ "truffle-balsamic-glaze": {
+  "title": "Acetaia Reale Truffle Balsamic Glaze - 21 oz",
+  "kind": "lathe",
+  "img": "work/cut/truffle-balsamic-glaze/00.png",
+  "sym": 0.992,
+  "price": "20.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/truffle-balsamic-glaze"
+ },
+ "unio-cava-wine-vinegar": {
+  "title": "Unio Cava Wine Vinegar, (500 ml)",
+  "kind": "lathe",
+  "img": "work/cut/unio-cava-wine-vinegar/00.png",
+  "sym": 0.987,
+  "price": "14.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/unio-cava-wine-vinegar"
+ },
+ "unio-reisling-wine-vinegar": {
+  "title": "Unio Reisling Wine Vinegar, (500 ml)",
+  "kind": "lathe",
+  "img": "work/cut/unio-reisling-wine-vinegar/00.png",
+  "sym": 0.987,
+  "price": "16.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/unio-reisling-wine-vinegar"
+ },
+ "unio-moscatel-wine-vinegar": {
+  "title": "Unio Moscatel Wine Vinegar, (500 ml)",
+  "kind": "lathe",
+  "img": "work/cut/unio-moscatel-wine-vinegar/00.png",
+  "sym": 0.992,
+  "price": "10.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/unio-moscatel-wine-vinegar"
+ },
+ "unio-chardonnay-wine-vinegar": {
+  "title": "Unio Chardonnay Wine Vinegar, (500 ml)",
+  "kind": "lathe",
+  "img": "work/cut/unio-chardonnay-wine-vinegar/00.png",
+  "sym": 0.994,
+  "price": "8.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/unio-chardonnay-wine-vinegar"
+ },
+ "unio-cabernet-sauvignon-wine-vinegar": {
+  "title": "Unio Cabernet Sauvignon Wine Vinegar, (500 ml)",
+  "kind": "lathe",
+  "img": "work/cut/unio-cabernet-sauvignon-wine-vinegar/00.png",
+  "sym": 0.992,
+  "price": "8.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/unio-cabernet-sauvignon-wine-vinegar"
+ },
+ "forum-forvm-spanish-cabernet-sauvignon-wine-balsamic-vinegar": {
+  "title": "Forum \"FORVM\" Spanish Cabernet Sauvignon Wine Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/forum-forvm-spanish-cabernet-sauvignon-wine-balsamic-vinegar/00.png",
+  "sym": 0.974,
+  "price": "21.50",
+  "available": false,
+  "url": "https://caviarstar.com/products/forum-forvm-spanish-cabernet-sauvignon-wine-balsamic-vinegar"
+ },
+ "forum-forvm-spanish-chardonnay-wine-balsamic-vinegar": {
+  "title": "Forum \"FORVM\" Spanish Chardonnay Wine Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/forum-forvm-spanish-chardonnay-wine-balsamic-vinegar/00.png",
+  "sym": 0.995,
+  "price": "17.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/forum-forvm-spanish-chardonnay-wine-balsamic-vinegar"
+ },
+ "leblanc-sherry-vinegar": {
+  "title": "LeBlanc Sherry Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-sherry-vinegar/00.png",
+  "sym": 0.989,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-sherry-vinegar"
+ },
+ "leblanc-french-cider-vinegar": {
+  "title": "LeBlanc French Cider Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-cider-vinegar/00.png",
+  "sym": 0.997,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-cider-vinegar"
+ },
+ "leblanc-french-champagne-vinegar": {
+  "title": "LeBlanc French Champagne Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-champagne-vinegar/00.png",
+  "sym": 0.996,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-champagne-vinegar"
+ },
+ "leblanc-balsamic-vinegar": {
+  "title": "LeBlanc Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-balsamic-vinegar/00.png",
+  "sym": 0.993,
+  "price": "16.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-balsamic-vinegar"
+ },
+ "leblanc-french-almond-oil": {
+  "title": "LeBlanc French Almond Oil",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-almond-oil/00.png",
+  "sym": 0.998,
+  "price": "30.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-almond-oil"
+ },
+ "leblanc-french-hazelnut-oil": {
+  "title": "LeBlanc French Hazelnut Oil",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-hazelnut-oil/00.png",
+  "sym": 0.998,
+  "price": "40.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/leblanc-french-hazelnut-oil"
+ },
+ "leblanc-french-walnut-oil": {
+  "title": "LeBlanc French Walnut Oil",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-walnut-oil/00.png",
+  "sym": 0.988,
+  "price": "19.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-walnut-oil"
+ },
+ "leblanc-french-pecan-oil": {
+  "title": "LeBlanc French Pecan Oil",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-pecan-oil/00.png",
+  "sym": 0.99,
+  "price": "48.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-pecan-oil"
+ },
+ "smoked-american-salmon-caviar": {
+  "title": "Smoked American Salmon Roe",
+  "kind": "jar",
+  "img": "work/cut/smoked-american-salmon-caviar/00.png",
+  "sym": 0,
+  "price": "25.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/smoked-american-salmon-caviar"
+ },
+ "mother-of-pearl-spoon-with-dot-inlay-wooden-handle": {
+  "title": "Mother of Pearl Spoon with Dot Inlay, Wooden Handle",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-spoon-with-dot-inlay-wooden-handle/00.png",
+  "sym": 0.99,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-spoon-with-dot-inlay-wooden-handle"
+ },
+ "leblanc-french-pistachio-oil": {
+  "title": "LeBlanc French Pistachio Oil",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-pistachio-oil/00.png",
+  "sym": 0.998,
+  "price": "58.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-pistachio-oil"
+ },
+ "escargot-snail-shells-12-count": {
+  "title": "Escargot Snail Shells (12 count)",
+  "kind": "relief",
+  "img": "work/cut/escargot-snail-shells-12-count/00.png",
+  "sym": 0.986,
+  "price": "10.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/escargot-snail-shells-12-count"
+ },
+ "beluga-sterlet-bester-hybrid": {
+  "title": "Royal Beluga Bester Hybrid Caviar",
+  "kind": "jar",
+  "img": "work/cut/beluga-sterlet-bester-hybrid/00.png",
+  "sym": 0,
+  "price": "149.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/beluga-sterlet-bester-hybrid"
+ },
+ "leblanc-french-toasted-sesame-seed-oil": {
+  "title": "LeBlanc French Toasted Sesame Seed Oil",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-toasted-sesame-seed-oil/00.png",
+  "sym": 0.992,
+  "price": "19.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-toasted-sesame-seed-oil"
+ },
+ "leblanc-french-grapeseed-oil": {
+  "title": "LeBlanc French Grapeseed Oil",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-grapeseed-oil/00.png",
+  "sym": 0.989,
+  "price": "9.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-grapeseed-oil"
+ },
+ "leblanc-french-extra-virgin-olive-oil": {
+  "title": "LeBlanc French Extra Virgin Olive Oil",
+  "kind": "lathe",
+  "img": "work/cut/leblanc-french-extra-virgin-olive-oil/00.png",
+  "sym": 0.994,
+  "price": "22.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/leblanc-french-extra-virgin-olive-oil"
+ },
+ "8-10-and-12-year-aged-balsamic-vinegar-gift-box": {
+  "title": "8, 10 and 12 Year Aged Balsamic Vinegar Gift box",
+  "kind": "relief",
+  "img": "work/cut/8-10-and-12-year-aged-balsamic-vinegar-gift-box/01.png",
+  "sym": 0.988,
+  "price": "46.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/8-10-and-12-year-aged-balsamic-vinegar-gift-box",
+  "flat": true
+ },
+ "16-year-aged-balsamic-vinegar-gift-box": {
+  "title": "16 Year Aged Balsamic Vinegar Gift box",
+  "kind": "relief",
+  "img": "work/cut/16-year-aged-balsamic-vinegar-gift-box/00.png",
+  "sym": 0.943,
+  "price": "58.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/16-year-aged-balsamic-vinegar-gift-box",
+  "flat": true
+ },
+ "french-purple-condiment-mustard-with-grape-must": {
+  "title": "French Purple Condiment Mustard with Grape Must",
+  "kind": "lathe",
+  "img": "work/cut/french-purple-condiment-mustard-with-grape-must/00.png",
+  "sym": 0.984,
+  "price": "9.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/french-purple-condiment-mustard-with-grape-must"
+ },
+ "white-escargot-snail-caviar": {
+  "title": "White Escargot Snail Caviar",
+  "kind": "jar",
+  "img": "work/cut/white-escargot-snail-caviar/00.png",
+  "sym": 0,
+  "price": "125.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-escargot-snail-caviar"
+ },
+ "supreme-california-white-sturgeon-caviar": {
+  "title": "Supreme California White Sturgeon Caviar",
+  "kind": "jar",
+  "img": "work/cut/supreme-california-white-sturgeon-caviar/00.png",
+  "sym": 0,
+  "price": "139.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/supreme-california-white-sturgeon-caviar"
+ },
+ "cod-bottarga": {
+  "title": "Cod Bottarga",
+  "kind": "relief",
+  "img": "work/cut/cod-bottarga/00.png",
+  "sym": 0.978,
+  "price": "35.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/cod-bottarga"
+ },
+ "dry-cured-tuna-heart": {
+  "title": "Dry Cured Tuna Heart",
+  "kind": "relief",
+  "img": "work/cut/dry-cured-tuna-heart/00.png",
+  "sym": 0.801,
+  "price": "40.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/dry-cured-tuna-heart",
+  "flat": true
+ },
+ "smoked-golden-whitefish-caviar": {
+  "title": "Smoked Golden Whitefish Roe",
+  "kind": "jar",
+  "img": "work/cut/smoked-golden-whitefish-caviar/00.png",
+  "sym": 0,
+  "price": "17.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/smoked-golden-whitefish-caviar"
+ },
+ "heavy-duty-mother-of-pearl-spoon-with-logo-4-inch": {
+  "title": "Heavy Duty Mother of Pearl Spoon with Logo - 4 Inch",
+  "kind": "relief",
+  "img": "work/cut/heavy-duty-mother-of-pearl-spoon-with-logo-4-inch/00.png",
+  "sym": 0.988,
+  "price": "7.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/heavy-duty-mother-of-pearl-spoon-with-logo-4-inch"
+ },
+ "spanish-saffron-powder": {
+  "title": "Spanish Saffron Powder",
+  "kind": "relief",
+  "img": "work/cut/spanish-saffron-powder/00.png",
+  "sym": 0.973,
+  "price": "120.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/spanish-saffron-powder"
+ },
+ "mother-of-pearl-serving-spoon-with-mosaic-handle": {
+  "title": "Mother of Pearl Serving Spoon with Mosaic Handle",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-serving-spoon-with-mosaic-handle/00.png",
+  "sym": 0.973,
+  "price": "10.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-serving-spoon-with-mosaic-handle"
+ },
+ "natural-horn-serving-spoon-4-75-inch": {
+  "title": "Natural Horn Serving Spoon, 4.75 Inch",
+  "kind": "relief",
+  "img": "work/cut/natural-horn-serving-spoon-4-75-inch/00.png",
+  "sym": 0.893,
+  "price": "9.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/natural-horn-serving-spoon-4-75-inch"
+ },
+ "mother-of-pearl-serving-spoon-6-pack-set-4-5-inch-velvet-pouch": {
+  "title": "Mother of Pearl Serving Spoon 6-Pack Set, 4 inch, Velvet Pouch",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-serving-spoon-6-pack-set-4-5-inch-velvet-pouch/00.png",
+  "sym": 0.904,
+  "price": "45.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-serving-spoon-6-pack-set-4-5-inch-velvet-pouch"
+ },
+ "adamante-italian-white-balsamic-vinegar": {
+  "title": "Adamante Italian White Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/adamante-italian-white-balsamic-vinegar/00.png",
+  "sym": 0.993,
+  "price": "14.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/adamante-italian-white-balsamic-vinegar"
+ },
+ "tuna-bottarga-dried-and-cured-tuna-fish-roe": {
+  "title": "Tuna Bottarga - Dried and Cured Tuna Fish Roe",
+  "kind": "relief",
+  "img": "work/cut/tuna-bottarga-dried-and-cured-tuna-fish-roe/00.png",
+  "sym": 0.506,
+  "price": "60.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/tuna-bottarga-dried-and-cured-tuna-fish-roe"
+ },
+ "dynasty-imperial-amur-sturgeon-caviar": {
+  "title": "Dynasty Imperial Amur Sturgeon Caviar",
+  "kind": "jar",
+  "img": "work/cut/dynasty-imperial-amur-sturgeon-caviar/00.png",
+  "sym": 0,
+  "price": "80.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/dynasty-imperial-amur-sturgeon-caviar"
+ },
+ "25-year-aged-balsamic-vinegar": {
+  "title": "25 Year Aged Balsamic Vinegar",
+  "kind": "relief",
+  "img": "work/cut/25-year-aged-balsamic-vinegar/00.png",
+  "sym": 0.954,
+  "price": "93.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/25-year-aged-balsamic-vinegar",
+  "flat": true
+ },
+ "clovis-tarragon-white-wine-vinegar": {
+  "title": "Clovis Tarragon White Wine Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/clovis-tarragon-white-wine-vinegar/00.png",
+  "sym": 0.992,
+  "price": "16.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/clovis-tarragon-white-wine-vinegar"
+ },
+ "genki-tobiko-caviar-flying-fish-roe": {
+  "title": "Genki Tobiko Caviar Flying Fish Roe",
+  "kind": "jar",
+  "img": "work/cut/genki-tobiko-caviar-flying-fish-roe/00.png",
+  "sym": 0,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/genki-tobiko-caviar-flying-fish-roe"
+ },
+ "amber-dynasty-royal-kaluga-caviar": {
+  "title": "Premier Kaluga Hybrid Caviar",
+  "kind": "jar",
+  "img": "work/cut/amber-dynasty-royal-kaluga-caviar/00.png",
+  "sym": 0,
+  "price": "79.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/amber-dynasty-royal-kaluga-caviar"
+ },
+ "lyna-polska-royal-osetra-caviar": {
+  "title": "Lyna Polska Royal Osetra Caviar",
+  "kind": "jar",
+  "img": "work/cut/lyna-polska-royal-osetra-caviar/00.png",
+  "sym": 0,
+  "price": "89.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/lyna-polska-royal-osetra-caviar"
+ },
+ "remodena-organic-balsamic-vinegars": {
+  "title": "ReModena Balsamic Vinegars",
+  "kind": "lathe",
+  "img": "work/cut/remodena-organic-balsamic-vinegars/00.png",
+  "sym": 0.994,
+  "price": "20.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/remodena-organic-balsamic-vinegars"
+ },
+ "square-plate": {
+  "title": "Square Plate",
+  "kind": "relief",
+  "img": "work/cut/square-plate/00.png",
+  "sym": 0.947,
+  "price": "6.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/square-plate",
+  "flat": true
+ },
+ "square-bowl": {
+  "title": "Square Bowl",
+  "kind": "relief",
+  "img": "work/cut/square-bowl/00.png",
+  "sym": 0.991,
+  "price": "5.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/square-bowl",
+  "flat": true
+ },
+ "bloc-platter": {
+  "title": "Bloc Platter",
+  "kind": "relief",
+  "img": "work/cut/bloc-platter/01.png",
+  "sym": 0.963,
+  "price": "15.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/bloc-platter",
+  "flat": true
+ },
+ "fig-vincotto-vinegar": {
+  "title": "Fig Vincotto Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/fig-vincotto-vinegar/00.png",
+  "sym": 0.992,
+  "price": "17.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/fig-vincotto-vinegar"
+ },
+ "dynasty-royal-osetra-caviar": {
+  "title": "Dynasty Royal Osetra Caviar",
+  "kind": "jar",
+  "img": "work/cut/dynasty-royal-osetra-caviar/00.png",
+  "sym": 0,
+  "price": "99.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/dynasty-royal-osetra-caviar"
+ },
+ "flavored-french-wine-vinegar": {
+  "title": "Flavored French Wine Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/flavored-french-wine-vinegar/00.png",
+  "sym": 0.996,
+  "price": "6.50",
+  "available": false,
+  "url": "https://caviarstar.com/products/flavored-french-wine-vinegar"
+ },
+ "golden-dynasty-imperial-osetra-caviar": {
+  "title": "Golden Dynasty Imperial Osetra Caviar",
+  "kind": "jar",
+  "img": "work/cut/golden-dynasty-imperial-osetra-caviar/00.png",
+  "sym": 0,
+  "price": "99.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/golden-dynasty-imperial-osetra-caviar"
+ },
+ "black-winter-truffle-juice": {
+  "title": "Black Winter Truffle Juice",
+  "kind": "lathe",
+  "img": "work/cut/black-winter-truffle-juice/00.png",
+  "sym": 0.996,
+  "price": "48.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-winter-truffle-juice"
+ },
+ "50-year-aged-sherry": {
+  "title": "50 Year Aged Sherry",
+  "kind": "lathe",
+  "img": "work/cut/50-year-aged-sherry/00.png",
+  "sym": 0.979,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/50-year-aged-sherry"
+ },
+ "mazzetti-white-wine-sweet-balsamic-vinegar": {
+  "title": "Mazzetti White Wine Sweet Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/mazzetti-white-wine-sweet-balsamic-vinegar/00.png",
+  "sym": 0.992,
+  "price": "10.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/mazzetti-white-wine-sweet-balsamic-vinegar"
+ },
+ "reims-champagne-vinegar": {
+  "title": "Clovis Reims Champagne White Wine Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/reims-champagne-vinegar/00.png",
+  "sym": 0.988,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/reims-champagne-vinegar"
+ },
+ "clovis-whole-grain-mustard": {
+  "title": "Clovis Whole Grain Mustard",
+  "kind": "lathe",
+  "img": "work/cut/clovis-whole-grain-mustard/00.png",
+  "sym": 0.995,
+  "price": "12.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/clovis-whole-grain-mustard"
+ },
+ "royal-california-white-sturgeon-caviar": {
+  "title": "Royal California White Sturgeon Caviar",
+  "kind": "jar",
+  "img": "work/cut/royal-california-white-sturgeon-caviar/00.png",
+  "sym": 0,
+  "price": "109.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/royal-california-white-sturgeon-caviar"
+ },
+ "30-year-aged-balsamic-vinegar": {
+  "title": "30 Year Aged Balsamic Vinegar",
+  "kind": "relief",
+  "img": "work/cut/30-year-aged-balsamic-vinegar/01.png",
+  "sym": 0.948,
+  "price": "58.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/30-year-aged-balsamic-vinegar",
+  "flat": true
+ },
+ "lyna-polska-siberian-caviar": {
+  "title": "Lyna Polska Siberian Baerii Caviar",
+  "kind": "jar",
+  "img": "work/cut/lyna-polska-siberian-caviar/00.png",
+  "sym": 0,
+  "price": "79.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/lyna-polska-siberian-caviar"
+ },
+ "il-casolare-italian-extra-virgin-olive-oil": {
+  "title": "Il Casolare Italian Extra Virgin Olive Oil",
+  "kind": "lathe",
+  "img": "work/cut/il-casolare-italian-extra-virgin-olive-oil/00.png",
+  "sym": 0.969,
+  "price": "16.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/il-casolare-italian-extra-virgin-olive-oil"
+ },
+ "white-balsamic-glaze": {
+  "title": "White Balsamic Glaze",
+  "kind": "lathe",
+  "img": "work/cut/white-balsamic-glaze/00.png",
+  "sym": 0.983,
+  "price": "14.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-balsamic-glaze"
+ },
+ "black-truffle-breakings": {
+  "title": "Black Truffle Breakings",
+  "kind": "lathe",
+  "img": "work/cut/black-truffle-breakings/00.png",
+  "sym": 0.996,
+  "price": "68.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-truffle-breakings"
+ },
+ "dark-balsamic-glaze": {
+  "title": "Dark Balsamic Glaze",
+  "kind": "lathe",
+  "img": "work/cut/dark-balsamic-glaze/00.png",
+  "sym": 0.997,
+  "price": "8.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/dark-balsamic-glaze"
+ },
+ "lobster-oil": {
+  "title": "Lobster Oil",
+  "kind": "lathe",
+  "img": "work/cut/lobster-oil/00.png",
+  "sym": 0.991,
+  "price": "18.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/lobster-oil"
+ },
+ "mojama-hand-cured-tuna-in-sea-salt": {
+  "title": "Mojama - Hand Cured Tuna in Sea Salt",
+  "kind": "relief",
+  "img": "work/cut/mojama-hand-cured-tuna-in-sea-salt/00.png",
+  "sym": 0.932,
+  "price": "36.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mojama-hand-cured-tuna-in-sea-salt"
+ },
+ "fresh-australian-perigord-black-winter-truffles": {
+  "title": "Fresh P\u00e9rigord Black Winter Truffles",
+  "kind": "relief",
+  "img": "work/cut/fresh-australian-perigord-black-winter-truffles/00.png",
+  "sym": 0.749,
+  "price": "89.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/fresh-australian-perigord-black-winter-truffles"
+ },
+ "karat-israeli-osetra-caviar": {
+  "title": "Karat Israeli Osetra Caviar",
+  "kind": "jar",
+  "img": "work/cut/karat-israeli-osetra-caviar/00.png",
+  "sym": 0,
+  "price": "109.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/karat-israeli-osetra-caviar"
+ },
+ "20-year-aged-sherry-vinegar": {
+  "title": "20 year Aged Sherry Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/20-year-aged-sherry-vinegar/00.png",
+  "sym": 0.982,
+  "price": "19.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/20-year-aged-sherry-vinegar"
+ },
+ "cuttlefish-squid-ink": {
+  "title": "Cuttlefish Squid Ink",
+  "kind": "lathe",
+  "img": "work/cut/cuttlefish-squid-ink/00.png",
+  "sym": 0.994,
+  "price": "10.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/cuttlefish-squid-ink"
+ },
+ "reggio-emilia-traditional-aged-balsamic-vinegar": {
+  "title": "Reggio Emilia Traditional Aged Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/reggio-emilia-traditional-aged-balsamic-vinegar/00.png",
+  "sym": 0.926,
+  "price": "80.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/reggio-emilia-traditional-aged-balsamic-vinegar"
+ },
+ "white-truffle-grapeseed-oil": {
+  "title": "White Truffle Grapeseed Oil",
+  "kind": "lathe",
+  "img": "work/cut/white-truffle-grapeseed-oil/00.png",
+  "sym": 0.993,
+  "price": "14.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-truffle-grapeseed-oil"
+ },
+ "stainless-steel-truffle-slicer": {
+  "title": "Stainless Steel Truffle Slicer",
+  "kind": "relief",
+  "img": "work/cut/stainless-steel-truffle-slicer/00.png",
+  "sym": 0.985,
+  "price": "25.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/stainless-steel-truffle-slicer"
+ },
+ "mother-of-pearl-serving-spoon-logo-3-5-inch": {
+  "title": "Mother of Pearl Serving Spoon Logo 3.5 Inch",
+  "kind": "relief",
+  "img": "work/cut/mother-of-pearl-serving-spoon-logo-3-5-inch/00.png",
+  "sym": 0.986,
+  "price": "10.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/mother-of-pearl-serving-spoon-logo-3-5-inch"
+ },
+ "glass-caviar-serving-dish": {
+  "title": "Glass Caviar Serving Dish",
+  "kind": "relief",
+  "img": "work/cut/glass-caviar-serving-dish/00.png",
+  "sym": 0.768,
+  "price": "32.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/glass-caviar-serving-dish",
+  "flat": true
+ },
+ "stainless-roll-top-caviar-server": {
+  "title": "Stainless Roll Top Caviar Server",
+  "kind": "relief",
+  "img": "work/cut/stainless-roll-top-caviar-server/00.png",
+  "sym": 0.86,
+  "price": "100.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/stainless-roll-top-caviar-server",
+  "flat": true
+ },
+ "unio-siurana-arbequina-extra-virgin-olive-oil": {
+  "title": "UNIO Siurana Arbequina Extra Virgin Olive Oil",
+  "kind": "lathe",
+  "img": "work/cut/unio-siurana-arbequina-extra-virgin-olive-oil/00.png",
+  "sym": 0.997,
+  "price": "20.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/unio-siurana-arbequina-extra-virgin-olive-oil"
+ },
+ "banyuls-vinegar": {
+  "title": "Banyuls Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/banyuls-vinegar/00.png",
+  "sym": 0.986,
+  "price": "13.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/banyuls-vinegar"
+ },
+ "fig-balsamic-glaze": {
+  "title": "Fig Balsamic Glaze",
+  "kind": "lathe",
+  "img": "work/cut/fig-balsamic-glaze/00.png",
+  "sym": 0.994,
+  "price": "8.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/fig-balsamic-glaze"
+ },
+ "flavored-balsamic-glaze": {
+  "title": "Flavored Balsamic Glaze",
+  "kind": "lathe",
+  "img": "work/cut/flavored-balsamic-glaze/01.png",
+  "sym": 0.992,
+  "price": "6.00",
+  "available": false,
+  "url": "https://caviarstar.com/products/flavored-balsamic-glaze"
+ },
+ "saba-vinegar": {
+  "title": "Saba Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/saba-vinegar/00.png",
+  "sym": 0.995,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/saba-vinegar"
+ },
+ "5-year-white-balsamic-vinegar": {
+  "title": "5 Year White Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/5-year-white-balsamic-vinegar/00.png",
+  "sym": 0.996,
+  "price": "15.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/5-year-white-balsamic-vinegar"
+ },
+ "8-year-aged-balsamic-vinegar": {
+  "title": "8 Year Aged Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/8-year-aged-balsamic-vinegar/01.png",
+  "sym": 0.976,
+  "price": "22.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/8-year-aged-balsamic-vinegar"
+ },
+ "10-year-aged-balsamic-vinegar": {
+  "title": "10 Year Aged Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/10-year-aged-balsamic-vinegar/01.png",
+  "sym": 0.972,
+  "price": "30.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/10-year-aged-balsamic-vinegar"
+ },
+ "12-year-aged-balsamic-vinegar": {
+  "title": "12 Year Aged Balsamic Vinegar",
+  "kind": "lathe",
+  "img": "work/cut/12-year-aged-balsamic-vinegar/01.png",
+  "sym": 0.991,
+  "price": "38.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/12-year-aged-balsamic-vinegar"
+ },
+ "50-year-aged-balsamic-vinegar": {
+  "title": "50-Year Aged Balsamic Vinegar \u2013 2.29oz",
+  "kind": "relief",
+  "img": "work/cut/50-year-aged-balsamic-vinegar/01.png",
+  "sym": 0.963,
+  "price": "239.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/50-year-aged-balsamic-vinegar",
+  "flat": true
+ },
+ "100-year-aged-balsamic-vinegar": {
+  "title": "100 Year aged Balsamic Vinegar",
+  "kind": "relief",
+  "img": "work/cut/100-year-aged-balsamic-vinegar/00.png",
+  "sym": 0.862,
+  "price": "395.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/100-year-aged-balsamic-vinegar",
+  "flat": true
+ },
+ "black-truffle-olive-oil": {
+  "title": "Black Truffle Olive Oil",
+  "kind": "lathe",
+  "img": "work/cut/black-truffle-olive-oil/01.png",
+  "sym": 0.994,
+  "price": "5.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-truffle-olive-oil"
+ },
+ "black-truffle-sauce": {
+  "title": "Black Truffle Sauce",
+  "kind": "lathe",
+  "img": "work/cut/black-truffle-sauce/00.png",
+  "sym": 0.996,
+  "price": "14.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-truffle-sauce"
+ },
+ "black-truffle-paste": {
+  "title": "Black Truffle Paste",
+  "kind": "lathe",
+  "img": "work/cut/black-truffle-paste/01.png",
+  "sym": 0.994,
+  "price": "24.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-truffle-paste"
+ },
+ "black-truffle-sea-salt": {
+  "title": "Black Truffle Sea Salt",
+  "kind": "relief",
+  "img": "work/cut/black-truffle-sea-salt/01.png",
+  "sym": 0.995,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-truffle-sea-salt",
+  "flat": true
+ },
+ "white-truffle-butter": {
+  "title": "White Truffle Butter",
+  "kind": "lathe",
+  "img": "work/cut/white-truffle-butter/01.png",
+  "sym": 0.997,
+  "price": "12.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-truffle-butter"
+ },
+ "white-truffle-olive-oil": {
+  "title": "White Truffle Olive Oil",
+  "kind": "lathe",
+  "img": "work/cut/white-truffle-olive-oil/01.png",
+  "sym": 0.99,
+  "price": "8.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-truffle-olive-oil"
+ },
+ "white-truffle-paste": {
+  "title": "White Truffle Paste",
+  "kind": "lathe",
+  "img": "work/cut/white-truffle-paste/01.png",
+  "sym": 0.996,
+  "price": "38.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-truffle-paste"
+ },
+ "white-truffle-sauce": {
+  "title": "White Truffle Sauce",
+  "kind": "lathe",
+  "img": "work/cut/white-truffle-sauce/00.png",
+  "sym": 0.99,
+  "price": "20.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-truffle-sauce"
+ },
+ "white-truffle-flour": {
+  "title": "White Truffle Flour",
+  "kind": "lathe",
+  "img": "work/cut/white-truffle-flour/00.png",
+  "sym": 0.99,
+  "price": "20.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-truffle-flour"
+ },
+ "whole-black-summer-truffles": {
+  "title": "Whole Black Summer Truffles \u2013 8.8 oz",
+  "kind": "lathe",
+  "img": "work/cut/whole-black-summer-truffles/00.png",
+  "sym": 0.992,
+  "price": "57.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/whole-black-summer-truffles"
+ },
+ "black-summer-truffle-peelings": {
+  "title": "Black Summer Truffle Peelings",
+  "kind": "lathe",
+  "img": "work/cut/black-summer-truffle-peelings/00.png",
+  "sym": 0.995,
+  "price": "57.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-summer-truffle-peelings"
+ },
+ "black-truffle-concentrated-juice": {
+  "title": "Black Truffle Concentrated Juice",
+  "kind": "lathe",
+  "img": "work/cut/black-truffle-concentrated-juice/00.png",
+  "sym": 0.999,
+  "price": "32.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-truffle-concentrated-juice"
+ },
+ "black-truffle-carpaccio": {
+  "title": "Black Truffle Carpaccio",
+  "kind": "lathe",
+  "img": "work/cut/black-truffle-carpaccio/00.png",
+  "sym": 0.994,
+  "price": "28.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/black-truffle-carpaccio"
+ },
+ "white-truffle-honey": {
+  "title": "White Truffle Honey",
+  "kind": "lathe",
+  "img": "work/cut/white-truffle-honey/02.png",
+  "sym": 0.993,
+  "price": "9.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/white-truffle-honey"
+ },
+ "piment-d-espelette": {
+  "title": "Piment d' Espelette",
+  "kind": "relief",
+  "img": "work/cut/piment-d-espelette/00.png",
+  "sym": 0.998,
+  "price": "8.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/piment-d-espelette",
+  "flat": true
+ },
+ "bottarga-dried-and-cured-mullet-roe": {
+  "title": "Bottarga - Dried and Cured Mullet Roe",
+  "kind": "relief",
+  "img": "work/cut/bottarga-dried-and-cured-mullet-roe/00.png",
+  "sym": 0.91,
+  "price": "50.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/bottarga-dried-and-cured-mullet-roe"
+ },
+ "extra-large-burgundy-escargots-6-dozen": {
+  "title": "Extra Large Burgundy Escargots - 6 Dozen Per Can",
+  "kind": "lathe",
+  "img": "work/cut/extra-large-burgundy-escargots-6-dozen/03.png",
+  "sym": 0.996,
+  "price": "32.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/extra-large-burgundy-escargots-6-dozen"
+ },
+ "organic-gourmet-vanilla-beans": {
+  "title": "Organic Gourmet Vanilla Beans",
+  "kind": "relief",
+  "img": "work/cut/organic-gourmet-vanilla-beans/00.png",
+  "sym": 0.766,
+  "price": "16.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/organic-gourmet-vanilla-beans"
+ },
+ "spanish-saffron-threads": {
+  "title": "Spanish Saffron Threads",
+  "kind": "relief",
+  "img": "work/cut/spanish-saffron-threads/00.png",
+  "sym": 0.88,
+  "price": "120.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/spanish-saffron-threads"
+ },
+ "creme-fraiche": {
+  "title": "Cr\u00e8me Fra\u00eeche",
+  "kind": "relief",
+  "img": "work/cut/creme-fraiche/01.png",
+  "sym": 0.817,
+  "price": "5.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/creme-fraiche",
+  "flat": true
+ },
+ "cocktail-blinis": {
+  "title": "Cocktail Blinis",
+  "kind": "relief",
+  "img": "work/cut/cocktail-blinis/00.png",
+  "sym": 0.95,
+  "price": "7.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/cocktail-blinis",
+  "flat": true
+ },
+ "french-mini-blinis-2": {
+  "title": "French Mini Blinis 2\"",
+  "kind": "relief",
+  "img": "work/cut/french-mini-blinis-2/00.png",
+  "sym": 0.915,
+  "price": "7.50",
+  "available": true,
+  "url": "https://caviarstar.com/products/french-mini-blinis-2",
+  "flat": true
+ },
+ "irish-cold-smoked-atlantic-salmon": {
+  "title": "Irish Cold Smoked Atlantic Salmon",
+  "kind": "relief",
+  "img": "work/cut/irish-cold-smoked-atlantic-salmon/00.png",
+  "sym": 0.902,
+  "price": "25.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/irish-cold-smoked-atlantic-salmon"
+ },
+ "cold-smoked-balik-salmon-fume": {
+  "title": "Balik Loin Cold Smoked Atlantic Salmon",
+  "kind": "relief",
+  "img": "work/cut/cold-smoked-balik-salmon-fume/00.png",
+  "sym": 0.881,
+  "price": "42.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/cold-smoked-balik-salmon-fume"
+ },
+ "golden-whitefish-roe": {
+  "title": "Golden Whitefish Roe",
+  "kind": "jar",
+  "img": "work/cut/golden-whitefish-roe/00.png",
+  "sym": 0,
+  "price": "25.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/golden-whitefish-roe"
+ },
+ "american-salmon-caviar": {
+  "title": "American Salmon Roe, #1 Chum (Keta)",
+  "kind": "jar",
+  "img": "work/cut/american-salmon-caviar/00.png",
+  "sym": 0,
+  "price": "18.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/american-salmon-caviar"
+ },
+ "american-bowfin-caviar": {
+  "title": "American Bowfin Roe",
+  "kind": "jar",
+  "img": "work/cut/american-bowfin-caviar/00.png",
+  "sym": 0,
+  "price": "28.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/american-bowfin-caviar"
+ },
+ "american-hackleback-sturgeon-caviar": {
+  "title": "American Hackleback Sturgeon Caviar",
+  "kind": "jar",
+  "img": "work/cut/american-hackleback-sturgeon-caviar/00.png",
+  "sym": 0,
+  "price": "59.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/american-hackleback-sturgeon-caviar"
+ },
+ "american-paddlefish-caviar": {
+  "title": "American Paddlefish Caviar",
+  "kind": "jar",
+  "img": "work/cut/american-paddlefish-caviar/00.png",
+  "sym": 0,
+  "price": "39.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/american-paddlefish-caviar"
+ },
+ "rainbow-trout-roe": {
+  "title": "Rainbow Trout Roe",
+  "kind": "jar",
+  "img": "work/cut/rainbow-trout-roe/00.png",
+  "sym": 0,
+  "price": "22.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/rainbow-trout-roe"
+ },
+ "bourbon-barrel-smoked-trout-roe": {
+  "title": "Bourbon Barrel Smoked Trout Roe",
+  "kind": "jar",
+  "img": "work/cut/bourbon-barrel-smoked-trout-roe/00.png",
+  "sym": 0,
+  "price": "29.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/bourbon-barrel-smoked-trout-roe"
+ },
+ "golden-dynasty-imperial-kaluga-hybrid-caviar": {
+  "title": "Imperial Kaluga Hybrid Caviar",
+  "kind": "jar",
+  "img": "work/cut/golden-dynasty-imperial-kaluga-hybrid-caviar/00.png",
+  "sym": 0,
+  "price": "90.00",
+  "available": true,
+  "url": "https://caviarstar.com/products/golden-dynasty-imperial-kaluga-hybrid-caviar"
+ }
+}

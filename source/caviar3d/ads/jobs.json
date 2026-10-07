@@ -1,0 +1,818 @@
+[
+ {
+  "id": "dynasty-siberian-caviar",
+  "format": "1x1",
+  "ad": {
+   "h": "dynasty-siberian-caviar",
+   "headline": "Elegant. Buttery.",
+   "sub": "Soft pearls that melt on the palate",
+   "name": "Royal Dynasty Siberian Caviar",
+   "now": "$59",
+   "was": "$89",
+   "size": "1 oz",
+   "badge": [
+    "Save",
+    "$30",
+    "on 1 oz"
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/dynasty-siberian-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "dynasty-siberian-caviar",
+  "format": "4x5",
+  "ad": {
+   "h": "dynasty-siberian-caviar",
+   "headline": "Elegant. Buttery.",
+   "sub": "Soft pearls that melt on the palate",
+   "name": "Royal Dynasty Siberian Caviar",
+   "now": "$59",
+   "was": "$89",
+   "size": "1 oz",
+   "badge": [
+    "Save",
+    "$30",
+    "on 1 oz"
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/dynasty-siberian-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "dynasty-siberian-caviar",
+  "format": "9x16",
+  "ad": {
+   "h": "dynasty-siberian-caviar",
+   "headline": "Elegant. Buttery.",
+   "sub": "Soft pearls that melt on the palate",
+   "name": "Royal Dynasty Siberian Caviar",
+   "now": "$59",
+   "was": "$89",
+   "size": "1 oz",
+   "badge": [
+    "Save",
+    "$30",
+    "on 1 oz"
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/dynasty-siberian-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "amber-dynasty-royal-kaluga-caviar",
+  "format": "1x1",
+  "ad": {
+   "h": "amber-dynasty-royal-kaluga-caviar",
+   "headline": "Large. Firm. Buttery.",
+   "sub": "Chocolate brown to dark amber, mild briny finish",
+   "name": "Premier Kaluga Hybrid Caviar",
+   "now": "$205",
+   "was": "$300",
+   "size": "4 oz",
+   "badge": [
+    "Save",
+    "31%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/amber-dynasty-royal-kaluga-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "amber-dynasty-royal-kaluga-caviar",
+  "format": "4x5",
+  "ad": {
+   "h": "amber-dynasty-royal-kaluga-caviar",
+   "headline": "Large. Firm. Buttery.",
+   "sub": "Chocolate brown to dark amber, mild briny finish",
+   "name": "Premier Kaluga Hybrid Caviar",
+   "now": "$205",
+   "was": "$300",
+   "size": "4 oz",
+   "badge": [
+    "Save",
+    "31%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/amber-dynasty-royal-kaluga-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "amber-dynasty-royal-kaluga-caviar",
+  "format": "9x16",
+  "ad": {
+   "h": "amber-dynasty-royal-kaluga-caviar",
+   "headline": "Large. Firm. Buttery.",
+   "sub": "Chocolate brown to dark amber, mild briny finish",
+   "name": "Premier Kaluga Hybrid Caviar",
+   "now": "$205",
+   "was": "$300",
+   "size": "4 oz",
+   "badge": [
+    "Save",
+    "31%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/amber-dynasty-royal-kaluga-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "royal-california-white-sturgeon-caviar",
+  "format": "1x1",
+  "ad": {
+   "h": "royal-california-white-sturgeon-caviar",
+   "headline": "Nutty. Clean. Creamy.",
+   "sub": "Deep amber to dark gold pearls",
+   "name": "Royal California White Sturgeon Caviar",
+   "now": "$159",
+   "was": "$219",
+   "size": "2 oz",
+   "badge": [
+    "Save",
+    "27%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/royal-california-white-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "royal-california-white-sturgeon-caviar",
+  "format": "4x5",
+  "ad": {
+   "h": "royal-california-white-sturgeon-caviar",
+   "headline": "Nutty. Clean. Creamy.",
+   "sub": "Deep amber to dark gold pearls",
+   "name": "Royal California White Sturgeon Caviar",
+   "now": "$159",
+   "was": "$219",
+   "size": "2 oz",
+   "badge": [
+    "Save",
+    "27%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/royal-california-white-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "royal-california-white-sturgeon-caviar",
+  "format": "9x16",
+  "ad": {
+   "h": "royal-california-white-sturgeon-caviar",
+   "headline": "Nutty. Clean. Creamy.",
+   "sub": "Deep amber to dark gold pearls",
+   "name": "Royal California White Sturgeon Caviar",
+   "now": "$159",
+   "was": "$219",
+   "size": "2 oz",
+   "badge": [
+    "Save",
+    "27%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/royal-california-white-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "classic-california-white-sturgeon-caviar",
+  "format": "1x1",
+  "ad": {
+   "h": "classic-california-white-sturgeon-caviar",
+   "headline": "Clean. Creamy. Lingering.",
+   "sub": "American White Sturgeon caviar, medium pearls",
+   "name": "Classic American White Sturgeon Caviar",
+   "now": "$459",
+   "was": "$650",
+   "size": "7 oz",
+   "badge": [
+    "Save",
+    "29%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/classic-california-white-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "classic-california-white-sturgeon-caviar",
+  "format": "4x5",
+  "ad": {
+   "h": "classic-california-white-sturgeon-caviar",
+   "headline": "Clean. Creamy. Lingering.",
+   "sub": "American White Sturgeon caviar, medium pearls",
+   "name": "Classic American White Sturgeon Caviar",
+   "now": "$459",
+   "was": "$650",
+   "size": "7 oz",
+   "badge": [
+    "Save",
+    "29%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/classic-california-white-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "classic-california-white-sturgeon-caviar",
+  "format": "9x16",
+  "ad": {
+   "h": "classic-california-white-sturgeon-caviar",
+   "headline": "Clean. Creamy. Lingering.",
+   "sub": "American White Sturgeon caviar, medium pearls",
+   "name": "Classic American White Sturgeon Caviar",
+   "now": "$459",
+   "was": "$650",
+   "size": "7 oz",
+   "badge": [
+    "Save",
+    "29%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/classic-california-white-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "dynasty-royal-osetra-caviar",
+  "format": "1x1",
+  "ad": {
+   "h": "dynasty-royal-osetra-caviar",
+   "headline": "Nutty. Buttery. Pop.",
+   "sub": "Amber Osetra, perfectly briny",
+   "name": "Dynasty Royal Osetra Caviar",
+   "now": "$999",
+   "was": "$1,269",
+   "size": "16 oz",
+   "badge": [
+    "Save",
+    "21%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/dynasty-royal-osetra-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "dynasty-royal-osetra-caviar",
+  "format": "4x5",
+  "ad": {
+   "h": "dynasty-royal-osetra-caviar",
+   "headline": "Nutty. Buttery. Pop.",
+   "sub": "Amber Osetra, perfectly briny",
+   "name": "Dynasty Royal Osetra Caviar",
+   "now": "$999",
+   "was": "$1,269",
+   "size": "16 oz",
+   "badge": [
+    "Save",
+    "21%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/dynasty-royal-osetra-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "dynasty-royal-osetra-caviar",
+  "format": "9x16",
+  "ad": {
+   "h": "dynasty-royal-osetra-caviar",
+   "headline": "Nutty. Buttery. Pop.",
+   "sub": "Amber Osetra, perfectly briny",
+   "name": "Dynasty Royal Osetra Caviar",
+   "now": "$999",
+   "was": "$1,269",
+   "size": "16 oz",
+   "badge": [
+    "Save",
+    "21%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/dynasty-royal-osetra-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "american-hackleback-sturgeon-caviar",
+  "format": "1x1",
+  "ad": {
+   "h": "american-hackleback-sturgeon-caviar",
+   "headline": "Feel the Pop",
+   "sub": "Mild, clean, with subtle earthy notes",
+   "name": "American Hackleback Sturgeon Caviar",
+   "now": "$309",
+   "was": "$349",
+   "size": "7 oz",
+   "badge": [
+    "Save",
+    "11%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/american-hackleback-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "american-hackleback-sturgeon-caviar",
+  "format": "4x5",
+  "ad": {
+   "h": "american-hackleback-sturgeon-caviar",
+   "headline": "Feel the Pop",
+   "sub": "Mild, clean, with subtle earthy notes",
+   "name": "American Hackleback Sturgeon Caviar",
+   "now": "$309",
+   "was": "$349",
+   "size": "7 oz",
+   "badge": [
+    "Save",
+    "11%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/american-hackleback-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "american-hackleback-sturgeon-caviar",
+  "format": "9x16",
+  "ad": {
+   "h": "american-hackleback-sturgeon-caviar",
+   "headline": "Feel the Pop",
+   "sub": "Mild, clean, with subtle earthy notes",
+   "name": "American Hackleback Sturgeon Caviar",
+   "now": "$309",
+   "was": "$349",
+   "size": "7 oz",
+   "badge": [
+    "Save",
+    "11%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/american-hackleback-sturgeon-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "smoked-golden-whitefish-caviar",
+  "format": "1x1",
+  "ad": {
+   "h": "smoked-golden-whitefish-caviar",
+   "headline": "Soft Yet Crunchy",
+   "sub": "Cold smoked over bourbon barrel oak",
+   "name": "Smoked Golden Whitefish Roe",
+   "now": "$25",
+   "was": "$35",
+   "size": "4 oz",
+   "badge": [
+    "Save",
+    "28%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/smoked-golden-whitefish-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "smoked-golden-whitefish-caviar",
+  "format": "4x5",
+  "ad": {
+   "h": "smoked-golden-whitefish-caviar",
+   "headline": "Soft Yet Crunchy",
+   "sub": "Cold smoked over bourbon barrel oak",
+   "name": "Smoked Golden Whitefish Roe",
+   "now": "$25",
+   "was": "$35",
+   "size": "4 oz",
+   "badge": [
+    "Save",
+    "28%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/smoked-golden-whitefish-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "smoked-golden-whitefish-caviar",
+  "format": "9x16",
+  "ad": {
+   "h": "smoked-golden-whitefish-caviar",
+   "headline": "Soft Yet Crunchy",
+   "sub": "Cold smoked over bourbon barrel oak",
+   "name": "Smoked Golden Whitefish Roe",
+   "now": "$25",
+   "was": "$35",
+   "size": "4 oz",
+   "badge": [
+    "Save",
+    "28%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026",
+   "lid": "../../ads/assets/smoked-golden-whitefish-caviar/lid.jpg"
+  }
+ },
+ {
+  "id": "shell-caviar-spoon-with-abalone-inlay",
+  "format": "1x1",
+  "ad": {
+   "h": "shell-caviar-spoon-with-abalone-inlay",
+   "headline": "Taste Only Caviar",
+   "sub": "Real mollusk shell, abalone tip, no metal taste",
+   "name": "Shell Caviar Spoon with Abalone Inlay",
+   "now": "$4",
+   "was": "$7.50",
+   "size": "1 spoon",
+   "badge": [
+    "Save",
+    "46%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "shell-caviar-spoon-with-abalone-inlay",
+  "format": "4x5",
+  "ad": {
+   "h": "shell-caviar-spoon-with-abalone-inlay",
+   "headline": "Taste Only Caviar",
+   "sub": "Real mollusk shell, abalone tip, no metal taste",
+   "name": "Shell Caviar Spoon with Abalone Inlay",
+   "now": "$4",
+   "was": "$7.50",
+   "size": "1 spoon",
+   "badge": [
+    "Save",
+    "46%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "shell-caviar-spoon-with-abalone-inlay",
+  "format": "9x16",
+  "ad": {
+   "h": "shell-caviar-spoon-with-abalone-inlay",
+   "headline": "Taste Only Caviar",
+   "sub": "Real mollusk shell, abalone tip, no metal taste",
+   "name": "Shell Caviar Spoon with Abalone Inlay",
+   "now": "$4",
+   "was": "$7.50",
+   "size": "1 spoon",
+   "badge": [
+    "Save",
+    "46%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "mother-of-pearl-spoon-3-5",
+  "format": "1x1",
+  "ad": {
+   "h": "mother-of-pearl-spoon-3-5",
+   "headline": "Set the Caviar Table",
+   "sub": "Hand cut nacre spoons that protect the flavor",
+   "name": "Mother of Pearl Spoons, 3.5 inch",
+   "now": "$55",
+   "was": "$100",
+   "size": "Set of 10",
+   "badge": [
+    "Save",
+    "45%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "mother-of-pearl-spoon-3-5",
+  "format": "4x5",
+  "ad": {
+   "h": "mother-of-pearl-spoon-3-5",
+   "headline": "Set the Caviar Table",
+   "sub": "Hand cut nacre spoons that protect the flavor",
+   "name": "Mother of Pearl Spoons, 3.5 inch",
+   "now": "$55",
+   "was": "$100",
+   "size": "Set of 10",
+   "badge": [
+    "Save",
+    "45%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "mother-of-pearl-spoon-3-5",
+  "format": "9x16",
+  "ad": {
+   "h": "mother-of-pearl-spoon-3-5",
+   "headline": "Set the Caviar Table",
+   "sub": "Hand cut nacre spoons that protect the flavor",
+   "name": "Mother of Pearl Spoons, 3.5 inch",
+   "now": "$55",
+   "was": "$100",
+   "size": "Set of 10",
+   "badge": [
+    "Save",
+    "45%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "pink-mother-of-pearl-shell-plate-spoon-set",
+  "format": "1x1",
+  "ad": {
+   "h": "pink-mother-of-pearl-shell-plate-spoon-set",
+   "headline": "Set for Caviar Night",
+   "sub": "Handmade pink mother of pearl plate and spoon",
+   "name": "Pink Mother of Pearl Shell Plate and Spoon Set",
+   "now": "$30",
+   "was": "$49",
+   "size": "",
+   "badge": [
+    "Save",
+    "38%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "pink-mother-of-pearl-shell-plate-spoon-set",
+  "format": "4x5",
+  "ad": {
+   "h": "pink-mother-of-pearl-shell-plate-spoon-set",
+   "headline": "Set for Caviar Night",
+   "sub": "Handmade pink mother of pearl plate and spoon",
+   "name": "Pink Mother of Pearl Shell Plate and Spoon Set",
+   "now": "$30",
+   "was": "$49",
+   "size": "",
+   "badge": [
+    "Save",
+    "38%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "pink-mother-of-pearl-shell-plate-spoon-set",
+  "format": "9x16",
+  "ad": {
+   "h": "pink-mother-of-pearl-shell-plate-spoon-set",
+   "headline": "Set for Caviar Night",
+   "sub": "Handmade pink mother of pearl plate and spoon",
+   "name": "Pink Mother of Pearl Shell Plate and Spoon Set",
+   "now": "$30",
+   "was": "$49",
+   "size": "",
+   "badge": [
+    "Save",
+    "38%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "caviar-sale-collection",
+  "format": "1x1",
+  "ad": {
+   "items": [
+    {
+     "h": "amber-dynasty-royal-kaluga-caviar",
+     "label": "Kaluga Hybrid",
+     "size": "16 oz",
+     "price": 705.0,
+     "was": 1250.0,
+     "lid": "../../ads/assets/amber-dynasty-royal-kaluga-caviar/lid.jpg"
+    },
+    {
+     "h": "dynasty-siberian-caviar",
+     "label": "Siberian",
+     "size": "1 oz",
+     "price": 59.0,
+     "was": 89.0,
+     "lid": "../../ads/assets/dynasty-siberian-caviar/lid.jpg"
+    },
+    {
+     "h": "royal-california-white-sturgeon-caviar",
+     "label": "Royal White",
+     "size": "1 oz",
+     "price": 109.0,
+     "was": 129.0,
+     "lid": "../../ads/assets/royal-california-white-sturgeon-caviar/lid.jpg"
+    },
+    {
+     "h": "classic-california-white-sturgeon-caviar",
+     "label": "Classic White",
+     "size": "2 oz",
+     "price": 169.0,
+     "was": 189.0,
+     "lid": "../../ads/assets/classic-california-white-sturgeon-caviar/lid.jpg"
+    },
+    {
+     "h": "dynasty-royal-osetra-caviar",
+     "label": "Royal Osetra",
+     "size": "7 oz",
+     "price": 479.0,
+     "was": 575.0,
+     "lid": "../../ads/assets/dynasty-royal-osetra-caviar/lid.jpg"
+    },
+    {
+     "h": "american-hackleback-sturgeon-caviar",
+     "label": "Hackleback",
+     "size": "7 oz",
+     "price": 309.0,
+     "was": 349.0,
+     "lid": "../../ads/assets/american-hackleback-sturgeon-caviar/lid.jpg"
+    }
+   ],
+   "headline": "Caviar on sale",
+   "sub": "Up to 43% off sturgeon caviar",
+   "badge": [
+    "Save up to",
+    "43%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "caviar-sale-collection",
+  "format": "4x5",
+  "ad": {
+   "items": [
+    {
+     "h": "amber-dynasty-royal-kaluga-caviar",
+     "label": "Kaluga Hybrid",
+     "size": "16 oz",
+     "price": 705.0,
+     "was": 1250.0,
+     "lid": "../../ads/assets/amber-dynasty-royal-kaluga-caviar/lid.jpg"
+    },
+    {
+     "h": "dynasty-siberian-caviar",
+     "label": "Siberian",
+     "size": "1 oz",
+     "price": 59.0,
+     "was": 89.0,
+     "lid": "../../ads/assets/dynasty-siberian-caviar/lid.jpg"
+    },
+    {
+     "h": "royal-california-white-sturgeon-caviar",
+     "label": "Royal White",
+     "size": "1 oz",
+     "price": 109.0,
+     "was": 129.0,
+     "lid": "../../ads/assets/royal-california-white-sturgeon-caviar/lid.jpg"
+    },
+    {
+     "h": "classic-california-white-sturgeon-caviar",
+     "label": "Classic White",
+     "size": "2 oz",
+     "price": 169.0,
+     "was": 189.0,
+     "lid": "../../ads/assets/classic-california-white-sturgeon-caviar/lid.jpg"
+    },
+    {
+     "h": "dynasty-royal-osetra-caviar",
+     "label": "Royal Osetra",
+     "size": "7 oz",
+     "price": 479.0,
+     "was": 575.0,
+     "lid": "../../ads/assets/dynasty-royal-osetra-caviar/lid.jpg"
+    },
+    {
+     "h": "american-hackleback-sturgeon-caviar",
+     "label": "Hackleback",
+     "size": "7 oz",
+     "price": 309.0,
+     "was": 349.0,
+     "lid": "../../ads/assets/american-hackleback-sturgeon-caviar/lid.jpg"
+    }
+   ],
+   "headline": "Caviar on sale",
+   "sub": "Up to 43% off sturgeon caviar",
+   "badge": [
+    "Save up to",
+    "43%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ },
+ {
+  "id": "caviar-sale-collection",
+  "format": "9x16",
+  "ad": {
+   "items": [
+    {
+     "h": "amber-dynasty-royal-kaluga-caviar",
+     "label": "Kaluga Hybrid",
+     "size": "16 oz",
+     "price": 705.0,
+     "was": 1250.0,
+     "lid": "../../ads/assets/amber-dynasty-royal-kaluga-caviar/lid.jpg"
+    },
+    {
+     "h": "dynasty-siberian-caviar",
+     "label": "Siberian",
+     "size": "1 oz",
+     "price": 59.0,
+     "was": 89.0,
+     "lid": "../../ads/assets/dynasty-siberian-caviar/lid.jpg"
+    },
+    {
+     "h": "royal-california-white-sturgeon-caviar",
+     "label": "Royal White",
+     "size": "1 oz",
+     "price": 109.0,
+     "was": 129.0,
+     "lid": "../../ads/assets/royal-california-white-sturgeon-caviar/lid.jpg"
+    },
+    {
+     "h": "classic-california-white-sturgeon-caviar",
+     "label": "Classic White",
+     "size": "2 oz",
+     "price": 169.0,
+     "was": 189.0,
+     "lid": "../../ads/assets/classic-california-white-sturgeon-caviar/lid.jpg"
+    },
+    {
+     "h": "dynasty-royal-osetra-caviar",
+     "label": "Royal Osetra",
+     "size": "7 oz",
+     "price": 479.0,
+     "was": 575.0,
+     "lid": "../../ads/assets/dynasty-royal-osetra-caviar/lid.jpg"
+    },
+    {
+     "h": "american-hackleback-sturgeon-caviar",
+     "label": "Hackleback",
+     "size": "7 oz",
+     "price": 309.0,
+     "was": 349.0,
+     "lid": "../../ads/assets/american-hackleback-sturgeon-caviar/lid.jpg"
+    }
+   ],
+   "headline": "Caviar on sale",
+   "sub": "Up to 43% off sturgeon caviar",
+   "badge": [
+    "Save up to",
+    "43%",
+    ""
+   ],
+   "cta": "Shop the sale",
+   "foot": "Prices on caviarstar.com as of Oct 6, 2026"
+  }
+ }
+]

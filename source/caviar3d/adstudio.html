@@ -1,0 +1,1116 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Caviar Star Ad Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<style>
+/* Layout: a working desk. Controls in one column, the ad on a dark stage beside it (sticky on wide screens);
+   on phones the controls come first and the stage follows. Dark black and gold in every colour scheme. */
+:root, :root[data-theme] {
+  color-scheme: dark;
+  --ink: #0a0a0c;      /* page ground */
+  --panel: #121216;    /* control panels */
+  --well: #1a191e;     /* inputs */
+  --line: #36312a;     /* hairlines, warm */
+  --line-hi: #5a4e3a;  /* hover and focus rings */
+  --text: #efe8da;     /* parchment */
+  --muted: #a99f8d;
+  --gold: #d9b871;
+  --gold-hi: #f1dc9e;
+  --gold-lo: #a07a3a;
+  --on-gold: #15110a;
+  --warn: #e7ae63;
+  --bad: #f09a86;
+  --good: #b3cf97;
+  --display: 'Cinzel', 'Trajan Pro', Georgia, serif;
+  --serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+[hidden] { display: none !important; }
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--ink); }
+body { margin: 0; background: var(--ink); color: var(--text); font: 15px/1.5 var(--ui); }
+a { color: var(--gold-hi); }
+.wrap { max-width: 1400px; margin: 0 auto; padding-inline: 16px; padding-block: 18px 48px; }
+header.top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; padding-block: 4px 18px; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
+.brand { font-family: var(--display); font-weight: 500; letter-spacing: .42em; text-transform: uppercase; color: var(--gold); font-size: 13px; }
+h1 { margin: 0; font-family: var(--display); font-weight: 500; font-size: clamp(24px, 4vw, 32px); letter-spacing: .04em; color: var(--gold-hi); }
+.lede { margin: 0; flex: 1 1 320px; min-width: 0; color: var(--muted); font-family: var(--serif); font-style: italic; font-size: 18px; }
+
+.desk { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); grid-template-areas: "controls" "stage" "caps"; }
+.controls { grid-area: controls; } .stage { grid-area: stage; } .caps { grid-area: caps; }
+@media (min-width: 980px) {
+  /* the stage stays in view while the controls and captions scroll past it */
+  .desk { grid-template-columns: minmax(340px, 430px) minmax(0, 1fr); grid-template-areas: "controls stage" "caps stage"; grid-template-rows: auto 1fr; align-items: start; }
+  .stage { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); }
+}
+.controls { display: grid; gap: 14px; min-width: 0; }
+fieldset, .panel { margin: 0; min-width: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); padding: 14px 14px 16px; display: grid; gap: 10px; }
+legend, .panel-title { font-family: var(--display); font-weight: 600; font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold); padding: 0 6px; margin-left: -6px; }
+.panel-title { margin: 0 0 2px; }
+label, .lab { font-weight: 600; font-size: 13px; color: var(--text); }
+.field { display: grid; gap: 4px; min-width: 0; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-width: 0; }
+.row > .grow { flex: 1 1 160px; min-width: 0; }
+.hint { margin: 0; font-size: 13px; color: var(--muted); }
+.msg { margin: 0; font-size: 13px; }
+.msg.bad { color: var(--bad); } .msg.warn { color: var(--warn); } .msg.good { color: var(--good); }
+.count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; justify-self: end; }
+.count.over { color: var(--warn); }
+.labrow { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+
+input[type=text], input[type=search], input[type=number], select, textarea {
+  width: 100%; min-width: 0; font: inherit; color: var(--text); background: var(--well); border: 1px solid var(--line); border-radius: 7px; padding: 8px 10px; }
+textarea { resize: vertical; line-height: 1.4; }
+select[size] { padding: 4px; }
+select option:disabled { color: #6f675b; }
+input[aria-invalid=true] { border-color: var(--bad); }
+input:hover, select:hover, textarea:hover { border-color: var(--line-hi); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline-offset: 0; }
+
+/* segmented radio groups */
+.seg { display: flex; flex-wrap: wrap; gap: 6px; border: 0; padding: 0; background: none; }
+.seg label { position: relative; font-weight: 500; }
+.seg input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.seg span { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--well); color: var(--text); font-size: 13px; cursor: pointer; }
+.seg input:checked + span { background: linear-gradient(180deg, var(--gold-hi), var(--gold)); color: var(--on-gold); border-color: var(--gold); font-weight: 600; }
+.seg input:focus-visible + span { outline: 2px solid var(--gold); outline-offset: 2px; }
+.seg input:disabled + span { opacity: .45; cursor: not-allowed; }
+.check { display: flex; gap: 8px; align-items: flex-start; font-weight: 500; }
+.check input { margin-top: 3px; accent-color: var(--gold); width: 16px; height: 16px; }
+input[type=range] { width: 100%; accent-color: var(--gold); }
+
+button { font: inherit; font-weight: 600; font-size: 14px; color: var(--text); background: var(--well); border: 1px solid var(--line-hi); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+button:hover:not(:disabled) { border-color: var(--gold); }
+button.gold { background: linear-gradient(180deg, #f3e1a8, #c9a35a); color: var(--on-gold); border-color: #c9a35a; font-family: var(--display); letter-spacing: .12em; text-transform: uppercase; font-size: 13px; padding: 10px 18px; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.small { font-size: 12px; padding: 4px 10px; font-weight: 600; }
+
+.price { display: grid; gap: 2px; padding: 10px 12px; border-radius: 8px; background: var(--well); border: 1px solid var(--line); }
+.price .big { font-family: var(--display); font-weight: 600; color: var(--gold-hi); font-size: 22px; font-variant-numeric: lining-nums tabular-nums; }
+.price .big s { color: var(--muted); font-weight: 400; font-size: 16px; text-decoration-color: #c4705e; margin-left: 8px; }
+.price .save { color: var(--good); font-weight: 600; font-size: 13px; }
+.source { margin: 0; font-size: 13px; color: var(--muted); }
+.source.live { color: var(--good); }
+.source.stale { color: var(--warn); }
+
+/* stage */
+.stage { display: grid; gap: 14px; min-width: 0; }
+.screen { position: relative; display: grid; place-items: center; padding: 14px; border-radius: 12px; border: 1px solid var(--line);
+  background: radial-gradient(ellipse at 50% 30%, #17140e, #08080a 70%); min-width: 0; }
+#out { display: block; width: auto; height: auto; max-width: 100%; max-height: min(72vh, 860px); border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,.6); background: #060709; }
+@media (min-width: 980px) { #out { max-height: max(300px, min(calc(100vh - 400px), 860px)); } }
+.stage-msg { position: absolute; margin: 0; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 8px 14px; border-radius: 999px; background: rgba(10,10,12,.85);
+  border: 1px solid var(--line); color: var(--muted); font-size: 13px; text-align: center; max-width: 90%; }
+.transport { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.transport input { flex: 1 1 160px; min-width: 0; }
+.transport output { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 13px; min-width: 4.5em; }
+.checks { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-size: 13px; }
+.checks li { padding-left: 18px; position: relative; }
+.checks li::before { content: ''; position: absolute; left: 2px; top: .5em; width: 8px; height: 8px; border-radius: 50%; background: var(--good); }
+.checks li.warn { color: var(--warn); } .checks li.warn::before { background: var(--warn); }
+.exports { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.prog { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.prog progress { flex: 1 1 200px; min-width: 0; height: 10px; accent-color: var(--gold); }
+.prog span { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.fname { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; margin: 0; }
+.caps { display: grid; gap: 12px; }
+.cap { display: grid; gap: 4px; }
+.cap .labrow button { flex: none; }
+#mhost { position: fixed; left: 0; top: 0; width: 0; height: 0; overflow: hidden; visibility: hidden; pointer-events: none; }
+
+/* The measuring copy of the ad: the same CSS as doc/stage/ad.html (keep in sync), laid out by the browser, never shown.
+   The canvas compositor reads every line, box and baseline from it. */
+#m { all: initial; display: block; position: absolute; left: 0; top: 0; overflow: hidden; visibility: hidden;
+  color: #efe8da; font-family: 'Cormorant Garamond', Georgia, serif; }
+#m * { box-sizing: border-box; }
+#m .abs { position: absolute; }
+#m .mark { font-family: 'Cinzel'; font-weight: 500; letter-spacing: .42em; color: #d9b871; text-transform: uppercase; white-space: nowrap; }
+#m .head { font-family: 'Cinzel'; font-weight: 500; letter-spacing: .05em; line-height: 1.04; text-wrap: balance; color: #d9b871; }
+#m .sub { font-style: italic; color: #efe8da; line-height: 1.25; }
+#m .name { font-family: 'Cinzel'; letter-spacing: .08em; color: #efe8da; line-height: 1.25; text-transform: uppercase; text-wrap: balance; }
+#m .now { font-family: 'Cinzel'; font-weight: 600; color: #f1dc9e; line-height: 1; letter-spacing: .02em; font-variant-numeric: lining-nums; }
+#m .was { position: relative; color: #cfc6b4; line-height: 1; white-space: nowrap; justify-self: start; font-variant-numeric: lining-nums; }
+#m .was i { position: absolute; left: -4%; top: 46%; height: .05em; width: 0; }
+#m .size { font-family: 'Cinzel'; letter-spacing: .2em; color: #cfc6b4; text-transform: uppercase; white-space: nowrap; }
+#m .badge { border-radius: 50%; display: grid; place-items: center; text-align: center; color: #15110a; }
+#m .badge b { display: block; font-family: 'Cinzel'; font-weight: 600; line-height: .95; }
+#m .badge span { display: block; font-family: 'Cinzel'; font-weight: 600; letter-spacing: .2em; }
+#m .cta { display: inline-flex; align-items: center; gap: .6em; border-radius: 999px; padding: .62em 1.3em; color: #15110a; white-space: nowrap;
+  font-family: 'Cinzel'; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+#m .url { font-family: 'Cinzel'; letter-spacing: .2em; color: #d9b871; text-transform: lowercase; white-space: nowrap; }
+#m .foot { color: #bdb5a5; letter-spacing: .02em; white-space: nowrap; font-variant-numeric: lining-nums; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+<script type="importmap">{"imports":{"three":"./web/vendor/three.module.js","three/addons/":"./web/vendor/addons/"}}</script>
+
+<div class="wrap">
+  <header class="top">
+    <span class="brand">Caviar Star</span>
+    <h1>Ad Studio</h1>
+    <p class="lede">Pick a product and size, write the words, and export a sale video in the house style. Prices come from caviarstar.com.</p>
+    <p class="lede" style="font-size:13px;opacity:.8">Spec work prepared for Caviar Star; not an official Caviar Star tool.</p>
+  </header>
+
+  <div class="desk">
+    <form class="controls" id="form" autocomplete="off" novalidate>
+      <fieldset>
+        <legend>Product</legend>
+        <div class="seg" role="radiogroup" aria-label="Which products to list">
+          <label><input type="radio" name="filter" id="filter-sale" value="sale" checked><span id="filter-sale-l">On sale now</span></label>
+          <label><input type="radio" name="filter" id="filter-all" value="all"><span id="filter-all-l">All products</span></label>
+        </div>
+        <div class="field">
+          <label for="search">Search</label>
+          <input type="search" id="search" placeholder="Kaluga, osetra, spoon..." aria-describedby="list-hint">
+        </div>
+        <div class="field">
+          <label for="product">Product</label>
+          <select id="product" size="8" aria-describedby="list-hint"></select>
+          <p class="hint" id="list-hint"></p>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Size and price</legend>
+        <div class="field">
+          <label for="size">Size</label>
+          <select id="size"></select>
+        </div>
+        <div class="price" aria-live="polite">
+          <div class="big" id="price-big">&nbsp;</div>
+          <div class="save" id="price-save"></div>
+        </div>
+        <div class="row">
+          <p class="source grow" id="source" role="status">Checking today's price on caviarstar.com</p>
+          <button type="button" class="small" id="refresh">Check price again</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Words</legend>
+        <div class="field">
+          <div class="labrow"><label for="headline">Headline</label><span class="count" id="headline-count"></span></div>
+          <input type="text" id="headline" maxlength="80" aria-describedby="headline-msg headline-count">
+          <p class="msg" id="headline-msg"></p>
+        </div>
+        <div class="field">
+          <div class="labrow"><label for="sub">Sub line</label><span class="count" id="sub-count"></span></div>
+          <input type="text" id="sub" maxlength="120" aria-describedby="sub-msg sub-count">
+          <p class="msg" id="sub-msg"></p>
+        </div>
+        <div class="field">
+          <div class="labrow"><label for="name">Product name</label><span class="count" id="name-count"></span></div>
+          <input type="text" id="name" maxlength="90" aria-describedby="name-count">
+        </div>
+        <div class="field">
+          <div class="labrow"><label for="cta">Button text</label><span class="count" id="cta-count"></span></div>
+          <input type="text" id="cta" maxlength="28" aria-describedby="cta-hint cta-count">
+          <p class="hint" id="cta-hint">Leave empty for the usual wording.</p>
+        </div>
+        <p class="hint">Percentages and "up to" stay out of the words: the badge shows the exact saving for the size in the ad. Dashes turn into commas.</p>
+        <div class="row"><button type="button" class="small" id="reset-words">Reset words for this product</button></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Badge</legend>
+        <div class="seg" role="radiogroup" aria-label="Badge" aria-describedby="badge-msg">
+          <label><input type="radio" name="badge" id="badge-percent" value="percent" checked><span>Percent off</span></label>
+          <label><input type="radio" name="badge" id="badge-dollars" value="dollars"><span>Dollars off</span></label>
+          <label><input type="radio" name="badge" id="badge-none" value="none"><span>No badge</span></label>
+          <label><input type="radio" name="badge" id="badge-code" value="code"><span>Promo code</span></label>
+        </div>
+        <div class="row" id="code-fields" hidden>
+          <div class="field grow"><label for="code">Code</label><input type="text" id="code" maxlength="16" placeholder="CAVIAR10" autocapitalize="characters"></div>
+          <div class="field" style="flex:0 1 110px"><label for="code-pct">Extra % off</label><input type="number" id="code-pct" min="1" max="90" step="1" placeholder="10"></div>
+        </div>
+        <p class="msg" id="badge-msg"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Format</legend>
+        <div class="seg" role="radiogroup" aria-label="Format">
+          <label><input type="radio" name="fmt" id="fmt-9x16" value="9x16" checked><span>9:16 Reels, Stories, TikTok</span></label>
+          <label><input type="radio" name="fmt" id="fmt-4x5" value="4x5"><span>4:5 Feed</span></label>
+          <label><input type="radio" name="fmt" id="fmt-1x1" value="1x1"><span>1:1 Square</span></label>
+        </div>
+        <label class="check" for="catalog"><input type="checkbox" id="catalog"><span>Catalog version (no price on screen)<br><span class="hint">For catalog and Advantage+ ads, where Meta shows the live price itself.</span></span></label>
+        <div class="field">
+          <div class="labrow"><label for="glass">Jar glass</label><output id="glass-out" for="glass"></output></div>
+          <input type="range" id="glass" min="0" max="1" step="0.01" aria-describedby="glass-hint">
+          <p class="hint" id="glass-hint">0 is clear glass, 1 is a solid jar.</p>
+        </div>
+      </fieldset>
+    </form>
+
+    <section class="stage" aria-label="Preview and export">
+      <div class="screen">
+        <canvas id="out" width="1080" height="1920" role="img" aria-label="Ad preview"></canvas>
+        <p class="stage-msg" id="stage-msg">Loading the 3D studio</p>
+      </div>
+      <div class="transport">
+        <button type="button" id="play" class="small" aria-pressed="true">Pause</button>
+        <label for="scrub" class="lab">Time</label>
+        <input type="range" id="scrub" min="0" max="7.96" step="0.0417" value="0">
+        <output id="time" for="scrub">0.0 s</output>
+      </div>
+      <div class="panel">
+        <p class="panel-title">Layout check</p>
+        <ul class="checks" id="checks"><li>Waiting for the first preview</li></ul>
+      </div>
+      <div class="panel">
+        <p class="panel-title">Export</p>
+        <div class="exports">
+          <button type="button" class="gold" id="export-video">Export video</button>
+          <button type="button" id="export-png">Export PNG</button>
+          <button type="button" id="export-all">Export all three sizes</button>
+        </div>
+        <p class="fname" id="fname"></p>
+        <div class="prog" id="prog" hidden>
+          <progress id="progress" max="1" value="0"></progress>
+          <span id="prog-text">0 of 192 frames</span>
+          <button type="button" class="small" id="cancel">Cancel</button>
+        </div>
+        <p class="msg" id="export-msg" role="status"></p>
+      </div>
+    </section>
+
+    <section class="panel caps" aria-label="Captions">
+      <p class="panel-title">Captions</p>
+      <p class="hint">Ready to paste, written from the price in the ad.</p>
+      <div class="cap">
+        <div class="labrow"><label for="cap-meta">Meta primary text</label><span class="row"><span class="count" id="cap-meta-count"></span><button type="button" class="small" data-copy="cap-meta">Copy</button></span></div>
+        <textarea id="cap-meta" rows="3" readonly></textarea>
+      </div>
+      <div class="cap">
+        <div class="labrow"><label for="cap-head">Meta headline</label><span class="row"><span class="count" id="cap-head-count"></span><button type="button" class="small" data-copy="cap-head">Copy</button></span></div>
+        <textarea id="cap-head" rows="1" readonly></textarea>
+      </div>
+      <div class="cap">
+        <div class="labrow"><label for="cap-tt">TikTok caption</label><span class="row"><span class="count" id="cap-tt-count"></span><button type="button" class="small" data-copy="cap-tt">Copy</button></span></div>
+        <textarea id="cap-tt" rows="2" readonly></textarea>
+      </div>
+      <p class="msg" id="copy-msg" role="status"></p>
+    </section>
+  </div>
+</div>
+<div id="mhost" aria-hidden="true"><div id="m"></div></div>
+
+<script type="module">
+import { Studio, GLASS_OPACITY } from './web/studio.js';
+
+/* ---------------- constants ---------------- */
+const $ = s => document.querySelector(s);
+const FPS = 24, DUR = 8, PNG_T = 7.6, N_FRAMES = (window.__adstudioTest || {}).frames || FPS * DUR;
+const STORE = 'https://caviarstar.com';
+const MP4_MUXER = 'https://cdn.jsdelivr.net/npm/mp4-muxer@5.2.2/build/mp4-muxer.mjs';
+const WEBM_MUXER = 'https://cdn.jsdelivr.net/npm/webm-muxer@5.1.4/build/webm-muxer.mjs';
+const FMT_LABEL = { '9x16': '9:16', '4x5': '4:5', '1x1': '1:1' };
+const KEY = 'caviarstar-adstudio-v1';
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Layout per format, copied from doc/stage/ad.html (keep in sync). All numbers are px in the ad's own size.
+const L = {
+  '1x1':  { W: 1080, H: 1080, mark: [64, 62, 22], cv: [-28, 200, 800], head: [650, 258, 62, 390], sub: [650, 0, 28, 390], name: [650, 0, 19, 390], price: [650, 0, 104], was: 46, size: 23,
+            badge: [428, 216, 160], cta: [650, 930, 22], url: [650, 1000, 18], foot: [64, 1002, 24], align: 'left' },
+  '4x5':  { W: 1080, H: 1350, mark: [0, 64, 22], cv: [110, 205, 860], head: [90, 130, 68, 900], sub: [90, 0, 30, 900], name: [90, 976, 22, 900], price: [0, 1020, 110], was: 50, size: 24,
+            badge: [752, 332, 180], cta: [0, 1192, 22], url: [0, 1192, 18], foot: [0, 1276, 24], align: 'center' },
+  '9x16': { W: 1080, H: 1920, mark: [0, 280, 24], cv: [70, 900, 940], head: [80, 345, 84, 920], sub: [80, 0, 34, 920], name: [80, 0, 26, 920], price: [0, 0, 140], was: 62, size: 28,
+            badge: [780, 900, 210], cta: [0, 0, 26], url: [0, 0, 20], foot: [0, 1876, 16], align: 'center' },
+};
+
+/* ---------------- small helpers ---------------- */
+const sm = t => { t = Math.min(1, Math.max(0, t)); return t * t * (3 - 2 * t); };
+const back = t => { t = Math.min(1, Math.max(0, t)); const c = 1.7; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); };
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const money = cents => { const x = Math.round(cents) / 100; return '$' + (Number.isInteger(x) ? x.toLocaleString('en-US') : x.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })); };
+const floorPct = (p, w) => Math.floor(100 * (1 - p / w) + 1e-9);
+const norm = s => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const slug = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const DASH = /\s*[\u2012\u2013\u2014\u2015]\s*/g;
+const tidy = s => String(s || '').replace(DASH, ', ').replace(/\s+/g, ' ').trim();
+const ruleError = s => /%/.test(s) ? 'Keep percentages out of this line. The badge carries the saving for the size shown.'
+  : /\bup\s+to\b/i.test(s) ? 'Leave out "up to". The badge shows the exact saving for the size shown.' : '';
+const SIZE_WORDS = { onespoon: '1 spoon', pairof2: '2 spoons', bundleof10spoons: '10 spoons', defaulttitle: '' };
+function saySize(s, h) {  // sizes as people say them, same rules as ads/make.py
+  s = String(s || '').trim();
+  if (/^\d+$/.test(s)) { const n = +s, thing = h.includes('spoon') ? 'spoon' : 'piece'; return `${n} ${thing}${n > 1 ? 's' : ''}`; }
+  if (norm(s) in SIZE_WORDS) return SIZE_WORDS[norm(s)];
+  return s.replace(/(\d)\s?oz/g, '$1 oz');
+}
+const localDate = iso => { const [y, m, d] = iso.split('-').map(Number); return new Date(y, m - 1, d); };
+const isoDay = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const sayDay = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+const sayTime = d => d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+
+/* ---------------- state ---------------- */
+let DATA = { date: isoDay(new Date()), products: [] };
+const S = {
+  prod: null,        // product entry from adstudio-data.json
+  price: null,       // { h, title, variants:[{title,price,cmp,av}], source:'live'|'snapshot'|'checking', at:Date, why }
+  size: '',          // selected variant title
+  fmt: '9x16', catalog: false, glass: GLASS_OPACITY, filter: 'sale',
+};
+let store = {};
+try { store = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { store = {}; }
+const persist = () => { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) { /* private window: fine */ } };
+
+/* ---------------- 3D studio ---------------- */
+const gl = document.createElement('canvas'); gl.width = gl.height = 800;
+const st = new Studio(gl, { base: './web', dpr: 1, preserve: true, floor: true });
+let loadedH = null, loadSeq = 0, loadChain = Promise.resolve();
+function setGlass(v) { st.glassOpacity = v; if (st.glassMats) st.setGlass(v); }   // studio.js leaves glassMats unset until a jar loads
+function loadProduct(p) {
+  const my = ++loadSeq;
+  loadChain = loadChain.then(async () => {
+    if (my !== loadSeq) return;
+    stageMsg('Loading the 3D product');
+    st.glassOpacity = S.glass;
+    const spec = { handle: p.h, kind: p.k, title: p.t, period: DUR, packed: p.packed };
+    for (const k of ['color', 'aspect', 'flat']) if (p[k] != null) spec[k] = p[k];
+    if (p.lid) spec.lidUrl = `./ads/assets/${p.h}/lid.jpg`;
+    try { await st.load(spec, './web/assets'); setGlass(S.glass); loadedH = p.h; stageMsg(''); }
+    catch (e) { console.warn(e); loadedH = null; stageMsg('The 3D model for this product did not load. Try another product or reload the page.'); }
+    dirty = true; updateExportState();
+  });
+  return loadChain;
+}
+
+/* ---------------- measuring DOM: the ad laid out by the browser exactly as doc/stage/ad.html does ---------------- */
+const M = $('#m');
+function mk(tag, cls, text, css, parent = M) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; if (css) e.style.cssText = css; parent.appendChild(e); return e; }
+const el = (cls, text, css) => mk('div', 'abs ' + cls, text, css);
+const R = e => { const o = M.getBoundingClientRect(), r = e.getBoundingClientRect(); return { left: r.left - o.left, top: r.top - o.top, right: r.right - o.left, bottom: r.bottom - o.top, width: r.width, height: r.height }; };
+
+function buildDOM(a) {   // port of window.loadAd in doc/stage/ad.html (single product)
+  M.textContent = '';
+  let f = L[a.format];
+  const W = f.W, H = f.H; M.style.width = W + 'px'; M.style.height = H + 'px';
+  const center = f.align === 'center';
+  const tx = (x, w) => center ? `left:${(W - w) / 2}px;width:${w}px;text-align:center;` : `left:${x}px;width:${w}px;`;
+  const P = {}; let cv = f.cv.slice();
+  P.mark = el('mark', 'Caviar Star', center ? `left:0;width:${W}px;text-align:center;top:${f.mark[1]}px;font-size:${f.mark[2]}px;` : `left:${f.mark[0]}px;top:${f.mark[1]}px;font-size:${f.mark[2]}px;`);
+  const [hx, hy, hs, hw] = f.head;
+  P.head = el('head', a.headline, tx(hx, hw) + `top:${hy}px;font-size:${hs}px;`);
+  const hb = P.head.getBoundingClientRect().height;
+  P.sub = el('sub', a.sub || '', tx(f.sub[0], f.sub[3]) + `top:${hy + hb + 14}px;font-size:${f.sub[2]}px;`);
+  if (a.format === '9x16') {
+    let y = hy + hb + 12 + P.sub.getBoundingClientRect().height + 38;
+    P.name = el('name', a.name, `left:80px;width:${W - 160}px;text-align:center;top:${y}px;font-size:${f.name[2]}px;`); y += P.name.getBoundingClientRect().height + 24;
+    P.row = el('', '', `left:0;width:${W}px;top:${y}px;display:flex;justify-content:center;align-items:baseline;gap:26px;`);
+  } else if (a.format === '1x1') {
+    let y = hy + hb + 14 + P.sub.getBoundingClientRect().height + 34;
+    P.name = el('name', a.name, tx(f.name[0], f.name[3]) + `top:${y}px;font-size:${f.name[2]}px;`); y += P.name.getBoundingClientRect().height + 22;
+    P.row = el('', '', `left:${f.price[0]}px;top:${y}px;display:flex;align-items:baseline;gap:22px;`);
+  } else {
+    P.name = el('name', a.name, tx(f.name[0], f.name[3]) + `top:${a.catalog ? f.cta[1] - 84 : f.name[1]}px;font-size:${f.name[2]}px;`);
+    P.row = el('', '', `left:0;width:${W}px;top:${f.price[1]}px;display:flex;justify-content:center;align-items:baseline;gap:26px;`);
+  }
+  if (!a.catalog) {
+    P.now = mk('div', 'now', a.now, `font-size:${f.price[2]}px`, P.row);
+    const col = mk('div', '', null, 'display:grid;gap:10px;', P.row);
+    P.was = mk('div', 'was', a.was, `font-size:${f.was}px`, col); mk('i', '', null, null, P.was);
+    P.size = mk('div', 'size', a.size || '', `font-size:${f.size}px`, col);
+    // 1:1: the row must end inside a 65px right margin; long prices shrink rather than run off
+    let ps = f.price[2], ws = f.was;
+    const right = () => Math.max(...[P.now, P.was, P.size].map(e => R(e).right)) + 6;
+    while (a.format === '1x1' && right() > W - 65 && ps > 70) { ps -= 4; ws -= 1.5; P.now.style.fontSize = ps + 'px'; P.was.style.fontSize = ws + 'px'; }
+  }
+  const ctaText = a.cta || 'Shop the sale';
+  if (a.format === '9x16') {
+    const ctaY = R(P.row).bottom + 34;
+    P.cta = el('', null, `left:0;width:${W}px;top:${ctaY}px;display:flex;justify-content:center;align-items:center;gap:28px;`);
+    P.pill = mk('span', 'cta', ctaText, `font-size:${f.cta[2]}px`, P.cta); P.ctaUrl = mk('span', 'url', 'caviarstar.com', `font-size:${f.url[2]}px`, P.cta);
+    f = Object.assign({}, f, { foot: [0, ctaY + 94, 24] });
+    const flat = a.kind === 'relief', top = ctaY + (flat ? 120 : 46), size = flat ? 740 : 800;
+    cv = [(W - size) / 2 - 40, top, size];
+    f.badge = [870 - f.badge[2], top + (flat ? 60 : 140), f.badge[2]];
+  } else if (a.format === '1x1') {
+    const ctaY = R(P.row).bottom + 40;
+    P.cta = el('', null, `left:${f.cta[0]}px;top:${ctaY}px;`);
+    P.pill = mk('span', 'cta', ctaText, `font-size:${f.cta[2]}px`, P.cta);
+    P.url = el('url', 'caviarstar.com', `left:${f.url[0]}px;top:${ctaY + 92}px;font-size:${f.url[2]}px;`);
+  } else {
+    P.cta = el('', null, `left:0;width:${W}px;top:${f.cta[1]}px;display:flex;justify-content:center;align-items:center;gap:28px;`);
+    P.pill = mk('span', 'cta', ctaText, `font-size:${f.cta[2]}px`, P.cta); P.ctaUrl = mk('span', 'url', 'caviarstar.com', `font-size:${f.url[2]}px`, P.cta);
+  }
+  P.foot = el('foot', a.foot || '', center ? `left:0;width:${W}px;text-align:center;top:${f.foot[1]}px;font-size:${f.foot[2]}px;` : `left:${f.foot[0]}px;top:${f.foot[1]}px;font-size:${f.foot[2]}px;`);
+  if (a.badge && f.badge) {
+    const [bx, by, bs] = f.badge, [lead, main, qual] = a.badge;
+    P.badge = el('badge', null, `left:${bx}px;top:${by}px;width:${bs}px;height:${bs}px;`);
+    const inner = mk('div', '', null, null, P.badge);
+    P.bLead = mk('span', '', lead, `font-size:${bs * (lead.length > 5 ? .082 : .1)}px`, inner);
+    P.bMain = mk('b', '', main, `font-size:${bs * (main.length > 3 ? .28 : .34)}px`, inner);
+    if (qual) P.bQual = mk('span', '', qual, `font-size:${bs * .088}px;letter-spacing:.08em;margin-top:.2em`, inner);
+  }
+  return { P, W, H, cv };
+}
+
+// Every visual line of an element's text: its characters, left edge and box, in ad pixels.
+function lineRuns(e) {
+  const o = M.getBoundingClientRect(), out = [], rg = document.createRange();
+  const walk = document.createTreeWalker(e, NodeFilter.SHOW_TEXT);
+  let cur = null;
+  for (let n; (n = walk.nextNode());) {
+    const s = n.data;
+    for (let i = 0; i < s.length; i++) {
+      let j = i + 1; const c = s.charCodeAt(i); if (c >= 0xd800 && c < 0xdc00 && j < s.length) j++;
+      rg.setStart(n, i); rg.setEnd(n, j);
+      const piece = s.slice(i, j); i = j - 1;
+      const r = rg.getClientRects()[0], space = /\s/.test(piece);
+      if (!r || (space && r.width === 0)) continue;
+      const top = r.top - o.top;
+      if (!cur || Math.abs(top - cur.top) > r.height * .5) {
+        if (space) continue;
+        cur = { text: '', left: r.left - o.left, top, bottom: r.bottom - o.top, right: r.right - o.left }; out.push(cur);
+      }
+      cur.text += piece; if (!space) cur.right = r.right - o.left;
+    }
+  }
+  for (const l of out) l.text = l.text.replace(/\s+$/, '');
+  return out;
+}
+// Distance from a text box's top to its baseline, as the browser lays it out (cached per font)
+const ascCache = new Map();
+function ascentOf(font, lnum) {
+  const key = font + '|' + lnum; if (ascCache.has(key)) return ascCache.get(key);
+  const d = document.createElement('div');
+  d.style.cssText = `position:absolute;left:0;top:0;white-space:nowrap;line-height:normal;font:${font};font-variant-numeric:${lnum ? 'lining-nums' : 'normal'}`;
+  d.textContent = 'H';
+  const mark = document.createElement('span'); mark.style.cssText = 'display:inline-block;width:0;height:0;vertical-align:baseline'; d.appendChild(mark); M.appendChild(d);
+  const rg = document.createRange(); rg.setStart(d.firstChild, 0); rg.setEnd(d.firstChild, 1);
+  const v = mark.getBoundingClientRect().top - rg.getClientRects()[0].top; d.remove();
+  ascCache.set(key, v); return v;
+}
+function textItem(e, extra) {
+  const cs = getComputedStyle(e);
+  const font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  const lnum = /lining-nums/.test(cs.fontVariantNumeric);
+  const ls = cs.letterSpacing === 'normal' ? 0 : (parseFloat(cs.letterSpacing) || 0);
+  const tt = cs.textTransform, asc = ascentOf(font, lnum);
+  const mc = helperCanvas('measure', 4, 4, true).getContext('2d');   // glyph ink bounds, for the layout check
+  setLnum(mc, lnum); mc.font = font; if (HAS_LS) mc.letterSpacing = ls + 'px';
+  const lines = lineRuns(e).map(l => {
+    const text = tt === 'uppercase' ? l.text.toUpperCase() : tt === 'lowercase' ? l.text.toLowerCase() : l.text, y = l.top + asc, m = mc.measureText(text);
+    return { text, x: l.left, y, ink: { l: l.left - m.actualBoundingBoxLeft, r: l.left + m.actualBoundingBoxRight, t: y - m.actualBoundingBoxAscent, b: y + m.actualBoundingBoxDescent } };
+  });
+  return Object.assign({ type: 'text', font, lnum, ls, color: cs.color, lines }, extra);
+}
+const boxOf = items => { let b = null; for (const it of items) for (const { ink: k } of it.lines || []) { b = b ? { l: Math.min(b.l, k.l), t: Math.min(b.t, k.t), r: Math.max(b.r, k.r), b: Math.max(b.b, k.b) } : { ...k }; } return b; };
+
+// The scene: what to draw, in ad.html's DOM order, with ad.html's timeline (window.renderAt)
+function extract(d, a) {
+  const { P, W, H, cv } = d, layers = [];
+  const vis = (start, dur = .7, dy = 18) => t => { const k = sm((t - start) / dur); return { a: k, ty: (1 - k) * dy }; };
+  layers.push({ id: 'Wordmark', anim: vis(.1, .8, 0), items: [textItem(P.mark)] });
+  layers.push({ id: 'product', anim: vis(.25, 1.0, 30), product: true });
+  const hr = R(P.head);
+  layers.push({ id: 'Headline', anim: vis(.7), items: [textItem(P.head, { grad: [hr.top, hr.bottom] })] });
+  layers.push({ id: 'Sub line', anim: vis(1.1), items: [textItem(P.sub)] });
+  layers.push({ id: 'Product name', anim: vis(1.6), items: [textItem(P.name)] });
+  if (P.now) {
+    const nr = R(P.now), wr = R(P.was), ws = parseFloat(getComputedStyle(P.was).fontSize);
+    layers.push({ id: 'Price', anim: t => { const k = back((t - 3.8) / .6); return { a: sm((t - 3.8) / .25), s: .6 + .4 * Math.max(0, k), ox: nr.left, oy: nr.bottom }; }, items: [textItem(P.now)] });
+    layers.push({ id: 'Was price', anim: t => ({ a: sm((t - 2.9) / .4) }), items: [textItem(P.was), { type: 'strike', x: wr.left - .04 * wr.width, y: wr.top + .46 * wr.height, h: .05 * ws, w: wr.width, k: t => 1.08 * sm((t - 3.4) / .45) }] });
+    layers.push({ id: 'Size', anim: t => ({ a: sm((t - 3.0) / .4) }), items: [textItem(P.size)] });
+  }
+  const pr = R(P.pill);
+  const ctaItems = [{ type: 'pill', x: pr.left, y: pr.top, w: pr.width, h: pr.height }, textItem(P.pill)];
+  if (P.ctaUrl) ctaItems.push(textItem(P.ctaUrl));
+  layers.push({ id: 'Button', anim: vis(4.9), items: ctaItems, box: { l: pr.left, t: pr.top, r: P.ctaUrl ? R(P.ctaUrl).right : pr.right, b: pr.bottom } });
+  if (P.url) layers.push({ id: 'Web address', anim: vis(5.1), items: [textItem(P.url)] });
+  layers.push({ id: 'Legal line', anim: vis(5.4, .6, 0), items: [textItem(P.foot)] });
+  if (P.badge) {
+    const br = R(P.badge), cx = br.left + br.width / 2, cy = br.top + br.height / 2;
+    const items = [{ type: 'badge', x: br.left, y: br.top, s: br.width }, textItem(P.bLead), textItem(P.bMain)];
+    if (P.bQual) items.push(textItem(P.bQual));
+    layers.push({ id: 'Badge', anim: t => { const k = back((t - 2.4) / .55); return { a: sm((t - 2.4) / .2), s: Math.max(0, k), rot: (1 - Math.min(1, k)) * -14 * Math.PI / 180, ox: cx, oy: cy }; }, items, box: { l: br.left, t: br.top, r: br.right, b: br.bottom } });
+  }
+  return { W, H, cv, layers, fmt: a.format };
+}
+
+function layoutChecks(sc) {
+  const out = [], boxes = [];
+  for (const ly of sc.layers) {
+    if (ly.product) continue;
+    const b = ly.box || boxOf(ly.items); if (b) boxes.push({ id: ly.id, ...b });
+  }
+  for (const b of boxes) if (b.l < 8 || b.r > sc.W - 8 || b.t < 0 || b.b > sc.H) out.push(`${b.id} runs off the ${FMT_LABEL[sc.fmt]} frame. Use shorter words.`);
+  const price = new Set(['Price', 'Was price', 'Size']);
+  for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) {
+    const p = boxes[i], q = boxes[j];
+    if (price.has(p.id) && price.has(q.id)) continue;
+    if (p.l < q.r - 2 && q.l < p.r - 2 && p.t < q.b - 2 && q.t < p.b - 2) out.push(`${p.id} overlaps ${q.id.toLowerCase()} in ${FMT_LABEL[sc.fmt]}. Shorten the headline or sub line.`);
+  }
+  if (sc.fmt === '9x16' && sc.cv[1] + sc.cv[2] * .62 > sc.H) out.push('The text is tall enough to push the product off the bottom of the 9:16 frame. Shorten the words.');
+  return out;
+}
+
+/* ---------------- canvas compositor ---------------- */
+const out = $('#out');
+const ctx = out.getContext('2d', { alpha: false });
+const HAS_LS = 'letterSpacing' in CanvasRenderingContext2D.prototype;
+const helpers = new Map();
+function helperCanvas(key, w, h, attach) {   // attached canvases inherit font-variant-numeric (lining figures)
+  let c = helpers.get(key);
+  if (!c) { c = document.createElement('canvas'); helpers.set(key, c); if (attach) $('#mhost').appendChild(c); }
+  if (c.width !== w || c.height !== h) { c.width = w; c.height = h; c._lnum = null; }
+  return c;
+}
+function background(W, H) {
+  const c = helperCanvas('bg' + W + 'x' + H, W, H);
+  if (!c._done) {
+    const x = c.getContext('2d'), rx = .75 * W, ry = .55 * H, cx = .5 * W, cy = .42 * H;
+    x.setTransform(rx, 0, 0, ry, cx, cy);
+    const g = x.createRadialGradient(0, 0, 0, 0, 0, 1);
+    g.addColorStop(0, '#1b160d'); g.addColorStop(.58, '#0b0b0e'); g.addColorStop(1, '#060709');
+    x.fillStyle = g; x.fillRect(-cx / rx, -cy / ry, W / rx, H / ry); c._done = true;
+  }
+  return c;
+}
+function featherMask(s) {   // mask-image: radial-gradient(closest-side, #000 62%, transparent 100%)
+  const c = helperCanvas('mask' + s, s, s);
+  if (!c._done) {
+    const x = c.getContext('2d'), g = x.createRadialGradient(s / 2, s / 2, 0, s / 2, s / 2, s / 2);
+    g.addColorStop(0, 'rgba(0,0,0,1)'); g.addColorStop(.62, 'rgba(0,0,0,1)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+    x.fillStyle = g; x.fillRect(0, 0, s, s); c._done = true;
+  }
+  return c;
+}
+function setLnum(c, on) {
+  const cv = c.canvas, want = on ? 'lining-nums' : 'normal';
+  if (cv._lnum !== want) { cv.style.fontVariantNumeric = want; cv._lnum = want; c.font = '10px serif'; }
+}
+function drawText(c, it) {
+  if (!it.lines.length) return;
+  setLnum(c, it.lnum);
+  c.font = it.font; c.textAlign = 'left'; c.textBaseline = 'alphabetic';
+  if (HAS_LS) c.letterSpacing = it.ls + 'px';
+  if (it.grad) { const g = c.createLinearGradient(0, it.grad[0], 0, it.grad[1]); g.addColorStop(0, '#f6e7b8'); g.addColorStop(.55, '#d9b871'); g.addColorStop(1, '#a07a3a'); c.fillStyle = g; }
+  else c.fillStyle = it.color;
+  for (const l of it.lines) {
+    if (HAS_LS || !it.ls) c.fillText(l.text, l.x, l.y);
+    else for (let i = 0; i < l.text.length; i++) c.fillText(l.text[i], l.x + c.measureText(l.text.slice(0, i)).width + i * it.ls, l.y);
+  }
+}
+function pillPath(c, x, y, w, h) { const r = Math.min(h, w) / 2; c.beginPath(); c.moveTo(x + r, y); c.lineTo(x + w - r, y); c.arc(x + w - r, y + r, r, -Math.PI / 2, Math.PI / 2); c.lineTo(x + r, y + h); c.arc(x + r, y + r, r, Math.PI / 2, Math.PI * 1.5); c.closePath(); }
+const snap = (x, y, w, h) => { const x0 = Math.round(x), y0 = Math.round(y); return [x0, y0, Math.round(x + w) - x0, Math.round(y + h) - y0]; };
+function drawItem(c, it, t, tf) {
+  if (it.type === 'text') return drawText(c, it);
+  if (it.type === 'strike') {
+    const w = it.w * it.k(t); if (w <= 0) return;
+    const [x, y, ww, hh] = snap(it.x, it.y, w, it.h); c.fillStyle = '#c4705e'; c.fillRect(x, y, ww, Math.max(1, hh)); return;
+  }
+  if (it.type === 'pill') {
+    const [x, y, w, h] = snap(it.x, it.y, it.w, it.h), g = c.createLinearGradient(0, y, 0, y + h);
+    g.addColorStop(0, '#f3e1a8'); g.addColorStop(1, '#c9a35a'); c.fillStyle = g; pillPath(c, x, y, w, h); c.fill(); return;
+  }
+  if (it.type === 'badge') {
+    const { x, y, s } = it, r = s / 2, cx = x + r, cy = y + r, k = tf.s ?? 1, th = tf.rot || 0;
+    const g = c.createRadialGradient(x + .35 * s, y + .3 * s, 0, x + .35 * s, y + .3 * s, s * Math.hypot(.65, .7));
+    g.addColorStop(0, '#f8e9b9'); g.addColorStop(.55, '#d9b871'); g.addColorStop(1, '#a8803c');
+    c.save();   // box-shadow 0 18px 40px rgba(0,0,0,.45), turned and scaled with the badge
+    c.shadowColor = 'rgba(0,0,0,.45)'; c.shadowBlur = 40 * k; c.shadowOffsetX = -18 * k * Math.sin(th); c.shadowOffsetY = 18 * k * Math.cos(th);
+    c.fillStyle = g; c.beginPath(); c.arc(cx, cy, r, 0, Math.PI * 2); c.fill(); c.restore();
+    c.strokeStyle = 'rgba(255,240,200,.35)'; c.lineWidth = 2; c.beginPath(); c.arc(cx, cy, r - 1, 0, Math.PI * 2); c.stroke();
+  }
+}
+function applyTf(c, tf) {
+  if (tf.ty) c.translate(0, tf.ty);
+  if (tf.s != null) { c.translate(tf.ox, tf.oy); c.scale(tf.s, tf.s); if (tf.rot) c.rotate(tf.rot); c.translate(-tf.ox, -tf.oy); }
+}
+function compose(c, sc, t) {
+  const W = sc.W, H = sc.H;
+  c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over';
+  c.drawImage(background(W, H), 0, 0);
+  for (const ly of sc.layers) {
+    const tf = ly.anim(t), a = Math.min(1, Math.max(0, tf.a));
+    if (a <= 0.002 || tf.s === 0) continue;
+    if (ly.product) {
+      const [x, y, s] = sc.cv, pc = helperCanvas('product', s, s), p = pc.getContext('2d');
+      p.globalCompositeOperation = 'copy'; p.drawImage(gl, 0, 0, s, s);
+      p.globalCompositeOperation = 'destination-in'; p.drawImage(featherMask(s), 0, 0);
+      p.globalCompositeOperation = 'source-over';
+      c.globalAlpha = a; c.drawImage(pc, x, y + (tf.ty || 0)); c.globalAlpha = 1;
+      continue;
+    }
+    const group = ly.items.length > 1 && a < .999;   // CSS opacity fades the element as one picture
+    let d = c;
+    if (group) { const lc = helperCanvas('layer', W, H, true); d = lc.getContext('2d'); d.setTransform(1, 0, 0, 1, 0, 0); d.clearRect(0, 0, W, H); }
+    d.save(); if (!group) d.globalAlpha = a;
+    applyTf(d, tf);
+    for (const it of ly.items) drawItem(d, it, t, tf);
+    d.restore();
+    if (group) { c.globalAlpha = a; c.drawImage(d.canvas, 0, 0); c.globalAlpha = 1; }
+  }
+}
+function renderFrame(sc, t) {
+  const s = sc.cv[2];
+  if (gl.width !== s || gl.height !== s) st.size(s, s);
+  if (out.width !== sc.W || out.height !== sc.H) { out.width = sc.W; out.height = sc.H; out._lnum = null; }
+  if (st.obj) st.render(t);
+  compose(ctx, sc, t);
+}
+
+/* ---------------- fonts ---------------- */
+const FACES = ['400 20px Cinzel', '500 20px Cinzel', '600 20px Cinzel', '500 20px "Cormorant Garamond"', 'italic 500 20px "Cormorant Garamond"'];
+async function fontsFor(a) {
+  const s = [a.headline, a.sub, a.name, a.now, a.was, a.size, a.cta, a.foot, ...(a.badge || []), 'Caviar Star caviarstar.com Shop the sale $0123456789'].join(' ');
+  const text = s + s.toUpperCase() + s.toLowerCase();
+  try { await Promise.race([Promise.all(FACES.map(f => document.fonts.load(f, text))), sleep(8000)]); } catch (e) { /* fallback fonts */ }
+}
+document.fonts.addEventListener?.('loadingdone', () => { ascCache.clear(); scheduleRefresh(); });
+
+/* ---------------- prices ---------------- */
+const snapVariants = p => (p.v || []).map(([title, price, cmp, av]) => ({ title, price, cmp, av: !!av }));
+async function checkPrice(p) {
+  const h = p.h;
+  S.price = { h, title: p.t, variants: snapVariants(p), source: 'checking', at: localDate(p.vdate || DATA.date) };
+  renderPrice(); updateExportState();
+  try {
+    const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 9000);
+    const r = await fetch(`${STORE}/products/${h}.js`, { cache: 'no-store', signal: ctl.signal });
+    clearTimeout(timer);
+    if (!r.ok) throw new Error(r.status === 404 ? 'not found on the store' : 'store answered ' + r.status);
+    const j = await r.json();
+    if (S.prod?.h !== h) return;
+    S.price = { h, title: j.title || p.t, variants: j.variants.map(v => ({ title: v.title, price: +v.price, cmp: +(v.compare_at_price || 0), av: v.available !== false })), source: 'live', at: new Date() };
+  } catch (e) {
+    if (S.prod?.h !== h) return;
+    S.price = { h, title: p.t, variants: snapVariants(p), source: 'snapshot', at: localDate(p.vdate || DATA.date), why: e.name === 'AbortError' ? 'timed out' : String(e.message || e) };
+  }
+  pickSize(); renderPrice(); scheduleRefresh(); updateExportState();
+}
+function variant() { const vs = S.price?.variants || []; return vs.find(v => v.title === S.size) || vs[0] || null; }
+function pickSize() {
+  const vs = S.price?.variants || []; if (!vs.length) { S.size = ''; return; }
+  const ed = edits(), want = ed.size || S.prod.copy?.size || '';
+  let v = vs.find(v => v.title === S.size && v.av) || (want && vs.find(v => norm(v.title) === norm(want) && v.av));
+  if (!v) { const sale = vs.filter(v => v.av && v.cmp > v.price); v = sale.sort((a, b) => floorPct(b.price, b.cmp) - floorPct(a.price, a.cmp))[0] || vs.find(v => v.av) || vs[0]; }
+  S.size = v.title;
+}
+
+/* ---------------- the ad, from the form ---------------- */
+const F = {
+  headline: $('#headline'), sub: $('#sub'), name: $('#name'), cta: $('#cta'), code: $('#code'), codePct: $('#code-pct'),
+  size: $('#size'), product: $('#product'), search: $('#search'), catalog: $('#catalog'), glass: $('#glass'),
+};
+const badgeMode = () => document.querySelector('input[name=badge]:checked')?.value || 'percent';
+function edits() { return (store.edits && S.prod && store.edits[S.prod.h]) || {}; }
+function facts() {
+  const p = S.prod, v = variant(); if (!p || !v) return null;
+  const sale = v.av && v.cmp > v.price, pct = sale ? floorPct(v.price, v.cmp) : 0;
+  const size = saySize(v.title, p.h), title = S.price?.title || p.t;
+  const code = tidy(F.code.value).toUpperCase().replace(/[^A-Z0-9_-]/g, ''), cp = Math.round(+F.codePct.value || 0);
+  return { p, v, sale, pct, size, title, code, cp, mode: badgeMode(), saving: sale ? v.cmp - v.price : 0, date: S.price.at, source: S.price.source };
+}
+function buildAd(fmt) {
+  const x = facts(); if (!x) return null;
+  const headline = tidy(F.headline.value) || x.title, sub = tidy(F.sub.value), name = tidy(F.name.value) || x.title;
+  let badge = null;
+  if (x.mode === 'code' && x.code && x.cp > 0) badge = ['Extra', `${x.cp}%`, `code ${x.code}`];
+  else if (x.sale && x.mode === 'dollars') badge = ['Save', money(x.saving), x.size ? `on ${x.size.toLowerCase()}` : ''];
+  else if (x.sale && x.mode === 'percent') badge = ['Save', `${x.pct}%`, ''];
+  const ad = { format: fmt, h: x.p.h, kind: x.p.k, headline, sub, name, now: money(x.v.price), was: x.sale ? money(x.v.cmp) : '', size: x.size, badge,
+    cta: tidy(F.cta.value) || (S.catalog || !x.sale ? 'Shop now' : 'Shop the sale'), foot: `Prices on caviarstar.com as of ${sayDay(x.date)}`, catalog: S.catalog };
+  if (S.catalog) Object.assign(ad, { badge: null, now: '', was: '', size: '', foot: '' });
+  return ad;
+}
+async function sceneFor(fmt) {
+  const ad = buildAd(fmt); if (!ad) return null;
+  await fontsFor(ad);
+  const sc = extract(buildDOM(ad), ad);
+  sc.ad = ad; sc.checks = layoutChecks(sc);
+  return sc;
+}
+
+/* ---------------- preview ---------------- */
+let scene = null, dirty = true, playing = !REDUCED, tStart = performance.now(), tHold = REDUCED ? PNG_T : 0, lastFrame = -1, exporting = false;
+const stageMsgEl = $('#stage-msg'), msgs = { load: '', price: '' };
+function stageMsg(s, key = 'load') { msgs[key] = s; const t = msgs.price || msgs.load; stageMsgEl.textContent = t; stageMsgEl.hidden = !t; }
+let refreshSeq = 0, refreshTimer = 0;
+function scheduleRefresh(ms = 120) { clearTimeout(refreshTimer); refreshTimer = setTimeout(refresh, ms); }
+async function refresh() {
+  if (exporting) { scheduleRefresh(400); return; }
+  const my = ++refreshSeq;
+  const sc = await sceneFor(S.fmt);
+  if (my !== refreshSeq) return;
+  if (!sc) {   // no price for this product: show nothing rather than the last product's words
+    scene = null; ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.fillStyle = '#060709'; ctx.fillRect(0, 0, out.width, out.height);
+    stageMsg('This product has no price on caviarstar.com right now, so there is no ad to make.', 'price'); renderCaptions(); updateExportState(); return;
+  }
+  stageMsg('', 'price');
+  scene = sc; dirty = true;
+  out.setAttribute('aria-label', `Ad preview, ${FMT_LABEL[S.fmt]}: ${sc.ad.headline}. ${sc.ad.name}${sc.ad.now ? `, ${sc.ad.now}` : ''}${sc.ad.was ? `, was ${sc.ad.was}` : ''}.`);
+  const ul = $('#checks'); ul.textContent = '';
+  if (!sc.checks.length) mk('li', '', `Everything fits in ${FMT_LABEL[S.fmt]}.`, null, ul);
+  for (const w of sc.checks) mk('li', 'warn', w, null, ul);
+  renderCaptions(); renderFilename(); updateExportState();
+}
+function loop(now) {
+  requestAnimationFrame(loop);
+  if (exporting || !scene) return;
+  const t = playing ? ((now - tStart) / 1000) % DUR : tHold;
+  const fi = Math.floor(t * FPS + 1e-6);
+  if (fi === lastFrame && !dirty) return;
+  lastFrame = fi; dirty = false;
+  renderFrame(scene, fi / FPS);
+  if (playing) { $('#scrub').value = (fi / FPS).toFixed(3); }
+  $('#time').textContent = (fi / FPS).toFixed(1) + ' s';
+}
+requestAnimationFrame(loop);
+function setPlaying(on) {
+  if (on === playing) return;
+  if (on) tStart = performance.now() - tHold * 1000; else tHold = Math.floor((((performance.now() - tStart) / 1000) % DUR) * FPS) / FPS;
+  playing = on; dirty = true;
+  const b = $('#play'); b.textContent = on ? 'Pause' : 'Play'; b.setAttribute('aria-pressed', String(on));
+}
+$('#play').addEventListener('click', () => setPlaying(!playing));
+$('#scrub').addEventListener('input', e => { setPlaying(false); tHold = +e.target.value; dirty = true; });
+if (!playing) { $('#play').textContent = 'Play'; $('#play').setAttribute('aria-pressed', 'false'); $('#scrub').value = tHold; }
+
+/* ---------------- form rendering ---------------- */
+function renderList() {
+  const q = norm(F.search.value), sel = F.product;
+  const items = DATA.products.filter(p => (S.filter === 'all' || p.sale) && (!q || norm(p.t + ' ' + p.h + ' ' + p.c).includes(q)));
+  sel.textContent = '';
+  const groups = new Map();
+  for (const p of items) { if (!groups.has(p.c)) groups.set(p.c, []); groups.get(p.c).push(p); }
+  for (const [c, ps] of [...groups].sort((a, b) => a[0].localeCompare(b[0]))) {
+    const og = document.createElement('optgroup'); og.label = c;
+    for (const p of ps) { const o = document.createElement('option'); o.value = p.h; o.textContent = p.t + (S.filter === 'all' && p.sale ? '  (on sale)' : '') + (p.v?.length ? '' : '  (no price)'); og.appendChild(o); }
+    sel.appendChild(og);
+  }
+  if (S.prod) sel.value = S.prod.h;
+  const saleN = DATA.products.filter(p => p.sale).length;
+  $('#filter-sale-l').textContent = `On sale now (${saleN})`; $('#filter-all-l').textContent = `All products (${DATA.products.length})`;
+  $('#list-hint').textContent = (items.length ? `${items.length} shown. ` : 'Nothing matches. ') + `The sale list is from the price snapshot of ${sayDay(localDate(DATA.date))}; picking a product checks its price live.`;
+}
+function renderPrice() {
+  const vs = S.price?.variants || [], sel = F.size, p = S.prod;
+  sel.textContent = '';
+  for (const v of vs) {
+    const o = document.createElement('option'); o.value = v.title;
+    const nm = saySize(v.title, p.h) || 'One size';
+    if (!v.av) { o.textContent = `${nm}: ${money(v.price)}, sold out`; o.disabled = true; }
+    else if (v.cmp > v.price) o.textContent = `${nm}: ${money(v.price)}, was ${money(v.cmp)}, save ${money(v.cmp - v.price)} (${floorPct(v.price, v.cmp)}%)`;
+    else o.textContent = `${nm}: ${money(v.price)}, not on sale`;
+    sel.appendChild(o);
+  }
+  if (!vs.length) { const o = document.createElement('option'); o.textContent = 'No sizes found on caviarstar.com'; o.disabled = true; sel.appendChild(o); }
+  sel.value = S.size;
+  const v = variant(), big = $('#price-big'), save = $('#price-save');
+  big.textContent = ''; save.textContent = '';
+  if (v) {
+    big.append(money(v.price));
+    if (v.cmp > v.price) { const s = document.createElement('s'); s.textContent = money(v.cmp); big.appendChild(s); save.textContent = `Saves ${money(v.cmp - v.price)}, ${floorPct(v.price, v.cmp)}% off ${saySize(v.title, p.h) || 'this item'}`; }
+    else save.textContent = 'Full price: the ad shows no badge and no strike price.';
+    if (!v.av) save.textContent = 'Sold out on the site.';
+  } else big.textContent = 'No price';
+  const src = $('#source'); src.className = 'source grow';
+  if (S.price?.source === 'checking') src.textContent = "Checking today's price on caviarstar.com";
+  else if (S.price?.source === 'live') { src.classList.add('live'); src.textContent = `Live price from caviarstar.com, checked at ${sayTime(S.price.at)}.`; }
+  else if (S.price) {
+    src.classList.add('stale'); src.textContent = '';
+    const busy = /429/.test(S.price.why || '');
+    src.append(busy ? `caviarstar.com is busy (too many price checks), so these are the saved prices from ${sayDay(S.price.at)}. Try "Check price again" in a minute, or check the `
+      : `Could not reach caviarstar.com from this page, so these are the saved prices from ${sayDay(S.price.at)}. Check the `);
+    const a = document.createElement('a'); a.href = `${STORE}/products/${p.h}`; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'product page'; src.append(a, ' before you post.');
+  }
+  renderBadgeNote();
+}
+function renderBadgeNote() {
+  const x = facts(), msg = $('#badge-msg'); msg.className = 'msg'; msg.textContent = '';
+  $('#code-fields').hidden = badgeMode() !== 'code';
+  if (!x) return;
+  if (S.catalog) { msg.textContent = 'Catalog version: no badge, price or legal line on screen.'; return; }
+  if (badgeMode() === 'code' && !(x.code && x.cp > 0)) { msg.className = 'msg bad'; msg.textContent = 'Enter the code and the extra percent off.'; return; }
+  if (!x.sale && (badgeMode() === 'percent' || badgeMode() === 'dollars')) { msg.className = 'msg warn'; msg.textContent = 'This size is not on sale, so the ad shows the price with no badge and no strike price.'; }
+}
+function renderCounts() {
+  const lim = { headline: 34, sub: 60, name: 48, cta: 18 };
+  for (const k of Object.keys(lim)) {
+    const n = tidy(F[k].value).length, c = $('#' + k + '-count');
+    c.textContent = `${n} / ${lim[k]}`; c.classList.toggle('over', n > lim[k]);
+  }
+  for (const k of ['headline', 'sub']) {
+    const err = ruleError(F[k].value), m = $('#' + k + '-msg');
+    m.className = err ? 'msg bad' : 'msg'; m.textContent = err; F[k].setAttribute('aria-invalid', String(!!err));
+  }
+}
+function fillWords() {   // product defaults, then this owner's saved edits
+  const p = S.prod, ed = edits(), cp = p.copy || {};
+  F.headline.value = ed.headline ?? cp.headline ?? '';
+  F.sub.value = ed.sub ?? cp.sub ?? '';
+  F.name.value = ed.name ?? cp.name ?? '';
+  F.cta.value = ed.cta ?? (cp.cta && cp.cta !== 'Shop the sale' ? cp.cta : '');
+  F.headline.placeholder = F.name.placeholder = p.t;
+  const mode = ed.badge || (cp.code && cp.code_pct ? 'code' : cp.badge) || 'percent';
+  const r = document.getElementById('badge-' + mode); if (r) r.checked = true;
+  F.code.value = ed.code ?? cp.code ?? ''; F.codePct.value = ed.codePct ?? cp.code_pct ?? '';
+  renderCounts();
+}
+function saveEdits() {
+  if (!S.prod) return;
+  store.edits = store.edits || {};
+  store.edits[S.prod.h] = { size: S.size, headline: F.headline.value, sub: F.sub.value, name: F.name.value, cta: F.cta.value, badge: badgeMode(), code: F.code.value, codePct: F.codePct.value };
+  const keys = Object.keys(store.edits); if (keys.length > 60) delete store.edits[keys[0]];
+  Object.assign(store, { h: S.prod.h, fmt: S.fmt, catalog: S.catalog, glass: S.glass, filter: S.filter });
+  persist();
+}
+function placeholderCta() { const x = facts(); F.cta.placeholder = S.catalog || !x?.sale ? 'Shop now' : 'Shop the sale'; }
+
+async function selectProduct(h, { keepSize = false } = {}) {
+  const p = DATA.products.find(p => p.h === h); if (!p) return;
+  if (S.prod?.h !== h) { S.prod = p; if (!keepSize) S.size = ''; fillWords(); }
+  F.product.value = h;
+  $('#glass').disabled = p.k !== 'jar';
+  $('#glass-hint').textContent = p.k === 'jar' ? '0 is clear glass, 1 is a solid jar.' : 'Only the caviar jars have glass.';
+  S.price = { h, title: p.t, variants: snapVariants(p), source: 'checking', at: localDate(p.vdate || DATA.date) };
+  pickSize(); renderPrice(); placeholderCta(); scheduleRefresh(0);
+  loadProduct(p); checkPrice(p); saveEdits();
+}
+
+/* ---------------- captions ---------------- */
+function fit(cands, max) {
+  const clean = s => s.replace(/\s+/g, ' ').replace(/\s+([.,:])/g, '$1').trim();
+  for (const c of cands) { const s = clean(c); if (s && s.length <= max) return s; }
+  const s = clean(cands[cands.length - 1]); return s.length <= max ? s : s.slice(0, max - 1).replace(/\s+\S*$/, '') + '.';
+}
+const stop = s => !s ? '' : /[.!?]$/.test(s) ? s : s + '.';
+function captions() {
+  const x = facts(); if (!x || !scene) return null;
+  const ad = scene.ad, head = stop(ad.headline === x.title ? '' : ad.headline), name = ad.name, sz = x.size ? `, ${x.size}` : '';
+  const now = money(x.v.price), was = money(x.v.cmp);
+  const save = x.sale && x.mode === 'percent' ? `Save ${x.pct}%` : x.sale && x.mode === 'dollars' ? `Save ${money(x.saving)}` : '';
+  const promo = x.mode === 'code' && x.code && x.cp > 0 ? `Extra ${x.cp}% off with code ${x.code}.` : '';
+  if (S.catalog) {
+    const sub = stop(ad.sub);
+    return {
+      meta: fit([`${head} ${sub} ${name} at caviarstar.com. ${promo}`, `${head} ${name} at caviarstar.com. ${promo}`, `${name} at caviarstar.com.`], 125),
+      head: fit([name, ad.headline], 40),
+      tt: fit([`${head} ${name} at caviarstar.com ${promo} #caviar #caviarstar`, `${head} ${name} #caviar #caviarstar`, `${name} #caviar`], 100),
+    };
+  }
+  if (!x.sale) return {
+    meta: fit([`${head} ${name}${sz}: ${now} at caviarstar.com. ${promo}`, `${name}${sz}: ${now} at caviarstar.com. ${promo}`, `${name}: ${now}.`], 125),
+    head: fit([promo ? `Extra ${x.cp}% off with code ${x.code}` : '', `${name}, ${now}`, `${name}`], 40),
+    tt: fit([`${head} ${name}${sz}, ${now}. ${promo} #caviar #caviarstar`, `${name}${sz}, ${now}. ${promo} #caviar`, `${name}, ${now} #caviar`], 100),
+  };
+  return {
+    meta: fit([`${head} ${name}${sz}: ${now}, was ${was}. ${save ? save + ' at caviarstar.com.' : 'Shop caviarstar.com.'} ${promo}`,
+      `${name}${sz}: ${now}, was ${was}. ${save ? save + ' at caviarstar.com.' : ''} ${promo}`, `${name}${sz}: ${now}, was ${was}. ${promo || stop(save)}`, `${name}: ${now}, was ${was}.`], 125),
+    head: fit([promo ? `Extra ${x.cp}% off with code ${x.code}` : '', save ? `${save} on ${name}` : '', save ? `${name}: ${save}` : '', `${name}, ${now}`, save ? `${save}: ${now}, was ${was}` : '', `${now}, was ${was}`], 40),
+    tt: fit([`${head} ${name}${sz}, ${now} (was ${was}). ${stop(save)} ${promo} #caviar #caviarstar`, `${name}${sz}, ${now} (was ${was}). ${stop(save)} ${promo} #caviar #caviarstar`,
+      `${name}${sz}, ${now} (was ${was}). ${stop(save)} ${promo} #caviar`, `${name}, ${now} (was ${was}). ${promo || stop(save)} #caviar`,
+      promo ? `${name}, ${now}. ${promo}` : '', `${name}, ${now} (was ${was}) #caviar`], 100),
+  };
+}
+function renderCaptions() {
+  const c = captions(), lim = { meta: 125, head: 40, tt: 100 };
+  for (const k of Object.keys(lim)) {
+    const ta = $('#cap-' + k); ta.value = c ? c[k] : '';
+    $('#cap-' + k + '-count').textContent = `${ta.value.length} / ${lim[k]}`;
+  }
+}
+for (const b of document.querySelectorAll('[data-copy]')) b.addEventListener('click', () => {
+  const ta = document.getElementById(b.dataset.copy), msg = $('#copy-msg');
+  const p = navigator.clipboard?.writeText ? navigator.clipboard.writeText(ta.value) : Promise.reject(new Error('no clipboard'));
+  p.then(() => { msg.className = 'msg good'; msg.textContent = 'Copied.'; }, () => { ta.focus(); ta.select(); msg.className = 'msg'; msg.textContent = 'Selected. Press Ctrl+C (Cmd+C on a Mac) to copy.'; });
+});
+
+/* ---------------- export ---------------- */
+const downloadsCap = (window.claude && typeof window.claude.use === 'function') ? window.claude.use('downloads').catch(() => null) : Promise.resolve(null);
+async function saveBlob(name, blob) {
+  const dl = await downloadsCap;
+  if (dl) {
+    try { await dl.save({ filename: name, data: blob }); return 'saved'; }
+    catch (e) { if (e && e.code === 'declined') return 'declined'; throw new Error(e?.message || 'The file could not be saved here.'); }
+  }
+  const url = URL.createObjectURL(blob), a = document.createElement('a');
+  a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 120000);
+  return 'saved';
+}
+function fileName(fmt, ext) {
+  const x = facts(); if (!x) return '';
+  const size = x.v.title === 'Default Title' ? 'one-size' : slug(x.v.title);
+  const tag = S.catalog ? 'catalog' : x.sale ? `save${x.pct}` : 'fullprice';
+  return `caviarstar-${x.p.h}-${size}-${tag}-${fmt}-${isoDay(x.date)}.${ext}`;
+}
+function renderFilename() { $('#fname').textContent = fileName(S.fmt, 'mp4'); }
+function blockers() {
+  const x = facts(), why = [];
+  if (!x) why.push('Pick a product with a price.');
+  else {
+    if (!x.v.av) why.push('This size is sold out. Pick another size.');
+    if (ruleError(F.headline.value) || ruleError(F.sub.value)) why.push('Fix the words marked in red first.');
+    if (x.mode === 'code' && !(x.code && x.cp > 0) && !S.catalog) why.push('Enter the promo code and its extra percent off.');
+  }
+  if (S.price?.source === 'checking') why.push("Wait for today's price.");
+  if (loadedH !== S.prod?.h) why.push('Wait for the 3D product to load.');
+  if (!scene) why.push('Wait for the preview.');
+  return why;
+}
+function updateExportState() {
+  const why = exporting ? ['Exporting'] : blockers();
+  for (const id of ['export-video', 'export-png', 'export-all']) $('#' + id).disabled = why.length > 0;
+  if (!exporting) { const m = $('#export-msg'); if (!m.dataset.sticky) { m.className = 'msg'; m.textContent = why.length ? why.join(' ') : ''; } }
+}
+const TEST = window.__adstudioTest || {};   // automated checks only: { mp4Codec: 'vp09.00.40.08', frames: 24 }
+async function pickEncoder(W, H) {
+  if (typeof VideoEncoder === 'function' && typeof VideoFrame === 'function') {
+    const base = { width: W, height: H, bitrate: Math.round(W * H * FPS * .22), framerate: FPS, latencyMode: 'quality' };
+    if (TEST.mp4Codec) return { kind: 'mp4', mux: 'vp9', cfg: Object.assign({ codec: TEST.mp4Codec }, base), label: 'test: VP9 in MP4' };
+    for (const codec of ['avc1.640028', 'avc1.4d0028', 'avc1.42e01f']) {
+      const cfg = Object.assign({ codec, avc: { format: 'avc' } }, base);
+      try { if ((await VideoEncoder.isConfigSupported(cfg)).supported) return { kind: 'mp4', cfg, label: 'H.264 MP4' }; } catch (e) { /* next */ }
+    }
+    for (const codec of ['vp09.00.40.08', 'vp8']) {
+      const cfg = Object.assign({ codec }, base);
+      try { if ((await VideoEncoder.isConfigSupported(cfg)).supported) return { kind: 'webm', cfg, label: codec.startsWith('vp09') ? 'VP9 WebM' : 'VP8 WebM' }; } catch (e) { /* next */ }
+    }
+  }
+  if (out.captureStream && typeof MediaRecorder === 'function') return { kind: 'rec', label: 'recorded in real time' };
+  return null;
+}
+async function encodeVideo(sc, progress, signal) {
+  const W = sc.W, H = sc.H, pick = await pickEncoder(W, H);
+  if (!pick) throw new Error('This browser cannot make videos. Use Chrome, Edge or Safari on a computer.');
+  if (pick.kind === 'rec') return recordRealtime(sc, progress, signal, pick);
+  let lib;
+  try { lib = await import(pick.kind === 'mp4' ? MP4_MUXER : WEBM_MUXER); }
+  catch (e) { return recordRealtime(sc, progress, signal, { kind: 'rec', label: 'recorded in real time (the video packager did not load)' }); }
+  const muxer = new lib.Muxer({ target: new lib.ArrayBufferTarget(), fastStart: pick.kind === 'mp4' ? 'in-memory' : undefined,
+    video: { codec: pick.kind === 'mp4' ? (pick.mux || 'avc') : pick.cfg.codec === 'vp8' ? 'V_VP8' : 'V_VP9', width: W, height: H, frameRate: FPS } });
+  let fail = null;
+  const enc = new VideoEncoder({ output: (chunk, meta) => { try { muxer.addVideoChunk(chunk, meta); } catch (e) { fail = e; } }, error: e => { fail = e; } });
+  enc.configure(pick.cfg);
+  try {
+    for (let i = 0; i < N_FRAMES; i++) {
+      if (signal.aborted) throw new DOMException('Cancelled', 'AbortError');
+      if (fail) throw fail;
+      renderFrame(sc, i / FPS);
+      const vf = new VideoFrame(out, { timestamp: Math.round(i * 1e6 / FPS), duration: Math.round(1e6 / FPS) });
+      enc.encode(vf, { keyFrame: i % (FPS * 2) === 0 }); vf.close();
+      while (enc.encodeQueueSize > 2 && !fail) await sleep(2);
+      progress(i + 1);
+      if (i % 2 === 1) await sleep(0);
+    }
+    await enc.flush(); if (fail) throw fail;
+  } finally { if (enc.state !== 'closed') enc.close(); }
+  muxer.finalize();
+  return { blob: new Blob([muxer.target.buffer], { type: pick.kind === 'mp4' ? 'video/mp4' : 'video/webm' }), ext: pick.kind === 'mp4' ? 'mp4' : 'webm', label: pick.label };
+}
+async function recordRealtime(sc, progress, signal, pick) {
+  const mime = ['video/mp4;codecs=avc1.640028', 'video/mp4;codecs=avc1', 'video/mp4', 'video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm'].find(m => MediaRecorder.isTypeSupported(m)) || '';
+  renderFrame(sc, 0);
+  const stream = out.captureStream(0), track = stream.getVideoTracks()[0];
+  const rec = new MediaRecorder(stream, mime ? { mimeType: mime, videoBitsPerSecond: 12e6 } : { videoBitsPerSecond: 12e6 });
+  const chunks = []; rec.ondataavailable = e => { if (e.data.size) chunks.push(e.data); };
+  const stopped = new Promise(r => { rec.onstop = r; });
+  rec.start(500);
+  const t0 = performance.now();
+  try {
+    for (let i = 0; i < N_FRAMES; i++) {
+      if (signal.aborted) throw new DOMException('Cancelled', 'AbortError');
+      const wait = t0 + i * 1000 / FPS - performance.now(); if (wait > 0) await sleep(wait);
+      renderFrame(sc, i / FPS); track.requestFrame?.(); progress(i + 1);
+    }
+    await sleep(1000 / FPS);
+  } finally { rec.stop(); await stopped; track.stop(); }
+  const type = (rec.mimeType || mime || 'video/webm').split(';')[0];
+  return { blob: new Blob(chunks, { type }), ext: type.includes('mp4') ? 'mp4' : 'webm', label: pick.label };
+}
+
+let abort = null;
+const fmtSize = b => b > 1e6 ? (b / 1e6).toFixed(1) + ' MB' : Math.round(b / 1e3) + ' KB';
+function exportUI(on) {
+  exporting = on; $('#prog').hidden = !on;
+  for (const id of ['export-video', 'export-png', 'export-all']) $('#' + id).disabled = on;
+  for (const e of document.querySelectorAll('#form input, #form select, #form button')) e.disabled = on || (e.id === 'glass' && S.prod?.k !== 'jar');
+  if (!on) { dirty = true; updateExportState(); }
+}
+function say(text, cls = 'msg', sticky = true) { const m = $('#export-msg'); m.className = cls; m.textContent = text; if (sticky) m.dataset.sticky = '1'; else delete m.dataset.sticky; }
+async function runExport(fmts, kind) {
+  if (exporting) return;
+  saveEdits(); abort = new AbortController(); exportUI(true);
+  const done = [], total = fmts.length * (kind === 'png' ? 1 : N_FRAMES);
+  let base = 0;
+  try {
+    for (const fmt of fmts) {
+      const sc = fmt === S.fmt && scene ? scene : await sceneFor(fmt);
+      if (!sc) throw new Error('Nothing to export yet.');
+      if (sc.checks.length) say(`Note for ${FMT_LABEL[fmt]}: ${sc.checks[0]}`, 'msg warn', false);
+      if (kind === 'png') {
+        renderFrame(sc, PNG_T);
+        const blob = await new Promise(r => out.toBlob(r, 'image/png'));
+        const name = fileName(fmt, 'png'), res = await saveBlob(name, blob);
+        done.push(res === 'saved' ? `${name} (${fmtSize(blob.size)})` : `${name} not saved`);
+      } else {
+        const r = await encodeVideo(sc, n => { $('#progress').value = (base + n) / total; $('#prog-text').textContent = `${FMT_LABEL[fmt]}: frame ${n} of ${N_FRAMES}`; }, abort.signal);
+        const name = fileName(fmt, r.ext), res = await saveBlob(name, r.blob);
+        done.push(res === 'saved' ? `${name} (${fmtSize(r.blob.size)}, ${r.label})` : `${name} not saved`);
+        if (r.ext !== 'mp4') say('This browser cannot make MP4 files, so the video is WebM. For MP4, use Chrome or Edge on a computer.', 'msg warn', false);
+      }
+      base += kind === 'png' ? 1 : N_FRAMES;
+    }
+    say('Saved: ' + done.join('; '), 'msg good');
+  } catch (e) {
+    if (e?.name === 'AbortError') say('Export cancelled.', 'msg');
+    else { console.error(e); say('Export stopped: ' + (e?.message || e) + (done.length ? ` Saved before that: ${done.join('; ')}` : ''), 'msg bad'); }
+  } finally {
+    exportUI(false); abort = null;
+    window.__lastExport = done;   // for automated checks
+  }
+}
+$('#export-video').addEventListener('click', () => runExport([S.fmt], 'video'));
+$('#export-png').addEventListener('click', () => runExport([S.fmt], 'png'));
+$('#export-all').addEventListener('click', () => runExport(['9x16', '4x5', '1x1'], 'video'));
+$('#cancel').addEventListener('click', () => abort?.abort());
+
+/* ---------------- form events ---------------- */
+function onWords(e) {
+  const f = e.target;
+  const fixed = f.value.replace(DASH, ', ').replace(/, {2,}/g, ', ');   // dashes become commas, without doubled spaces
+  if (fixed !== f.value) { const pos = f.selectionStart, d = fixed.length - f.value.length; f.value = fixed; try { f.setSelectionRange(Math.max(0, pos + d), Math.max(0, pos + d)); } catch (err) { /* number inputs */ } }
+  delete $('#export-msg').dataset.sticky;
+  renderCounts(); renderBadgeNote(); placeholderCta(); saveEdits(); scheduleRefresh();
+}
+for (const k of ['headline', 'sub', 'name', 'cta', 'code', 'codePct']) F[k].addEventListener('input', onWords);
+F.code.addEventListener('change', () => { F.code.value = F.code.value.toUpperCase().replace(/[^A-Z0-9_-]/g, ''); onWords({ target: F.code }); });
+for (const r of document.querySelectorAll('input[name=badge]')) r.addEventListener('change', () => { delete $('#export-msg').dataset.sticky; renderBadgeNote(); saveEdits(); scheduleRefresh(0); });
+for (const r of document.querySelectorAll('input[name=fmt]')) r.addEventListener('change', () => { S.fmt = r.value; delete $('#export-msg').dataset.sticky; saveEdits(); scheduleRefresh(0); });
+for (const r of document.querySelectorAll('input[name=filter]')) r.addEventListener('change', () => { S.filter = r.value; renderList(); saveEdits(); });
+F.catalog.addEventListener('change', () => { S.catalog = F.catalog.checked; renderBadgeNote(); placeholderCta(); saveEdits(); scheduleRefresh(0); });
+F.glass.addEventListener('input', () => { S.glass = +F.glass.value; $('#glass-out').textContent = S.glass.toFixed(2); setGlass(S.glass); dirty = true; saveEdits(); });
+F.search.addEventListener('input', renderList);
+let pickTimer = 0;
+F.product.addEventListener('change', () => { clearTimeout(pickTimer); const h = F.product.value; pickTimer = setTimeout(() => { delete $('#export-msg').dataset.sticky; selectProduct(h); }, 150); });
+F.size.addEventListener('change', () => { S.size = F.size.value; delete $('#export-msg').dataset.sticky; renderPrice(); placeholderCta(); saveEdits(); scheduleRefresh(0); });
+$('#refresh').addEventListener('click', () => S.prod && checkPrice(S.prod));
+$('#reset-words').addEventListener('click', () => { if (store.edits && S.prod) delete store.edits[S.prod.h]; fillWords(); renderBadgeNote(); placeholderCta(); saveEdits(); scheduleRefresh(0); });
+$('#form').addEventListener('submit', e => e.preventDefault());
+
+/* ---------------- start ---------------- */
+(async () => {
+  try { DATA = await (await fetch('./adstudio-data.json', { cache: 'no-cache' })).json(); }
+  catch (e) { stageMsg('The product list (adstudio-data.json) did not load. Run python3 tools/adstudio_data.py and reload.'); return; }
+  S.fmt = L[store.fmt] ? store.fmt : '9x16'; S.catalog = !!store.catalog; S.filter = store.filter === 'all' ? 'all' : 'sale';
+  S.glass = Number.isFinite(+store.glass) && store.glass !== undefined && store.glass !== null ? Math.min(1, Math.max(0, +store.glass)) : GLASS_OPACITY;
+  document.getElementById('fmt-' + S.fmt).checked = true; F.catalog.checked = S.catalog;
+  document.getElementById('filter-' + S.filter).checked = true;
+  F.glass.value = S.glass; $('#glass-out').textContent = S.glass.toFixed(2);
+  const ps = DATA.products;
+  const first = ps.find(p => p.h === store.h) || ps.find(p => p.sale && p.copy) || ps.find(p => p.sale) || ps[0];
+  if (!first) { stageMsg('No products in adstudio-data.json.'); return; }
+  if (!first.sale && S.filter === 'sale') { S.filter = 'all'; $('#filter-all').checked = true; }
+  S.size = store.edits?.[first.h]?.size || '';
+  renderList();
+  await selectProduct(first.h, { keepSize: true });
+})();
+window.__adstudio = { state: S, get scene() { return scene; }, renderFrame: t => scene && renderFrame(scene, t), setPlaying, studio: st };
+</script>

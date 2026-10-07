@@ -1,0 +1,15 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#07080c}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script></head>
+<body><canvas id="c" width="1080" height="1080" style="width:1080px;height:1080px"></canvas>
+<script type="module">
+import { Studio } from './studio.js';
+const q = new URLSearchParams(location.search);
+const W = +(q.get('w') || 1080), H = +(q.get('h') || 1080);
+const c = document.getElementById('c'); c.style.width = W + 'px'; c.style.height = H + 'px';
+const st = new Studio(c, { preserve: true, dpr: 1, base: '.' });
+st.size(W, H);
+window.studio = st;
+window.loadProduct = async (spec) => { await st.load(spec, './assets'); st.render(0); return true; };
+window.renderAt = (t) => { st.render(t); return true; };
+window.ready = true;
+</script></body></html>

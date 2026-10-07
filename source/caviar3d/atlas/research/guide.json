@@ -1,0 +1,493 @@
+{
+ "meta": {
+  "title": "The Caviar Atlas: connoisseur guide",
+  "compiled": "2026-10-06",
+  "conventions": "Each item: title, text (max 45 words), source. Several sources are separated by ' ; '. Caviar Star pages were read on 2026-10-06. Uncertainties are in guide_notes.md."
+ },
+ "serving": [
+  {
+   "title": "Serve it very cold",
+   "text": "Serve caviar well chilled, ideally between 26°F and 34°F. Keep the tin nested in crushed ice and uncover it only when you are ready, because heat and air are its biggest enemies.",
+   "source": "https://caviarstar.com/blogs/news/how-to-eat-and-serve-caviar-like-a-pro ; https://caviarstar.com/blogs/news/your-guide-to-proper-caviar-serving-etiquette"
+  },
+  {
+   "title": "Bring it out in rounds",
+   "text": "At a party, do not set out the whole supply at once. Serve smaller portions and replenish them from the refrigerator so every spoonful stays cold.",
+   "source": "https://caviarstar.com/blogs/news/your-guide-to-proper-caviar-serving-etiquette ; https://caviarstar.com/blogs/news/how-do-you-portion-out-caviar-a-guide-to-serving-sizes"
+  },
+  {
+   "title": "How much: a tasting",
+   "text": "For a tasting, plan about 10 to 15 grams (1/3 to 1/2 ounce) per person. When comparing several caviars side by side, allow roughly that much of each variety per guest.",
+   "source": "https://caviarstar.com/blogs/news/the-standard-caviar-serving-size ; https://caviarstar.com/blogs/news/how-to-host-a-caviar-tasting-at-home"
+  },
+  {
+   "title": "How much: a course",
+   "text": "When caviar is the feature of a course or a generous appetizer, plan about 28 to 30 grams (1 ounce) per person, up to 50 grams for a lavish celebration. As a garnish, 3 to 5 grams is enough.",
+   "source": "https://caviarstar.com/blogs/news/the-standard-caviar-serving-size"
+  },
+  {
+   "title": "Why mother-of-pearl",
+   "text": "Mother-of-pearl, horn, bone, glass and gold are non-reactive, so they leave the roe's flavor untouched. Silver is the classic mistake: with salt on the tongue it can produce a coppery, metallic taste.",
+   "source": "https://caviarstar.com/blogs/news/how-mother-of-pearl-spoons-enhance-the-caviar-experience ; https://caviarstar.com/blogs/news/caviar-fact-check-caviar-fun-facts ; https://caviarstar.com/blogs/news/how-to-host-a-caviar-tasting-at-home"
+  },
+  {
+   "title": "What about stainless steel?",
+   "text": "Stainless steel is less reactive than silver and is used in packing rooms, so it is fine for casual scooping. Tradition still favors a natural spoon for tasting fine caviar.",
+   "source": "https://caviarstar.com/blogs/news/how-mother-of-pearl-spoons-enhance-the-caviar-experience"
+  },
+  {
+   "title": "Horn: the sturdy choice",
+   "text": "Horn is the practical second choice after shell. A dropped mother-of-pearl spoon will break; horn is much less breakable. Never heat horn or clean it with harsh chemicals.",
+   "source": "https://caviarstar.com/blogs/news/how-mother-of-pearl-spoons-enhance-the-caviar-experience"
+  },
+  {
+   "title": "Taste it plain first",
+   "text": "Start with a small spoonful on its own, before blinis or crème fraîche. Give each caviar its own spoon so flavors do not mingle, and taste from the mildest to the most intense.",
+   "source": "https://caviarstar.com/blogs/news/your-guide-to-proper-caviar-serving-etiquette ; https://caviarstar.com/blogs/news/how-to-host-a-caviar-tasting-at-home"
+  },
+  {
+   "title": "Roll, don't chew",
+   "text": "Resist the urge to chew. Let the pearls roll across your palate, then press them gently with your tongue to release the flavor and the pop. Good caviar tastes clean, never overwhelmingly fishy.",
+   "source": "https://caviarstar.com/blogs/news/how-to-eat-and-serve-caviar-like-a-pro ; https://caviarstar.com/blogs/news/what-does-caviar-taste-like"
+  },
+  {
+   "title": "The caviar bump",
+   "text": "Place a little caviar on the back of your hand, between thumb and index finger, and eat it in one bite. The skin there is neutral in taste. The habit began in professional tastings, where experts use it to judge quality quickly.",
+   "source": "https://caviarstar.com/blogs/news/how-to-host-a-caviar-tasting-at-home"
+  },
+  {
+   "title": "What to serve it on",
+   "text": "Keep the base neutral: warm blinis, toast points or brioche, boiled potatoes, kettle chips. Crème fraîche goes underneath; its gentle tang balances the salt. About half to one teaspoon tops a small blini.",
+   "source": "https://caviarstar.com/blogs/news/the-best-foods-to-serve-with-caviar ; https://caviarstar.com/blogs/news/your-guide-to-proper-caviar-serving-etiquette ; https://caviarstar.com/blogs/news/how-do-you-portion-out-caviar-a-guide-to-serving-sizes"
+  },
+  {
+   "title": "Eggs, chives and restraint",
+   "text": "Chopped or deviled egg and chives are classic partners. Keep garlic, hot peppers, strong cheese and heavy sauces away, and skip onions and capers at a tasting, where they mask subtle differences.",
+   "source": "https://caviarstar.com/blogs/news/the-best-foods-to-serve-with-caviar ; https://caviarstar.com/blogs/news/your-guide-to-proper-caviar-serving-etiquette ; https://caviarstar.com/blogs/news/how-to-host-a-caviar-tasting-at-home"
+  },
+  {
+   "title": "Champagne",
+   "text": "Dry Champagne and other dry sparkling wines are the classic match: their acidity and bubbles cut the richness and cleanse the palate between bites.",
+   "source": "https://caviarstar.com/blogs/news/the-best-foods-to-serve-with-caviar ; https://caviarstar.com/blogs/news/your-guide-to-proper-caviar-serving-etiquette ; https://caviarstar.com/blogs/news/an-easy-guide-to-partying-with-caviar"
+  },
+  {
+   "title": "Vodka",
+   "text": "Ice-cold vodka is the Russian tradition. Its clean, neutral profile resets the palate between bites without competing with the roe.",
+   "source": "https://caviarstar.com/blogs/news/the-best-foods-to-serve-with-caviar ; https://caviarstar.com/blogs/news/an-easy-guide-to-partying-with-caviar"
+  },
+  {
+   "title": "Other good pours",
+   "text": "Crisp dry whites such as Chablis or Sauvignon Blanc, or a dry prosecco, also work. Avoid sweet drinks, red wine and bourbon with fine sturgeon caviar; bolder smoked roes can take craft beer or whisky.",
+   "source": "https://caviarstar.com/blogs/news/how-to-eat-and-serve-caviar-like-a-pro ; https://caviarstar.com/blogs/news/an-easy-guide-to-partying-with-caviar ; https://caviarstar.com/blogs/news/how-to-celebrate-national-caviar-day-the-right-way"
+  },
+  {
+   "title": "Without alcohol",
+   "text": "Chilled sparkling mineral water is the purist's choice: the bubbles refresh the palate between tastes. A light citrus note, such as lemon or yuzu, flatters buttery Kaluga or Osetra.",
+   "source": "https://caviarstar.com/blogs/news/non-alcoholic-pairings-for-caviar ; https://caviarstar.com/blogs/news/your-guide-to-proper-caviar-serving-etiquette"
+  }
+ ],
+ "storage": [
+  {
+   "title": "Storage temperature",
+   "text": "Keep unopened tins as close to freezing as possible without freezing, about 27°F to 37°F, in the coldest part of the refrigerator such as the meat or cheese drawer.",
+   "source": "https://caviarstar.com/blogs/news/caviar-storage-how-long-does-caviar-last ; https://caviarstar.com/blogs/news/how-to-store-caviar-storage-directions-for-unopened-and-opened-caviar-jars-and-tins"
+  },
+  {
+   "title": "Shelf life, unopened",
+   "text": "Fresh, vacuum-sealed malossol caviar keeps about three to five weeks from the date it was packed, if it stays cold. Its pop and clean finish are best within the first month.",
+   "source": "https://caviarstar.com/blogs/news/caviar-storage-how-long-does-caviar-last"
+  },
+  {
+   "title": "Shelf life, opened",
+   "text": "Once the seal is broken, eat it within about three to five days. Press clean plastic wrap onto the surface and close the lid tightly to keep air out. Discard caviar that smells strong or off.",
+   "source": "https://caviarstar.com/blogs/news/how-to-store-caviar-storage-directions-for-unopened-and-opened-caviar-jars-and-tins ; https://caviarstar.com/pages/faq"
+  },
+  {
+   "title": "Pasteurized tins last longer",
+   "text": "Pasteurized caviar, sealed and refrigerated, can last up to about six months. The trade-off is texture and taste: the eggs turn firmer, even rubbery, and the flavor is more subdued.",
+   "source": "https://caviarstar.com/blogs/news/caviar-storage-how-long-does-caviar-last ; https://caviarstar.com/blogs/news/buy-caviar-online-or-in-person"
+  },
+  {
+   "title": "Why not freeze it",
+   "text": "Each pearl is a thin membrane full of liquid. Freezing forms ice crystals inside, so thawed caviar turns soft and oily and loses flavor. The Codex caviar standard forbids freezing unless quality is protected.",
+   "source": "https://caviarstar.com/blogs/news/caviar-storage-how-long-does-caviar-last ; https://caviarstar.com/blogs/news/how-to-store-caviar-storage-directions-for-unopened-and-opened-caviar-jars-and-tins ; Codex Alimentarius, Standard for Sturgeon Caviar CXS 291-2010 (amended 2011, 2013); copy read at https://elearning.jcu.cz/mod/resource/view.php?id=153881"
+  },
+  {
+   "title": "What can be frozen",
+   "text": "Sturdier roes such as salmon and trout roe, tobiko and masago tolerate freezing much better. For fine sturgeon caviar, freezing is not recommended.",
+   "source": "https://caviarstar.com/blogs/news/how-to-store-caviar-storage-directions-for-unopened-and-opened-caviar-jars-and-tins ; https://caviarstar.com/blogs/news/caviar-storage-how-long-does-caviar-last"
+  },
+  {
+   "title": "On the move",
+   "text": "Carry sealed tins in a cooler at the bottom, surrounded by ice packs rather than loose ice, which melts and can wash off labels. Refrigerate on arrival and open only when serving.",
+   "source": "https://caviarstar.com/blogs/news/holiday-hosting-with-caviar-a-fourth-of-july-guide-to-travel-presentation-and-celebration"
+  }
+ ],
+ "words": [
+  {
+   "title": "Malossol",
+   "text": "Russian for \"little salt.\" Fresh caviar cured with just enough salt to preserve it, usually under 5 percent and often about 3. The Codex standard for sturgeon caviar sets 3 to 5 percent salt.",
+   "source": "https://caviarstar.com/blogs/news/malossol-caviar-what-is-it ; Codex Alimentarius, Standard for Sturgeon Caviar CXS 291-2010 (amended 2011, 2013); copy read at https://elearning.jcu.cz/mod/resource/view.php?id=153881"
+  },
+  {
+   "title": "Pressed caviar",
+   "text": "Eggs too ripe, soft or broken for malossol, cured with a little more salt and pressed into a dense, jam-like paste. Intense and briny, used as a spread or garnish.",
+   "source": "https://caviarstar.com/blogs/news/blogwhat-are-the-processing-methods-used-to-cure-and-preserve-caviar"
+  },
+  {
+   "title": "Grade 1 and Grade 2",
+   "text": "The trade's quality grades. Grade 1 has large, intact, firm grains with fine color, smell and taste. Grade 2 is still sound malossol caviar but scores lower in one or more of those areas.",
+   "source": "https://caviarstar.com/blogs/news/how-is-the-quality-of-caviar-graded"
+  },
+  {
+   "title": "Classic, Royal, Imperial",
+   "text": "Retail grades set by each seller, mostly by egg size and color, so they differ between companies. Classic is the species average; Royal is lighter or larger; Imperial has the largest, lightest, golden eggs.",
+   "source": "https://caviarstar.com/blogs/news/whats-the-difference-between-select-classic-royal-supreme-and-imperial-caviar ; https://caviarstar.com/blogs/news/how-is-caviar-graded"
+  },
+  {
+   "title": "000, 00, 0",
+   "text": "A traditional color scale for the eggs, or berries: 000 marks the lightest caviar, 00 a medium shade and 0 the darkest. Lighter eggs are rarer.",
+   "source": "https://www.ciafoodies.com/all-about-caviar/ ; https://caviarstar.com/blogs/news/whats-the-difference-between-select-classic-royal-supreme-and-imperial-caviar"
+  },
+  {
+   "title": "Pasteurized",
+   "text": "Caviar gently heated in its sealed jar to kill bacteria, so it keeps for months instead of weeks. The eggs become firmer and the flavor flatter. Most supermarket caviar is pasteurized.",
+   "source": "https://caviarstar.com/blogs/news/caviar-storage-how-long-does-caviar-last ; https://caviarstar.com/blogs/news/buy-caviar-online-or-in-person"
+  },
+  {
+   "title": "Roe",
+   "text": "Any unfertilized fish eggs, from salmon and trout to flying fish and paddlefish. All caviar is roe, but not all roe is caviar.",
+   "source": "https://caviarstar.com/blogs/news/caviar-vs-roe-what-is-the-difference-between-roe-and-caviar ; https://caviarstar.com/pages/faq"
+  },
+  {
+   "title": "Caviar",
+   "text": "Strictly, sturgeon eggs cured with salt. The international Codex standard covers four sturgeon genera and their hybrids. Paddlefish and bowfin are not true sturgeon, so their roe sits outside it.",
+   "source": "Codex Alimentarius, Standard for Sturgeon Caviar CXS 291-2010 (amended 2011, 2013); copy read at https://elearning.jcu.cz/mod/resource/view.php?id=153881 ; https://caviarstar.com/blogs/news/caviar-vs-roe-what-is-the-difference-between-roe-and-caviar ; https://caviarstar.com/products/american-paddlefish-caviar ; https://caviarstar.com/products/american-bowfin-caviar"
+  },
+  {
+   "title": "\"Caviar\" on a US label",
+   "text": "FDA policy reserves the word caviar on its own for salted sturgeon roe. Any other roe may be called caviar only with the fish named, as in \"whitefish caviar\" or \"salmon caviar.\"",
+   "source": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/cpg-sec-540150-caviar-use-term-labeling ; https://caviarstar.com/blogs/news/caviar-vs-roe-what-is-the-difference-between-roe-and-caviar"
+  },
+  {
+   "title": "OT (original tin)",
+   "text": "The large tin, typically 500 grams to 1.75 kilograms, that a farm packs and sells to experienced resellers, who repack it into smaller jars. Caviar Star also sells its VIP Kaluga Hybrid in OT tins.",
+   "source": "https://caviarstar.com/blogs/news/buy-caviar-online-or-in-person ; https://caviarstar.com/products/kaluga-hybrid-caviar-limited-edition ; https://www.baldorfood.com/farms/caviar-star"
+  },
+  {
+   "title": "Green eggs",
+   "text": "Trade slang for sturgeon roe that has not yet been salted. Until it is cured, it is roe, not caviar.",
+   "source": "https://caviarstar.com/blogs/news/caviar-vs-roe-what-is-the-difference-between-roe-and-caviar"
+  },
+  {
+   "title": "Hybrid",
+   "text": "Caviar from a farm-bred cross of two sturgeon species, such as Kaluga hybrid (Kaluga x Amur) or Bester (Beluga x Sterlet). The Codex standard requires the word hybrid on the label.",
+   "source": "https://caviarstar.com/products/kaluga-hybrid-caviar-limited-edition ; https://caviarstar.com/products/beluga-sterlet-bester-hybrid ; Codex Alimentarius, Standard for Sturgeon Caviar CXS 291-2010 (amended 2011, 2013); copy read at https://elearning.jcu.cz/mod/resource/view.php?id=153881"
+  },
+  {
+   "title": "The CITES code",
+   "text": "The label code required on internationally traded sturgeon and paddlefish caviar: species code, source code, country of origin, year of harvest, then processing plant code and lot number, so each tin can be traced.",
+   "source": "50 CFR 23.71, https://www.ecfr.gov/current/title-50/chapter-I/subchapter-B/part-23/subpart-D/section-23.71 ; https://caviarstar.com/pages/international-distribution"
+  }
+ ],
+ "history_market": [
+  {
+   "title": "1998: Every sturgeon is listed",
+   "text": "On April 1, 1998, all sturgeon and paddlefish species joined CITES Appendix II. From then on, every international caviar shipment needed a permit showing it was legal and not harmful to wild stocks.",
+   "source": "https://www.fws.gov/story/1999-12/caviar-emptor-additional-trade-controls-benefit-wild-sturgeon-conservation-and"
+  },
+  {
+   "title": "2005: US stops Caspian beluga",
+   "text": "The US listed beluga sturgeon as threatened in 2004. On September 30, 2005, it suspended imports of beluga caviar from the Caspian Sea countries. Caviar Star notes that pure beluga caviar has not been imported since.",
+   "source": "https://www.fws.gov/story/2005-09/service-suspends-trade-threatened-beluga-sturgeon-caspian-sea-basin ; https://caviarstar.com/products/beluga-sterlet-bester-hybrid"
+  },
+  {
+   "title": "2006: Trade halts, farms pull ahead",
+   "text": "In January 2006 CITES withheld export quotas, all but halting Caspian caviar exports until a small 2007 quota. By then farms made about 80 to 100 tonnes a year, roughly four times the legal wild yield.",
+   "source": "https://www.nbcnews.com/id/wbna10695402 ; https://www.nbcnews.com/id/wbna16989412 ; https://thefishsite.com/articles/a-global-overview-of-sturgeon-aquaculture"
+  },
+  {
+   "title": "2010: Most threatened animals",
+   "text": "The IUCN Red List found 85 percent of sturgeon species at risk of extinction, the most threatened group of animals it assesses. Caspian beluga was listed Critically Endangered.",
+   "source": "https://www.iucn.org/content/sturgeon-more-critically-endangered-any-other-group-species"
+  },
+  {
+   "title": "2011: Wild quotas reach zero",
+   "text": "There were no Caspian export quotas in 2006 or 2009, and shrinking ones in other years. For the quota year from March 2011, CITES published zero export quotas for wild caviar from shared sturgeon stocks.",
+   "source": "https://www.themoscowtimes.com/2010/07/25/beluga-back-on-market-as-export-quotas-set-a88 ; https://cites.org/sites/default/files/eng/com/ac/25/E25-16-01.pdf"
+  },
+  {
+   "title": "2018: China scales up",
+   "text": "China's farmed caviar grew from 0.7 tonnes in 2006 to 135 tonnes in 2018, of about 380 tonnes made worldwide. China supplied 65 to 84 percent of EU caviar imports from outside the bloc in 2015 to 2020.",
+   "source": "https://www.fao.org/in-action/globefish/news-events/news/news-detail/Chinese-sturgeon-and-caviar-industry/en ; EUMOFA (2021) The Caviar Market, https://eumofa.eu/documents/20124/55247/2021+-+The+Caviar+Market.pdf (figures as summarised at https://feap.info/2021/05/05/eumofa-study-the-caviar-market/)"
+  },
+  {
+   "title": "2022: Russian caviar shut out",
+   "text": "After the invasion of Ukraine, the United States banned imports of Russian seafood, and the EU and Canada banned Russian caviar. Caviar Star says it sells no Russian caviar.",
+   "source": "FAO GLOBEFISH Highlights, 2nd issue 2023, https://openknowledge.fao.org/server/api/core/bitstreams/0ce654d7-e7dc-4360-ae72-76a15d24989e/content ; https://caviarstar.com/blogs/news/blogdo-we-still-get-caviar-from-russia-russian-caviar-in-america"
+  },
+  {
+   "title": "Today: China leads, America buys",
+   "text": "A 2024 peer-reviewed study puts China at about 70 percent of world caviar output. In 2024 trade data, China ran the largest caviar surplus and the United States the largest deficit, about 49 million dollars.",
+   "source": "Liu et al. 2024, Food Chemistry: X 23:101688, doi:10.1016/j.fochx.2024.101688 (https://europepmc.org/article/PMC/PMC11339060) ; https://oec.world/en/profile/hs/caviar"
+  },
+  {
+   "title": "America still produces, too",
+   "text": "The US farms white sturgeon in California and Russian sturgeon in North Carolina, and still fishes wild hackleback, the only wild sturgeon commercially harvested in the country, plus paddlefish.",
+   "source": "https://caviarstar.com/products/classic-california-white-sturgeon-caviar ; https://thelocalpalate.com/articles/the-souths-best-caviar/ ; https://caviarstar.com/products/american-hackleback-sturgeon-caviar ; https://caviarstar.com/products/american-paddlefish-caviar"
+  }
+ ],
+ "caviar_star": [
+  {
+   "title": "A family business since 1991",
+   "text": "Divers Dana and Denise Leavitt started out harvesting urchins and scallops in Portland, Maine, in the late 1980s and founded Great Atlantic Trading in 1991. They now run it from North Carolina with their son and daughter.",
+   "source": "https://caviarstar.com/pages/our-story ; https://greatatlantictradinginc.com/about-us.html ; https://www.flipsnack.com/caviarlady/great-atlantic-catalog"
+  },
+  {
+   "title": "Packed to order, by hand",
+   "text": "The company says it personally inspects every container it receives, re-grades the caviar and hand-packs each order daily from large original tins. It describes its caviar as roe and salt only.",
+   "source": "https://greatatlantictradinginc.com/about-us.html ; https://www.baldorfood.com/farms/caviar-star ; https://caviarstar.com/"
+  },
+  {
+   "title": "Overnight, cold and insured",
+   "text": "Perishables ship UPS Next Day Air in insulated boxes with gel ice, which the shop says stay cold for up to 72 hours. Orders over $500 ship free, with insurance and a signature on delivery.",
+   "source": "https://caviarstar.com/pages/shipping ; https://caviarstar.com/blogs/news/whats-the-best-way-to-package-and-ship-caviar"
+  },
+  {
+   "title": "Greener boxes",
+   "text": "In 2018 Caviar Star began replacing Styrofoam with insulation made from recycled cotton and denim. Perishables now ship in recycled cotton or compostable plant-based foam, and since 2023 every shipment goes UPS Carbon Neutral.",
+   "source": "https://caviarstar.com/blogs/news/going-green-environmentally-friendly-shipping-boxes ; https://caviarstar.com/pages/our-brand ; https://caviarstar.com/blogs/news/caviar-star-carbon-neutral-shipping-discounted-rates"
+  },
+  {
+   "title": "Traceable and inspected",
+   "text": "Imported and exported sturgeon and paddlefish caviar carries a CITES number for each lot. The company says it is inspected yearly by the US Fish and Wildlife Service, APHIS, NOAA and under FDA HACCP rules.",
+   "source": "https://caviarstar.com/pages/sustainability ; https://caviarstar.com/pages/international-distribution ; https://greatatlantictradinginc.com/american-export.html"
+  },
+  {
+   "title": "Straight from farms and fishermen",
+   "text": "Caviar Star buys directly from farms and fisheries, with no middlemen, and in most cases visits its suppliers' farms. It has worked with the same wild bowfin fishermen, from Louisiana to Illinois, for over a decade.",
+   "source": "https://caviarstar.com/ ; https://greatatlantictradinginc.com/about-us.html ; https://caviarstar.com/products/american-bowfin-caviar"
+  },
+  {
+   "title": "On a Charleston menu",
+   "text": "Caviar Star works with Chef James London's Chubby Fish in Charleston, South Carolina, which serves the same VIP Kaluga Hybrid caviar the shop sells, including in its Caviar Sammich.",
+   "source": "https://caviarstar.com/products/kaluga-hybrid-caviar-limited-edition ; https://caviarstar.com/blogs/recipes/chubby-fish-caviar-sandwich"
+  },
+  {
+   "title": "Ten tons a year",
+   "text": "The Local Palate named Caviar Star among the South's best caviar in 2021, noting that its small, family-run team moves nearly ten tons of caviar a year.",
+   "source": "https://thelocalpalate.com/articles/the-souths-best-caviar/"
+  }
+ ],
+ "quiz_axes": {
+  "note": "Design proposal, not sourced facts. Attribute names follow atlas/research/products.json (kind, price_per_gram_usd, flavor, grain_label, texture, smoked, wild_or_farmed, origin_country, sizes). Price bands use price_per_gram_usd x 28.35 (USD per ounce), October 2026 catalog. Example handles are illustrations, checked against products.json.",
+  "existing_quiz": "caviarstar.com/pages/caviar-quiz embeds a Typeform (form.typeform.com/to/sqbKR2lZ) with 10 questions, mostly taste proxies (coffee, beer, wine, liquor), plus value vs rarity, serving style and texture. One running score routes to 5 result screens. Its jump logic has impossible conditions (score 4 AND 3; -1 AND 2), so scores 2, 3, 4 and -1 match no result. See guide_notes.md.",
+  "scoring": "Each option adds weights to products whose attributes match; hard filters only for budget and roe type. Show the top 3, at least one in stock.",
+  "questions": [
+   {
+    "id": "budget",
+    "question": "What would you like to spend per ounce?",
+    "options": [
+     {
+      "label": "Under $40",
+      "favors": "price_per_gram_usd < 1.41",
+      "examples": [
+       "american-salmon-caviar",
+       "golden-whitefish-roe",
+       "american-bowfin-caviar",
+       "bourbon-barrel-smoked-trout-roe",
+       "american-paddlefish-caviar"
+      ]
+     },
+     {
+      "label": "$40 to $100",
+      "favors": "1.41 <= price_per_gram_usd < 3.53",
+      "examples": [
+       "american-hackleback-sturgeon-caviar",
+       "lyna-polska-siberian-caviar",
+       "amber-dynasty-royal-kaluga-caviar",
+       "golden-dynasty-imperial-osetra-caviar"
+      ]
+     },
+     {
+      "label": "$100 to $140",
+      "favors": "3.53 <= price_per_gram_usd < 4.94",
+      "examples": [
+       "classic-california-white-sturgeon-caviar",
+       "royal-california-white-sturgeon-caviar",
+       "dieckmann-hansen-reserve-german-osetra-caviar"
+      ]
+     },
+     {
+      "label": "$140 and up",
+      "favors": "price_per_gram_usd >= 4.94",
+      "examples": [
+       "beluga-sterlet-bester-hybrid"
+      ],
+      "stock_note": "caviar-house-prunier-osetra-caviar and albino-almas-caviar also fall here but were sold out on 2026-10-06"
+     }
+    ]
+   },
+   {
+    "id": "flavor",
+    "question": "Which taste sounds best?",
+    "options": [
+     {
+      "label": "Buttery and mild",
+      "favors": "flavor contains buttery, creamy, mild or delicate; low salinity",
+      "examples": [
+       "golden-dynasty-imperial-kaluga-hybrid-caviar",
+       "lyna-polska-siberian-caviar",
+       "classic-california-white-sturgeon-caviar"
+      ]
+     },
+     {
+      "label": "Nutty and complex",
+      "favors": "flavor contains nutty",
+      "examples": [
+       "dynasty-royal-osetra-caviar",
+       "royal-california-white-sturgeon-caviar",
+       "beluga-sterlet-bester-hybrid"
+      ]
+     },
+     {
+      "label": "Briny, like the sea",
+      "favors": "flavor contains briny, sea or ocean",
+      "examples": [
+       "american-salmon-caviar",
+       "dieckmann-hansen-reserve-german-osetra-caviar",
+       "american-paddlefish-caviar"
+      ]
+     },
+     {
+      "label": "Bold: earthy or smoky",
+      "favors": "flavor contains earthy, spice or smoky; smoked = true",
+      "examples": [
+       "american-bowfin-caviar",
+       "bourbon-barrel-smoked-trout-roe",
+       "smoked-golden-whitefish-caviar"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "pearl",
+    "question": "What kind of pearl do you like?",
+    "options": [
+     {
+      "label": "Big pearls with a firm pop",
+      "favors": "grain_label large / exceptionally large / generous; texture firm",
+      "examples": [
+       "golden-dynasty-imperial-kaluga-hybrid-caviar",
+       "dieckmann-hansen-reserve-german-osetra-caviar",
+       "american-salmon-caviar"
+      ]
+     },
+     {
+      "label": "Medium and creamy",
+      "favors": "grain_label medium or medium-to-large; texture smooth, soft or creamy",
+      "examples": [
+       "lyna-polska-siberian-caviar",
+       "classic-california-white-sturgeon-caviar",
+       "golden-dynasty-imperial-osetra-caviar"
+      ]
+     },
+     {
+      "label": "Small and delicate",
+      "favors": "grain_label small",
+      "examples": [
+       "american-hackleback-sturgeon-caviar",
+       "american-bowfin-caviar",
+       "golden-whitefish-roe"
+      ]
+     },
+     {
+      "label": "No preference",
+      "favors": "no weight; let flavor and budget decide",
+      "examples": []
+     }
+    ]
+   },
+   {
+    "id": "occasion",
+    "question": "What is it for?",
+    "options": [
+     {
+      "label": "A gift",
+      "favors": "upper two price bands; sturgeon or hybrid kind; in stock; offer a serving spoon add-on",
+      "examples": [
+       "beluga-sterlet-bester-hybrid",
+       "golden-dynasty-imperial-kaluga-hybrid-caviar",
+       "golden-dynasty-imperial-osetra-caviar"
+      ]
+     },
+     {
+      "label": "A party",
+      "favors": "lowest price per gram among sturgeon and paddlefish; sizes of 4 oz and up available; about 1/2 oz per guest",
+      "examples": [
+       "american-hackleback-sturgeon-caviar",
+       "american-paddlefish-caviar",
+       "classic-california-white-sturgeon-caviar"
+      ]
+     },
+     {
+      "label": "A special dinner",
+      "favors": "Osetra or Kaluga species; large or medium-to-large grain; about 1 oz per person",
+      "examples": [
+       "golden-dynasty-imperial-kaluga-hybrid-caviar",
+       "golden-dynasty-imperial-osetra-caviar",
+       "dynasty-royal-osetra-caviar"
+      ]
+     },
+     {
+      "label": "Everyday and cooking",
+      "favors": "kind = roe; price band under $40; smoked roes welcome",
+      "examples": [
+       "american-salmon-caviar",
+       "bourbon-barrel-smoked-trout-roe",
+       "golden-whitefish-roe"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "roe_type",
+    "question": "Which roe are you after?",
+    "options": [
+     {
+      "label": "Sturgeon caviar only",
+      "favors": "kind in (sturgeon caviar, hybrid sturgeon caviar)",
+      "examples": [
+       "lyna-polska-siberian-caviar",
+       "golden-dynasty-imperial-osetra-caviar",
+       "beluga-sterlet-bester-hybrid"
+      ]
+     },
+     {
+      "label": "American wild",
+      "favors": "wild_or_farmed = wild and origin_country = USA",
+      "examples": [
+       "american-hackleback-sturgeon-caviar",
+       "american-paddlefish-caviar",
+       "american-bowfin-caviar"
+      ]
+     },
+     {
+      "label": "Bright red and gold roes",
+      "favors": "kind = roe from salmon, trout or whitefish",
+      "examples": [
+       "american-salmon-caviar",
+       "rainbow-trout-roe",
+       "golden-whitefish-roe"
+      ]
+     },
+     {
+      "label": "Surprise me",
+      "favors": "no filter; widen to every kind",
+      "examples": []
+     }
+    ]
+   }
+  ]
+ }
+}

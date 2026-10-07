@@ -1,0 +1,157 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="fonts/fonts.css">
+<script type="importmap">{"imports":{"three":"../../web/vendor/three.module.js","three/addons/":"../../web/vendor/addons/"}}</script>
+<style>
+/* Sale ad stage: one composition, three formats (1:1, 4:5, 9:16). Deterministic: renderAt(t) draws the frame at t seconds.
+   Brand: black and gold, Cinzel display, Cormorant Garamond text. */
+html, body { margin: 0; background: #000; }
+#ad { position: relative; overflow: hidden; color: #efe8da; font-family: 'Cormorant Garamond', Georgia, serif;
+  background: radial-gradient(ellipse 75% 55% at 50% 42%, #1b160d 0%, #0b0b0e 58%, #060709 100%); }
+#ad * { box-sizing: border-box; }
+.abs { position: absolute; }
+.mark { font-family: 'Cinzel'; font-weight: 500; letter-spacing: .42em; color: #d9b871; text-transform: uppercase; white-space: nowrap; }
+.kick { font-family: 'Cinzel'; font-weight: 500; letter-spacing: .34em; color: #a69c8a; text-transform: uppercase; }
+.head { font-family: 'Cinzel'; font-weight: 500; letter-spacing: .05em; line-height: 1.04; text-wrap: balance;
+  background: linear-gradient(180deg, #f6e7b8 0%, #d9b871 55%, #a07a3a 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sub { font-style: italic; color: #efe8da; line-height: 1.25; }
+.name { font-family: 'Cinzel'; letter-spacing: .08em; color: #efe8da; line-height: 1.25; text-transform: uppercase; text-wrap: balance; }
+.now { font-family: 'Cinzel'; font-weight: 600; color: #f1dc9e; line-height: 1; letter-spacing: .02em; font-variant-numeric: lining-nums; }
+.was { position: relative; color: #cfc6b4; line-height: 1; white-space: nowrap; justify-self: start; font-variant-numeric: lining-nums; }
+.was i { position: absolute; left: -4%; top: 46%; height: .05em; background: #c4705e; width: 0; }
+.size { font-family: 'Cinzel'; letter-spacing: .2em; color: #cfc6b4; text-transform: uppercase; white-space: nowrap; }
+.badge { border-radius: 50%; display: grid; place-items: center; text-align: center; color: #15110a;
+  background: radial-gradient(circle at 35% 30%, #f8e9b9, #d9b871 55%, #a8803c); box-shadow: 0 0 0 2px rgba(255,240,200,.35) inset, 0 18px 40px rgba(0,0,0,.45); }
+.badge b { display: block; font-family: 'Cinzel'; font-weight: 600; line-height: .95; }
+.badge span { display: block; font-family: 'Cinzel'; font-weight: 600; letter-spacing: .2em; }
+.cta { display: inline-flex; align-items: center; gap: .6em; border-radius: 999px; padding: .62em 1.3em; color: #15110a; white-space: nowrap;
+  background: linear-gradient(180deg, #f3e1a8, #c9a35a); font-family: 'Cinzel'; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+.url { font-family: 'Cinzel'; letter-spacing: .2em; color: #d9b871; text-transform: lowercase; white-space: nowrap; }
+.foot { color: #bdb5a5; letter-spacing: .02em; white-space: nowrap; font-variant-numeric: lining-nums; }
+canvas.p { position: absolute; -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%); mask-image: radial-gradient(closest-side, #000 62%, transparent 100%); }
+.lab { position: absolute; text-align: center; font-family: 'Cinzel'; letter-spacing: .12em; color: #efe8da; text-transform: uppercase; line-height: 1.25; }
+.lab small { display: block; color: #f1dc9e; letter-spacing: .04em; margin-top: .3em; font-weight: 600; font-size: 1.35em; font-variant-numeric: lining-nums; text-transform: none; }
+.lab s { color: #cfc6b4; font-weight: 400; text-decoration-color: #c4705e; }
+</style></head><body><div id="ad"></div>
+<script type="module">
+import { Studio } from '../../web/studio.js';
+const AD = document.getElementById('ad');
+const sm = t => { t = Math.min(1, Math.max(0, t)); return t * t * (3 - 2 * t); };
+const back = t => { t = Math.min(1, Math.max(0, t)); const c = 1.7; return 1 + (c + 1) * Math.pow(t - 1, 3) + c * Math.pow(t - 1, 2); };
+const spec = await fetch('../../work/spec.json').then(r => r.json());
+const el = (cls, html, css) => { const e = document.createElement('div'); e.className = 'abs ' + cls; if (html != null) e.innerHTML = html; if (css) e.style.cssText += css; AD.appendChild(e); return e; };
+const money = v => '$' + (Number.isInteger(+v) ? (+v).toLocaleString('en-US') : (+v).toFixed(2));
+let parts = {}, studios = [], D = 8;
+
+// Layout per format. All numbers are px in the ad's own size.
+const L = {
+  '1x1':  { W: 1080, H: 1080, mark: [64, 62, 22], cv: [-28, 200, 800], head: [650, 258, 60, 365], sub: [650, 0, 28, 365], name: [650, 0, 19, 365], price: [650, 0, 104], was: 46, size: 23,
+            badge: [428, 216, 160], cta: [650, 930, 22], url: [650, 1000, 18], foot: [64, 1002, 24], align: 'left' },
+  '4x5':  { W: 1080, H: 1350, mark: [0, 64, 22], cv: [110, 205, 860], head: [90, 130, 68, 900], sub: [90, 0, 30, 900], name: [90, 976, 22, 900], price: [0, 1020, 110], was: 50, size: 24,
+            badge: [752, 332, 180], cta: [0, 1192, 22], url: [0, 1192, 18], foot: [0, 1276, 24], align: 'center' },
+  '9x16': { W: 1080, H: 1920, mark: [0, 280, 24], cv: [70, 900, 940], head: [80, 345, 84, 920], sub: [80, 0, 34, 920], name: [80, 0, 26, 920], price: [0, 0, 140], was: 62, size: 28,
+            badge: [780, 900, 210], cta: [0, 0, 26], url: [0, 0, 20], foot: [0, 1876, 16], align: 'center' },
+};
+
+window.loadAd = async (a) => {
+  for (const s of studios) { s.renderer.dispose(); s.renderer.forceContextLoss(); }
+  AD.innerHTML = ''; studios = []; parts = {}; D = a.dur || 8;
+  let f = L[a.format]; if (a.items && a.items.length > 1 && a.format === '1x1') f = Object.assign({}, f, { align: 'center', mark: [0, 52, 22], head: [80, 100, 58, 920], sub: [80, 0, 26, 920], name: [80, 0, 0, 920], price: [0, 0, 0], cta: [0, 950, 22], url: [0, 950, 18], foot: [0, 1012, 24], badge: [860, 40, 170] });
+  if (a.items && a.items.length > 1 && a.format === '4x5') f = Object.assign({}, f, { head: [90, 140, 66, 900], badge: [850, 50, 180], cta: [0, 1186, 22], foot: [0, 1268, 24] });
+  if (a.items && a.items.length > 1 && a.format === '9x16') f = Object.assign({}, f, { head: [80, 330, 84, 920], badge: null, cta: [0, 1400, 26], foot: [0, 1480, 24] });
+  const W = f.W, H = f.H; AD.style.width = W + 'px'; AD.style.height = H + 'px'; const coll = !!(a.items && a.items.length > 1);
+  const center = f.align === 'center';
+  const tx = (x, w) => center ? `left:${(W - w) / 2}px;width:${w}px;text-align:center;` : `left:${x}px;width:${w}px;`;
+  parts.mark = el('mark', 'Caviar Star', center ? `left:0;width:${W}px;text-align:center;top:${f.mark[1]}px;font-size:${f.mark[2]}px;` : `left:${f.mark[0]}px;top:${f.mark[1]}px;font-size:${f.mark[2]}px;`);
+  // product(s)
+  if (a.items && a.items.length > 1) {
+    const n = a.items.length, cols = 3, rows = Math.ceil(n / cols), labH = a.format === '1x1' ? 64 : 84;
+    const top = a.format === '9x16' ? 520 : a.format === '4x5' ? 300 : 230, avail = a.format === '9x16' ? 830 : a.format === '4x5' ? 800 : 690;
+    const cell = Math.min((W - 120) / cols, avail / rows - labH), x0 = (W - cols * cell) / 2;
+    parts.cv = [];
+    for (let i = 0; i < n; i++) {
+      const it = a.items[i], r = Math.floor(i / cols), c = i % cols, x = x0 + c * cell, y = top + r * (cell + labH);
+      const cv = document.createElement('canvas'); cv.className = 'p'; cv.width = cell; cv.height = cell; cv.style.cssText = `left:${x}px;top:${y}px;width:${cell}px;height:${cell}px;`; AD.appendChild(cv);
+      const st = new Studio(cv, { base: '../../web', dpr: 1, preserve: true, floor: true }); st.size(cell, cell);
+      await st.load(Object.assign({ handle: it.h, period: D }, spec[it.h], it.lid ? { lidUrl: it.lid } : {}), '../../web/assets'); studios.push(st); parts.cv.push(cv);
+      const fs = Math.round(Math.min(26, cell / 12));
+      const lb = el('lab', `${it.label}<small>${it.size} ${money(it.price)} <s>${money(it.was)}</s></small>`, `left:${x - 10}px;width:${cell + 20}px;top:${y + cell - 26}px;font-size:${fs}px;white-space:nowrap;`); parts.cv.push(lb);
+    }
+    parts.gridBottom = top + rows * (cell + labH);
+  } else {
+    const [cx, cy, cs] = f.cv; const cv = document.createElement('canvas'); cv.className = 'p'; cv.width = cs; cv.height = cs; cv.style.cssText = `left:${cx}px;top:${cy}px;width:${cs}px;height:${cs}px;`; AD.appendChild(cv);
+    const st = new Studio(cv, { base: '../../web', dpr: 1, preserve: true, floor: true }); st.size(cs, cs);
+    await st.load(Object.assign({ handle: a.h, period: D }, spec[a.h], a.lid ? { lidUrl: a.lid } : {}), '../../web/assets'); studios.push(st); parts.cv = [cv];
+  }
+  // text
+  const [hx, hy, hs, hw] = f.head;
+  parts.head = el('head', a.headline, tx(hx, hw) + `top:${hy}px;font-size:${hs}px;`);
+  await document.fonts.ready;
+  const hb = parts.head.getBoundingClientRect().height;
+  parts.sub = el('sub', a.sub || '', tx(f.sub[0], f.sub[3]) + `top:${hy + hb + 14}px;font-size:${f.sub[2]}px;`);
+  if (coll) {
+    parts.name = null; parts.priceRow = null;
+  } else if (a.format === '9x16') {
+    let y = hy + hb + 12 + parts.sub.getBoundingClientRect().height + 38;
+    parts.name = el('name', a.name, `left:80px;width:${W - 160}px;text-align:center;top:${y}px;font-size:${f.name[2]}px;`); y += parts.name.getBoundingClientRect().height + 24;
+    parts.priceRow = el('', '', `left:0;width:${W}px;top:${y}px;display:flex;justify-content:center;align-items:baseline;gap:26px;`);
+  } else if (a.format === '1x1') {
+    // right column stacks from the headline down
+    let y = hy + hb + 14 + parts.sub.getBoundingClientRect().height + 34;
+    parts.name = el('name', a.name, tx(f.name[0], f.name[3]) + `top:${y}px;font-size:${f.name[2]}px;`); y += parts.name.getBoundingClientRect().height + 22;
+    parts.priceRow = el('', '', `left:${f.price[0]}px;top:${y}px;display:flex;align-items:baseline;gap:22px;`);
+  } else {
+    parts.name = el('name', a.name, tx(f.name[0], f.name[3]) + `top:${a.catalog ? f.cta[1] - 84 : f.name[1]}px;font-size:${f.name[2]}px;`);  // catalog: no price row, the name sits on the button
+    parts.priceRow = el('', '', `left:0;width:${W}px;top:${f.price[1]}px;display:flex;justify-content:center;align-items:baseline;gap:26px;`);
+  }
+  if (parts.priceRow && !a.catalog) {
+  parts.now = document.createElement('div'); parts.now.className = 'now'; parts.now.style.fontSize = f.price[2] + 'px'; parts.now.textContent = a.now; parts.priceRow.appendChild(parts.now);
+  const col = document.createElement('div'); col.style.cssText = 'display:grid;gap:10px;'; parts.priceRow.appendChild(col);
+  parts.was = document.createElement('div'); parts.was.className = 'was'; parts.was.style.fontSize = f.was + 'px'; parts.was.innerHTML = `${a.was}<i></i>`; col.appendChild(parts.was);
+  parts.size = document.createElement('div'); parts.size.className = 'size'; parts.size.style.fontSize = f.size + 'px'; parts.size.textContent = a.size || ''; col.appendChild(parts.size);
+  // 1:1: the row must end inside a 65px right margin (same as the left); long prices shrink rather than run off
+  let ps = f.price[2], ws = f.was;
+  const right = () => Math.max(...[parts.now, parts.was, parts.size].map(e => e.getBoundingClientRect().right)) + 6;  // + the strike's overhang
+  right(); await document.fonts.ready;  // the price face loads on first use: measure the real glyphs, not the fallback
+  while (a.format === '1x1' && right() > W - 65 && ps > 70) { ps -= 4; ws -= 1.5; parts.now.style.fontSize = ps + 'px'; parts.was.style.fontSize = ws + 'px'; }
+  }
+  if (a.format === '9x16' && !coll) {
+    const pb = parts.priceRow.getBoundingClientRect(); const ctaY = pb.bottom + 34;
+    parts.cta = el('', `<span class="cta" style="font-size:${f.cta[2]}px">${a.cta || 'Shop the sale'}</span><span class="url" style="font-size:${f.url[2]}px">caviarstar.com</span>`, `left:0;width:${W}px;top:${ctaY}px;display:flex;justify-content:center;align-items:center;gap:28px;`);
+    parts.url = null;
+    // the product takes the rest of the frame, under the text
+    f = Object.assign({}, f, { foot: [0, ctaY + 94, 24] });
+    const flat = (spec[a.h] || {}).kind === 'relief', top = ctaY + (flat ? 120 : 46), size = flat ? 740 : 800, cv = parts.cv[0];
+    cv.style.top = top + 'px'; cv.style.left = (W - size) / 2 - 40 + 'px'; cv.style.width = size + 'px'; cv.style.height = size + 'px'; cv.width = size; cv.height = size; studios[0].size(size, size);
+    f.badge = [870 - f.badge[2], top + (flat ? 60 : 140), f.badge[2]];
+  } else if (a.format === '1x1' && !coll) {
+    const pb = parts.priceRow.getBoundingClientRect(); const ctaY = pb.bottom + 40;
+    parts.cta = el('', `<span class="cta" style="font-size:${f.cta[2]}px">${a.cta || 'Shop the sale'}</span>`, `left:${f.cta[0]}px;top:${ctaY}px;`);
+    parts.url = el('url', 'caviarstar.com', `left:${f.url[0]}px;top:${ctaY + 92}px;font-size:${f.url[2]}px;`);
+  } else {
+    parts.cta = el('', `<span class="cta" style="font-size:${f.cta[2]}px">${a.cta || 'Shop the sale'}</span><span class="url" style="font-size:${f.url[2]}px">caviarstar.com</span>`, `left:0;width:${W}px;top:${f.cta[1]}px;display:flex;justify-content:center;align-items:center;gap:28px;`);
+    parts.url = null;
+  }
+  parts.foot = el('foot', a.foot || '', center ? `left:0;width:${W}px;text-align:center;top:${f.foot[1]}px;font-size:${f.foot[2]}px;` : `left:${f.foot[0]}px;top:${f.foot[1]}px;font-size:${f.foot[2]}px;`);
+  if (a.badge && f.badge) {
+    const [bx, by, bs] = f.badge, [lead, main, qual] = a.badge;
+    parts.badge = el('badge', `<div><span style="font-size:${bs * (lead.length > 5 ? .082 : .1)}px">${lead}</span><b style="font-size:${bs * (main.length > 3 ? .28 : .34)}px">${main}</b>${qual ? `<span style="font-size:${bs * .088}px;letter-spacing:.08em;margin-top:.2em">${qual}</span>` : ''}</div>`, `left:${bx}px;top:${by}px;width:${bs}px;height:${bs}px;`);
+  }
+  return true;
+};
+
+// timeline (seconds): wordmark, product, headline, badge, price (was, strike, now), CTA; all hold to the end so the loop is clean
+window.renderAt = (t) => {
+  const vis = (e, a, d = .7, dy = 18) => { if (!e) return; const k = sm((t - a) / d); e.style.opacity = k; e.style.transform = `translateY(${(1 - k) * dy}px)`; };
+  vis(parts.mark, .1, .8, 0);
+  (parts.cv || []).forEach((c, i) => vis(c, .25 + i * .12, 1.0, 30));
+  vis(parts.head, .7); vis(parts.sub, 1.1); vis(parts.name, 1.6);
+  if (parts.badge) { const k = back((t - 2.4) / .55); parts.badge.style.opacity = sm((t - 2.4) / .2); parts.badge.style.transform = `scale(${Math.max(0, k)}) rotate(${(1 - Math.min(1, k)) * -14}deg)`; }
+  if (parts.was) { parts.was.style.opacity = sm((t - 2.9) / .4); parts.was.querySelector('i').style.width = (108 * sm((t - 3.4) / .45)) + '%'; }
+  if (parts.size) parts.size.style.opacity = sm((t - 3.0) / .4);
+  if (parts.now) { const k = back((t - 3.8) / .6); parts.now.style.opacity = sm((t - 3.8) / .25); parts.now.style.transform = `scale(${.6 + .4 * Math.max(0, k)})`; parts.now.style.transformOrigin = 'left bottom'; }
+  vis(parts.cta, 4.9); vis(parts.url, 5.1); vis(parts.foot, 5.4, .6, 0);
+  studios.forEach((s, i) => s.render(t + i * 0.35));
+  return true;
+};
+window.ready = true;
+</script></body></html>

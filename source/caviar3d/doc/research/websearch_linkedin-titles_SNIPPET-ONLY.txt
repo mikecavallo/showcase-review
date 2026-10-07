@@ -1,0 +1,7 @@
+https://www.linkedin.com/in/dana-leavitt-04778721/ ; https://www.linkedin.com/in/derek-leavitt-726a6912b/ ; https://www.linkedin.com/in/deannaleavitt/
+Retrieved: 2026-10-06. LinkedIn returned HTTP 999 (blocked) for Dana's and Derek's profiles; only the search-result titles below were visible. Deanna's public page loaded (see linkedin_deanna-leavitt_public.txt).
+
+Search result titles (verbatim):
+- "Dana Leavitt - Co-Owner at Caviar Star"
+- "Derek Leavitt - Great Atlantic Trading, Inc. (Caviar Star)"
+- "Deanna Leavitt - Great Atlantic Trading, Inc. (Caviar Star)"

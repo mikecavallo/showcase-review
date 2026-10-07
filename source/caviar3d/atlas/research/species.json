@@ -1,0 +1,1769 @@
+{
+  "meta": {
+    "title": "The Caviar Atlas: species facts",
+    "compiled": "2026-10-06",
+    "conventions": {
+      "units": "Lengths in metres (max_length_m), weights in kilograms, ages in years, egg diameters in millimetres.",
+      "null": "null means no authoritative number was found. A null inside a [min,max] pair means that end of the range is unknown.",
+      "max_length_type": "TL = total length, FL = fork length, SL = standard length, shell = shell diameter.",
+      "egg_diameter_mm": "Ripe egg (roe grain) diameter. Where a source gives only a mean, min and max are equal and egg_diameter_note says so.",
+      "map_points": "Approximate, hand-placed representative points on named rivers, seas and lakes inside the native range. They are display anchors, not survey data.",
+      "field_sources": "Each key names the field; the value is a key in source_index. See species_notes.md for conflicts and choices.",
+      "iucn_status": "Category and assessment date as given by FishBase (which cites IUCN Red List version 2025-2); publication year and assessment id from the published IUCN citation where found. iucnredlist.org itself refused automated access (HTTP 403)."
+    }
+  },
+  "species": [
+    {
+      "id": "beluga",
+      "common": "Beluga",
+      "latin": "Huso huso",
+      "taxonomy_note": "FishBase now lists this species as Acipenser huso (genus Huso merged into Acipenser); Huso huso is still the name most used in the caviar trade.",
+      "family": "Acipenseridae",
+      "native_range": "Caspian, Black and Azov Sea basins, migrating up large rivers such as the Volga and Danube to spawn; extirpated from the Adriatic.",
+      "map_points": [
+        {
+          "label": "Caspian Sea",
+          "lat": 42.0,
+          "lon": 50.5
+        },
+        {
+          "label": "Volga River delta",
+          "lat": 46.0,
+          "lon": 48.5
+        },
+        {
+          "label": "Danube delta, Black Sea",
+          "lat": 45.2,
+          "lon": 29.6
+        }
+      ],
+      "max_length_m": 8.0,
+      "max_length_type": "TL",
+      "max_weight_kg": 3200,
+      "max_size_note": "FishBase's 8 m and 3,200 kg are historical published maxima. The best-documented single fish, a female caught in the Volga estuary in 1827, is given by Guinness World Records as 7.3 m and 1,474 kg. Use the 1827 figures for a conservative label.",
+      "lifespan_years": 118,
+      "female_age_at_maturity_years": [
+        16,
+        18
+      ],
+      "egg_diameter_mm": [
+        3.6,
+        4.3
+      ],
+      "iucn_status": {
+        "code": "CR",
+        "category": "Critically Endangered",
+        "criteria": "A2bcd",
+        "assessed": 2019,
+        "assessed_date": "2019-09-14",
+        "published": "IUCN Red List 2022-1",
+        "assessment_id": "T10269A135087846"
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "The US listed beluga as threatened under the Endangered Species Act effective October 2004 and suspended imports of beluga caviar and meat from the Caspian Sea countries effective 30 September 2005.",
+      "one_fact": "Depending on her size, a single female beluga can carry anywhere from 200,000 to 8 million eggs, each about 4 millimeters across.",
+      "field_sources": {
+        "max_length_m": "fb_huso",
+        "max_weight_kg": "fb_huso",
+        "max_size_note": "guinness_beluga",
+        "lifespan_years": "fb_huso",
+        "female_age_at_maturity_years": "fao_tp558",
+        "egg_diameter_mm": "edis_fa153",
+        "iucn_status": "fb_huso",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "usfws_beluga_2005",
+        "one_fact": "fao_tp558"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Huso-huso.html",
+        "https://www.fishbase.se/Reproduction/MaturityList.php?ID=2067",
+        "https://www.fao.org/4/i2144e/i2144e00.htm",
+        "https://edis.ifas.ufl.edu/publication/FA153",
+        "https://www.iucnredlist.org/species/10269/135087846",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm",
+        "https://www.fws.gov/story/2005-09/service-suspends-trade-threatened-beluga-sturgeon-caspian-sea-basin",
+        "https://www.guinnessworldrecords.com/world-records/542172-largest-anadromous-fish"
+      ]
+    },
+    {
+      "id": "kaluga",
+      "common": "Kaluga",
+      "latin": "Huso dauricus",
+      "taxonomy_note": "FishBase now lists this species as Acipenser dauricus.",
+      "family": "Acipenseridae",
+      "native_range": "Endemic to the Amur River basin on the Russia-China border, from upper tributaries such as the Argun, Shilka and Onon down to the estuary and nearby brackish waters of the Sea of Okhotsk and Sea of Japan.",
+      "map_points": [
+        {
+          "label": "Amur River estuary",
+          "lat": 53.0,
+          "lon": 141.0
+        },
+        {
+          "label": "Middle Amur at Khabarovsk",
+          "lat": 48.5,
+          "lon": 135.1
+        },
+        {
+          "label": "Sungari (Songhua) River mouth",
+          "lat": 47.7,
+          "lon": 132.5
+        }
+      ],
+      "max_length_m": 5.6,
+      "max_length_type": "TL",
+      "max_weight_kg": 1000,
+      "lifespan_years": 80,
+      "female_age_at_maturity_years": [
+        14,
+        23
+      ],
+      "female_maturity_note": "NOAA figure, sexes not separated. FishBase female records: 11 to 16 years (middle Amur) and 17 to 23 years (estuary population).",
+      "egg_diameter_mm": null,
+      "egg_diameter_note": "No authoritative measurement found; only retailer claims (about 3 to 4 mm).",
+      "iucn_status": {
+        "code": "CR",
+        "category": "Critically Endangered",
+        "criteria": "A2bd",
+        "assessed": 2019,
+        "assessed_date": "2019-09-15",
+        "published": "IUCN Red List 2022-1",
+        "assessment_id": "T10268A146104292"
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "Listed as endangered under the US Endangered Species Act since July 2014; NOAA reports the Lower Amur population fell from about 40,000 fish in the 1990s to 19,100 in 2011.",
+      "one_fact": "Kaluga can reach 5.6 meters and about 1,000 kilograms; after their first year they switch from invertebrates to hunting fish, including young chum salmon.",
+      "field_sources": {
+        "max_length_m": "fb_dauricus",
+        "max_weight_kg": "fb_dauricus",
+        "lifespan_years": "fb_dauricus",
+        "female_age_at_maturity_years": "noaa_kaluga",
+        "iucn_status": "fb_dauricus",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "noaa_kaluga",
+        "one_fact": "fb_dauricus"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Huso-dauricus.html",
+        "https://www.fishbase.se/Reproduction/MaturityList.php?ID=4633",
+        "https://www.fisheries.noaa.gov/species/kaluga-sturgeon",
+        "https://cms.int/sharks/sites/default/files/document/CMS_COP6_II_26_Huso_dauricus-Ger-E.pdf",
+        "https://www.iucnredlist.org/species/10268/146104292",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+      ]
+    },
+    {
+      "id": "amur-sturgeon",
+      "common": "Amur sturgeon",
+      "latin": "Acipenser schrenckii",
+      "family": "Acipenseridae",
+      "native_range": "Endemic to the Amur River system on the Russia-China border.",
+      "map_points": [
+        {
+          "label": "Amur River at Khabarovsk",
+          "lat": 48.5,
+          "lon": 135.1
+        },
+        {
+          "label": "Amur River at Blagoveshchensk",
+          "lat": 50.3,
+          "lon": 127.5
+        },
+        {
+          "label": "Shilka-Argun confluence (head of the Amur)",
+          "lat": 53.3,
+          "lon": 121.5
+        }
+      ],
+      "max_length_m": 3.0,
+      "max_length_type": "TL",
+      "max_weight_kg": 190,
+      "lifespan_years": 65,
+      "female_age_at_maturity_years": [
+        9,
+        14
+      ],
+      "female_maturity_note": "USFWS says Amur sturgeon begin reproducing after 9 to 14 years (sexes not separated); FishBase female records fall in the same 9 to 14 range.",
+      "egg_diameter_mm": [
+        2.8,
+        3.5
+      ],
+      "egg_diameter_note": "Range of per-female mean oocyte diameters in 14 wild Amur River females with ripe (stage IV) ovaries; overall mean 3.05 mm.",
+      "iucn_status": {
+        "code": "CR",
+        "category": "Critically Endangered",
+        "criteria": "A2bd",
+        "assessed": 2019,
+        "assessed_date": "2019-09-15",
+        "published": null,
+        "assessment_id": null
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "The US Fish and Wildlife Service proposed listing the Amur sturgeon as endangered under the Endangered Species Act in August 2021; a final decision was not confirmed in this research.",
+      "one_fact": "Found only in the Amur River system, the Amur sturgeon occurs in two distinct color forms, one brown and one gray.",
+      "field_sources": {
+        "max_length_m": "fb_schrenckii",
+        "max_weight_kg": "fb_schrenckii",
+        "lifespan_years": "fb_schrenckii",
+        "female_age_at_maturity_years": "usfws_amur_2021",
+        "egg_diameter_mm": "belyaev2022",
+        "iucn_status": "fb_schrenckii",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "usfws_amur_2021",
+        "one_fact": "fb_schrenckii"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Acipenser-schrenckii.html",
+        "https://www.fishbase.se/Reproduction/MaturityList.php?ID=6085",
+        "https://fws.gov/press-release/2021-08/us-fish-and-wildlife-service-proposes-endangered-species-act-protection-amur",
+        "https://vr.vniro.ru/jour/article/download/200/203",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+      ]
+    },
+    {
+      "id": "russian-sturgeon",
+      "common": "Russian sturgeon (osetra)",
+      "latin": "Acipenser gueldenstaedtii",
+      "family": "Acipenseridae",
+      "native_range": "Caspian Sea, Black Sea and Sea of Azov basins, with both sea-run and freshwater populations.",
+      "map_points": [
+        {
+          "label": "Caspian Sea",
+          "lat": 42.0,
+          "lon": 50.5
+        },
+        {
+          "label": "Volga River delta",
+          "lat": 46.0,
+          "lon": 48.5
+        },
+        {
+          "label": "Sea of Azov",
+          "lat": 46.1,
+          "lon": 36.6
+        }
+      ],
+      "max_length_m": 2.36,
+      "max_length_type": "TL",
+      "max_weight_kg": 115,
+      "lifespan_years": 46,
+      "female_age_at_maturity_years": [
+        12,
+        16
+      ],
+      "egg_diameter_mm": [
+        3.2,
+        3.8
+      ],
+      "iucn_status": {
+        "code": "CR",
+        "category": "Critically Endangered",
+        "criteria": "A2bcde",
+        "assessed": 2019,
+        "assessed_date": "2019-09-14",
+        "published": null,
+        "assessment_id": null
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "FishBase notes the species is now mainly propagated through artificial reproduction; the Caspian range states set no commercial sturgeon fishing or wild-caviar export quotas in 2014 and said they would set none for 2015 to 2016.",
+      "one_fact": "Scientists crossed Russian sturgeon eggs with American paddlefish sperm, families that split about 184 million years ago, and 62 to 74 percent of the hybrids survived their first month.",
+      "field_sources": {
+        "max_length_m": "fb_gueld",
+        "max_weight_kg": "fb_gueld",
+        "lifespan_years": "fb_gueld",
+        "female_age_at_maturity_years": "fao_tp558",
+        "egg_diameter_mm": "edis_fa153",
+        "iucn_status": "fb_gueld",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "fb_gueld + cites_ac28",
+        "one_fact": "kaldy2020"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Acipenser-gueldenstaedtii.html",
+        "https://www.fao.org/4/i2144e/i2144e00.htm",
+        "https://edis.ifas.ufl.edu/publication/FA153",
+        "https://biblio.naturalsciences.be/associated_publications/bjz/135-2/volume-135-2-pp-205-207.pdf",
+        "https://doi.org/10.3390/genes11070753",
+        "https://cites.org/sites/default/files/eng/com/ac/28/E-AC28-16-01.pdf",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+      ]
+    },
+    {
+      "id": "siberian-sturgeon",
+      "common": "Siberian sturgeon",
+      "latin": "Acipenser baerii",
+      "family": "Acipenseridae",
+      "native_range": "Siberian rivers from the Ob east to the Kolyma, including the Yenisei and Lena, plus Lake Baikal; it lives mainly in fresh water.",
+      "map_points": [
+        {
+          "label": "Ob River",
+          "lat": 61.0,
+          "lon": 69.0
+        },
+        {
+          "label": "Lena River",
+          "lat": 62.0,
+          "lon": 129.7
+        },
+        {
+          "label": "Lake Baikal",
+          "lat": 53.5,
+          "lon": 108.0
+        }
+      ],
+      "max_length_m": 2.0,
+      "max_length_type": "TL",
+      "max_weight_kg": 210,
+      "lifespan_years": 63,
+      "female_age_at_maturity_years": [
+        12,
+        20
+      ],
+      "female_maturity_note": "Wild fish, depending on origin; farmed females mature at about 7 years.",
+      "egg_diameter_mm": [
+        2.4,
+        3.0
+      ],
+      "iucn_status": {
+        "code": "CR",
+        "category": "Critically Endangered",
+        "criteria": "A2bd",
+        "assessed": 2019,
+        "assessed_date": "2019-09-14",
+        "published": "IUCN Red List 2022",
+        "assessment_id": "T244A156718817"
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "Once caught by the hundreds of tonnes a year in the Ob, Yenisei and Lena basins, wild stocks have declined from dams, overfishing and pollution.",
+      "one_fact": "In 2016 the Siberian sturgeon was the world's top caviar species, supplying about 31 percent of global caviar production by volume.",
+      "field_sources": {
+        "max_length_m": "fb_baerii",
+        "max_weight_kg": "fb_baerii",
+        "lifespan_years": "fb_baerii",
+        "female_age_at_maturity_years": "fao_casip_baerii",
+        "egg_diameter_mm": "edis_fa153",
+        "iucn_status": "fb_baerii",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "fao_casip_baerii",
+        "one_fact": "bronzi2019"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Acipenser-baerii.html",
+        "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_acipenser.htm",
+        "https://edis.ifas.ufl.edu/publication/FA153",
+        "https://doi.org/10.1111/jai.13870",
+        "https://www.iucnredlist.org/species/244/156718817",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+      ]
+    },
+    {
+      "id": "white-sturgeon",
+      "common": "White sturgeon",
+      "latin": "Acipenser transmontanus",
+      "family": "Acipenseridae",
+      "native_range": "Pacific coast of North America from the Gulf of Alaska to central California, spawning in large rivers such as the Sacramento, Columbia and Fraser.",
+      "map_points": [
+        {
+          "label": "Sacramento-San Joaquin Delta",
+          "lat": 38.1,
+          "lon": -121.6
+        },
+        {
+          "label": "Lower Columbia River",
+          "lat": 46.2,
+          "lon": -123.4
+        },
+        {
+          "label": "Fraser River",
+          "lat": 49.2,
+          "lon": -122.8
+        }
+      ],
+      "max_length_m": 6.1,
+      "max_length_type": "TL",
+      "max_weight_kg": 816,
+      "lifespan_years": 104,
+      "female_age_at_maturity_years": [
+        15,
+        32
+      ],
+      "female_maturity_note": "Females, per Chapman et al. 1996 (citing the White Sturgeon Planning Committee). CDFW gives 10 to 19 years for age at first reproduction in California, sexes combined.",
+      "egg_diameter_mm": [
+        3.2,
+        4.0
+      ],
+      "iucn_status": {
+        "code": "VU",
+        "category": "Vulnerable",
+        "criteria": "A2bc",
+        "assessed": 2020,
+        "assessed_date": "2020-09-15",
+        "published": "IUCN Red List 2022-1",
+        "assessment_id": "T234A97440736"
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "California shut its commercial white sturgeon fishery in 1901, commercial caviar fishing is illegal in the Sacramento-San Joaquin Delta, and the species is now a candidate for listing under the California Endangered Species Act.",
+      "one_fact": "White sturgeon are the largest fish found in North American fresh water; historic specimens reached about 6.1 meters (20 feet).",
+      "field_sources": {
+        "max_length_m": "fb_transmontanus",
+        "max_weight_kg": "fb_transmontanus",
+        "lifespan_years": "fb_transmontanus",
+        "female_age_at_maturity_years": "chapman1996",
+        "egg_diameter_mm": "edis_fa153",
+        "iucn_status": "fb_transmontanus",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "cdfw_white + usbr_wang2006",
+        "one_fact": "cdfw_white"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Acipenser-transmontanus.html",
+        "https://wildlife.ca.gov/Conservation/Fishes/Sturgeon/White-Sturgeon",
+        "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/1996/944/chapman.pdf",
+        "https://edis.ifas.ufl.edu/publication/FA153",
+        "https://www.usbr.gov/mp/TFFIP/docs/ttb-2006-1-early-life-history-comparison.pdf",
+        "https://www.iucnredlist.org/species/234/97440736",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+      ]
+    },
+    {
+      "id": "sterlet",
+      "common": "Sterlet",
+      "latin": "Acipenser ruthenus",
+      "family": "Acipenseridae",
+      "native_range": "Rivers draining to the Black, Azov and Caspian Seas, and Siberian rivers from the Ob east to the Yenisei.",
+      "map_points": [
+        {
+          "label": "Middle Volga River",
+          "lat": 55.8,
+          "lon": 49.1
+        },
+        {
+          "label": "Danube River",
+          "lat": 44.7,
+          "lon": 22.5
+        },
+        {
+          "label": "Yenisei River",
+          "lat": 56.0,
+          "lon": 92.9
+        }
+      ],
+      "max_length_m": 1.25,
+      "max_length_type": "TL",
+      "max_weight_kg": 16,
+      "lifespan_years": 36,
+      "female_age_at_maturity_years": [
+        4,
+        9
+      ],
+      "egg_diameter_mm": [
+        2.0,
+        2.8
+      ],
+      "iucn_status": {
+        "code": "EN",
+        "category": "Endangered",
+        "criteria": null,
+        "assessed": null,
+        "assessed_date": null,
+        "published": "IUCN Red List 2022",
+        "assessment_id": "T227A135062526"
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "Its migratory (sea-run) populations are now extirpated, though local river populations survive in most of its range.",
+      "one_fact": "FAO calls the sterlet the smallest sturgeon species; stocked sterlet males in Russia's Krasnodar Reservoir matured at only two years old.",
+      "field_sources": {
+        "max_length_m": "fb_ruthenus",
+        "max_weight_kg": "fb_ruthenus",
+        "lifespan_years": "fb_ruthenus",
+        "female_age_at_maturity_years": "fao_tp558",
+        "egg_diameter_mm": "edis_fa153",
+        "iucn_status": "wiki_sterlet_iucn_cite",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "fb_ruthenus",
+        "one_fact": "fao_tp558"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Acipenser-ruthenus.html",
+        "https://www.fao.org/4/i2144e/i2144e00.htm",
+        "https://edis.ifas.ufl.edu/publication/FA153",
+        "https://www.iucnredlist.org/species/227/135062526",
+        "https://en.wikipedia.org/wiki/Sterlet",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+      ]
+    },
+    {
+      "id": "stellate-sturgeon",
+      "common": "Stellate sturgeon (sevruga)",
+      "latin": "Acipenser stellatus",
+      "family": "Acipenseridae",
+      "native_range": "Caspian, Black and Azov Sea basins (probably extirpated from the Aegean), ascending rivers to spawn.",
+      "map_points": [
+        {
+          "label": "Caspian Sea",
+          "lat": 42.0,
+          "lon": 50.5
+        },
+        {
+          "label": "Black Sea",
+          "lat": 43.2,
+          "lon": 34.0
+        },
+        {
+          "label": "Sea of Azov",
+          "lat": 46.1,
+          "lon": 36.6
+        }
+      ],
+      "max_length_m": 2.5,
+      "max_length_type": "TL",
+      "max_weight_kg": 80,
+      "lifespan_years": 29,
+      "female_age_at_maturity_years": [
+        8,
+        10
+      ],
+      "egg_diameter_mm": [
+        2.7,
+        3.2
+      ],
+      "iucn_status": {
+        "code": "CR",
+        "category": "Critically Endangered",
+        "criteria": "A2bcde",
+        "assessed": 2019,
+        "assessed_date": "2019-09-14",
+        "published": "IUCN Red List 2022-1",
+        "assessment_id": "T229A135062806"
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "In the Sea of Azov basin, stellate sturgeon have reproduced only through hatchery stocking since the 1970s.",
+      "one_fact": "Its skin is studded with small star-shaped bony plates, and its long, flattened, upturned snout sets it apart from every other Acipenser species.",
+      "field_sources": {
+        "max_length_m": "fb_stellatus",
+        "max_weight_kg": "fb_stellatus",
+        "lifespan_years": "fb_stellatus",
+        "female_age_at_maturity_years": "fao_tp558",
+        "egg_diameter_mm": "edis_fa153",
+        "iucn_status": "fb_stellatus",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "fao_tp558",
+        "one_fact": "fao_tp558"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Acipenser-stellatus.html",
+        "https://www.fao.org/4/i2144e/i2144e00.htm",
+        "https://edis.ifas.ufl.edu/publication/FA153",
+        "https://www.iucnredlist.org/species/229/135062806",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+      ]
+    },
+    {
+      "id": "shovelnose-sturgeon",
+      "common": "Shovelnose sturgeon (hackleback)",
+      "latin": "Scaphirhynchus platorynchus",
+      "family": "Acipenseridae",
+      "native_range": "Mississippi and Missouri river basins of the central United States, plus the Mobile Bay drainage and the upper Rio Grande.",
+      "map_points": [
+        {
+          "label": "Mississippi River at St. Louis",
+          "lat": 38.6,
+          "lon": -90.2
+        },
+        {
+          "label": "Missouri River at Omaha",
+          "lat": 41.3,
+          "lon": -95.9
+        },
+        {
+          "label": "Upper Missouri River, Montana",
+          "lat": 47.8,
+          "lon": -110.7
+        }
+      ],
+      "max_length_m": 1.08,
+      "max_length_type": "TL",
+      "max_weight_kg": 4.9,
+      "lifespan_years": 43,
+      "female_age_at_maturity_years": [
+        6,
+        12
+      ],
+      "egg_diameter_mm": [
+        2.4,
+        2.58
+      ],
+      "egg_diameter_note": "Population means: 2.40 mm (lower Platte River, Nebraska) and 2.58 mm (middle Mississippi River, Illinois).",
+      "iucn_status": {
+        "code": "VU",
+        "category": "Vulnerable",
+        "criteria": "A2bce",
+        "assessed": 2019,
+        "assessed_date": "2019-09-14",
+        "published": "IUCN Red List 2022-1",
+        "assessment_id": "T19943A81762958"
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1998-04-01",
+        "note": "All Acipenseriformes not already listed were added to Appendix II effective 1 April 1998."
+      },
+      "wild_status_note": "Since October 2010, commercial harvest of shovelnose flesh or roe is prohibited where they overlap endangered pallid sturgeon, for example the entire Missouri River in Missouri.",
+      "one_fact": "Because shovelnose look so much like endangered pallid sturgeon, U.S. law bans commercial fishing for them wherever the two species live together.",
+      "field_sources": {
+        "max_length_m": "fb_platorynchus",
+        "max_weight_kg": "fb_platorynchus",
+        "lifespan_years": "fb_platorynchus",
+        "female_age_at_maturity_years": "fot_shovelnose",
+        "egg_diameter_mm": "hamel2015 + fot_shovelnose",
+        "iucn_status": "fb_platorynchus",
+        "cites_appendix": "fr_1999_cites",
+        "wild_status_note": "usfws_shovelnose_2010 + mdc_shovelnose",
+        "one_fact": "usfws_shovelnose_2010"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Scaphirhynchus-platorynchus.html",
+        "https://fishesoftexas.org/taxa/scaphirhynchus-platorynchus",
+        "https://pubs.usgs.gov/publication/70154857",
+        "https://www.fws.gov/policy/library/2010/2010-21861.html",
+        "https://mdc.mo.gov/fishing/regulations/commercial-shovelnose-fishing-restricted",
+        "https://www.iucnredlist.org/species/19943/81762958",
+        "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+      ]
+    },
+    {
+      "id": "paddlefish",
+      "common": "American paddlefish",
+      "latin": "Polyodon spathula",
+      "family": "Polyodontidae",
+      "native_range": "Mississippi River basin from southwestern New York to Montana and south to Louisiana, plus Gulf Slope drainages from Mobile Bay to Galveston Bay.",
+      "map_points": [
+        {
+          "label": "Mississippi River at Memphis",
+          "lat": 35.15,
+          "lon": -90.05
+        },
+        {
+          "label": "Kentucky Lake (Tennessee River)",
+          "lat": 36.9,
+          "lon": -88.2
+        },
+        {
+          "label": "Missouri-Yellowstone confluence",
+          "lat": 47.98,
+          "lon": -103.98
+        }
+      ],
+      "max_length_m": 2.21,
+      "max_length_type": "TL",
+      "max_weight_kg": 90.7,
+      "lifespan_years": 55,
+      "female_age_at_maturity_years": [
+        6,
+        12
+      ],
+      "egg_diameter_mm": [
+        2.1,
+        3.1
+      ],
+      "iucn_status": {
+        "code": "VU",
+        "category": "Vulnerable",
+        "criteria": "A2cd",
+        "assessed": 2019,
+        "assessed_date": "2019-09-14",
+        "published": "IUCN Red List 2022-1",
+        "assessment_id": "T17938A81763841"
+      },
+      "cites_appendix": {
+        "appendix": "II",
+        "since": "1992",
+        "note": "Paddlefish were added to Appendix II in 1992, six years before the rest of the sturgeons."
+      },
+      "wild_status_note": "Wild paddlefish roe is still harvested commercially under state permits in some places, such as Kentucky Lake and Lake Barkley in Kentucky (38-inch minimum size).",
+      "one_fact": "The paddlefish's long snout works as an electrical antenna, sensing the faint electric signals of plankton such as water fleas (Daphnia) that it feeds on.",
+      "field_sources": {
+        "max_length_m": "fb_polyodon",
+        "max_weight_kg": "fb_polyodon",
+        "lifespan_years": "fb_polyodon",
+        "female_age_at_maturity_years": "fot_paddlefish",
+        "egg_diameter_mm": "fot_paddlefish",
+        "iucn_status": "fb_polyodon",
+        "cites_appendix": "srac437",
+        "wild_status_note": "ky_301kar1140",
+        "one_fact": "wilkens1997"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Polyodon-spathula.html",
+        "https://fishesoftexas.org/taxa/polyodon-spathula",
+        "https://www.srac.msstate.edu/pdfs/Fact%20Sheets/437%20Production%20of%20Paddlefish.pdf",
+        "https://doi.org/10.1098/rspb.1997.0239",
+        "https://apps.legislature.ky.gov/law/kar/titles/301/001/140/REG",
+        "https://www.iucnredlist.org/species/17938/81763841"
+      ]
+    },
+    {
+      "id": "bowfin",
+      "common": "Bowfin (choupique)",
+      "latin": "Amia calva",
+      "taxonomy_note": "In 2022 the bowfin was split in two. Amia calva proper lives from the Pearl River (Louisiana/Mississippi) east; fish west of it, including Louisiana's Atchafalaya Basin where most bowfin caviar is harvested, are now the eyetail bowfin, Amia ocellicauda. The numbers below come from pre-split studies of the combined species.",
+      "family": "Amiidae",
+      "native_range": "Eastern North America: Amia calva proper ranges from the Pearl River east through Florida and up the Atlantic coastal plain to Virginia, while the eyetail bowfin covers the Mississippi basin, Great Lakes and Gulf drainages west to Texas.",
+      "map_points": [
+        {
+          "label": "Atchafalaya Basin, Louisiana (now A. ocellicauda range)",
+          "lat": 30.3,
+          "lon": -91.7
+        },
+        {
+          "label": "St. Johns River, Florida",
+          "lat": 29.5,
+          "lon": -81.6
+        },
+        {
+          "label": "Atlantic coastal plain, North Carolina",
+          "lat": 35.5,
+          "lon": -77.0
+        }
+      ],
+      "max_length_m": 1.09,
+      "max_length_type": "TL",
+      "max_weight_kg": 9.8,
+      "lifespan_years": 30,
+      "female_age_at_maturity_years": [
+        3,
+        5
+      ],
+      "egg_diameter_mm": [
+        2.14,
+        3.0
+      ],
+      "egg_diameter_note": "Freshly laid eggs, least to greatest diameter; the egg capsule later swells to about twice this size.",
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2011,
+        "assessed_date": "2011-10-19",
+        "published": "IUCN Red List 2013-1",
+        "assessment_id": "T201942A2730796"
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Louisiana allows commercial harvest of wild bowfin, mainly for roe, with a 22-inch minimum length and a ban on removing eggs from fish while on the water (rules as reported in 2009).",
+      "one_fact": "Bowfin can breathe air as well as water, letting them survive in warm, stagnant, oxygen-poor backwaters.",
+      "field_sources": {
+        "max_length_m": "fb_amia",
+        "max_weight_kg": "fb_amia",
+        "lifespan_years": "fb_amia",
+        "female_age_at_maturity_years": "fb_amia_mat",
+        "egg_diameter_mm": "fb_amia_egg",
+        "iucn_status": "fb_amia",
+        "wild_status_note": "lsu_bowfin_2009",
+        "one_fact": "fb_amia + lsu_bowfin_2009",
+        "taxonomy_note": "fb_amia + fb_amia_ocellicauda"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Amia-calva.html",
+        "https://www.fishbase.se/summary/Amia-ocellicauda.html",
+        "https://www.fishbase.se/Reproduction/MaturityList.php?ID=2600",
+        "https://www.fishbase.se/Reproduction/FishEggInfoSummary.php?ID=2600&StockCode=2796",
+        "https://www.seagrantfish.lsu.edu/pdfs/lagniappe/2009/03-2009.pdf",
+        "https://www.iucnredlist.org/species/201942/2730796"
+      ]
+    },
+    {
+      "id": "lake-whitefish",
+      "common": "Lake whitefish",
+      "latin": "Coregonus clupeaformis",
+      "family": "Salmonidae",
+      "native_range": "Large cold lakes and rivers across most of Canada and the northern United States, including the Great Lakes, New England, central Minnesota and Alaska's Copper and Susitna drainages.",
+      "map_points": [
+        {
+          "label": "Lake Superior",
+          "lat": 47.7,
+          "lon": -87.5
+        },
+        {
+          "label": "Lake Michigan",
+          "lat": 44.0,
+          "lon": -87.0
+        },
+        {
+          "label": "Lake Huron",
+          "lat": 44.8,
+          "lon": -82.4
+        }
+      ],
+      "max_length_m": 1.0,
+      "max_length_type": "TL",
+      "max_weight_kg": 19,
+      "lifespan_years": 50,
+      "female_age_at_maturity_years": [
+        4,
+        7
+      ],
+      "female_maturity_note": "Ontario study, sexes combined; northern populations mature later (females 7 to 10 or more years).",
+      "egg_diameter_mm": [
+        3.21,
+        3.21
+      ],
+      "egg_diameter_note": "Mean of fertilized, water-hardened eggs from Lakes Michigan and Ontario (SD 0.20 mm); unfertilized roe is somewhat smaller.",
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2016,
+        "assessed_date": "2016-07-27",
+        "published": null,
+        "assessment_id": null
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Wild-caught: Michigan DNR calls lake whitefish by far the most important commercial fish in the Great Lakes, 88 percent of the value of Michigan's state-licensed catch in 2015.",
+      "one_fact": "Lake whitefish spawn in shallow water in fall and early winter; at a near-freezing 0.5 °C, their eggs take about 140 days to develop.",
+      "field_sources": {
+        "max_length_m": "fb_coregonus",
+        "max_weight_kg": "fb_coregonus",
+        "lifespan_years": "fb_coregonus",
+        "female_age_at_maturity_years": "fb_coregonus_mat",
+        "egg_diameter_mm": "paufve2020",
+        "iucn_status": "fb_coregonus",
+        "wild_status_note": "midnr_2015",
+        "one_fact": "fb_coregonus + fb_coregonus_egg"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Coregonus-clupeaformis.html",
+        "https://www.fishbase.se/Reproduction/MaturityList.php?ID=234",
+        "https://www.fishbase.se/Reproduction/FishEggInfoSummary.php?ID=234&StockCode=248",
+        "https://pubs.usgs.gov/publication/70228365",
+        "https://content.govdelivery.com/accounts/MIDNR/bulletins/144069b"
+      ]
+    },
+    {
+      "id": "chum-salmon",
+      "common": "Chum (keta) salmon",
+      "latin": "Oncorhynchus keta",
+      "family": "Salmonidae",
+      "native_range": "North Pacific, from Korea and Japan through the Sea of Okhotsk and Bering Sea to Arctic Alaska and south to California.",
+      "map_points": [
+        {
+          "label": "Yukon River, Alaska",
+          "lat": 62.6,
+          "lon": -164.6
+        },
+        {
+          "label": "Hokkaido, Japan",
+          "lat": 43.0,
+          "lon": 143.0
+        },
+        {
+          "label": "Amur River estuary",
+          "lat": 53.0,
+          "lon": 141.0
+        }
+      ],
+      "max_length_m": 1.0,
+      "max_length_type": "FL",
+      "max_weight_kg": 18.1,
+      "lifespan_years": 7,
+      "female_age_at_maturity_years": [
+        3,
+        5
+      ],
+      "female_maturity_note": "USFWS figure, sexes combined.",
+      "egg_diameter_mm": [
+        7.2,
+        7.2
+      ],
+      "egg_diameter_note": "Mean diameter of fertilized eggs (Korea); no sourced range found.",
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2020,
+        "assessed_date": "2020-07-23",
+        "published": "IUCN Red List 2024-2",
+        "assessment_id": "T202637A18236268"
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Least Concern globally; wild chum are fished commercially across the North Pacific.",
+      "one_fact": "Chum salmon range more widely than any other Pacific salmon, and like all Pacific salmon they spawn once and then die.",
+      "related_species": [
+        {
+          "common": "Pink salmon",
+          "latin": "Oncorhynchus gorbuscha",
+          "note": "Also sold as salmon roe. FishBase calls it the smallest of the true salmon and notes its roe is valued for caviar, especially in Japan.",
+          "max_length_m": 0.76,
+          "max_length_type": "TL",
+          "max_weight_kg": 7.0,
+          "lifespan_years": 3,
+          "age_at_maturity_years": [
+            2,
+            2
+          ],
+          "egg_diameter_mm": null,
+          "iucn_status": {
+            "code": "LC",
+            "category": "Least Concern",
+            "assessed": 2020,
+            "assessed_date": "2020-07-23",
+            "published": "IUCN Red List 2024-2",
+            "assessment_id": "T202636A18232679"
+          },
+          "field_sources": {
+            "max_length_m": "fb_gorbuscha",
+            "max_weight_kg": "fb_gorbuscha",
+            "lifespan_years": "fb_gorbuscha",
+            "age_at_maturity_years": "usfws_salmon_cheatsheet",
+            "iucn_status": "fb_gorbuscha",
+            "note": "fb_gorbuscha"
+          },
+          "sources": [
+            "https://www.fishbase.se/summary/Oncorhynchus-gorbuscha.html",
+            "https://www.fws.gov/sites/default/files/documents/06_Life%20Stage%20Cheat%20Sheet.pdf",
+            "https://www.iucnredlist.org/species/202636/18232679"
+          ]
+        }
+      ],
+      "field_sources": {
+        "max_length_m": "fb_keta",
+        "max_weight_kg": "fb_keta",
+        "lifespan_years": "fb_keta",
+        "female_age_at_maturity_years": "usfws_salmon_cheatsheet",
+        "egg_diameter_mm": "myoung1993",
+        "iucn_status": "fb_keta",
+        "wild_status_note": "fb_keta",
+        "one_fact": "adfg_chum + usfws_salmon_cheatsheet"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Oncorhynchus-keta.html",
+        "https://www.adfg.alaska.gov/index.cfm?adfg=chumsalmon.main",
+        "https://www.fws.gov/sites/default/files/documents/06_Life%20Stage%20Cheat%20Sheet.pdf",
+        "https://koreascience.or.kr/article/JAKO199327236818656.pub?orgId=isk",
+        "https://www.iucnredlist.org/species/202637/18236268"
+      ]
+    },
+    {
+      "id": "rainbow-trout",
+      "common": "Rainbow trout",
+      "latin": "Oncorhynchus mykiss",
+      "family": "Salmonidae",
+      "native_range": "Pacific slope of North America from Alaska's Kuskokwim River to southern California, plus Russia's Kamchatka Peninsula; introduced worldwide.",
+      "map_points": [
+        {
+          "label": "Kamchatka Peninsula",
+          "lat": 56.0,
+          "lon": 159.0
+        },
+        {
+          "label": "Kuskokwim River, Alaska",
+          "lat": 60.8,
+          "lon": -161.8
+        },
+        {
+          "label": "Columbia River",
+          "lat": 46.2,
+          "lon": -123.4
+        }
+      ],
+      "max_length_m": 1.23,
+      "max_length_type": "TL",
+      "max_weight_kg": 25.9,
+      "lifespan_years": 11,
+      "female_age_at_maturity_years": [
+        3,
+        4
+      ],
+      "female_maturity_note": "FAO: usually 3 to 4 years (farmed and wild); FishBase has a female record of 3 to 5 years (Ontario).",
+      "egg_diameter_mm": [
+        3.0,
+        7.0
+      ],
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2020,
+        "assessed_date": "2020-07-28",
+        "published": "IUCN Red List 2024-2",
+        "assessment_id": "T166481A18229476"
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Least Concern globally and widely farmed, but on the US West Coast one steelhead population is listed as endangered and ten as threatened under the Endangered Species Act.",
+      "one_fact": "Steelhead and rainbow trout are the same species: steelhead migrate to the ocean, grow larger there, and return to fresh water to spawn.",
+      "field_sources": {
+        "max_length_m": "fb_mykiss",
+        "max_weight_kg": "fb_mykiss",
+        "lifespan_years": "fb_mykiss",
+        "female_age_at_maturity_years": "fao_casip_trout",
+        "egg_diameter_mm": "fao_casip_trout",
+        "iucn_status": "fb_mykiss",
+        "wild_status_note": "noaa_steelhead + fb_mykiss",
+        "one_fact": "noaa_steelhead"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Oncorhynchus-mykiss.html",
+        "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_rainbowtrout.htm",
+        "https://www.fisheries.noaa.gov/species/steelhead-trout",
+        "https://www.iucnredlist.org/species/166481/18229476"
+      ]
+    },
+    {
+      "id": "flying-fish",
+      "common": "Flying fish (tobiko)",
+      "latin": "Hirundichthys affinis",
+      "latin_note": "No authoritative source names a single tobiko species. Tobiko is roe of flying fish in the genera Cheilopogon and Hirundichthys; in a 2021 DNA survey of Italian sushi, the four-wing flyingfish Hirundichthys affinis was the species most often found (6 of 12 samples), with single samples of H. oxycephalus and H. coromandelensis. Numbers below are for H. affinis except the egg size, which is for H. oxycephalus.",
+      "family": "Exocoetidae",
+      "native_range": "Tropical Atlantic: Guinea to Angola in the east, and from the Gulf Stream off Virginia and the northern Gulf of Mexico through the Caribbean to Brazil in the west.",
+      "map_points": [
+        {
+          "label": "Eastern Caribbean (Barbados)",
+          "lat": 13.1,
+          "lon": -59.6
+        },
+        {
+          "label": "Northeastern Brazil",
+          "lat": -5.0,
+          "lon": -35.5
+        },
+        {
+          "label": "Gulf of Guinea",
+          "lat": 3.0,
+          "lon": 5.0
+        }
+      ],
+      "max_length_m": 0.33,
+      "max_length_type": "TL",
+      "max_weight_kg": null,
+      "lifespan_years": 1,
+      "female_age_at_maturity_years": [
+        0.6,
+        0.7
+      ],
+      "female_maturity_note": "Sexes combined (eastern Caribbean).",
+      "egg_diameter_mm": [
+        1.6,
+        2.0
+      ],
+      "egg_diameter_note": "Eggs of Hirundichthys oxycephalus (Kyushu, Japan). A sushi survey describes tobiko grains as 2 mm or less.",
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2013,
+        "assessed_date": "2013-01-29",
+        "published": null,
+        "assessment_id": null
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Hirundichthys affinis is Least Concern and is the most important commercial fish species of the eastern Caribbean.",
+      "one_fact": "In a DNA survey of sushi sold in Italy, 4 of 12 samples labeled tobiko were actually capelin roe, not flying fish.",
+      "field_sources": {
+        "max_length_m": "fb_haffinis",
+        "lifespan_years": "fb_haffinis",
+        "female_age_at_maturity_years": "fb_haffinis_mat",
+        "egg_diameter_mm": "ichimaru2006",
+        "iucn_status": "fb_haffinis",
+        "wild_status_note": "fb_haffinis",
+        "one_fact": "pappalardo2021",
+        "latin_note": "pappalardo2021"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Hirundichthys-affinis.html",
+        "https://www.fishbase.se/Reproduction/MaturityList.php?ID=7457",
+        "https://doi.org/10.3390/foods10040756",
+        "https://www.miyagi.kopas.co.jp/JSFS/jsfs-english/E-PUB/72-1/p21.html"
+      ]
+    },
+    {
+      "id": "grey-mullet",
+      "common": "Flathead grey mullet (bottarga)",
+      "latin": "Mugil cephalus",
+      "family": "Mugilidae",
+      "native_range": "Coastal waters of tropical, subtropical and temperate seas worldwide, often entering estuaries, lagoons and rivers.",
+      "map_points": [
+        {
+          "label": "Cabras Lagoon, Sardinia",
+          "lat": 39.94,
+          "lon": 8.49
+        },
+        {
+          "label": "Taiwan Strait",
+          "lat": 24.0,
+          "lon": 119.5
+        },
+        {
+          "label": "Gulf of Mexico, Florida coast",
+          "lat": 27.5,
+          "lon": -82.8
+        }
+      ],
+      "max_length_m": 1.0,
+      "max_length_type": "SL",
+      "max_weight_kg": null,
+      "max_size_note": "FishBase cites a 12 kg report but flags it as unconfirmed.",
+      "lifespan_years": 16,
+      "female_age_at_maturity_years": [
+        3,
+        4
+      ],
+      "female_maturity_note": "Sexes combined.",
+      "egg_diameter_mm": [
+        0.88,
+        0.98
+      ],
+      "egg_diameter_note": "Spawned eggs. Bottarga is the whole salted, pressed and dried ovary, not loose grains.",
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2022,
+        "assessed_date": "2022-05-30",
+        "published": null,
+        "assessment_id": null
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Least Concern; most mullet farming still depends on fry collected from the wild.",
+      "one_fact": "Flathead grey mullet have been found in water ranging from fresh to 75 parts per thousand salt, about twice as salty as seawater.",
+      "field_sources": {
+        "max_length_m": "fb_mugil",
+        "lifespan_years": "fb_mugil",
+        "female_age_at_maturity_years": "fb_mugil",
+        "egg_diameter_mm": "fao_casip_mullet",
+        "iucn_status": "fb_mugil",
+        "wild_status_note": "fao_casip_mullet",
+        "one_fact": "fao_casip_mullet",
+        "egg_diameter_note": "corrias2020"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Mugil-cephalus.html",
+        "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_flatheadgreymullet.htm",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7600528"
+      ]
+    },
+    {
+      "id": "atlantic-bluefin-tuna",
+      "common": "Atlantic bluefin tuna",
+      "latin": "Thunnus thynnus",
+      "bottarga_note": "The typical species for tuna bottarga: a peer-reviewed analysis describes salted, dried bluefin (Thunnus thynnus) roe as a seafood characteristic of the Mediterranean.",
+      "family": "Scombridae",
+      "native_range": "Atlantic Ocean from Newfoundland to Brazil and from Norway to the Canary Islands, including the Mediterranean; spawns in the Gulf of Mexico and the Mediterranean.",
+      "map_points": [
+        {
+          "label": "Western Mediterranean (Balearic Sea)",
+          "lat": 39.5,
+          "lon": 3.0
+        },
+        {
+          "label": "Gulf of Mexico",
+          "lat": 26.0,
+          "lon": -90.0
+        },
+        {
+          "label": "Gulf of Maine",
+          "lat": 43.0,
+          "lon": -69.0
+        }
+      ],
+      "max_length_m": 4.58,
+      "max_length_type": "TL",
+      "max_weight_kg": 726,
+      "max_size_note": "726 kg is ICCAT's official maximum weight (a 427 cm fish from the Gulf of Maine); FishBase lists 684 kg and NOAA says up to 2,000 lb.",
+      "lifespan_years": 32,
+      "female_age_at_maturity_years": [
+        4,
+        8
+      ],
+      "female_maturity_note": "Age at 50 percent maturity: about 4 in the eastern Atlantic and Mediterranean, about 8 in the western Atlantic (sexes combined).",
+      "egg_diameter_mm": [
+        1.0,
+        1.0
+      ],
+      "egg_diameter_note": "ICCAT gives eggs of about 1 mm.",
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2021,
+        "assessed_date": "2021-01-15",
+        "published": "IUCN Red List 2021-2",
+        "assessment_id": "T21860A46913402"
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Least Concern globally; ICCAT manages it as two stocks, east and west of the 45°W meridian.",
+      "one_fact": "A 15- to 20-year-old female Atlantic bluefin can carry up to 45 million eggs, each only about 1 millimeter across.",
+      "field_sources": {
+        "max_length_m": "fb_thynnus",
+        "max_weight_kg": "iccat_bft",
+        "lifespan_years": "fb_thynnus",
+        "female_age_at_maturity_years": "iccat_bft",
+        "egg_diameter_mm": "iccat_bft",
+        "iucn_status": "fb_thynnus",
+        "wild_status_note": "iccat_bft",
+        "one_fact": "iccat_bft",
+        "bottarga_note": "scano2013"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Thunnus-thynnus.html",
+        "https://www.iccat.int/Documents/SCRS/Manual/CH2/2_1_5_BFT_ENG.pdf",
+        "https://www.fisheries.noaa.gov/species/western-atlantic-bluefin-tuna",
+        "https://doi.org/10.1016/j.foodchem.2012.11.095",
+        "https://www.iucnredlist.org/species/21860/46913402"
+      ]
+    },
+    {
+      "id": "yellowfin-tuna",
+      "common": "Yellowfin tuna",
+      "latin": "Thunnus albacares",
+      "bottarga_note": "Also used for tuna bottarga, but no authoritative source on its share was found; bluefin is the traditionally documented species.",
+      "family": "Scombridae",
+      "native_range": "Tropical and subtropical seas worldwide, but absent from the Mediterranean.",
+      "map_points": [
+        {
+          "label": "Gulf of Guinea",
+          "lat": 0.0,
+          "lon": 2.0
+        },
+        {
+          "label": "Eastern tropical Pacific",
+          "lat": 10.0,
+          "lon": -110.0
+        },
+        {
+          "label": "Western Indian Ocean",
+          "lat": -5.0,
+          "lon": 55.0
+        }
+      ],
+      "max_length_m": 2.39,
+      "max_length_type": "FL",
+      "max_weight_kg": 200,
+      "lifespan_years": 18,
+      "female_age_at_maturity_years": [
+        2,
+        null
+      ],
+      "female_maturity_note": "50 percent of females mature at about 2 years (western Pacific) or a little over 2 (eastern Atlantic); no sourced upper bound.",
+      "egg_diameter_mm": [
+        0.9,
+        1.04
+      ],
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2021,
+        "assessed_date": "2021-01-15",
+        "published": "IUCN Red List 2021-2",
+        "assessment_id": "T21857A46624561"
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Least Concern globally; in the Atlantic it is assessed and managed by ICCAT.",
+      "one_fact": "Large yellowfin tuna frequently school with porpoises and gather around floating debris and other objects in the open ocean.",
+      "field_sources": {
+        "max_length_m": "fb_albacares + iccat_yft",
+        "max_weight_kg": "fb_albacares + iccat_yft",
+        "lifespan_years": "fb_albacares",
+        "female_age_at_maturity_years": "iccat_yft",
+        "egg_diameter_mm": "iccat_yft",
+        "iucn_status": "fb_albacares",
+        "wild_status_note": "iccat_yft",
+        "one_fact": "fb_albacares"
+      },
+      "sources": [
+        "https://www.fishbase.se/summary/Thunnus-albacares.html",
+        "https://www.iccat.int/Documents/SCRS/Manual/CH2/2_1_1_YFT_ENG.pdf",
+        "https://www.iucnredlist.org/species/21857/46624561"
+      ]
+    },
+    {
+      "id": "garden-snail",
+      "common": "Garden snail (snail caviar)",
+      "latin": "Cornu aspersum",
+      "latin_note": "Formerly Helix aspersa.",
+      "family": "Helicidae",
+      "native_range": "Britain, western Europe and the shores of the Mediterranean and Black Seas; introduced widely, including to California in the 1850s as a source of escargot.",
+      "map_points": [
+        {
+          "label": "Italy (type locality)",
+          "lat": 41.9,
+          "lon": 12.5
+        },
+        {
+          "label": "Western France",
+          "lat": 47.0,
+          "lon": -1.5
+        },
+        {
+          "label": "Southern Britain",
+          "lat": 51.0,
+          "lon": -1.5
+        }
+      ],
+      "max_length_m": 0.038,
+      "max_length_type": "shell",
+      "max_weight_kg": null,
+      "lifespan_years": null,
+      "lifespan_note": "No authoritative figure found; non-authoritative sites say 2 to 5 years.",
+      "female_age_at_maturity_years": [
+        0.8,
+        2
+      ],
+      "female_maturity_note": "Hermaphrodite, so this is age at sexual maturity: about 10 months in South Africa, about 2 years in southern California.",
+      "egg_diameter_mm": [
+        3.0,
+        3.0
+      ],
+      "egg_diameter_note": "About 3 mm (CFIA); UF/IFAS gives about 1/8 inch.",
+      "iucn_status": {
+        "code": "LC",
+        "category": "Least Concern",
+        "criteria": null,
+        "assessed": 2011,
+        "assessed_date": null,
+        "published": "2011 (European regional assessment)",
+        "assessment_id": "T156890A5012868",
+        "scope_note": "Only a European assessment was found."
+      },
+      "cites_appendix": {
+        "appendix": null,
+        "since": null,
+        "note": "Not listed."
+      },
+      "wild_status_note": "Not threatened in its native Europe, it is an invasive crop pest elsewhere; it was brought to California in the 1850s for escargot.",
+      "one_fact": "Every garden snail is both male and female; after mating it digs a small nest in the soil and lays about 86 round white eggs.",
+      "field_sources": {
+        "max_length_m": "cfia_snail",
+        "female_age_at_maturity_years": "edis_eeny240",
+        "egg_diameter_mm": "cfia_snail + edis_eeny240",
+        "iucn_status": "wiki_snail_iucn_cite",
+        "wild_status_note": "edis_eeny240",
+        "one_fact": "cfia_snail + edis_eeny240",
+        "native_range": "edis_eeny240"
+      },
+      "sources": [
+        "https://edis.ifas.ufl.edu/publication/IN396",
+        "https://inspection.canada.ca/en/plant-health/invasive-species/nematodes-snails-and-others/european-brown-garden-snail/fact-sheet",
+        "https://www.iucnredlist.org/species/156890/5012868",
+        "https://en.wikipedia.org/wiki/Cornu_aspersum"
+      ]
+    }
+  ],
+  "hybrids": [
+    {
+      "id": "kaluga-hybrid",
+      "common": "Kaluga hybrid (kaluga x Amur sturgeon)",
+      "parents": "Huso dauricus (female) x Acipenser schrenckii (male)",
+      "why_farmed": "This cross shows better viability and growth than either parent species and has become the most exploited sturgeon for caviar production; it supplied about 13 percent of world caviar in 2016.",
+      "egg_diameter_mm": null,
+      "egg_diameter_note": "No authoritative measurement found.",
+      "notes": "It is one of the five farmed sturgeons that made up 90 percent of China's sturgeon output in 2010-2012. DNA testing has found a high level of concealed hybridization in caviar sold as pure Amur or kaluga.",
+      "field_sources": {
+        "why_farmed": "shivaramu2019 + bronzi2019",
+        "parents": "shen2014",
+        "notes": "shen2014 + boscari2017"
+      },
+      "sources": [
+        "https://doi.org/10.17221/165/2018-CJAS",
+        "https://doi.org/10.1111/jai.13870",
+        "https://doi.org/10.1111/jai.12618",
+        "https://doi.org/10.1016/j.foodcont.2017.07.001"
+      ]
+    },
+    {
+      "id": "bester",
+      "common": "Bester (beluga x sterlet)",
+      "parents": "Huso huso (female) x Acipenser ruthenus (male)",
+      "why_farmed": "Soviet hybridization work begun in 1949 aimed to combine the beluga's rapid growth with the sterlet's early maturity, and the bester is cultivated for its high-quality eggs.",
+      "egg_diameter_mm": null,
+      "egg_diameter_note": "No authoritative measurement found.",
+      "field_sources": {
+        "why_farmed": "fao_1971_hybrids + fb_huso",
+        "parents": "fb_huso"
+      },
+      "sources": [
+        "https://www.fao.org/4/b3310e/B3310E25.htm",
+        "https://www.fishbase.se/summary/Huso-huso.html"
+      ]
+    },
+    {
+      "id": "beluga-sevruga",
+      "common": "Beluga x sevruga",
+      "parents": "Huso huso x Acipenser stellatus",
+      "why_farmed": null,
+      "why_farmed_note": "No source specific to farming this cross was found. FAO (1971) lists it among natural sturgeon hybrids and says hybrids in general are farmed for rapid growth, greater viability and earlier maturity.",
+      "egg_diameter_mm": null,
+      "field_sources": {
+        "parents": "fao_1971_hybrids",
+        "why_farmed_note": "fao_1971_hybrids"
+      },
+      "sources": [
+        "https://www.fao.org/4/b3310e/B3310E25.htm"
+      ]
+    }
+  ],
+  "source_index": {
+    "fb_huso": {
+      "cite": "FishBase species summary, Acipenser (Huso) huso. Size and age from Kottelat & Freyhof 2007 and others; IUCN data from Red List version 2025-2.",
+      "url": "https://www.fishbase.se/summary/Huso-huso.html"
+    },
+    "fb_dauricus": {
+      "cite": "FishBase species summary, Acipenser (Huso) dauricus (Krykhtin & Svirskii 1997 and others).",
+      "url": "https://www.fishbase.se/summary/Huso-dauricus.html"
+    },
+    "fb_schrenckii": {
+      "cite": "FishBase species summary, Acipenser schrenckii.",
+      "url": "https://www.fishbase.se/summary/Acipenser-schrenckii.html"
+    },
+    "fb_gueld": {
+      "cite": "FishBase species summary, Acipenser gueldenstaedtii.",
+      "url": "https://www.fishbase.se/summary/Acipenser-gueldenstaedtii.html"
+    },
+    "fb_baerii": {
+      "cite": "FishBase species summary, Acipenser baerii.",
+      "url": "https://www.fishbase.se/summary/Acipenser-baerii.html"
+    },
+    "fb_transmontanus": {
+      "cite": "FishBase species summary, Acipenser transmontanus.",
+      "url": "https://www.fishbase.se/summary/Acipenser-transmontanus.html"
+    },
+    "fb_ruthenus": {
+      "cite": "FishBase species summary, Acipenser ruthenus.",
+      "url": "https://www.fishbase.se/summary/Acipenser-ruthenus.html"
+    },
+    "fb_stellatus": {
+      "cite": "FishBase species summary, Acipenser stellatus.",
+      "url": "https://www.fishbase.se/summary/Acipenser-stellatus.html"
+    },
+    "fb_platorynchus": {
+      "cite": "FishBase species summary, Scaphirhynchus platorynchus.",
+      "url": "https://www.fishbase.se/summary/Scaphirhynchus-platorynchus.html"
+    },
+    "fb_polyodon": {
+      "cite": "FishBase species summary, Polyodon spathula.",
+      "url": "https://www.fishbase.se/summary/Polyodon-spathula.html"
+    },
+    "fb_amia": {
+      "cite": "FishBase species summary, Amia calva.",
+      "url": "https://www.fishbase.se/summary/Amia-calva.html"
+    },
+    "fb_amia_ocellicauda": {
+      "cite": "FishBase species summary, Amia ocellicauda (range after the 2022 split).",
+      "url": "https://www.fishbase.se/summary/Amia-ocellicauda.html"
+    },
+    "fb_amia_mat": {
+      "cite": "FishBase maturity table, Amia calva (female 3-5 y, Scott & Crossman 1973).",
+      "url": "https://www.fishbase.se/Reproduction/MaturityList.php?ID=2600"
+    },
+    "fb_amia_egg": {
+      "cite": "FishBase egg information, Amia calva (Jones, Martin & Hardy 1978).",
+      "url": "https://www.fishbase.se/Reproduction/FishEggInfoSummary.php?ID=2600&StockCode=2796"
+    },
+    "fb_coregonus": {
+      "cite": "FishBase species summary, Coregonus clupeaformis.",
+      "url": "https://www.fishbase.se/summary/Coregonus-clupeaformis.html"
+    },
+    "fb_coregonus_mat": {
+      "cite": "FishBase maturity table, Coregonus clupeaformis (Ontario 4-7 y, sexes combined).",
+      "url": "https://www.fishbase.se/Reproduction/MaturityList.php?ID=234"
+    },
+    "fb_coregonus_egg": {
+      "cite": "FishBase egg information, Coregonus clupeaformis (Morrow 1980: 140 days at 0.5 C).",
+      "url": "https://www.fishbase.se/Reproduction/FishEggInfoSummary.php?ID=234&StockCode=248"
+    },
+    "fb_keta": {
+      "cite": "FishBase species summary, Oncorhynchus keta.",
+      "url": "https://www.fishbase.se/summary/Oncorhynchus-keta.html"
+    },
+    "fb_gorbuscha": {
+      "cite": "FishBase species summary, Oncorhynchus gorbuscha.",
+      "url": "https://www.fishbase.se/summary/Oncorhynchus-gorbuscha.html"
+    },
+    "fb_mykiss": {
+      "cite": "FishBase species summary, Oncorhynchus mykiss.",
+      "url": "https://www.fishbase.se/summary/Oncorhynchus-mykiss.html"
+    },
+    "fb_haffinis": {
+      "cite": "FishBase species summary, Hirundichthys affinis.",
+      "url": "https://www.fishbase.se/summary/Hirundichthys-affinis.html"
+    },
+    "fb_haffinis_mat": {
+      "cite": "FishBase maturity table, Hirundichthys affinis (0.6-0.7 y, eastern Caribbean).",
+      "url": "https://www.fishbase.se/Reproduction/MaturityList.php?ID=7457"
+    },
+    "fb_mugil": {
+      "cite": "FishBase species summary, Mugil cephalus.",
+      "url": "https://www.fishbase.se/summary/Mugil-cephalus.html"
+    },
+    "fb_thynnus": {
+      "cite": "FishBase species summary, Thunnus thynnus.",
+      "url": "https://www.fishbase.se/summary/Thunnus-thynnus.html"
+    },
+    "fb_albacares": {
+      "cite": "FishBase species summary, Thunnus albacares.",
+      "url": "https://www.fishbase.se/summary/Thunnus-albacares.html"
+    },
+    "fao_tp558": {
+      "cite": "Chebanov, M.S. & Galich, E.V. 2011. Sturgeon hatchery manual. FAO Fisheries and Aquaculture Technical Paper No. 558.",
+      "url": "https://www.fao.org/4/i2144e/i2144e00.htm"
+    },
+    "fao_casip_baerii": {
+      "cite": "Williot, P. et al. Acipenser baerii. FAO Cultured Aquatic Species Fact Sheets.",
+      "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_acipenser.htm"
+    },
+    "fao_casip_trout": {
+      "cite": "Cowx, I.G. Oncorhynchus mykiss. FAO Cultured Aquatic Species Fact Sheets.",
+      "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_rainbowtrout.htm"
+    },
+    "fao_casip_mullet": {
+      "cite": "Saleh, M.A. Mugil cephalus. FAO Cultured Aquatic Species Fact Sheets.",
+      "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_flatheadgreymullet.htm"
+    },
+    "fao_1971_hybrids": {
+      "cite": "Nikoljukin, N.I. Hybridization of Acipenseridae and its practical significance. In FAO 1971, Seminar/Study Tour in the USSR on Genetic Selection and Hybridization of Cultivated Fishes (1968), Rep. FAO/UNDP(TA) 2926.",
+      "url": "https://www.fao.org/4/b3310e/B3310E25.htm"
+    },
+    "edis_fa153": {
+      "cite": "Chapman, F.A. & Van Eenennaam, J.P. Sturgeon Aquaculture: Determining the Stage of Sexual Maturity in Female Sturgeon (egg polarization index). UF/IFAS EDIS FA153 (2007, reviewed 2019).",
+      "url": "https://edis.ifas.ufl.edu/publication/FA153"
+    },
+    "lenhardt2005": {
+      "cite": "Lenhardt, M. et al. 2005. Analysis of the post-vitellogenic oocytes of three species of Danubian Acipenseridae. Belgian Journal of Zoology 135(2): 205-207.",
+      "url": "https://biblio.naturalsciences.be/associated_publications/bjz/135-2/volume-135-2-pp-205-207.pdf"
+    },
+    "belyaev2022": {
+      "cite": "Belyaev, V.A., Fedorov, K.E. & Novosadova, A.V. 2022. Gonad condition of Amur sturgeon females from the Amur River. Voprosy Rybolovstva (Problems of Fisheries) 23(3): 122-130. doi:10.36038/0234-2774-2022-23-3-122-130.",
+      "url": "https://vr.vniro.ru/jour/article/download/200/203"
+    },
+    "chapman1996": {
+      "cite": "Chapman, F.A., Van Eenennaam, J.P. & Doroshov, S.I. 1996. The reproductive condition of white sturgeon in San Francisco Bay, California. Fishery Bulletin 94: 628-634.",
+      "url": "https://spo.nmfs.noaa.gov/sites/default/files/pdf-content/1996/944/chapman.pdf"
+    },
+    "cdfw_white": {
+      "cite": "California Department of Fish and Wildlife, White Sturgeon page.",
+      "url": "https://wildlife.ca.gov/Conservation/Fishes/Sturgeon/White-Sturgeon"
+    },
+    "usbr_wang2006": {
+      "cite": "Wang, J.C.S. 2006. Early life history comparison of green and white sturgeon. Tracy Technical Bulletin 2006-1, US Bureau of Reclamation.",
+      "url": "https://www.usbr.gov/mp/TFFIP/docs/ttb-2006-1-early-life-history-comparison.pdf"
+    },
+    "fot_shovelnose": {
+      "cite": "Fishes of Texas, Scaphirhynchus platorynchus (Kennedy et al. 2006; Stahl 2008).",
+      "url": "https://fishesoftexas.org/taxa/scaphirhynchus-platorynchus"
+    },
+    "hamel2015": {
+      "cite": "Hamel, M.J. et al. 2015. Reproductive traits of shovelnose sturgeon in the lower Platte River, Nebraska. Journal of Applied Ichthyology.",
+      "url": "https://pubs.usgs.gov/publication/70154857"
+    },
+    "fot_paddlefish": {
+      "cite": "Fishes of Texas, Polyodon spathula (Pitman 1992; Reed et al. 1992).",
+      "url": "https://fishesoftexas.org/taxa/polyodon-spathula"
+    },
+    "srac437": {
+      "cite": "Southern Regional Aquaculture Center Publication 437, Production of Paddlefish (Kentucky State University).",
+      "url": "https://www.srac.msstate.edu/pdfs/Fact%20Sheets/437%20Production%20of%20Paddlefish.pdf"
+    },
+    "wilkens1997": {
+      "cite": "Wilkens, L.A., Russell, D.F., Pei, X. & Gurgens, C. 1997. The paddlefish rostrum functions as an electrosensory antenna in plankton feeding. Proc. R. Soc. B 264: 1723-1729.",
+      "url": "https://doi.org/10.1098/rspb.1997.0239"
+    },
+    "ky_301kar1140": {
+      "cite": "Kentucky Administrative Regulation 301 KAR 1:140, Special commercial fishing permit for Kentucky Lake and Lake Barkley (effective 26 June 2025).",
+      "url": "https://apps.legislature.ky.gov/law/kar/titles/301/001/140/REG"
+    },
+    "usfws_shovelnose_2010": {
+      "cite": "USFWS 2010. Threatened status for shovelnose sturgeon under the similarity of appearance provisions of the ESA. 75 FR 53598, effective 1 October 2010.",
+      "url": "https://www.fws.gov/policy/library/2010/2010-21861.html"
+    },
+    "mdc_shovelnose": {
+      "cite": "Missouri Department of Conservation, Commercial Shovelnose Fishing Restricted.",
+      "url": "https://mdc.mo.gov/fishing/regulations/commercial-shovelnose-fishing-restricted"
+    },
+    "lsu_bowfin_2009": {
+      "cite": "Louisiana Sea Grant and LSU AgCenter, Lagniappe, March 2009, Species Profile: Bowfin.",
+      "url": "https://www.seagrantfish.lsu.edu/pdfs/lagniappe/2009/03-2009.pdf"
+    },
+    "paufve2020": {
+      "cite": "Paufve, M.R. et al. 2020. Differentiation between lake whitefish and cisco eggs based on diameter. Journal of Great Lakes Research.",
+      "url": "https://pubs.usgs.gov/publication/70228365"
+    },
+    "midnr_2015": {
+      "cite": "Michigan DNR news bulletin, 20 April 2016, on 2015 state-licensed commercial fishing.",
+      "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/144069b"
+    },
+    "myoung1993": {
+      "cite": "Myoung, J.-G. & Kim, Y.-U. 1993. Egg development and morphology of alevin, fry and smolt of chum salmon. Korean Journal of Ichthyology.",
+      "url": "https://koreascience.or.kr/article/JAKO199327236818656.pub?orgId=isk"
+    },
+    "adfg_chum": {
+      "cite": "Alaska Department of Fish and Game, Chum Salmon species profile.",
+      "url": "https://www.adfg.alaska.gov/index.cfm?adfg=chumsalmon.main"
+    },
+    "usfws_salmon_cheatsheet": {
+      "cite": "USFWS Columbia River FWCO 2022, Life Stage Cheat Sheet for Pacific Salmon.",
+      "url": "https://www.fws.gov/sites/default/files/documents/06_Life%20Stage%20Cheat%20Sheet.pdf"
+    },
+    "noaa_steelhead": {
+      "cite": "NOAA Fisheries, Steelhead Trout species page.",
+      "url": "https://www.fisheries.noaa.gov/species/steelhead-trout"
+    },
+    "pappalardo2021": {
+      "cite": "Pappalardo, A.M. et al. 2021. Geographic pattern of sushi product misdescription in Italy: a crosstalk between citizen science and DNA barcoding. Foods 10(4): 756.",
+      "url": "https://doi.org/10.3390/foods10040756"
+    },
+    "ichimaru2006": {
+      "cite": "Ichimaru, T., Mizuta, K. & Nakazono, A. 2006. Egg morphology and spawning season of the mirror-finned flying fish Hirundichthys oxycephalus near Kyushu, Japan. Nippon Suisan Gakkaishi 72(1): 21-26.",
+      "url": "https://www.miyagi.kopas.co.jp/JSFS/jsfs-english/E-PUB/72-1/p21.html"
+    },
+    "corrias2020": {
+      "cite": "Corrias, F. et al. 2020. Influence of the technological process on the biochemical composition of fresh roe and bottarga from Liza ramada and Mugil cephalus. Foods.",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7600528"
+    },
+    "scano2013": {
+      "cite": "Scano, P. et al. 2013. Lipid components and water soluble metabolites in salted and dried tuna (Thunnus thynnus L.) roes. Food Chemistry.",
+      "url": "https://doi.org/10.1016/j.foodchem.2012.11.095"
+    },
+    "iccat_bft": {
+      "cite": "Fromentin, J.-M. 2006. ICCAT Manual, Chapter 2.1.5: Atlantic Bluefin Tuna.",
+      "url": "https://www.iccat.int/Documents/SCRS/Manual/CH2/2_1_5_BFT_ENG.pdf"
+    },
+    "iccat_yft": {
+      "cite": "IEO 2006. ICCAT Manual, Chapter 2.1.1: Yellowfin Tuna.",
+      "url": "https://www.iccat.int/Documents/SCRS/Manual/CH2/2_1_1_YFT_ENG.pdf"
+    },
+    "noaa_wbft": {
+      "cite": "NOAA Fisheries, Western Atlantic Bluefin Tuna species page.",
+      "url": "https://www.fisheries.noaa.gov/species/western-atlantic-bluefin-tuna"
+    },
+    "edis_eeny240": {
+      "cite": "Dekle, G.W. & Fasulo, T.R. Brown Garden Snail, Cornu aspersum. UF/IFAS EDIS EENY240.",
+      "url": "https://edis.ifas.ufl.edu/publication/IN396"
+    },
+    "cfia_snail": {
+      "cite": "Canadian Food Inspection Agency, Cornu aspersum (European brown garden snail) fact sheet.",
+      "url": "https://inspection.canada.ca/en/plant-health/invasive-species/nematodes-snails-and-others/european-brown-garden-snail/fact-sheet"
+    },
+    "usfws_beluga_2005": {
+      "cite": "USFWS 2005. Service suspends trade in threatened beluga sturgeon from the Caspian Sea basin.",
+      "url": "https://www.fws.gov/story/2005-09/service-suspends-trade-threatened-beluga-sturgeon-caspian-sea-basin"
+    },
+    "guinness_beluga": {
+      "cite": "Guinness World Records, Largest anadromous fish (beluga, Volga estuary, 1827).",
+      "url": "https://www.guinnessworldrecords.com/world-records/542172-largest-anadromous-fish"
+    },
+    "fr_1999_cites": {
+      "cite": "Federal Register, 26 Oct 1999 (FR Doc. 99-27953): CITES CoP10 included all previously unlisted Acipenseriformes in Appendix II, effective 1 April 1998.",
+      "url": "https://www.govinfo.gov/content/pkg/FR-1999-10-26/html/99-27953.htm"
+    },
+    "noaa_kaluga": {
+      "cite": "NOAA Fisheries, Kaluga Sturgeon species page (ESA endangered, effective 2 July 2014).",
+      "url": "https://www.fisheries.noaa.gov/species/kaluga-sturgeon"
+    },
+    "cms_dauricus": {
+      "cite": "CMS COP6 Proposal II/26 (Germany): inclusion of Huso dauricus in CMS Appendix II.",
+      "url": "https://cms.int/sharks/sites/default/files/document/CMS_COP6_II_26_Huso_dauricus-Ger-E.pdf"
+    },
+    "usfws_amur_2021": {
+      "cite": "USFWS press release, 24 Aug 2021: proposed endangered status for the Amur sturgeon.",
+      "url": "https://fws.gov/press-release/2021-08/us-fish-and-wildlife-service-proposes-endangered-species-act-protection-amur"
+    },
+    "cites_ac28": {
+      "cite": "CITES Animals Committee AC28 Doc. 16.1 (2015) on sturgeons; read only through search-engine text (the PDF returned HTTP 403).",
+      "url": "https://cites.org/sites/default/files/eng/com/ac/28/E-AC28-16-01.pdf"
+    },
+    "kaldy2020": {
+      "cite": "Kaldy, J. et al. 2020. Hybridization of Russian sturgeon and American paddlefish and evaluation of their progeny. Genes 11(7): 753.",
+      "url": "https://doi.org/10.3390/genes11070753"
+    },
+    "bronzi2019": {
+      "cite": "Bronzi, P., Chebanov, M., Michaels, J., Wei, Q., Rosenthal, H. & Gessner, J. 2019. Sturgeon meat and caviar production: Global update 2017. Journal of Applied Ichthyology 35: 257-266. Read through the abstract as quoted by search results; the publisher page returned HTTP 403.",
+      "url": "https://doi.org/10.1111/jai.13870"
+    },
+    "shivaramu2019": {
+      "cite": "Shivaramu, S. et al. 2019. Influence of interspecific hybridization on fitness-related traits in Siberian sturgeon and Russian sturgeon. Czech Journal of Animal Science 64: 78-88.",
+      "url": "https://doi.org/10.17221/165/2018-CJAS"
+    },
+    "shen2014": {
+      "cite": "Shen, L. et al. 2014. Sturgeon aquaculture in China: status, challenge and proposals based on nation-wide surveys of 2010-2012. Journal of Applied Ichthyology.",
+      "url": "https://doi.org/10.1111/jai.12618"
+    },
+    "boscari2017": {
+      "cite": "Boscari, E. et al. 2017. Genetic identification of the caviar-producing Amur and Kaluga sturgeons revealed a high level of concealed hybridization. Food Control.",
+      "url": "https://doi.org/10.1016/j.foodcont.2017.07.001"
+    },
+    "igb_2022": {
+      "cite": "IGB Berlin press release on the IUCN sturgeon reassessment published 21 July 2022.",
+      "url": "https://www.igb-berlin.de/en/node/11357"
+    },
+    "wiki_sterlet_iucn_cite": {
+      "cite": "IUCN citation as given on Wikipedia: Gessner, J., Freyhof, J., Kottelat, M. & Friedrich, T. 2022. Acipenser ruthenus. IUCN Red List e.T227A135062526.",
+      "url": "https://en.wikipedia.org/wiki/Sterlet"
+    },
+    "wiki_snail_iucn_cite": {
+      "cite": "IUCN citation as given on Wikipedia: Neubert, E. 2011. Cornu aspersum (Europe assessment). IUCN Red List e.T156890A5012868.",
+      "url": "https://en.wikipedia.org/wiki/Cornu_aspersum"
+    }
+  }
+}

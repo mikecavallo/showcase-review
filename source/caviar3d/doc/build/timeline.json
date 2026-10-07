@@ -1,0 +1,1630 @@
+[
+ {
+  "id": "0.1",
+  "dur": 21.647,
+  "shots": [
+   {
+    "type": "photo",
+    "src": "cs_home_caviar-macro-hero.jpg",
+    "kb": [
+     [
+      1.18,
+      0.03,
+      0.02
+     ],
+     [
+      1.32,
+      -0.03,
+      -0.01
+     ]
+    ],
+    "start": 0,
+    "dur": 5.867
+   },
+   {
+    "type": "product",
+    "items": [
+     "kaluga-hybrid-caviar-limited-edition"
+    ],
+    "start": 5.167,
+    "dur": 7.823
+   },
+   {
+    "type": "photo",
+    "src": "archival_dana-leavitt-drysuit-on-boat_SCAN0024.jpg",
+    "mono": true,
+    "kb": [
+     [
+      1.05,
+      0,
+      0
+     ],
+     [
+      1.15,
+      0.01,
+      -0.01
+     ]
+    ],
+    "start": 12.29,
+    "dur": 3.423
+   },
+   {
+    "type": "photo",
+    "src": "archival_japan-street_dana_date-stamp-4-18-9x.jpg",
+    "mono": true,
+    "start": 15.013,
+    "dur": 3.423
+   },
+   {
+    "type": "photo",
+    "src": "catalog2026_page13.jpg",
+    "fit": "contain",
+    "kb": [
+     [
+      1,
+      0,
+      0
+     ],
+     [
+      1.05,
+      0,
+      0
+     ]
+    ],
+    "start": 17.735,
+    "dur": 3.911
+   }
+  ],
+  "audio": "build/audio/0.1.wav",
+  "chapter": 0,
+  "chapter_title": "Cold open"
+ },
+ {
+  "id": "0.2",
+  "dur": 21.411,
+  "shots": [
+   {
+    "type": "title",
+    "logo": "gat_logo_estd-1991.png",
+    "title": "GREAT ATLANTIC",
+    "sub": "From the Docks to the Tin",
+    "kicker": "Great Atlantic Trading Inc. \u00b7 Caviar Star",
+    "start": 0,
+    "dur": 21.411
+   }
+  ],
+  "audio": "build/audio/0.2.wav",
+  "chapter": 0,
+  "chapter_title": "Cold open"
+ },
+ {
+  "id": "ch1",
+  "dur": 4.0,
+  "audio": null,
+  "chapter": 1,
+  "chapter_title": "Maine and the sea",
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "Chapter One",
+    "title": "MAINE AND THE SEA",
+    "start": 0,
+    "dur": 4.0
+   }
+  ]
+ },
+ {
+  "id": "1.1",
+  "dur": 24.256,
+  "shots": [
+   {
+    "type": "map",
+    "view": "gulf-maine",
+    "pins": [
+     {
+      "lon": -70.255,
+      "lat": 43.66,
+      "label": "Portland, Maine",
+      "at": 0.8
+     }
+    ],
+    "label": "Portland, Maine \u00b7 late 1980s",
+    "zoom": [
+     1,
+     1.1
+    ],
+    "start": 0,
+    "dur": 12.478
+   },
+   {
+    "type": "diagram",
+    "kind": "urchin",
+    "title": "Before 1985: about 45 metric tons a year",
+    "start": 11.778,
+    "dur": 12.478
+   }
+  ],
+  "audio": "build/audio/1.1.wav",
+  "chapter": 1,
+  "chapter_title": "Maine and the sea"
+ },
+ {
+  "id": "1.2",
+  "dur": 23.887,
+  "shots": [
+   {
+    "type": "map",
+    "view": "pacific",
+    "pins": [
+     {
+      "lon": 139.77,
+      "lat": 35.68,
+      "label": "Tokyo",
+      "at": 0.3
+     },
+     {
+      "lon": -120.5,
+      "lat": 34.5,
+      "label": "California",
+      "at": 1.4
+     },
+     {
+      "lon": -127,
+      "lat": 51,
+      "label": "British Columbia",
+      "at": 2.2,
+      "dx": -24,
+      "anchor": "end"
+     },
+     {
+      "lon": -70.255,
+      "lat": 43.66,
+      "label": "Maine",
+      "at": 3.6
+     }
+    ],
+    "arcs": [
+     {
+      "from": [
+       139.77,
+       35.68
+      ],
+      "to": [
+       -120.5,
+       34.5
+      ],
+      "at": 1.0
+     },
+     {
+      "from": [
+       139.77,
+       35.68
+      ],
+      "to": [
+       -127,
+       51
+      ],
+      "at": 1.8
+     },
+     {
+      "from": [
+       139.77,
+       35.68
+      ],
+      "to": [
+       -70.25,
+       43.66
+      ],
+      "at": 3.2,
+      "dur": 2.2
+     }
+    ],
+    "label": "Uni: sea urchin roe",
+    "zoom": [
+     1,
+     1.04
+    ],
+    "start": 0,
+    "dur": 23.887
+   }
+  ],
+  "audio": "build/audio/1.2.wav",
+  "chapter": 1,
+  "chapter_title": "Maine and the sea"
+ },
+ {
+  "id": "1.3",
+  "dur": 34.305,
+  "shots": [
+   {
+    "type": "chart",
+    "title": "Maine urchin landings",
+    "bars": [
+     {
+      "label": "1987",
+      "value": 1.4,
+      "text": "1.4 million lb"
+     },
+     {
+      "label": "1992",
+      "value": 26,
+      "text": "over 26 million lb"
+     }
+    ],
+    "src": "Maine Department of Marine Resources; Christian Science Monitor, 1994",
+    "start": 0,
+    "dur": 16.125
+   },
+   {
+    "type": "lines",
+    "items": [
+     "1990 value: almost $15 million",
+     "Hand-fishing urchin licenses: 807 (1992)",
+     "1,439 (1993)"
+    ],
+    "src": "Maine Department of Marine Resources; Christian Science Monitor, 1994",
+    "start": 15.425,
+    "dur": 11.518
+   },
+   {
+    "type": "photo",
+    "src": "archival_dana-leavitt-drysuit-on-boat_SCAN0024.jpg",
+    "mono": true,
+    "start": 26.243,
+    "dur": 8.062
+   }
+  ],
+  "audio": "build/audio/1.3.wav",
+  "chapter": 1,
+  "chapter_title": "Maine and the sea"
+ },
+ {
+  "id": "ch2",
+  "dur": 4.0,
+  "audio": null,
+  "chapter": 2,
+  "chapter_title": "The docks and Japan",
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "Chapter Two",
+    "title": "THE DOCKS AND JAPAN",
+    "start": 0,
+    "dur": 4.0
+   }
+  ]
+ },
+ {
+  "id": "2.1",
+  "dur": 23.979,
+  "shots": [
+   {
+    "type": "photo",
+    "src": "archival_dana-leavitt-drysuit-on-boat_SCAN0024.jpg",
+    "mono": true,
+    "kb": [
+     [
+      1.02,
+      0,
+      0
+     ],
+     [
+      1.2,
+      0.02,
+      -0.02
+     ]
+    ],
+    "lower": [
+     "Dana Leavitt",
+     "Photo: Caviar Star"
+    ],
+    "start": 0,
+    "dur": 15.187
+   },
+   {
+    "type": "map",
+    "view": "gulf-maine",
+    "pins": [
+     {
+      "lon": -70.255,
+      "lat": 43.66,
+      "label": "Great Atlantic Seafood \u00b7 Portland",
+      "at": 0.4
+     }
+    ],
+    "zoom": [
+     1.05,
+     1.18
+    ],
+    "label": "Portland docks",
+    "start": 14.487,
+    "dur": 9.492
+   }
+  ],
+  "audio": "build/audio/2.1.wav",
+  "chapter": 2,
+  "chapter_title": "The docks and Japan"
+ },
+ {
+  "id": "2.2",
+  "dur": 18.468,
+  "shots": [
+   {
+    "type": "diagram",
+    "kind": "urchin",
+    "title": "Prime season: November to March",
+    "start": 0,
+    "dur": 18.468
+   }
+  ],
+  "audio": "build/audio/2.2.wav",
+  "chapter": 2,
+  "chapter_title": "The docks and Japan"
+ },
+ {
+  "id": "2.3",
+  "dur": 35.323,
+  "shots": [
+   {
+    "type": "diagram",
+    "kind": "grades",
+    "start": 0,
+    "dur": 15.662
+   },
+   {
+    "type": "quote",
+    "text": "The Maine market did not get off the ground until Japanese representatives came to Maine to explain what is required to satisfy their market.",
+    "by": "Maine Department of Marine Resources",
+    "start": 14.962,
+    "dur": 20.361
+   }
+  ],
+  "audio": "build/audio/2.3.wav",
+  "chapter": 2,
+  "chapter_title": "The docks and Japan"
+ },
+ {
+  "id": "2.4",
+  "dur": 18.823,
+  "shots": [
+   {
+    "type": "photo",
+    "src": "archival_japan-group-photo_dana-denise_SCAN0069.jpg",
+    "mono": true,
+    "lower": [
+     "Dana and Denise Leavitt in Japan",
+     "Photo: Caviar Star"
+    ],
+    "start": 0,
+    "dur": 10.649
+   },
+   {
+    "type": "photo",
+    "src": "archival_japan-dinner-toast_dana-denise_gat-about.jpg",
+    "mono": true,
+    "kb": [
+     [
+      1.05,
+      0,
+      0
+     ],
+     [
+      1.15,
+      -0.02,
+      0
+     ]
+    ],
+    "start": 9.949,
+    "dur": 8.874
+   }
+  ],
+  "audio": "build/audio/2.4.wav",
+  "chapter": 2,
+  "chapter_title": "The docks and Japan"
+ },
+ {
+  "id": "2.5",
+  "dur": 24.591,
+  "shots": [
+   {
+    "type": "photo",
+    "src": "archival_japan-dinner-toast_dana-denise_gat-about.jpg",
+    "mono": true,
+    "kb": [
+     [
+      1.15,
+      -0.02,
+      0
+     ],
+     [
+      1.2,
+      -0.03,
+      0.01
+     ]
+    ],
+    "start": 0,
+    "dur": 7.17
+   },
+   {
+    "type": "photo",
+    "src": "archival_japan-street_dana_date-stamp-4-18-9x.jpg",
+    "mono": true,
+    "kb": [
+     [
+      1.02,
+      0,
+      0
+     ],
+     [
+      1.6,
+      -0.18,
+      -0.12
+     ]
+    ],
+    "cap": "Japan, 1990s",
+    "start": 6.47,
+    "dur": 12.547
+   },
+   {
+    "type": "photo",
+    "src": "archival_japan-street_SCAN0052.jpg",
+    "mono": true,
+    "start": 18.317,
+    "dur": 6.274
+   }
+  ],
+  "audio": "build/audio/2.5.wav",
+  "chapter": 2,
+  "chapter_title": "The docks and Japan"
+ },
+ {
+  "id": "ch3",
+  "dur": 4.0,
+  "audio": null,
+  "chapter": 3,
+  "chapter_title": "Building Great Atlantic",
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "Chapter Three",
+    "title": "BUILDING GREAT ATLANTIC",
+    "start": 0,
+    "dur": 4.0
+   }
+  ]
+ },
+ {
+  "id": "3.1",
+  "dur": 20.139,
+  "shots": [
+   {
+    "type": "title",
+    "title": "1991",
+    "kicker": "Great Atlantic Trading",
+    "sub": "established",
+    "start": 0,
+    "dur": 10.419
+   },
+   {
+    "type": "title",
+    "logo": "gat_logo_estd-1991.png",
+    "title": "ESTD 1991",
+    "start": 9.719,
+    "dur": 10.419
+   }
+  ],
+  "audio": "build/audio/3.1.wav",
+  "chapter": 3,
+  "chapter_title": "Building Great Atlantic"
+ },
+ {
+  "id": "3.2",
+  "dur": 25.785,
+  "shots": [
+   {
+    "type": "map",
+    "view": "mississippi",
+    "states": true,
+    "rivers": [
+     {
+      "name": "mississippi",
+      "at": 0.3
+     },
+     {
+      "name": "missouri",
+      "at": 1.2
+     },
+     {
+      "name": "white",
+      "at": 2.0
+     },
+     {
+      "name": "ohio",
+      "at": 2.2
+     },
+     {
+      "name": "arkansas",
+      "at": 2.4
+     }
+    ],
+    "label": "The rivers of American wild caviar",
+    "zoom": [
+     1,
+     1.06
+    ],
+    "start": 0,
+    "dur": 9.295
+   },
+   {
+    "type": "photo",
+    "src": "gat_fish-drawing_hackleback.jpg",
+    "fit": "contain",
+    "lower": [
+     "Hackleback",
+     "Scaphirhynchus platorynchus"
+    ],
+    "start": 8.595,
+    "dur": 6.197
+   },
+   {
+    "type": "photo",
+    "src": "gat_fish-drawing_paddlefish.jpg",
+    "fit": "contain",
+    "lower": [
+     "Paddlefish",
+     "Polyodon spathula"
+    ],
+    "start": 14.092,
+    "dur": 6.197
+   },
+   {
+    "type": "photo",
+    "src": "gat_fish-drawing_bowfin-black.jpg",
+    "fit": "contain",
+    "lower": [
+     "Bowfin",
+     "Amia calva"
+    ],
+    "start": 19.589,
+    "dur": 6.197
+   }
+  ],
+  "audio": "build/audio/3.2.wav",
+  "chapter": 3,
+  "chapter_title": "Building Great Atlantic"
+ },
+ {
+  "id": "3.3",
+  "dur": 14.627,
+  "shots": [
+   {
+    "type": "chart",
+    "title": "Maine urchin landings",
+    "bars": [
+     {
+      "label": "1987",
+      "value": 1.4,
+      "text": "1.4 million lb"
+     },
+     {
+      "label": "1992",
+      "value": 26,
+      "text": "over 26 million lb"
+     }
+    ],
+    "stall": true,
+    "src": "1994: 'some say has peaked' \u00b7 Christian Science Monitor",
+    "start": 0,
+    "dur": 8.36
+   },
+   {
+    "type": "photo",
+    "src": "gat_caviar-macro_partner-page.jpg",
+    "start": 7.66,
+    "dur": 6.967
+   }
+  ],
+  "audio": "build/audio/3.3.wav",
+  "chapter": 3,
+  "chapter_title": "Building Great Atlantic"
+ },
+ {
+  "id": "3.4",
+  "dur": 16.547,
+  "shots": [
+   {
+    "type": "map",
+    "view": "east-coast",
+    "pins": [
+     {
+      "lon": -70.255,
+      "lat": 43.66,
+      "label": "Portland, Maine",
+      "at": 0.3
+     },
+     {
+      "lon": -78.43,
+      "lat": 33.89,
+      "label": "Ocean Isle Beach, NC",
+      "at": 2.4
+     }
+    ],
+    "arcs": [
+     {
+      "from": [
+       -70.25,
+       43.66
+      ],
+      "to": [
+       -78.43,
+       33.89
+      ],
+      "via": [
+       [
+        -69.8,
+        40.5
+       ],
+       [
+        -74.5,
+        35.6
+       ]
+      ],
+      "at": 0.8,
+      "dur": 2.0
+     }
+    ],
+    "label": "563 Seaside Rd SW \u00b7 Ocean Isle Beach, NC",
+    "states": true,
+    "start": 0,
+    "dur": 10.061
+   },
+   {
+    "type": "photo",
+    "src": "catalog2026_page53.jpg",
+    "fit": "contain",
+    "start": 9.361,
+    "dur": 7.186
+   }
+  ],
+  "audio": "build/audio/3.4.wav",
+  "chapter": 3,
+  "chapter_title": "Building Great Atlantic"
+ },
+ {
+  "id": "ch4",
+  "dur": 4.0,
+  "audio": null,
+  "chapter": 4,
+  "chapter_title": "Caviar and the world after wild Caspian caviar",
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "Chapter Four",
+    "title": "CAVIAR AND THE WORLD AFTER WILD CASPIAN CAVIAR",
+    "start": 0,
+    "dur": 4.0
+   }
+  ]
+ },
+ {
+  "id": "4.1",
+  "dur": 25.815,
+  "shots": [
+   {
+    "type": "map",
+    "view": "caspian",
+    "pins": [
+     {
+      "lon": 50.5,
+      "lat": 42.0,
+      "label": "Caspian Sea",
+      "at": 0.4
+     },
+     {
+      "lon": 34.0,
+      "lat": 43.5,
+      "label": "Black Sea",
+      "at": 1.0,
+      "anchor": "end",
+      "dx": -24
+     }
+    ],
+    "label": "The wild sturgeon seas",
+    "start": 0,
+    "dur": 13.889
+   },
+   {
+    "type": "photo",
+    "src": "baldor_cs_sturgeon-swimming.jpg",
+    "cap": "Sturgeon can live up to 100 years",
+    "start": 13.189,
+    "dur": 12.626
+   }
+  ],
+  "audio": "build/audio/4.1.wav",
+  "chapter": 4,
+  "chapter_title": "Caviar and the world after wild Caspian caviar"
+ },
+ {
+  "id": "4.2",
+  "dur": 29.973,
+  "shots": [
+   {
+    "type": "lines",
+    "items": [
+     "April 1, 1998: all sturgeon and paddlefish listed under CITES",
+     "October 21, 2004: beluga sturgeon listed as threatened (U.S.)",
+     "September 30, 2005: U.S. suspends Caspian beluga caviar imports"
+    ],
+    "typed": true,
+    "src": "U.S. Fish and Wildlife Service",
+    "start": 0,
+    "dur": 29.973
+   }
+  ],
+  "audio": "build/audio/4.2.wav",
+  "chapter": 4,
+  "chapter_title": "Caviar and the world after wild Caspian caviar"
+ },
+ {
+  "id": "4.3",
+  "dur": 14.548,
+  "shots": [
+   {
+    "type": "number",
+    "big": "85%",
+    "sub": "of sturgeon species at risk of extinction \u00b7 IUCN, 2010",
+    "count": true,
+    "start": 0,
+    "dur": 14.548
+   }
+  ],
+  "audio": "build/audio/4.3.wav",
+  "chapter": 4,
+  "chapter_title": "Caviar and the world after wild Caspian caviar"
+ },
+ {
+  "id": "4.4",
+  "dur": 18.033,
+  "shots": [
+   {
+    "type": "map",
+    "view": "world",
+    "highlight": [
+     "China",
+     "Italy",
+     "France",
+     "Poland",
+     "Israel",
+     "United States of America"
+    ],
+    "pins": [
+     {
+      "lon": 110,
+      "lat": 31,
+      "label": "China",
+      "at": 0.5
+     },
+     {
+      "lon": 12.5,
+      "lat": 42.5,
+      "label": "Italy",
+      "at": 0.9,
+      "dy": 40
+     },
+     {
+      "lon": 2.3,
+      "lat": 46.5,
+      "label": "France",
+      "at": 1.2,
+      "anchor": "end",
+      "dx": -24
+     },
+     {
+      "lon": 19.4,
+      "lat": 52.2,
+      "label": "Poland",
+      "at": 1.5,
+      "dy": -18
+     },
+     {
+      "lon": 35,
+      "lat": 31.5,
+      "label": "Israel",
+      "at": 1.8
+     },
+     {
+      "lon": -120.5,
+      "lat": 37.5,
+      "label": "California",
+      "at": 2.1
+     }
+    ],
+    "label": "China: the largest caviar producer",
+    "start": 0,
+    "dur": 8.149
+   },
+   {
+    "type": "photo",
+    "src": "cs_polish-caviar-farm.png",
+    "start": 7.449,
+    "dur": 5.642
+   },
+   {
+    "type": "photo",
+    "src": "catalog2026_page05.jpg",
+    "fit": "contain",
+    "start": 12.391,
+    "dur": 5.642
+   }
+  ],
+  "audio": "build/audio/4.4.wav",
+  "chapter": 4,
+  "chapter_title": "Caviar and the world after wild Caspian caviar"
+ },
+ {
+  "id": "4.5",
+  "dur": 30.351,
+  "shots": [
+   {
+    "type": "product",
+    "items": [
+     "american-hackleback-sturgeon-caviar"
+    ],
+    "note": [
+     "Every lot, documented",
+     "CITES number on the label. Permit copy on file."
+    ],
+    "start": 0,
+    "dur": 17.55
+   },
+   {
+    "type": "diagram",
+    "kind": "label",
+    "title": "Fish and Wildlife Service \u00b7 NOAA \u00b7 Department of Agriculture",
+    "start": 16.85,
+    "dur": 13.5
+   }
+  ],
+  "audio": "build/audio/4.5.wav",
+  "chapter": 4,
+  "chapter_title": "Caviar and the world after wild Caspian caviar"
+ },
+ {
+  "id": "4.6",
+  "dur": 32.484,
+  "shots": [
+   {
+    "type": "map",
+    "view": "mississippi",
+    "states": true,
+    "rivers": [
+     {
+      "name": "mississippi",
+      "at": 0.2,
+      "color": "#3e6a8f"
+     },
+     {
+      "name": "white",
+      "at": 0.6,
+      "color": "#3e6a8f"
+     }
+    ],
+    "pins": [
+     {
+      "lon": -91.6,
+      "lat": 30.9,
+      "label": "Louisiana bowfin",
+      "at": 1.5
+     }
+    ],
+    "label": "2022/23 season: bowfin catch under 10% of usual quota (Caviar Star\u2019s fishing partners)",
+    "zoom": [
+     1.1,
+     1.2
+    ],
+    "start": 0,
+    "dur": 18.1
+   },
+   {
+    "type": "photo",
+    "src": "cs_product_bowfin-styled.jpg",
+    "start": 17.4,
+    "dur": 15.084
+   }
+  ],
+  "audio": "build/audio/4.6.wav",
+  "chapter": 4,
+  "chapter_title": "Caviar and the world after wild Caspian caviar"
+ },
+ {
+  "id": "4.7",
+  "dur": 22.961,
+  "shots": [
+   {
+    "type": "lines",
+    "items": [
+     "March 28, 2022 \u00b7 'Do we still get caviar from Russia?'",
+     "No."
+    ],
+    "per": 2.4,
+    "start": 0,
+    "dur": 10.755
+   },
+   {
+    "type": "product",
+    "items": [
+     "lyna-polska-royal-osetra-caviar"
+    ],
+    "note": [
+     "Osetra",
+     "The \"Russian sturgeon\", farmed in Poland"
+    ],
+    "start": 10.055,
+    "dur": 12.906
+   }
+  ],
+  "audio": "build/audio/4.7.wav",
+  "chapter": 4,
+  "chapter_title": "Caviar and the world after wild Caspian caviar"
+ },
+ {
+  "id": "ch5",
+  "dur": 4.0,
+  "audio": null,
+  "chapter": 5,
+  "chapter_title": "Caviar Star",
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "Chapter Five",
+    "title": "CAVIAR STAR",
+    "start": 0,
+    "dur": 4.0
+   }
+  ]
+ },
+ {
+  "id": "5.1",
+  "dur": 14.777,
+  "shots": [
+   {
+    "type": "title",
+    "logo": "cs_logo_caviar-star-black.png",
+    "title": "CAVIAR STAR",
+    "kicker": "The house brand",
+    "start": 0,
+    "dur": 5.896
+   },
+   {
+    "type": "product",
+    "items": [
+     "kaluga-hybrid-caviar-limited-edition"
+    ],
+    "start": 5.196,
+    "dur": 9.581
+   }
+  ],
+  "audio": "build/audio/5.1.wav",
+  "chapter": 5,
+  "chapter_title": "Caviar Star"
+ },
+ {
+  "id": "5.2",
+  "dur": 23.779,
+  "shots": [
+   {
+    "type": "title",
+    "title": "December 26, 2011",
+    "sub": "The Wandering Eater",
+    "kicker": "A Christmas Eve dinner",
+    "start": 0,
+    "dur": 8.901
+   },
+   {
+    "type": "product",
+    "items": [
+     "classic-california-white-sturgeon-caviar",
+     "american-paddlefish-caviar",
+     "lyna-polska-royal-osetra-caviar"
+    ],
+    "labels": [
+     "American white sturgeon",
+     "Paddlefish",
+     "Osetra"
+    ],
+    "start": 8.201,
+    "dur": 15.577
+   }
+  ],
+  "audio": "build/audio/5.2.wav",
+  "chapter": 5,
+  "chapter_title": "Caviar Star"
+ },
+ {
+  "id": "5.3",
+  "dur": 22.349,
+  "shots": [
+   {
+    "type": "quote",
+    "text": "Caviar is a luxury, but at Caviar Star, it's a luxury meant to be enjoyed.",
+    "by": "Caviar Star",
+    "bg": "baldor_cs_circle-of-spoons.jpg",
+    "start": 0,
+    "dur": 22.349
+   }
+  ],
+  "audio": "build/audio/5.3.wav",
+  "chapter": 5,
+  "chapter_title": "Caviar Star"
+ },
+ {
+  "id": "5.4",
+  "dur": 26.709,
+  "shots": [
+   {
+    "type": "photo",
+    "src": "gat_caviar-tins-production-line_2020.jpg",
+    "cap": "8,500 sq ft \u00b7 3 walk-in coolers \u00b7 2 freezers (company figures)",
+    "start": 0,
+    "dur": 11.917
+   },
+   {
+    "type": "product",
+    "items": [
+     "american-hackleback-sturgeon-caviar",
+     "american-paddlefish-caviar",
+     "golden-whitefish-roe",
+     "american-salmon-caviar"
+    ],
+    "labels": [
+     "Hackleback",
+     "Paddlefish",
+     "Golden whitefish",
+     "Salmon roe"
+    ],
+    "cap": "1 oz to 1 kg, packed daily to order",
+    "start": 11.217,
+    "dur": 15.492
+   }
+  ],
+  "audio": "build/audio/5.4.wav",
+  "chapter": 5,
+  "chapter_title": "Caviar Star"
+ },
+ {
+  "id": "5.5",
+  "dur": 13.844,
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "The Local Palate \u00b7 November 21, 2021",
+    "title": "NEARLY 10 TONS",
+    "sub": "of caviar a year \u00b7 family-owned and operated",
+    "start": 0,
+    "dur": 13.844
+   }
+  ],
+  "audio": "build/audio/5.5.wav",
+  "chapter": 5,
+  "chapter_title": "Caviar Star"
+ },
+ {
+  "id": "5.6",
+  "dur": 27.569,
+  "shots": [
+   {
+    "type": "diagram",
+    "kind": "box",
+    "title": "2018: recycled cotton and denim insulation \u00b7 2023: carbon-neutral shipping",
+    "start": 0,
+    "dur": 27.569
+   }
+  ],
+  "audio": "build/audio/5.6.wav",
+  "chapter": 5,
+  "chapter_title": "Caviar Star"
+ },
+ {
+  "id": "ch6",
+  "dur": 4.0,
+  "audio": null,
+  "chapter": 6,
+  "chapter_title": "The products and the people who use them",
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "Chapter Six",
+    "title": "THE PRODUCTS AND THE PEOPLE WHO USE THEM",
+    "start": 0,
+    "dur": 4.0
+   }
+  ]
+ },
+ {
+  "id": "6.1",
+  "dur": 25.367,
+  "shots": [
+   {
+    "type": "pages",
+    "srcs": [
+     "catalog2026_page01.jpg",
+     "catalog2026_page06.jpg",
+     "catalog2026_page13.jpg"
+    ],
+    "start": 0,
+    "dur": 8.922
+   },
+   {
+    "type": "map",
+    "view": "world",
+    "highlight": [
+     "United States of America",
+     "France",
+     "Spain",
+     "Italy",
+     "Poland",
+     "Bulgaria",
+     "China",
+     "Denmark",
+     "Romania",
+     "Taiwan",
+     "Germany",
+     "Norway",
+     "Canada",
+     "Turkey"
+    ],
+    "label": "14 countries in the 2026 catalog",
+    "start": 8.222,
+    "dur": 8.179
+   },
+   {
+    "type": "product",
+    "items": [
+     "caviar-cloche-with-silver-sturgeon-handle",
+     "mother-of-pearl-spoon-3-5",
+     "fresh-summer-black-truffles"
+    ],
+    "labels": [
+     "Caviar cloche",
+     "Mother of pearl spoon",
+     "Black summer truffles"
+    ],
+    "start": 15.701,
+    "dur": 9.666
+   }
+  ],
+  "audio": "build/audio/6.1.wav",
+  "chapter": 6,
+  "chapter_title": "The products and the people who use them"
+ },
+ {
+  "id": "6.2",
+  "dur": 27.377,
+  "shots": [
+   {
+    "type": "product",
+    "items": [
+     "american-hackleback-sturgeon-caviar"
+    ],
+    "note": [
+     "Hackleback",
+     "Missouri and Mississippi rivers"
+    ],
+    "start": 0,
+    "dur": 7.369
+   },
+   {
+    "type": "product",
+    "items": [
+     "american-paddlefish-caviar"
+    ],
+    "note": [
+     "Paddlefish",
+     "The spoonbill"
+    ],
+    "start": 6.669,
+    "dur": 7.369
+   },
+   {
+    "type": "product",
+    "items": [
+     "american-bowfin-caviar"
+    ],
+    "note": [
+     "Bowfin",
+     "Louisiana"
+    ],
+    "start": 13.339,
+    "dur": 7.369
+   },
+   {
+    "type": "product",
+    "items": [
+     "royal-california-white-sturgeon-caviar"
+    ],
+    "note": [
+     "White sturgeon",
+     "Farmed in California"
+    ],
+    "start": 20.008,
+    "dur": 7.369
+   }
+  ],
+  "audio": "build/audio/6.2.wav",
+  "chapter": 6,
+  "chapter_title": "The products and the people who use them"
+ },
+ {
+  "id": "6.3",
+  "dur": 32.683,
+  "shots": [
+   {
+    "type": "product",
+    "items": [
+     "caviar-house-prunier-osetra-caviar"
+    ],
+    "note": [
+     "Prunier",
+     "Caviar house: 1921"
+    ],
+    "start": 0,
+    "dur": 8.919
+   },
+   {
+    "type": "product",
+    "items": [
+     "lyna-polska-siberian-caviar"
+    ],
+    "note": [
+     "Lyna River farm",
+     "Since 1967"
+    ],
+    "start": 8.219,
+    "dur": 8.919
+   },
+   {
+    "type": "photo",
+    "src": "catalog2026_page05.jpg",
+    "fit": "contain",
+    "start": 16.437,
+    "dur": 8.027
+   },
+   {
+    "type": "product",
+    "items": [
+     "kaluga-hybrid-caviar-limited-edition"
+    ],
+    "start": 23.764,
+    "dur": 8.919
+   }
+  ],
+  "audio": "build/audio/6.3.wav",
+  "chapter": 6,
+  "chapter_title": "The products and the people who use them"
+ },
+ {
+  "id": "6.4",
+  "dur": 18.659,
+  "shots": [
+   {
+    "type": "product",
+    "items": [
+     "bourbon-barrel-smoked-trout-roe"
+    ],
+    "note": [
+     "Cold-smoked",
+     "Bourbon barrel stave chips \u00b7 no liquid smoke"
+    ],
+    "start": 0,
+    "dur": 11.984
+   },
+   {
+    "type": "photo",
+    "src": "cs_product_bourbon-smoked-trout-roe.jpg",
+    "start": 11.284,
+    "dur": 7.375
+   }
+  ],
+  "audio": "build/audio/6.4.wav",
+  "chapter": 6,
+  "chapter_title": "The products and the people who use them"
+ },
+ {
+  "id": "6.5",
+  "dur": 25.771,
+  "shots": [
+   {
+    "type": "product",
+    "items": [
+     "100-year-aged-balsamic-vinegar"
+    ],
+    "note": [
+     "Acetaia Reale, Modena",
+     "Recipe since 1896 \u00b7 aged 100 years"
+    ],
+    "start": 0,
+    "dur": 10.868
+   },
+   {
+    "type": "product",
+    "items": [
+     "maine-lobster-meat-cooked-claw-and-knuckle"
+    ],
+    "note": [
+     "Maine lobster",
+     "Cooked claw and knuckle"
+    ],
+    "start": 10.168,
+    "dur": 9.963
+   },
+   {
+    "type": "map",
+    "view": "gulf-maine",
+    "pins": [
+     {
+      "lon": -70.255,
+      "lat": 43.66,
+      "label": "Portland, Maine",
+      "at": 0.2
+     }
+    ],
+    "zoom": [
+     1.1,
+     1.14
+    ],
+    "start": 19.431,
+    "dur": 6.34
+   }
+  ],
+  "audio": "build/audio/6.5.wav",
+  "chapter": 6,
+  "chapter_title": "The products and the people who use them"
+ },
+ {
+  "id": "6.6",
+  "dur": 30.605,
+  "shots": [
+   {
+    "type": "diagram",
+    "kind": "recipe",
+    "start": 0,
+    "dur": 14.907
+   },
+   {
+    "type": "product",
+    "items": [
+     "caviar-star-black-ot-gift-bag"
+    ],
+    "note": [
+     "Chubby Fish",
+     "Charleston, SC"
+    ],
+    "start": 14.207,
+    "dur": 16.398
+   }
+  ],
+  "audio": "build/audio/6.6.wav",
+  "chapter": 6,
+  "chapter_title": "The products and the people who use them"
+ },
+ {
+  "id": "ch7",
+  "dur": 4.0,
+  "audio": null,
+  "chapter": 7,
+  "chapter_title": "Family and the future",
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "Chapter Seven",
+    "title": "FAMILY AND THE FUTURE",
+    "start": 0,
+    "dur": 4.0
+   }
+  ]
+ },
+ {
+  "id": "7.1",
+  "dur": 17.407,
+  "shots": [
+   {
+    "type": "photo",
+    "src": "archival_japan-group-photo_dana-denise_SCAN0069.jpg",
+    "mono": true,
+    "start": 0,
+    "dur": 9.053
+   },
+   {
+    "type": "photo",
+    "src": "catalog2026_page04.jpg",
+    "fit": "contain",
+    "start": 8.353,
+    "dur": 9.053
+   }
+  ],
+  "audio": "build/audio/7.1.wav",
+  "chapter": 7,
+  "chapter_title": "Family and the future"
+ },
+ {
+  "id": "7.2",
+  "dur": 24.561,
+  "shots": [
+   {
+    "type": "lines",
+    "items": [
+     "Dana C. Leavitt \u00b7 2015",
+     "Derek Leavitt \u00b7 2018",
+     "Deanna Leavitt \u00b7 2026 catalog"
+    ],
+    "typed": true,
+    "start": 0,
+    "dur": 13.779
+   },
+   {
+    "type": "quote",
+    "text": "Life is too short for mediocre caviar.",
+    "by": "Deanna Leavitt",
+    "start": 13.079,
+    "dur": 11.482
+   }
+  ],
+  "audio": "build/audio/7.2.wav",
+  "chapter": 7,
+  "chapter_title": "Family and the future"
+ },
+ {
+  "id": "7.3",
+  "dur": 26.901,
+  "shots": [
+   {
+    "type": "product",
+    "items": [
+     "american-salmon-caviar"
+    ],
+    "note": [
+     "2026",
+     "A low Alaska salmon catch"
+    ],
+    "start": 0,
+    "dur": 14.458
+   },
+   {
+    "type": "photo",
+    "src": "baldor_cs_osetra-and-white-sturgeon.jpg",
+    "start": 13.758,
+    "dur": 13.143
+   }
+  ],
+  "audio": "build/audio/7.3.wav",
+  "chapter": 7,
+  "chapter_title": "Family and the future"
+ },
+ {
+  "id": "7.4",
+  "dur": 11.297,
+  "shots": [
+   {
+    "type": "quote",
+    "text": "We have always been passionate about holding up the integrity of each individual species and being transparent about where it's coming from.",
+    "by": null,
+    "mark": "gat_logo_trident-2022.png",
+    "start": 0,
+    "dur": 11.297
+   }
+  ],
+  "audio": "build/audio/7.4.wav",
+  "chapter": 7,
+  "chapter_title": "Family and the future"
+ },
+ {
+  "id": "ch8",
+  "dur": 4.0,
+  "audio": null,
+  "chapter": 8,
+  "chapter_title": "Close",
+  "shots": [
+   {
+    "type": "title",
+    "kicker": "Chapter Eight",
+    "title": "CLOSE",
+    "start": 0,
+    "dur": 4.0
+   }
+  ]
+ },
+ {
+  "id": "8.1",
+  "dur": 23.011,
+  "shots": [
+   {
+    "type": "map",
+    "view": "east-coast",
+    "pins": [
+     {
+      "lon": -78.43,
+      "lat": 33.89,
+      "label": "Ocean Isle Beach, NC",
+      "at": 0.2
+     }
+    ],
+    "states": true,
+    "zoom": [
+     1.1,
+     1.16
+    ],
+    "start": 0,
+    "dur": 5.162
+   },
+   {
+    "type": "photo",
+    "src": "gat_caviar-tins-production-line_2020.jpg",
+    "start": 4.462,
+    "dur": 5.162
+   },
+   {
+    "type": "number",
+    "big": "85%",
+    "sub": "of sturgeon species at risk of extinction",
+    "count": false,
+    "start": 8.924,
+    "dur": 3.872
+   },
+   {
+    "type": "photo",
+    "src": "archival_japan-street_dana_date-stamp-4-18-9x.jpg",
+    "mono": true,
+    "start": 12.096,
+    "dur": 5.162
+   },
+   {
+    "type": "photo",
+    "src": "archival_dana-leavitt-drysuit-on-boat_SCAN0024.jpg",
+    "mono": true,
+    "kb": [
+     [
+      1.2,
+      0.02,
+      -0.02
+     ],
+     [
+      1.04,
+      0,
+      0
+     ]
+    ],
+    "start": 16.558,
+    "dur": 6.453
+   }
+  ],
+  "audio": "build/audio/8.1.wav",
+  "chapter": 8,
+  "chapter_title": "Close"
+ },
+ {
+  "id": "8.2",
+  "dur": 5.119,
+  "shots": [
+   {
+    "type": "product",
+    "items": [
+     "kaluga-hybrid-caviar-limited-edition"
+    ],
+    "start": 0,
+    "dur": 3.394
+   },
+   {
+    "type": "title",
+    "logo": "gat_logo_estd-1991.png",
+    "title": "GREAT ATLANTIC",
+    "sub": "Great Atlantic Trading Inc. \u00b7 Caviar Star \u00b7 Ocean Isle Beach, North Carolina",
+    "start": 2.694,
+    "dur": 2.424
+   }
+  ],
+  "audio": "build/audio/8.2.wav",
+  "chapter": 8,
+  "chapter_title": "Close"
+ }
+]

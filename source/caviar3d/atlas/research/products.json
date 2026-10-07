@@ -1,0 +1,1833 @@
+[
+  {
+    "handle": "beluga-sterlet-bester-hybrid",
+    "title": "Royal Beluga Bester Hybrid Caviar",
+    "kind": "hybrid sturgeon caviar",
+    "species_common": "Bester hybrid (Beluga × Sterlet)",
+    "species_latin": "Huso huso × Acipenser ruthenus",
+    "origin_country": "Romania",
+    "origin_region": null,
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "larger than pure Sterlet, smaller than wild Beluga (new 2026 harvest billed as \"XXL pearls\")",
+    "color": "gray to dark amber",
+    "flavor": "rich, creamy, slightly nutty; buttery notes evolving into a lingering, briny, slightly nutty finish",
+    "texture": "smooth",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 149.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 199.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 369.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 619.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 1399.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 5.256,
+    "store_quote": "While it may lack the size of wild Beluga eggs, it more than makes up for it with incredible flavor and a smooth texture",
+    "sources": [
+      "https://caviarstar.com/products/beluga-sterlet-bester-hybrid",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page10.jpg",
+      "/home/user/caviar3d/doc/research/fws_2005_beluga-trade-suspended.txt"
+    ]
+  },
+  {
+    "handle": "white-escargot-snail-caviar",
+    "title": "White Escargot Snail Caviar",
+    "kind": "snail caviar",
+    "species_common": "Petit Gris snail (garden snail)",
+    "species_latin": "Cornu aspersum (syn. Helix aspersa)",
+    "origin_country": "USA",
+    "origin_region": "North Fork of Long Island, New York (Cutchogue)",
+    "producer": "Peconic Escargot",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": 4,
+    "grain_label": "approximately 4 mm (similar to trout roe or smaller salmon roe)",
+    "color": "bright white",
+    "flavor": "earthy and woodsy, with notes of carrot, herbs, mushrooms, and forest floor",
+    "texture": "firm",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "50g",
+        "grams": 50.0,
+        "price_usd": 125.0,
+        "available": true
+      },
+      {
+        "label": "25g",
+        "grams": 25.0,
+        "price_usd": 70.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 2.5,
+    "store_quote": "These snails only lay 50-100 eggs a year, making our snail caviar a truly extraordinary treat.",
+    "sources": [
+      "https://caviarstar.com/products/white-escargot-snail-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "https://www.danspapers.com/2023/12/profile-peconic-escargot-taylor-knapp"
+    ]
+  },
+  {
+    "handle": "dieckmann-hansen-reserve-german-osetra-caviar",
+    "title": "Dieckmann Hansen Reserve Osetra Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Russian sturgeon (Osetra)",
+    "species_latin": "Acipenser gueldenstaedtii",
+    "origin_country": "Germany",
+    "origin_region": null,
+    "producer": "Dieckmann & Hansen",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": [
+      3.3,
+      3.6
+    ],
+    "grain_label": "large",
+    "color": "deep brown to pale gray",
+    "flavor": "decadent, briny and buttery, balanced by a subtle nutty, fruity finish",
+    "texture": "semi-firm",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 119.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 189.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 349.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 569.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 1119.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 4.198,
+    "store_quote": "From the world’s oldest caviar company comes one of the most exceptional sustainable Osetra caviars available today.",
+    "sources": [
+      "https://caviarstar.com/products/dieckmann-hansen-reserve-german-osetra-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page10.jpg",
+      "https://dieckmann-hansen.com/",
+      "https://dieckmann-hansen.com/en/pages/unsere-geschichte",
+      "https://dieckmann-hansen.com/products.json",
+      "https://monocle.com/business/sustainable-caviar-farming-germany-desietra/"
+    ]
+  },
+  {
+    "handle": "classic-california-white-sturgeon-caviar",
+    "title": "Classic American White Sturgeon Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "White sturgeon (Pacific white sturgeon)",
+    "species_latin": "Acipenser transmontanus",
+    "origin_country": "USA",
+    "origin_region": "Sacramento, California",
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "medium",
+    "color": "dark gray to light brown (also described as brown to black)",
+    "flavor": "clean, fresh, creamy and delicate, with a creamy, lingering finish",
+    "texture": null,
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 109.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 169.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 279.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 459.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 999.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 3.845,
+    "store_quote": "Native to California, this caviar comes from the largest freshwater fish in North America, the Pacific White Sturgeon.",
+    "sources": [
+      "https://caviarstar.com/products/classic-california-white-sturgeon-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg"
+    ]
+  },
+  {
+    "handle": "classic-italian-white-sturgeon-caviar",
+    "title": "Italian White Sturgeon Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "White sturgeon",
+    "species_latin": "Acipenser transmontanus",
+    "origin_country": "Italy",
+    "origin_region": "near Parma",
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "generously sized",
+    "color": "black and dark gray to light brown",
+    "flavor": "complex, creamy, briny, yet delicate",
+    "texture": null,
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 109.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 159.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 309.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 489.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 1099.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 3.845,
+    "store_quote": "Italy is home to some of the largest White Sturgeon aquaculture operations in the world",
+    "sources": [
+      "https://caviarstar.com/products/classic-italian-white-sturgeon-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page10.jpg"
+    ]
+  },
+  {
+    "handle": "royal-california-white-sturgeon-caviar",
+    "title": "Royal California White Sturgeon Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "White sturgeon",
+    "species_latin": "Acipenser transmontanus",
+    "origin_country": "USA",
+    "origin_region": "Sacramento, California",
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "medium",
+    "color": "deep amber to dark gold",
+    "flavor": "wonderfully nutty, slightly bolder than Classic; clean, delicate flavor with a creamy finish",
+    "texture": null,
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 109.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 159.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 279.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 429.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 899.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 3.845,
+    "store_quote": "Royal White Sturgeon Caviar offers a wonderfully nutty taste and stunning color, ranging from deep amber to dark gold.",
+    "sources": [
+      "https://caviarstar.com/products/royal-california-white-sturgeon-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg"
+    ]
+  },
+  {
+    "handle": "dynasty-royal-osetra-caviar",
+    "title": "Dynasty Royal Osetra Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Russian sturgeon (Osetra)",
+    "species_latin": "Acipenser gueldenstaedtii",
+    "origin_country": "China",
+    "origin_region": "Thousand Island Lake (Qiandao Lake), Zhejiang",
+    "producer": "Kaluga Queen",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": null,
+    "color": "amber",
+    "flavor": "nutty, buttery, perfectly briny",
+    "texture": "creamy, with just the right amount of pop",
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 99.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 179.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 319.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 479.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 999.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 3.492,
+    "store_quote": "Nutty, buttery, perfectly briny, with just the right amount of \"pop\".",
+    "sources": [
+      "https://caviarstar.com/products/dynasty-royal-osetra-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page11.jpg",
+      "https://en.wikipedia.org/wiki/Kaluga_Queen",
+      "/home/user/caviar3d/doc/research/wikipedia_caviar_excerpts.txt"
+    ]
+  },
+  {
+    "handle": "golden-dynasty-imperial-osetra-caviar",
+    "title": "Golden Dynasty Imperial Osetra Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Russian sturgeon (Osetra)",
+    "species_latin": "Acipenser gueldenstaedtii",
+    "origin_country": "China",
+    "origin_region": "Thousand Island Lake (Qiandao Lake), Zhejiang",
+    "producer": "Kaluga Queen",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "medium-to-large",
+    "color": "light amber to luminous golden",
+    "flavor": "rich, buttery profile balanced by a delicate, lingering finish",
+    "texture": "soft (store tasting tag)",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 99.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 179.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 320.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 525.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 1100.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 3.492,
+    "store_quote": "Medium-to-large pearls shimmer in a brilliant palette that ranges from light amber to luminous golden tones—an appearance as luxurious as the flavor itself.",
+    "sources": [
+      "https://caviarstar.com/products/golden-dynasty-imperial-osetra-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page11.jpg",
+      "https://caviarstar.com/products/world-star-caviar-gift-bag",
+      "https://en.wikipedia.org/wiki/Kaluga_Queen",
+      "/home/user/caviar3d/doc/research/wikipedia_caviar_excerpts.txt"
+    ]
+  },
+  {
+    "handle": "golden-dynasty-imperial-kaluga-hybrid-caviar",
+    "title": "Imperial Kaluga Hybrid Caviar",
+    "kind": "hybrid sturgeon caviar",
+    "species_common": "Kaluga hybrid (\"River Beluga\"): Kaluga × Amur sturgeon",
+    "species_latin": "Huso dauricus × Acipenser schrenckii",
+    "origin_country": "China",
+    "origin_region": null,
+    "producer": "Kaluga Queen",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "exceptionally large",
+    "color": "vibrant honey to light golden-brown",
+    "flavor": "delicate, buttery, low salinity, with a subtle hint of brine on the finish",
+    "texture": "firm",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 90.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 150.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 290.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 500.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 999.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 3.175,
+    "store_quote": "These exquisite beads, with their smooth, rich taste, serve as the perfect substitute for the banned Caspian Beluga.",
+    "sources": [
+      "https://caviarstar.com/products/golden-dynasty-imperial-kaluga-hybrid-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "https://caviarstar.com/products/caviar-star-black-ot-gift-bag",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page11.jpg",
+      "https://en.wikipedia.org/wiki/Kaluga_Queen"
+    ]
+  },
+  {
+    "handle": "amber-dynasty-royal-kaluga-caviar",
+    "title": "Premier Kaluga Hybrid Caviar",
+    "kind": "hybrid sturgeon caviar",
+    "species_common": "Kaluga hybrid (\"River Beluga\"): Kaluga × Amur sturgeon",
+    "species_latin": "Huso dauricus × Acipenser schrenckii",
+    "origin_country": "China",
+    "origin_region": null,
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "generously sized, large",
+    "color": "rich chocolate brown to dark amber",
+    "flavor": "mild, delicate and buttery, with a very mild, briny finish",
+    "texture": "firm",
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 79.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 129.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 205.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 349.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 705.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 2.787,
+    "store_quote": "It’s one of the most popular caviars in the world today, known for its consistency, versatility, mild flavor, and large, beautiful pearls.",
+    "sources": [
+      "https://caviarstar.com/products/amber-dynasty-royal-kaluga-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page11.jpg"
+    ]
+  },
+  {
+    "handle": "lyna-polska-siberian-caviar",
+    "title": "Lyna Polska Siberian Baerii Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Siberian sturgeon",
+    "species_latin": "Acipenser baerii",
+    "origin_country": "Poland",
+    "origin_region": "Warmia (Łyna River, Napiwodzko-Ramucka Forest)",
+    "producer": "Gosławice Fish Farm (Gospodarstwo Rybackie Gosławice)",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "medium",
+    "color": "chocolate brown to light gray",
+    "flavor": "well-balanced and buttery, with a subtle taste of the sea",
+    "texture": "smooth",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 79.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 130.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 229.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 379.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 759.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 2.787,
+    "store_quote": "These eco-friendly sturgeon are raised in the \"green lungs of Poland,\" a non-urbanized area known for its natural beauty.",
+    "sources": [
+      "https://caviarstar.com/products/lyna-polska-siberian-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page10.jpg",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page05.jpg",
+      "https://caviarstar.com/products/world-star-caviar-gift-bag",
+      "https://eurofish.dk/sturgeon-farm-expands-production/",
+      "https://worldgourmetsummit.com/wgs2019/main.php/estab/575-Antonius-Caviar"
+    ]
+  },
+  {
+    "handle": "tuna-bottarga-dried-and-cured-tuna-fish-roe",
+    "title": "Tuna Bottarga - Dried and Cured Tuna Fish Roe",
+    "kind": "cured roe",
+    "species_common": "Yellowfin tuna",
+    "species_latin": "Thunnus albacares",
+    "origin_country": "Spain",
+    "origin_region": null,
+    "producer": null,
+    "wild_or_farmed": null,
+    "grain_size_mm": null,
+    "grain_label": null,
+    "color": null,
+    "flavor": "bold and briny, the deep, salty taste of the ocean",
+    "texture": "dried, cured strips for grating or shaving",
+    "malossol": false,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "Whole Strip (approx 12 oz)",
+        "grams": 340.2,
+        "price_usd": 60.0,
+        "available": false
+      },
+      {
+        "label": "Half Strip (approx 6 oz)",
+        "grams": 170.1,
+        "price_usd": 35.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 0.206,
+    "store_quote": "Enjoy this delicacy as a topping (much like you would with truffles) or as the key ingredient in unforgettable appetizers and dishes like spaghetti alla bottarga.",
+    "sources": [
+      "https://caviarstar.com/products/tuna-bottarga-dried-and-cured-tuna-fish-roe",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt"
+    ]
+  },
+  {
+    "handle": "dynasty-siberian-caviar",
+    "title": "Royal Dynasty Siberian Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Siberian sturgeon",
+    "species_latin": "Acipenser baerii",
+    "origin_country": "China",
+    "origin_region": null,
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "larger (from sturgeon allowed more than one maturation cycle)",
+    "color": "chocolate brown to dark gray, with occasional light gray highlights",
+    "flavor": "elegant and buttery; a refined, well-balanced taste of the sea",
+    "texture": "soft pearls that melt on the palate",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 59.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 109.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 199.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 329.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 720.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 2.081,
+    "store_quote": "Farm-raised and produced in the mountains and lakes of the countryside, these Siberian sturgeon produce beautiful gems that exude an elegant buttery flavor.",
+    "sources": [
+      "https://caviarstar.com/products/dynasty-siberian-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page11.jpg"
+    ]
+  },
+  {
+    "handle": "american-hackleback-sturgeon-caviar",
+    "title": "American Hackleback Sturgeon Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Shovelnose sturgeon (hackleback, sand sturgeon, switchtail)",
+    "species_latin": "Scaphirhynchus platorynchus",
+    "origin_country": "USA",
+    "origin_region": "Missouri and Mississippi river regions (Midwest)",
+    "producer": null,
+    "wild_or_farmed": "wild",
+    "grain_size_mm": null,
+    "grain_label": "small",
+    "color": "glossy black with glints of emerald and gold",
+    "flavor": "mild and clean, with subtle earthy notes",
+    "texture": "firm, with a satisfying pop",
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 59.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 99.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 189.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 309.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 709.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 2.081,
+    "store_quote": "This is caviar that doesn’t overwhelm; it elevates.",
+    "sources": [
+      "https://caviarstar.com/products/american-hackleback-sturgeon-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg",
+      "/home/user/caviar3d/doc/research/gat_american-export.txt",
+      "/home/user/caviar3d/doc/research/cs_blog_blogwild-american-caviar-supply-2023-poor-fishing-conditions-for-bowfin-and-hackleback.txt"
+    ]
+  },
+  {
+    "handle": "bottarga-dried-and-cured-mullet-roe",
+    "title": "Bottarga - Dried and Cured Mullet Roe",
+    "kind": "cured roe",
+    "species_common": "Grey mullet (striped grey mullet)",
+    "species_latin": "Mugil cephalus",
+    "origin_country": "USA",
+    "origin_region": "Clearwater, Florida (Gulf of Mexico)",
+    "producer": null,
+    "wild_or_farmed": "wild",
+    "grain_size_mm": null,
+    "grain_label": null,
+    "color": null,
+    "flavor": "rich, salty",
+    "texture": "dried, pressed strips for grating or shaving",
+    "malossol": false,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "Whole Strip (approx 4.5 to 5.5 oz)",
+        "grams": 141.75,
+        "price_usd": 50.0,
+        "available": false
+      },
+      {
+        "label": "Half Strip (approx 2 to 3 oz)",
+        "grams": 70.88,
+        "price_usd": 29.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 0.409,
+    "store_quote": "Experience the rich, salty flavor of artisanally hand-cured grey mullet roe from Clearwater, Florida.",
+    "sources": [
+      "https://caviarstar.com/products/bottarga-dried-and-cured-mullet-roe",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt"
+    ]
+  },
+  {
+    "handle": "american-paddlefish-caviar",
+    "title": "American Paddlefish Caviar",
+    "kind": "roe",
+    "species_common": "American paddlefish (spoonbill)",
+    "species_latin": "Polyodon spathula",
+    "origin_country": "USA",
+    "origin_region": "Mississippi and White Rivers",
+    "producer": null,
+    "wild_or_farmed": "wild",
+    "grain_size_mm": 2,
+    "grain_label": "approx. 2 mm (Caviar Star blog, general for paddlefish roe)",
+    "color": "soft olive green to deep steel gray",
+    "flavor": "earthy and savory, with a clean briny finish",
+    "texture": "delicate, with a smooth pop",
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 39.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 59.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 115.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 199.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 439.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 1.376,
+    "store_quote": "Often called “spoonbill” for its distinctive paddle-shaped snout, the American Paddlefish (Polyodon spathula) is a freshwater species native to the Mississippi River system.",
+    "sources": [
+      "https://caviarstar.com/products/american-paddlefish-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg",
+      "/home/user/caviar3d/doc/research/gat_american-export.txt",
+      "/home/user/caviar3d/doc/research/cs_blog_american-paddlefish-polydon-spathula.txt",
+      "/home/user/caviar3d/doc/research/cs_blog_blogwild-american-caviar-supply-2023-poor-fishing-conditions-for-bowfin-and-hackleback.txt"
+    ]
+  },
+  {
+    "handle": "bourbon-barrel-smoked-trout-roe",
+    "title": "Bourbon Barrel Smoked Trout Roe",
+    "kind": "roe",
+    "species_common": "Rainbow trout",
+    "species_latin": "Oncorhynchus mykiss",
+    "origin_country": "France",
+    "origin_region": null,
+    "producer": "Caviar Star (cold-smoked in house; roe supplier not named)",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": null,
+    "color": "orange (page meta description)",
+    "flavor": "subtle smokiness that infuses slowly without overpowering the natural flavor of the eggs",
+    "texture": "firm (page meta description)",
+    "malossol": null,
+    "smoked": true,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 29.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 32.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 49.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 75.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 150.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 1.023,
+    "store_quote": "Our signature cold-smoked trout caviar is made from fresh Rainbow Trout roe, seasoned with sea salt and gently smoked using fine-aged PAPPY VAN WINKLE Bourbon barrel wood stave chips.",
+    "sources": [
+      "https://caviarstar.com/products/bourbon-barrel-smoked-trout-roe",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt"
+    ]
+  },
+  {
+    "handle": "american-bowfin-caviar",
+    "title": "American Bowfin Roe",
+    "kind": "roe",
+    "species_common": "Bowfin (choupique)",
+    "species_latin": "Amia calva",
+    "origin_country": "USA",
+    "origin_region": "Baton Rouge, Louisiana north to Illinois (Mississippi River Basin)",
+    "producer": null,
+    "wild_or_farmed": "wild",
+    "grain_size_mm": null,
+    "grain_label": "small",
+    "color": "dark with a slight reddish tint",
+    "flavor": "rich, earthy, layered with subtle spice and a mild tang",
+    "texture": "balanced",
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 28.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 49.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 85.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 139.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 269.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 0.988,
+    "store_quote": "Known by its Cajun name “Choupique,” the Bowfin is a prehistoric species that predates even the sturgeon, an ancient fish that has remained virtually unchanged for millions of years.",
+    "sources": [
+      "https://caviarstar.com/products/american-bowfin-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg",
+      "/home/user/caviar3d/doc/research/gat_american-export.txt",
+      "/home/user/caviar3d/doc/research/cs_blog_blogwild-american-caviar-supply-2023-poor-fishing-conditions-for-bowfin-and-hackleback.txt"
+    ]
+  },
+  {
+    "handle": "smoked-american-salmon-caviar",
+    "title": "Smoked American Salmon Roe",
+    "kind": "roe",
+    "species_common": "Chum salmon (keta), ikura",
+    "species_latin": "Oncorhynchus keta",
+    "origin_country": "USA",
+    "origin_region": "Alaska (as the unsmoked American Salmon Roe)",
+    "producer": null,
+    "wild_or_farmed": "wild",
+    "grain_size_mm": null,
+    "grain_label": "large",
+    "color": null,
+    "flavor": "smoky, clean, rich (store tasting tags)",
+    "texture": "large, firm beads; the smoke softens the firm texture",
+    "malossol": null,
+    "smoked": true,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 25.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 25.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 40.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 60.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 119.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 0.882,
+    "store_quote": "This #1 grade salmon caviar, with its large firm beads, is a perfect product for cold smoking.",
+    "sources": [
+      "https://caviarstar.com/products/smoked-american-salmon-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt"
+    ]
+  },
+  {
+    "handle": "golden-whitefish-roe",
+    "title": "Golden Whitefish Roe",
+    "kind": "roe",
+    "species_common": "Lake whitefish (Great Lakes golden whitefish)",
+    "species_latin": "Coregonus clupeaformis",
+    "origin_country": "USA",
+    "origin_region": "Great Lakes",
+    "producer": null,
+    "wild_or_farmed": "wild",
+    "grain_size_mm": null,
+    "grain_label": "small",
+    "color": "bright golden",
+    "flavor": "crisp, clean, mild and delicate",
+    "texture": "crunchy",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 25.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 32.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 49.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 99.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 0.441,
+    "store_quote": "Golden Whitefish, also known as Great Lakes Whitefish caviar, is a small roe renowned for its bright golden color and crunchy texture.",
+    "sources": [
+      "https://caviarstar.com/products/golden-whitefish-roe",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg",
+      "/home/user/caviar3d/doc/research/gat_american-export.txt"
+    ]
+  },
+  {
+    "handle": "rainbow-trout-roe",
+    "title": "Rainbow Trout Roe",
+    "kind": "roe",
+    "species_common": "Rainbow trout",
+    "species_latin": "Oncorhynchus mykiss",
+    "origin_country": "France, Denmark",
+    "origin_region": null,
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "medium",
+    "color": "vibrant orange",
+    "flavor": "mild and delicate, with a crisp, briny tang",
+    "texture": "crisp",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 22.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 27.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 39.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 64.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 120.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 0.776,
+    "store_quote": "The vibrant orange, medium-sized grains of our trout roe offer a crisp, briny tang.",
+    "sources": [
+      "https://caviarstar.com/products/rainbow-trout-roe",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/gat_american-export.txt",
+      "/home/user/caviar3d/doc/research/cs_blog_2026-extremely-low-catch-this-season-for-alaskan-salmon-fishermen.txt"
+    ]
+  },
+  {
+    "handle": "american-salmon-caviar",
+    "title": "American Salmon Roe, #1 Chum (Keta)",
+    "kind": "roe",
+    "species_common": "Chum salmon (keta), ikura",
+    "species_latin": "Oncorhynchus keta",
+    "origin_country": "USA",
+    "origin_region": "Northern Pacific waters around Alaska",
+    "producer": null,
+    "wild_or_farmed": "wild",
+    "grain_size_mm": null,
+    "grain_label": "larger",
+    "color": "vibrant, jewel-like",
+    "flavor": "juicy sweetness and briny richness, with a clean finish",
+    "texture": "larger, firmer beads with a delicate pop",
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 18.0,
+        "available": true
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 24.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 37.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 60.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 110.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 0.635,
+    "store_quote": "Each pearl bursts with juicy sweetness and a briny richness that captures the essence of the sea.",
+    "sources": [
+      "https://caviarstar.com/products/american-salmon-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg",
+      "/home/user/caviar3d/doc/research/gat_american-export.txt",
+      "/home/user/caviar3d/doc/research/cs_blog_2026-extremely-low-catch-this-season-for-alaskan-salmon-fishermen.txt"
+    ]
+  },
+  {
+    "handle": "smoked-golden-whitefish-caviar",
+    "title": "Smoked Golden Whitefish Roe",
+    "kind": "roe",
+    "species_common": "Lake whitefish (Great Lakes golden whitefish)",
+    "species_latin": "Coregonus clupeaformis",
+    "origin_country": "USA",
+    "origin_region": "Great Lakes",
+    "producer": null,
+    "wild_or_farmed": "wild",
+    "grain_size_mm": null,
+    "grain_label": "small",
+    "color": "vibrant golden",
+    "flavor": "crisp, clean flavor with a remarkable smoky essence",
+    "texture": "soft yet crunchy",
+    "malossol": null,
+    "smoked": true,
+    "sizes": [
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 17.0,
+        "available": true
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 25.0,
+        "available": true
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 35.0,
+        "available": true
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 60.0,
+        "available": true
+      }
+    ],
+    "price_per_gram_usd": 0.3,
+    "store_quote": "It is enhanced with the natural cold-smoke from bourbon barrel oak wood chips, which imparts a remarkable smoky essence to the roe’s crisp, clean flavor.",
+    "sources": [
+      "https://caviarstar.com/products/smoked-golden-whitefish-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg"
+    ]
+  },
+  {
+    "handle": "genki-tobiko-caviar-flying-fish-roe",
+    "title": "Genki Tobiko Caviar Flying Fish Roe",
+    "kind": "roe",
+    "species_common": "Flying fish (tobiko)",
+    "species_latin": "Exocoetidae (family; species not stated)",
+    "origin_country": "Taiwan",
+    "origin_region": "off the coast of Taiwan",
+    "producer": "Genki (brand)",
+    "wild_or_farmed": "wild",
+    "grain_size_mm": null,
+    "grain_label": "small",
+    "color": "black, red, orange, wasabi green or yuzu yellow (by variant)",
+    "flavor": "clean flavor with delicate brininess",
+    "texture": "crisp, crunchy",
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "Black / 50g",
+        "grams": 50.0,
+        "price_usd": 12.0,
+        "available": true
+      },
+      {
+        "label": "Black / 1.1 lbs (500g)",
+        "grams": 500.0,
+        "price_usd": 45.0,
+        "available": true
+      },
+      {
+        "label": "Red / 50g",
+        "grams": 50.0,
+        "price_usd": 12.0,
+        "available": true
+      },
+      {
+        "label": "Red / 1.1 lbs (500g)",
+        "grams": 500.0,
+        "price_usd": 45.0,
+        "available": true
+      },
+      {
+        "label": "Orange / 50g",
+        "grams": 50.0,
+        "price_usd": 12.0,
+        "available": true
+      },
+      {
+        "label": "Orange / 1.1 lbs (500g)",
+        "grams": 500.0,
+        "price_usd": 45.0,
+        "available": true
+      },
+      {
+        "label": "Wasabi Green / 50g",
+        "grams": 50.0,
+        "price_usd": 12.0,
+        "available": true
+      },
+      {
+        "label": "Wasabi Green / 1.1 lbs (500g)",
+        "grams": 500.0,
+        "price_usd": 45.0,
+        "available": true
+      },
+      {
+        "label": "Yuzu Yellow / 50g",
+        "grams": 50.0,
+        "price_usd": 14.0,
+        "available": true
+      },
+      {
+        "label": "Yuzu Yellow / 1.1 lbs (500g)",
+        "grams": 500.0,
+        "price_usd": 48.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 0.24,
+    "store_quote": "Whether you're a professional chef or an adventurous home cook, this Tobiko caviar offers versatility, authenticity, and a striking finishing touch to your seafood creations.",
+    "sources": [
+      "https://caviarstar.com/products/genki-tobiko-caviar-flying-fish-roe",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page11.jpg"
+    ]
+  },
+  {
+    "handle": "albino-almas-caviar",
+    "title": "Albino Sterlet Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Albino sterlet sturgeon",
+    "species_latin": "Acipenser ruthenus",
+    "origin_country": "Germany",
+    "origin_region": null,
+    "producer": "Dieckmann & Hansen",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "small",
+    "color": "light opaque golden; bright opaque yellow",
+    "flavor": "tastes like salted butter; clean, buttery, briny and creamy",
+    "texture": "soft, with a subtle pop",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 150.0,
+        "available": false
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 250.0,
+        "available": false
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 450.0,
+        "available": false
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 760.0,
+        "available": false
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 1500.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 5.291,
+    "store_quote": "Usually dark black in color, this rare, light opaque golden caviar comes from the small population of Albino Sterlet sustainably farmed by Dieckmann & Hansen in Germany.",
+    "sources": [
+      "https://caviarstar.com/products/albino-almas-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page10.jpg",
+      "https://dieckmann-hansen.com/en/pages/unsere-geschichte"
+    ]
+  },
+  {
+    "handle": "caviar-house-prunier-osetra-caviar",
+    "title": "Caviar House & Prunier French Osetra Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Russian sturgeon (Osetra)",
+    "species_latin": "Acipenser gueldenstaedtii",
+    "origin_country": "France",
+    "origin_region": "Montpon-Ménestérol, Dordogne, on the River Isle (near Bordeaux)",
+    "producer": "Caviar House & Prunier",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "generous",
+    "color": "dark to light amber brown",
+    "flavor": "pronounced nutty profile with a rich, creamy finish",
+    "texture": "delicate",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz (28g) Jar, Caviar Star",
+        "grams": 28.0,
+        "price_usd": 150.0,
+        "available": false
+      },
+      {
+        "label": "1.06oz (30g) with Prunier Label",
+        "grams": 30.0,
+        "price_usd": 155.0,
+        "available": false
+      },
+      {
+        "label": "1.76oz (50g) With Prunier Label",
+        "grams": 50.0,
+        "price_usd": 198.0,
+        "available": false
+      },
+      {
+        "label": "2oz (56g) Jar, Caviar Star",
+        "grams": 56.0,
+        "price_usd": 210.0,
+        "available": false
+      },
+      {
+        "label": "4oz (113g) Jar, Caviar Star",
+        "grams": 113.0,
+        "price_usd": 399.0,
+        "available": false
+      },
+      {
+        "label": "7oz (200g) Tin, Caviar Star",
+        "grams": 200.0,
+        "price_usd": 620.0,
+        "available": false
+      },
+      {
+        "label": "16oz (454g) Tin, Caviar Star",
+        "grams": 454.0,
+        "price_usd": 1289.0,
+        "available": false
+      },
+      {
+        "label": "17.64oz (500g) Tin, Caviar Star",
+        "grams": 500.0,
+        "price_usd": 1390.0,
+        "available": false
+      },
+      {
+        "label": "35.27oz (1000g) Tin, Caviar Star",
+        "grams": 1000.0,
+        "price_usd": 2800.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 5.357,
+    "store_quote": "In 1921, it opened the world’s first dedicated caviar house, serving roe from sturgeon once fished along the rivers of Bordeaux.",
+    "sources": [
+      "https://caviarstar.com/products/caviar-house-prunier-osetra-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page10.jpg",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page05.jpg",
+      "https://www.fineandwild.com/collections/caviar-house-prunier"
+    ]
+  },
+  {
+    "handle": "supreme-california-white-sturgeon-caviar",
+    "title": "Supreme California White Sturgeon Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "White sturgeon",
+    "species_latin": "Acipenser transmontanus",
+    "origin_country": "USA",
+    "origin_region": "Sacramento River area, California",
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "medium",
+    "color": "light-colored, golden",
+    "flavor": "briny taste and creamy nuttiness; clean, delicate flavor with a buttery finish",
+    "texture": null,
+    "malossol": null,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 139.0,
+        "available": false
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 209.0,
+        "available": false
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 349.0,
+        "available": false
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 579.0,
+        "available": false
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 1200.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 4.903,
+    "store_quote": "With its medium-sized golden beads, Supreme grade has a more unique appearance than Classic White Sturgeon Caviar or Royal White Sturgeon Caviar, hence its higher price.",
+    "sources": [
+      "https://caviarstar.com/products/supreme-california-white-sturgeon-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page08.jpg"
+    ]
+  },
+  {
+    "handle": "karat-israeli-osetra-caviar",
+    "title": "Karat Israeli Osetra Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Russian sturgeon (Osetra)",
+    "species_latin": "Acipenser gueldenstaedtii",
+    "origin_country": "Israel",
+    "origin_region": "Kibbutz Dan, Upper Galilee (Dan River water)",
+    "producer": "Caviar Galilee (Karat Caviar brand)",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "medium",
+    "color": "dark to light bronze",
+    "flavor": "pronounced buttery profile with a pleasingly nutty finish; rich and clean",
+    "texture": null,
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 109.0,
+        "available": false
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 189.0,
+        "available": false
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 269.0,
+        "available": false
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 495.0,
+        "available": false
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 989.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 3.845,
+    "store_quote": "With pristine spring fed ponds boasting a constant flow rate and optimal year-round temperature, the caviar Karat produces is admired world-wide for its impeccable quality.",
+    "sources": [
+      "https://caviarstar.com/products/karat-israeli-osetra-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "https://en.wikipedia.org/wiki/Dan,_Israel"
+    ]
+  },
+  {
+    "handle": "beluga-sevruga-hybrid",
+    "title": "Reserve Beluga Sevruga Hybrid",
+    "kind": "hybrid sturgeon caviar",
+    "species_common": "Beluga × Sevruga (stellate sturgeon) hybrid",
+    "species_latin": "Huso huso × Acipenser stellatus",
+    "origin_country": "Bulgaria",
+    "origin_region": null,
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "larger than pure Sevruga, slightly smaller than wild Beluga",
+    "color": "gray to dark amber",
+    "flavor": "rich, creamy, slightly nutty; creamy, buttery notes with a lingering, briny, almost nutty finish",
+    "texture": "smooth",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 99.0,
+        "available": false
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 185.0,
+        "available": false
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 345.0,
+        "available": false
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 595.0,
+        "available": false
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 1300.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 3.492,
+    "store_quote": "The Beluga and Sevruga are two of the most popular caviar names in the business.",
+    "sources": [
+      "https://caviarstar.com/products/beluga-sevruga-hybrid",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page10.jpg",
+      "/home/user/caviar3d/doc/research/fws_2005_beluga-trade-suspended.txt"
+    ]
+  },
+  {
+    "handle": "lyna-polska-royal-osetra-caviar",
+    "title": "Lyna Polska Royal Osetra Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Russian sturgeon (Osetra)",
+    "species_latin": "Acipenser gueldenstaedtii",
+    "origin_country": "Poland",
+    "origin_region": "Warmia (Łyna River, Napiwodzko-Ramucka Forest)",
+    "producer": "Gosławice Fish Farm (Gospodarstwo Rybackie Gosławice)",
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "medium",
+    "color": "dark amber to gray-brown",
+    "flavor": "buttery, classic Osetra flavor with complex nutty notes and a clean, smooth finish",
+    "texture": "firm",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 89.0,
+        "available": false
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 145.0,
+        "available": false
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 250.0,
+        "available": false
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 399.0,
+        "available": false
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 899.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 3.139,
+    "store_quote": "Ranging from dark amber to gray-brown in color, this exceptional caviar features the complex nutty notes of traditional wild Caspian Osetra, with a clean, buttery, and smooth finish.",
+    "sources": [
+      "https://caviarstar.com/products/lyna-polska-royal-osetra-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/cs_products_key.txt",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page10.jpg",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page05.jpg",
+      "https://eurofish.dk/sturgeon-farm-expands-production/",
+      "https://worldgourmetsummit.com/wgs2019/main.php/estab/575-Antonius-Caviar"
+    ]
+  },
+  {
+    "handle": "dynasty-imperial-amur-sturgeon-caviar",
+    "title": "Dynasty Imperial Amur Sturgeon Caviar",
+    "kind": "sturgeon caviar",
+    "species_common": "Amur sturgeon (Japanese sturgeon)",
+    "species_latin": "Acipenser schrenckii",
+    "origin_country": "China",
+    "origin_region": "northern mountainous China, near the Russian border",
+    "producer": null,
+    "wild_or_farmed": "farmed",
+    "grain_size_mm": null,
+    "grain_label": "plump",
+    "color": "light amber (page meta description)",
+    "flavor": "buttery; resembles fine Osetra and Kaluga in taste",
+    "texture": "firm, creamy",
+    "malossol": true,
+    "smoked": false,
+    "sizes": [
+      {
+        "label": "1oz",
+        "grams": 28.35,
+        "price_usd": 80.0,
+        "available": false
+      },
+      {
+        "label": "2oz",
+        "grams": 56.7,
+        "price_usd": 150.0,
+        "available": false
+      },
+      {
+        "label": "4oz",
+        "grams": 113.4,
+        "price_usd": 280.0,
+        "available": false
+      },
+      {
+        "label": "7oz",
+        "grams": 198.45,
+        "price_usd": 440.0,
+        "available": false
+      },
+      {
+        "label": "16oz",
+        "grams": 453.6,
+        "price_usd": 899.0,
+        "available": false
+      }
+    ],
+    "price_per_gram_usd": 2.822,
+    "store_quote": "The Amur or Japanese Sturgeon makes for a relatively unknown but unbelievable tasting caviar.",
+    "sources": [
+      "https://caviarstar.com/products/dynasty-imperial-amur-sturgeon-caviar",
+      "/home/user/caviar3d/src/products.json",
+      "/home/user/caviar3d/doc/research/flipsnack_great-atlantic-catalog-2026.txt",
+      "/home/user/caviar3d/doc/research/img/catalog2026_page11.jpg"
+    ]
+  }
+]

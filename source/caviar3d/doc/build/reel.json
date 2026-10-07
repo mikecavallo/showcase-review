@@ -1,0 +1,170 @@
+{
+ "dur": 50.3,
+ "shots": [
+  {
+   "type": "title",
+   "k": "Caviar Star",
+   "t": "THE COLLECTION",
+   "s": "in 3D",
+   "size": 104,
+   "start": 0,
+   "dur": 3.6
+  },
+  {
+   "type": "prod",
+   "items": [
+    "kaluga-hybrid-caviar-limited-edition"
+   ],
+   "t": "VIP Imperial Kaluga",
+   "sub": "The Caviar Star OT tin",
+   "start": 3.1,
+   "dur": 5.0
+  },
+  {
+   "type": "prod",
+   "items": [
+    "dynasty-siberian-caviar",
+    "american-paddlefish-caviar",
+    "american-hackleback-sturgeon-caviar",
+    "american-salmon-caviar"
+   ],
+   "labels": [
+    "Siberian",
+    "Paddlefish",
+    "Hackleback",
+    "Salmon roe"
+   ],
+   "t": "Caviar & roe",
+   "sub": "Every jar under its own lid",
+   "start": 7.6,
+   "dur": 5.0
+  },
+  {
+   "type": "prod",
+   "items": [
+    "royal-california-white-sturgeon-caviar",
+    "golden-dynasty-imperial-osetra-caviar",
+    "albino-almas-caviar",
+    "golden-whitefish-roe"
+   ],
+   "labels": [
+    "White sturgeon",
+    "Golden osetra",
+    "Albino sterlet",
+    "Golden whitefish"
+   ],
+   "start": 12.1,
+   "dur": 5.0
+  },
+  {
+   "type": "prod",
+   "items": [
+    "fresh-black-burgundy-truffles"
+   ],
+   "t": "Fresh Burgundy truffles",
+   "sub": "Truffles",
+   "start": 16.6,
+   "dur": 4.2
+  },
+  {
+   "type": "prod",
+   "items": [
+    "black-truffle-paste",
+    "white-truffle-honey",
+    "whole-black-summer-truffles",
+    "black-truffle-olive-oil"
+   ],
+   "labels": [
+    "Truffle paste",
+    "Truffle honey",
+    "Summer truffles",
+    "Truffle oil"
+   ],
+   "start": 20.3,
+   "dur": 5.0
+  },
+  {
+   "type": "prod",
+   "items": [
+    "100-year-aged-balsamic-vinegar"
+   ],
+   "t": "100 year balsamic",
+   "sub": "Acetaia Reale, Modena",
+   "start": 24.8,
+   "dur": 4.2
+  },
+  {
+   "type": "prod",
+   "items": [
+    "unio-cava-wine-vinegar",
+    "leblanc-french-walnut-oil",
+    "pura-vida-pistachio-oil",
+    "il-casolare-italian-extra-virgin-olive-oil"
+   ],
+   "labels": [
+    "Cava vinegar",
+    "Walnut oil",
+    "Pistachio oil",
+    "Olive oil"
+   ],
+   "t": "Oils & vinegars",
+   "start": 28.5,
+   "dur": 5.0
+  },
+  {
+   "type": "prod",
+   "items": [
+    "mother-of-pearl-mosaic-handle-spoon-4-75-inch",
+    "abalone-caviar-bowl-silver-accents",
+    "silver-fish-6-shot-glass-server",
+    "pink-mother-of-pearl-shell-plate-spoon-set"
+   ],
+   "labels": [
+    "Mosaic spoon",
+    "Abalone bowl",
+    "Shot-glass server",
+    "Shell plate"
+   ],
+   "t": "Serveware",
+   "start": 33.0,
+   "dur": 5.0
+  },
+  {
+   "type": "prod",
+   "items": [
+    "bottarga-dried-and-cured-mullet-roe",
+    "mojama-hand-cured-tuna-in-sea-salt",
+    "irish-cold-smoked-atlantic-salmon",
+    "maine-lobster-meat-cooked-claw-and-knuckle"
+   ],
+   "labels": [
+    "Bottarga",
+    "Mojama",
+    "Smoked salmon",
+    "Maine lobster"
+   ],
+   "t": "From the sea",
+   "start": 37.5,
+   "dur": 5.0
+  },
+  {
+   "type": "prod",
+   "items": [
+    "vip-kaluga-hybrid-caviar-250g"
+   ],
+   "t": "VIP Kaluga",
+   "sub": "250 g OT tin",
+   "start": 42.0,
+   "dur": 4.4
+  },
+  {
+   "type": "title",
+   "k": "caviarstar.com",
+   "t": "181 PIECES",
+   "s": "Every one in 3D",
+   "size": 110,
+   "start": 45.9,
+   "dur": 4.4
+  }
+ ]
+}

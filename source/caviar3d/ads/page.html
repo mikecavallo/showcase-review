@@ -1,0 +1,123 @@
+<meta charset="utf-8">
+<title>Caviar Star Sale Ads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500&display=swap">
+<style>
+/* Layout: an ad library for the sale. One row per ad: the three formats side by side (motion where rendered, still
+   otherwise), then the ready-to-paste copy and the verified prices behind it. Brand black and gold, single dark look. */
+:root {
+  color-scheme: dark;
+  --bg: #07080c; --panel: #0e1016; --panel-2: #141720; --ink: #efe8da; --muted: #a69c8a; --gold: #d9b871; --line: rgba(217, 184, 113, .16);
+  --display: "Cinzel", "Trajan Pro", Georgia, serif; --serif: "Cormorant Garamond", Garamond, Georgia, serif; --ui: "Inter", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--bg); color: var(--ink); }
+body { margin: 0; font: 400 15px/1.5 var(--ui); }
+a { color: var(--gold); }
+:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: 1320px; margin: 0 auto; padding: clamp(28px, 6vh, 64px) clamp(16px, 4vw, 44px) 56px; display: grid; gap: 28px; }
+header { display: grid; gap: 10px; }
+.k { font: 500 12px/1.2 var(--display); letter-spacing: .38em; text-transform: uppercase; color: var(--muted); }
+h1 { margin: 0; font: 500 clamp(30px, 4.6vw, 54px)/1.05 var(--display); letter-spacing: .07em; color: var(--gold); text-wrap: balance; }
+header p { margin: 0; max-width: 68ch; color: var(--muted); font: 500 19px/1.45 var(--serif); }
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; }
+.tabs button { font: 500 11px/1 var(--display); letter-spacing: .18em; text-transform: uppercase; padding: 9px 12px; background: transparent; color: var(--ink); border: 1px solid var(--line); cursor: pointer; }
+.tabs button[aria-pressed="true"] { border-color: var(--gold); color: var(--gold); }
+.ad { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; padding: 22px; background: var(--panel); border: 1px solid var(--line); }
+.ad h2 { margin: 0 0 4px; font: 500 20px/1.25 var(--display); letter-spacing: .06em; }
+.ad .meta { color: var(--muted); font-size: 13px; }
+.formats { display: flex; gap: 12px; align-items: flex-end; min-width: 0; }
+.formats figure { margin: 0; display: grid; gap: 6px; min-width: 0; }
+.formats .media { position: relative; background: #000; overflow: hidden; border: 1px solid rgba(217,184,113,.1); max-width: 100%; }
+.formats img, .formats video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.formats figcaption { font: 500 10.5px/1.3 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.copy { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.field { background: var(--panel-2); border: 1px solid var(--line); padding: 10px 12px; display: grid; gap: 4px; }
+.field .lab { display: flex; justify-content: space-between; align-items: center; gap: 8px; font: 500 10.5px/1 var(--display); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.field .lab span { white-space: nowrap; }
+.field .txt { font-size: 14.5px; overflow-wrap: anywhere; }
+.field button { font: 500 10px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; padding: 6px 9px; background: transparent; color: var(--gold); border: 1px solid var(--line); cursor: pointer; }
+.field button.ok { color: var(--ink); border-color: var(--gold); }
+.chars { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; letter-spacing: 0; text-transform: none; font-family: var(--ui); }
+.prices { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+.prices th, .prices td { text-align: left; padding: 5px 8px 5px 0; border-bottom: 1px solid var(--line); }
+.prices th { font: 500 10px/1 var(--display); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.prices s { color: var(--muted); }
+.note { color: var(--muted); font-size: 13px; max-width: 90ch; margin: 0; }
+.reuse { display: grid; gap: 14px; }
+.reuse h2 { margin: 0; font: 500 18px/1.2 var(--display); letter-spacing: .1em; color: var(--gold); text-transform: uppercase; }
+.reuse-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; }
+.card { display: grid; gap: 8px; padding: 18px; background: var(--panel); border: 1px solid var(--line); color: var(--ink); text-decoration: none; }
+a.card:hover { border-color: var(--gold); }
+.card b { font: 500 22px/1.25 var(--serif); }
+.card span:not(.k) { color: var(--muted); font-size: 14px; }
+@media (max-width: 980px) { .ad { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .formats { flex-wrap: wrap; } .formats figure { flex: 1 1 40% !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="k">Caviar Star &middot; Paid social</div>
+    <h1>Sale ads, ready to run</h1>
+    <p id="lede">Every caviar on sale, plus three serving pieces and a collection ad, in the three sizes the platforms use. Each ad has motion and a still, copy for Meta and TikTok, and the live prices it was checked against.</p>
+    <div class="tabs" id="tabs" role="group" aria-label="Filter"></div>
+  </header>
+  <section class="reuse" aria-labelledby="reuse-h">
+    <h2 id="reuse-h">Make the next sale yourself</h2>
+    <div class="reuse-grid">
+      <a class="card" id="studioLink" href="https://claude.ai/artifact/3psJCsBJpVYWbD9GbQ2xJE" target="_blank" rel="noopener">
+        <span class="k">Ad Studio</span>
+        <b>Pick a product, get today's price, export the video</b>
+        <span>Runs in the browser. It reads the live price and compare-at price from caviarstar.com, so a badge can only show a saving the store really has. Exports MP4 and PNG in all three sizes, plus a price-free version for catalog ads.</span>
+      </a>
+      <div class="card">
+        <span class="k">Batch generator</span>
+        <b>One sheet in, every ad out</b>
+        <span>Edit a spreadsheet row (product, size, headline). One command re-prices every ad from the store and re-renders only what changed. Each MP4 carries the price it shows in its metadata, and a check command flags any video whose price has since changed or whose sale has ended.</span>
+      </div>
+    </div>
+  </section>
+  <div id="list" style="display:grid;gap:18px"></div>
+  <p class="note" id="foot"></p>
+</div>
+
+<script>
+(async function () {
+  var D = await (await fetch('ads.json')).json();
+  var list = document.getElementById('list'), tabs = document.getElementById('tabs');
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+  var LIMIT = { meta_primary: 125, meta_headline: 40, meta_description: 30, tiktok_caption: 100, story_hook: 40 };
+  var LABEL = { meta_primary: 'Meta primary text', meta_headline: 'Meta headline', meta_description: 'Meta description', tiktok_caption: 'TikTok caption', story_hook: 'Story or reel hook' };
+  function card(a) {
+    var el = document.createElement('article'); el.className = 'ad'; el.dataset.kind = /spoon|plate/.test(a.id) ? 'serve' : (a.id === 'caviar-sale-collection' ? 'coll' : 'caviar');
+    var media = a.formats.map(function (f) {
+      var basis = f.fmt === '9x16' ? 28 : f.fmt === '4x5' ? 36 : 36;
+      var m = f.vid ? '<video muted loop playsinline autoplay preload="metadata" poster="' + f.img + '" src="' + f.vid + '" aria-label="' + esc(a.title) + ', ' + f.fmt + ' video"></video>' : '<img src="' + f.img + '" alt="' + esc(a.title) + ', ' + f.fmt + ' still" loading="lazy">';
+      return '<figure style="flex:' + basis + ' 1 0"><div class="media" style="aspect-ratio:' + f.w + '/' + f.h + '">' + m + '</div><figcaption>' + f.fmt.replace('x', ':') + ' &middot; ' + esc(f.use) + '</figcaption></figure>';
+    }).join('');
+    var fields = Object.keys(LABEL).map(function (k) {
+      var t = a.copy[k] || ''; var over = t.length > LIMIT[k];
+      return '<div class="field"><div class="lab"><span>' + LABEL[k] + ' <span class="chars"' + (over ? ' style="color:#d4664f"' : '') + '>' + t.length + '/' + LIMIT[k] + '</span></span><button type="button" data-t="' + esc(t) + '">Copy</button></div><div class="txt">' + esc(t) + '</div></div>';
+    }).join('');
+    var rows = a.rows.map(function (r) { return '<tr><td>' + esc(r.size) + '</td><td>' + esc(r.price) + '</td><td><s>' + esc(r.was) + '</s></td></tr>'; }).join('');
+    el.innerHTML = '<div style="display:grid;gap:14px;min-width:0"><div><h2>' + esc(a.title) + '</h2><div class="meta">On the image: &ldquo;' + esc(a.headline) + '&rdquo; &middot; ' + esc(a.badge) + ' &middot; <a href="' + esc(a.url) + '" target="_blank" rel="noopener">Product page</a></div></div><div class="formats">' + media + '</div></div>' +
+      '<div class="copy">' + fields + '<table class="prices"><thead><tr><th>Sale size</th><th>Price</th><th>Was</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+    el.querySelectorAll('.field button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var done = function () { b.textContent = 'Copied'; b.classList.add('ok'); setTimeout(function () { b.textContent = 'Copy'; b.classList.remove('ok'); }, 1400); };
+        try { navigator.clipboard.writeText(b.dataset.t).then(done, function () { select(b); }); } catch (e) { select(b); }
+      });
+    });
+    return el;
+  }
+  function select(b) { var r = document.createRange(); r.selectNodeContents(b.closest('.field').querySelector('.txt')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected'; }
+  D.ads.forEach(function (a) { list.appendChild(card(a)); });
+  [['all', 'All ads'], ['caviar', 'Caviar'], ['serve', 'Serving pieces'], ['coll', 'Collection']].forEach(function (t, i) {
+    var b = document.createElement('button'); b.type = 'button'; b.textContent = t[1]; b.setAttribute('aria-pressed', String(i === 0));
+    b.addEventListener('click', function () { tabs.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); }); list.querySelectorAll('.ad').forEach(function (a) { a.hidden = t[0] !== 'all' && a.dataset.kind !== t[0]; }); });
+    tabs.appendChild(b);
+  });
+  document.getElementById('foot').textContent = 'Every price and percentage was checked against caviarstar.com on ' + D.asof + '. Percentages are rounded down, so no ad overstates a discount, and every badge states the saving on the size it shows. The one "up to" claim, on the collection ad, is carried by its Kaluga Hybrid 16 oz tile. Lid labels in the renders leave out the net weight so no ad shows a 1 oz label next to a larger size. Spec work for Caviar Star; not an official ad set.';
+})();
+</script>

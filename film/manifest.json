@@ -6,35 +6,35 @@
    "vtt": "part1.vtt",
    "start": 0.0,
    "dur": 230.099,
-   "mb": 10.2
+   "mb": 12.3
   },
   {
    "src": "part2.mp4",
    "vtt": "part2.vtt",
    "start": 230.099,
    "dur": 228.409,
-   "mb": 11.4
+   "mb": 14.4
   },
   {
    "src": "part3.mp4",
    "vtt": "part3.vtt",
    "start": 458.508,
-   "dur": 245.216,
-   "mb": 12.2
+   "dur": 217.839,
+   "mb": 13.4
   },
   {
    "src": "part4.mp4",
    "vtt": "part4.vtt",
-   "start": 703.724,
-   "dur": 218.895,
-   "mb": 11.9
+   "start": 676.347,
+   "dur": 181.063,
+   "mb": 13.0
   },
   {
    "src": "part5.mp4",
    "vtt": "part5.vtt",
-   "start": 922.619,
-   "dur": 5.119,
-   "mb": 0.4
+   "start": 857.41,
+   "dur": 70.328,
+   "mb": 4.7
   }
  ],
  "scenes": [

@@ -19,6 +19,10 @@ export const GLASS_TINT = '#e8eef2';
 // Caviar surface: true = drawn pearls (glossy spheres tinted from the product photo, sized per roe type), false = the photo itself
 export const PEARLS = true;
 const LID_ZOOM = 0.9;  // how much of the lid photo shows on the cap face: the whole lid, crimped metal rim included
+// OT tins: pearls across the open tin (about 4 in wide for 250 g, 2.8 in for 50 g; Kaluga grains run 3.5 to 4 mm) and how far
+// the packed caviar mounds above its edge
+const TIN_PEARLS = { 'vip-kaluga-hybrid-caviar-250g': 28, 'kaluga-hybrid-caviar-limited-edition': 22, 'caviar-star-black-ot-gift-bag': 22 };
+const TIN_DOME = 0.014;
 
 export class Studio {
   constructor(canvas, opts = {}) {
@@ -263,7 +267,21 @@ export class Studio {
     const neck = new THREE.Mesh(new THREE.CylinderGeometry(NR, NR, NECK, 128, 1, true), gold); neck.position.y = H - NECK / 2; grp.add(neck);
     const bandB = new THREE.Mesh(new THREE.TorusGeometry(R, 0.008, 12, 128), gold); bandB.rotation.x = Math.PI / 2; bandB.position.y = H - NECK; grp.add(bandB);
     const bandT = new THREE.Mesh(new THREE.TorusGeometry(NR, 0.006, 12, 128), gold); bandT.rotation.x = Math.PI / 2; bandT.position.y = H; grp.add(bandT);
-    if (disc) {
+    // caviar packed to the brim: real pearls sized for the tin (TIN_PEARLS across), a dark bed between them, and a short
+    // lacquered inner wall above the caviar, so the surface reads as a mound of spheres and not a printed disc
+    const inner = new THREE.Mesh(new THREE.CylinderGeometry(NR - 0.003, NR - 0.003, NECK * 0.9, 128, 1, true), new THREE.MeshPhysicalMaterial({ color: '#b8995a', roughness: 0.3, metalness: 0.85, envMapIntensity: 1.1, side: THREE.BackSide }));
+    inner.position.y = H - NECK * 0.45; grp.add(inner);
+    if (this.opts.pearls ?? PEARLS) {
+      const col = disc && disc.image ? discColor(disc.image) : new THREE.Color('#6b5a2a'), seed = hash(spec.handle);
+      const rr = NR - 0.004, n = TIN_PEARLS[spec.handle] ?? 22, base = roeType(spec.handle), roe = Object.assign({}, base, { across: 0.94 * n / (2 * rr), tone: 2.35, sss: 0.1, spread: 0.55 });  // seen from above, not through glass: lighter, warmer, more varied
+      const pr = rr / n, y1 = H - pr * 0.55;
+      const tp = pearlTex(col, roe, 2048, 2048, 2 * rr, 2 * rr, seed, false);
+      const bed = new THREE.CircleGeometry(rr, 128); bed.rotateX(-Math.PI / 2);
+      { const p = bed.attributes.position; for (let i = 0; i < p.count; i++) { const d = Math.hypot(p.getX(i), p.getZ(i)) / rr; p.setY(i, TIN_DOME * (1 - d * d)); } bed.computeVertexNormals(); }
+      const bedMesh = new THREE.Mesh(bed, new THREE.MeshPhysicalMaterial({ map: tp.map, emissiveMap: tp.map, emissive: '#ffffff', emissiveIntensity: 0.03, color: '#161616', roughness: 0.45, clearcoat: 0.3, clearcoatRoughness: 0.25, bumpMap: tp.bump, bumpScale: 1.4, envMapIntensity: 0.15 }));
+      bedMesh.position.y = y1 - pr * 0.45; grp.add(bedMesh);
+      grp.add(pearlSpheres(col, roe, seed, rr, 0, y1, { dome: TIN_DOME, walls: false, rimShade: 0.45, sat: 2.1, hue: 0.035, env: 0.35, coat: 1, spec: 0.9, squish: 0.12, ao: 0.14, layers: [[0, 0.25], [1, -0.55], [2, -1.3]] }));  // a third, deeper layer: holes show grains, not pits
+    } else if (disc) {
       const cav = new THREE.Mesh(new THREE.CircleGeometry(NR - 0.01, 96), new THREE.MeshPhysicalMaterial({ map: disc, emissiveMap: disc, emissive: '#fff', emissiveIntensity: 0.5, color: '#8a8a8a', roughness: 0.15, clearcoat: 1 }));
       cav.rotation.x = -Math.PI / 2; cav.position.y = H + 0.001; grp.add(cav);
     }
@@ -272,7 +290,9 @@ export class Studio {
     lid.add(capShell(R + 0.006, 0.09, black, lacquer, lacquer, 0.01));
     const rim = new THREE.Mesh(new THREE.TorusGeometry(R + 0.006, 0.01, 12, 128), gold); rim.rotation.x = Math.PI / 2; rim.position.y = 0.045; lid.add(rim);
     if (emb) {
-      const face = new THREE.Mesh(new THREE.CircleGeometry(R + 0.004, 128), new THREE.MeshPhysicalMaterial({ map: emb, emissiveMap: emb, emissive: '#fff', emissiveIntensity: 0.35, color: '#999', roughness: 0.2, metalness: 0.6, clearcoat: 1, clearcoatRoughness: 0.05 }));
+      // satin print, like the jar labels: a soft sheen as the lid turns, never a mirror that washes the emblem out to white
+      const face = new THREE.Mesh(new THREE.CircleGeometry(R + 0.004, 128), new THREE.MeshPhysicalMaterial({ map: emb, emissiveMap: emb, emissive: '#fff', emissiveIntensity: 0.45, color: '#8c8c8c', roughness: 0.5, metalness: 0.25, clearcoat: 0.25, clearcoatRoughness: 0.35, envMapIntensity: 0.35,
+        polygonOffset: true, polygonOffsetFactor: -2, polygonOffsetUnits: -4 }));
       face.rotation.x = -Math.PI / 2; face.position.y = 0.0455; lid.add(face);
     }
     lid.rotation.set(1.12, 0, 0.0); lid.position.set(0, R + 0.08, -R - 0.12); lid.userData.noFit = true;
@@ -315,12 +335,13 @@ function roeType(h = '') {  // across: pearls across a 1 oz jar; lift: drawn bac
 }
 // the pearls you can see, as real spheres: a randomly packed top layer on the domed surface and the rows pressed against
 // the glass. Each pearl varies a little in size and tint; the environment gives each its own wet highlight.
-function pearlSpheres(col, roe, seed, rr, y0, y1) {
+function pearlSpheres(col, roe, seed, rr, y0, y1, o = {}) {
+  const domeH = o.dome ?? 0.035, walls = o.walls ?? true, rimShade = o.rimShade ?? 0, sat = o.sat ?? 1, squish = o.squish ?? 0, dh = o.hue ?? 0;  // hue: offsets the filmic tone map's pull of saturated amber toward red
   const rnd = rng(seed ^ 0x2545f491), d = 0.94 / roe.across, pr = d / 2, M = new THREE.Matrix4(), Q = new THREE.Quaternion(), P = new THREE.Vector3(), S = new THREE.Vector3();
   const pts = [];
   // top: dart throwing on a hash grid, minimum spacing a little under one diameter (pearls press together)
   const R0 = rr - pr * 0.9, minD = d * 0.84, cell = minD, key = (i, j) => i * 100003 + j;
-  for (const [layer, lift] of [[0, 0.25], [1, -0.55]]) {
+  for (const [layer, lift] of o.layers ?? [[0, 0.25], [1, -0.55]]) {
   const grid = new Map(), start = pts.length, target = Math.floor(0.95 * (R0 * R0) / (pr * pr)); let tries = target * 30;
   while (pts.length - start < target && tries-- > 0) {
     const a = rnd() * Math.PI * 2, r = Math.sqrt(rnd()) * R0, x = Math.cos(a) * r, z = Math.sin(a) * r, gi = Math.floor(x / cell), gj = Math.floor(z / cell);
@@ -328,12 +349,12 @@ function pearlSpheres(col, roe, seed, rr, y0, y1) {
     for (let di = -1; di <= 1 && ok; di++) for (let dj = -1; dj <= 1 && ok; dj++) for (const q of grid.get(key(gi + di, gj + dj)) || []) if (Math.hypot(q[0] - x, q[1] - z) < minD) { ok = false; break; }
     if (!ok) continue;
     const g = grid.get(key(gi, gj)) || []; g.push([x, z]); grid.set(key(gi, gj), g);
-    const s = pr * (0.86 + rnd() * 0.24), dome = 0.035 * (1 - (r / rr) ** 2);
+    const s = pr * (0.86 + rnd() * 0.24), dome = domeH * (1 - (r / rr) ** 2);
     pts.push([x, y1 + dome + s * lift, z, s]);
   }
   }
   // wall: staggered rows against the glass, jittered
-  const rw = rr - pr * 0.55, rows = Math.floor((y1 - y0 - pr * 0.6) / (d * 0.8));
+  const rw = rr - pr * 0.55, rows = walls ? Math.floor((y1 - y0 - pr * 0.6) / (d * 0.8)) : 0;
   for (const [inset, phase] of [[0, 0], [pr * 0.7, 0.5]]) for (let k = 0; k < rows; k++) {
     const n = Math.round(2 * Math.PI * (rw - inset) / (d * 0.88)), y = y0 + pr * 1.05 + (k + phase * 0.5) * d * 0.8, off = (k & 1) * 0.5 + phase + rnd() * 0.3;
     for (let i = 0; i < n; i++) {
@@ -343,13 +364,29 @@ function pearlSpheres(col, roe, seed, rr, y0, y1) {
   }
   const lowPoly = roe.across > 30, geo = new THREE.SphereGeometry(1, lowPoly ? 9 : 14, lowPoly ? 6 : 10);
   const base = new THREE.Color().setRGB(col.r * roe.tone, col.g * roe.tone, col.b * roe.tone, THREE.SRGBColorSpace), hsl = {}; base.getHSL(hsl);
-  const mat = new THREE.MeshPhysicalMaterial({ color: '#ffffff', roughness: 0.22, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.04, envMapIntensity: 0.75,
-    emissive: base.clone().multiplyScalar(roe.sss * 2.2), specularIntensity: 0.6 });
+  // glow: the light carried through each translucent grain, in the grain's own (saturated) colour when sat/hue are given
+  const glow = (sat !== 1 || dh) ? new THREE.Color().setHSL(hsl.h + dh, Math.min(1, hsl.s * sat), hsl.l) : base.clone();
+  const mat = new THREE.MeshPhysicalMaterial({ color: '#ffffff', roughness: 0.22, metalness: 0, clearcoat: o.coat ?? 1, clearcoatRoughness: 0.04, envMapIntensity: o.env ?? 0.75,
+    emissive: glow.multiplyScalar(roe.sss * 2.2), specularIntensity: o.spec ?? 0.6 });
+  // ao: packed grains shade each other, so a grain's sides and underside sit in its neighbours' shadow. The studio has no
+  // shadow maps, so darken by how far the surface turns away from straight up (deterministic, and cheap enough for video)
+  if (o.ao) {
+    mat.onBeforeCompile = (sh) => {
+      sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nvarying float vUp;')
+        .replace('#include <beginnormal_vertex>', '#include <beginnormal_vertex>\nvUp = objectNormal.y;');
+      sh.fragmentShader = sh.fragmentShader.replace('#include <common>', '#include <common>\nvarying float vUp;')
+        .replace('#include <dithering_fragment>', `#include <dithering_fragment>\ngl_FragColor.rgb *= mix(${o.ao.toFixed(3)}, 1.0, smoothstep(-0.35, 0.8, vUp));`);
+    };
+    mat.customProgramCacheKey = () => 'pearl-ao-' + o.ao;
+  }
   const mesh = new THREE.InstancedMesh(geo, mat, pts.length), c = new THREE.Color();
   pts.forEach(([x, y, z, s], i) => {
     P.set(x, y, z); S.set(s, s * (0.94 + rnd() * 0.08), s); Q.setFromAxisAngle(P.clone().setY(0).normalize(), rnd() * 0.4);
+    if (squish) { S.x *= 1 + (rnd() - 0.5) * squish; S.z *= 1 + (rnd() - 0.5) * squish; }  // grains pressed a little out of round
     M.compose(P, Q, S); mesh.setMatrixAt(i, M);
-    const sp = roe.spread ?? 0.44; c.setHSL(hsl.h + (rnd() - 0.5) * 0.03, Math.min(1, hsl.s * (0.92 + rnd() * 0.2)), Math.max(0, hsl.l * (1 - sp / 2 + rnd() * sp))); mesh.setColorAt(i, c);
+    // rimShade: pearls against a metal wall get less light (the wall shades them), which is what makes the surface read as sunk in its tin
+    const edge = rimShade ? 1 - rimShade * Math.max(0, (Math.hypot(x, z) / rr - 0.72) / 0.28) ** 1.5 : 1;
+    const sp = roe.spread ?? 0.44; c.setHSL(hsl.h + dh + (rnd() - 0.5) * 0.03, Math.min(1, hsl.s * sat * (0.92 + rnd() * 0.2)), Math.max(0, hsl.l * edge * (1 - sp / 2 + rnd() * sp))); mesh.setColorAt(i, c);
   });
   mesh.instanceMatrix.needsUpdate = true; mesh.instanceColor.needsUpdate = true;
   return mesh;
@@ -361,6 +398,14 @@ function ringColor(img, u0 = 0) {
   x.drawImage(img, sx, 0, sw, H, 0, 0, 64, 64);
   const px = x.getImageData(0, 0, 64, 64).data; let r = 0, g = 0, b = 0, n = 0;
   for (let j = 0; j < 64; j++) for (let i = 0; i < 64; i++) { const q = Math.hypot((i + 0.5) / 32 - 1, (j + 0.5) / 32 - 1); if (q > 0.9 && q < 0.97) { const k = (j * 64 + i) * 4; r += px[k]; g += px[k + 1]; b += px[k + 2]; n++; } }
+  return new THREE.Color().setRGB(r / n / 255, g / n / 255, b / n / 255, THREE.SRGBColorSpace);
+}
+// average colour of a photographed caviar surface (a square close-up), from its central circle
+function discColor(img) {
+  const c = document.createElement('canvas'); c.width = c.height = 64; const x = c.getContext('2d');
+  x.drawImage(img, 0, 0, img.width, img.height, 0, 0, 64, 64);
+  const px = x.getImageData(0, 0, 64, 64).data; let r = 0, g = 0, b = 0, n = 0;
+  for (let j = 0; j < 64; j++) for (let i = 0; i < 64; i++) { if (Math.hypot((i + 0.5) / 32 - 1, (j + 0.5) / 32 - 1) < 0.8) { const k = (j * 64 + i) * 4; r += px[k]; g += px[k + 1]; b += px[k + 2]; n++; } }
   return new THREE.Color().setRGB(r / n / 255, g / n / 255, b / n / 255, THREE.SRGBColorSpace);
 }
 function hash(s = '') { let h = 2166136261; for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619); return h >>> 0; }

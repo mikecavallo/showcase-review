@@ -103,7 +103,7 @@ a.card:hover { border-color: var(--gold); }
       return '<div class="field"><div class="lab"><span>' + LABEL[k] + ' <span class="chars"' + (over ? ' style="color:#d4664f"' : '') + '>' + t.length + '/' + LIMIT[k] + '</span></span><button type="button" data-t="' + esc(t) + '">Copy</button></div><div class="txt">' + esc(t) + '</div></div>';
     }).join('');
     var rows = a.rows.map(function (r) { return '<tr><td>' + esc(r.size) + '</td><td>' + esc(r.price) + '</td><td><s>' + esc(r.was) + '</s></td></tr>'; }).join('');
-    el.innerHTML = '<div style="display:grid;gap:14px;min-width:0"><div><h2>' + esc(a.title) + '</h2><div class="meta">On the image: &ldquo;' + esc(a.headline) + '&rdquo; &middot; ' + esc(a.badge) + ' &middot; <a href="' + esc(a.url) + '" target="_blank" rel="noopener">Product page</a></div></div><div class="formats">' + media + '</div></div>' +
+    el.innerHTML = '<div style="display:grid;gap:14px;min-width:0;align-content:start"><div><h2>' + esc(a.title) + '</h2><div class="meta">On the image: &ldquo;' + esc(a.headline) + '&rdquo; &middot; ' + esc(a.badge) + ' &middot; <a href="' + esc(a.url) + '" target="_blank" rel="noopener">Product page</a></div></div><div class="formats">' + media + '</div></div>' +
       '<div class="copy">' + fields + '<table class="prices"><thead><tr><th>Sale size</th><th>Price</th><th>Was</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
     el.querySelectorAll('.field button').forEach(function (b) {
       b.addEventListener('click', function () {

@@ -29,7 +29,7 @@ a { color: var(--gold); }
 .stage { position: relative; height: min(86vh, 900px); min-height: 520px; overflow: hidden; background: radial-gradient(70% 60% at 62% 40%, #15120c 0%, var(--bg) 70%); }
 .stage canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; touch-action: pan-y; }
 .stage canvas:active { cursor: grabbing; }
-@media (min-width: 900px) { .stage canvas { left: clamp(0px, 16vw, 300px); width: calc(100% - clamp(0px, 16vw, 300px)); } }
+/* the canvas always spans the stage; on wide screens the camera shifts the model right of the text (see fit()) */
 .brand { position: absolute; left: 50%; top: 22px; transform: translateX(-50%); font-family: var(--display); letter-spacing: .5em; font-size: 12px; color: var(--muted); text-transform: uppercase; white-space: nowrap; }
 .info { position: absolute; left: clamp(16px, 5vw, 72px); bottom: clamp(24px, 7vh, 72px); width: min(400px, calc(100% - 32px)); display: grid; gap: 10px; pointer-events: none; }
 .info > * { pointer-events: auto; }
@@ -133,7 +133,11 @@ const gIn = $('#glass'), gOut = $('#glassOut');
 const setGlass = v => { glassV = v; st.setGlass(v); gIn.value = Math.round(v * 100); gOut.textContent = Math.round(v * 100) + '%'; };
 gIn.addEventListener('input', () => { setGlass(gIn.value / 100); try { localStorage.setItem('cs-glass', String(glassV)); } catch (e) {} });
 setGlass(glassV);
-const fit = () => st.size(canvas.clientWidth, canvas.clientHeight);
+const fit = () => {
+  const w = canvas.clientWidth, h = canvas.clientHeight; st.size(w, h);
+  const off = innerWidth >= 900 ? Math.min(300, innerWidth * .16) / 2 : 0;  // half the text column: the model sits centred in the space beside it
+  if (off) st.cam.setViewOffset(w, h, -off, 0, w, h); else st.cam.clearViewOffset();
+};
 addEventListener('resize', fit); fit();
 let cur = -1, list = items, loading = false;
 async function show(i) {

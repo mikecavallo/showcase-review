@@ -54,6 +54,14 @@ section { padding-block: clamp(56px, 9vh, 104px); border-top: 1px solid var(--li
 #map .land { fill: #1a2c31; stroke: #26403f; stroke-width: .5; }
 #map .grat { fill: none; stroke: rgba(147, 163, 159, .09); stroke-width: .6; }
 #map .pin { cursor: pointer; }
+#map .pin circle.hit { fill: transparent; }
+.map-note .swipe { display: none; }
+/* phones: the map keeps a readable size and scrolls sideways instead of shrinking its labels and points to specks */
+@media (max-width: 640px) {
+  .mapscroll { overflow-x: auto; overscroll-behavior-x: contain; margin-inline: -4px; padding-bottom: 6px; }
+  .mapscroll #map { width: 860px; max-width: none; }
+  .map-note .swipe { display: inline; }
+}
 #map .pin circle.core { stroke: var(--pearl); stroke-width: 1.2; stroke-opacity: .85; }
 #map .pin circle.halo { fill: none; stroke: var(--gold); opacity: .45; }
 #map .pin text { font: 500 10.5px var(--mono); letter-spacing: .06em; fill: var(--pearl); paint-order: stroke; stroke: var(--water); stroke-width: 3px; }
@@ -184,8 +192,8 @@ footer p { margin: 0; color: var(--mist); font-size: 13px; max-width: 90ch; }
         <div class="stats" id="stats"></div>
       </div>
       <div class="mapbox">
-        <svg id="map" viewBox="0 0 900 380" role="img" aria-label="World map of where each caviar comes from"></svg>
-        <div class="map-note" id="mapNote">Tap a point to see what comes from those waters.</div>
+        <div class="mapscroll"><svg id="map" viewBox="0 0 900 380" role="img" aria-label="World map of where each caviar comes from"></svg></div>
+        <div class="map-note" id="mapNote"><span class="swipe">Swipe the map sideways. </span>Tap a point to see what comes from those waters.</div>
       </div>
     </div>
   </header>
@@ -301,6 +309,7 @@ $('#stats').innerHTML = A.stats.map(s => `<div class="stat"><b>${esc(s.v)}</b><s
     const pin = g.append('g').attr('class', 'pin').attr('transform', `translate(${x},${y})`).attr('tabindex', 0).attr('role', 'button')
       .attr('aria-label', `${o.label}: ${o.products.length} products`);
     const c = byH[o.products[0]]?.color?.mid || '#d3ae63';
+    pin.append('circle').attr('class', 'hit').attr('r', 15);  // a fingertip-sized target under each point
     pin.append('circle').attr('class', 'halo').attr('r', 9).style('animation-delay', `${(i % 7) * .45}s`);
     pin.append('circle').attr('class', 'core').attr('r', 4 + Math.min(5, o.products.length)).attr('fill', c);
     const t = pin.append('text').attr('x', o.dx ?? 10).attr('y', o.dy ?? 4).attr('text-anchor', o.anchor || 'start').text(o.short || o.label);

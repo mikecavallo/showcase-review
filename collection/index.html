@@ -1,5 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Caviar Star in 3D</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,10 +73,15 @@ main { padding: clamp(40px, 7vh, 80px) clamp(16px, 4vw, 56px) 40px; max-width: 1
 .card .pr { font-size: 16px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .card .so { font-family: var(--display); font-size: 9px; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-deep); }
 footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 22px 0 8px; font-size: 15px; color: var(--muted); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+/* phones and tablets: the 3D stage on top, the product text below it, so the model never sits on the words */
+@media (max-width: 899px) {
+  .stage { height: auto; min-height: 0; padding-top: 44px; }
+  .stage canvas { position: relative; inset: auto; height: min(56vh, 540px); }
+  .info { position: static; width: auto; max-width: 640px; padding: 8px clamp(16px, 5vw, 40px) 32px; }
+  .nav { top: calc(44px + min(56vh, 540px) - 58px); bottom: auto; right: 16px; }
+  .count { top: calc(44px + min(56vh, 540px) - 40px); left: clamp(16px, 5vw, 40px); right: auto; }
+}
 @media (max-width: 640px) {
-  .stage { height: 78vh; min-height: 560px; }
-  .info { bottom: 86px; }
-  .nav { bottom: 20px; right: 16px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .brand { letter-spacing: .3em; font-size: 10px; }
 }
